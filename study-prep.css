@@ -502,6 +502,29 @@ color:#555;
 
 }
 
+/* Librarian & Admin Names */
+
+.librarian-name{
+    font-size:28px;
+    color:#0d47a1;
+    font-weight:700;
+    margin-top:15px;
+    margin-bottom:18px;
+    letter-spacing:1px;
+}
+
+.librarian-name span{
+    color:#FFD54F;
+    font-weight:600;
+}
+
+.admin-name{
+    font-size:18px;
+    color:#555;
+    font-weight:500;
+    margin-bottom:40px;
+}
+
 
 
 
@@ -645,5 +668,14 @@ font-size:34px;
 font-size:16px;
 line-height:1.8;
 
+}
+.librarian-name{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.admin-name{
+    font-size:16px;
+    margin-bottom:35px;
 }
 }
