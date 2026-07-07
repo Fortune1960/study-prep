@@ -1,0 +1,649 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8fb;
+color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+height:80px;
+background:#0d47a1;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 8%;
+position:fixed;
+top:0;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo h2{
+color:white;
+font-size:32px;
+}
+
+.logo span{
+color:#FFD54F;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin:0 15px;
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#FFD54F;
+
+}
+
+.nav-logo{
+
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+padding:5px;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,40,80,.75),rgba(0,40,80,.75)),
+
+url(images/hero-bg.jpg);
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+.overlay{
+
+max-width:800px;
+
+}
+
+.hero h1{
+
+font-size:30px !important;
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+.hero h2{
+
+font-size:35px;
+
+color:#FFD54F;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+color:white;
+
+font-size:18px;
+
+line-height:30px;
+
+margin-bottom:40px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 40px;
+
+background:#FFD54F;
+
+text-decoration:none;
+
+color:#0d47a1;
+
+font-weight:600;
+
+border-radius:50px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:white;
+
+transform:translateY(-5px);
+
+}
+
+/* FEATURES */
+
+.features{
+
+padding:100px 10%;
+
+text-align:center;
+
+}
+
+.features h1{
+
+font-size:40px;
+
+margin-bottom:50px;
+
+color:#0d47a1;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-15px);
+
+}
+
+.card i{
+
+font-size:50px;
+
+color:#0d47a1;
+
+margin-bottom:20px;
+
+}
+
+.card h2{
+
+margin-bottom:15px;
+
+}
+
+/* CTA */
+
+.cta{
+
+background:#0d47a1;
+
+padding:80px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.cta h1{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+margin-bottom:30px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#062a60;
+
+color:white;
+
+padding:25px;
+
+text-align:center;
+
+}
+.menu-toggle{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+
+margin-top:120px;
+
+padding:40px 8%;
+
+}
+
+.welcome{
+
+background:linear-gradient(135deg,#0d47a1,#1976d2);
+
+color:white;
+
+padding:40px;
+
+border-radius:20px;
+
+margin-bottom:40px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.welcome h1{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+}
+
+.search-box{
+
+display:flex;
+
+align-items:center;
+
+background:white;
+
+border-radius:50px;
+
+padding:15px 25px;
+
+margin-bottom:40px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.search-box input{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+font-size:18px;
+
+}
+
+.search-box i{
+
+color:#0d47a1;
+
+font-size:22px;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-bottom:50px;
+
+}
+
+.stat-card{
+
+background:white;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.stat-card h2{
+
+font-size:45px;
+
+color:#0d47a1;
+
+}
+
+/* ================= ABOUT HERO ================= */
+
+.about-hero{
+
+margin-top:120px;
+padding:80px 8%;
+background:#f8fbff;
+
+}
+
+.about-content{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+
+}
+
+.about-image{
+
+flex:1;
+display:flex;
+justify-content:center;
+
+}
+
+.image-frame{
+
+width:360px;
+height:430px;
+background:white;
+padding:15px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+position:relative;
+overflow:hidden;
+
+}
+
+.image-frame::before{
+
+content:"";
+position:absolute;
+top:-40px;
+left:-40px;
+width:120px;
+height:120px;
+background:#FFD54F;
+border-radius:50%;
+opacity:.3;
+
+}
+
+.image-frame::after{
+
+content:"";
+position:absolute;
+bottom:-40px;
+right:-40px;
+width:120px;
+height:120px;
+background:#0d47a1;
+border-radius:50%;
+opacity:.2;
+
+}
+
+.image-frame img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:18px;
+transition:.5s;
+
+}
+
+.image-frame:hover img{
+
+transform:scale(1.05);
+
+}
+
+.about-text{
+
+flex:1;
+
+}
+
+.about-text h1{
+
+font-size:48px;
+color:#0d47a1;
+margin-bottom:25px;
+
+}
+
+.about-text p{
+
+font-size:18px;
+line-height:2;
+margin-bottom:35px;
+color:#555;
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+
+nav{
+
+padding:20px;
+
+height:auto;
+
+flex-wrap:wrap;
+
+}
+
+nav ul{
+
+width:100%;
+
+justify-content:center;
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+}
+
+nav ul li{
+
+margin:10px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.features{
+
+padding:70px 30px;
+
+}
+
+.cta{
+
+padding:50px 20px;
+
+}
+.menu-toggle{
+display:block;
+}
+
+nav{
+padding:15px 20px;
+}
+
+#nav-links{
+display:none;
+width:100%;
+flex-direction:column;
+background:#0d47a1;
+margin-top:20px;
+padding:20px 0;
+border-radius:10px;
+}
+
+#nav-links.active{
+display:flex;
+}
+
+#nav-links li{
+margin:15px 0;
+text-align:center;
+}
+
+.nav-logo{
+width:50px;
+height:50px;
+}
+
+.dashboard{
+
+padding:30px;
+
+}
+
+.welcome h1{
+
+font-size:30px;
+
+}
+
+.search-box{
+
+padding:12px 18px;
+
+}
+
+/* About Page Mobile */
+
+.about-content{
+
+flex-direction:column;
+text-align:center;
+gap:40px;
+
+}
+
+.image-frame{
+
+width:280px;
+height:340px;
+
+}
+
+.about-text h1{
+
+font-size:34px;
+
+}
+
+.about-text p{
+
+font-size:16px;
+line-height:1.8;
+
+}
+}
