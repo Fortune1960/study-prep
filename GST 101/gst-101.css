@@ -330,6 +330,20 @@ nav{
 
 }
 
+.extreme{
+
+    background:#6a1b9a;
+
+}
+
+.extreme:hover{
+
+    background:#4a148c;
+
+    transform:translateY(-5px);
+
+}
+
 /* ==========================
    COMMON BUTTON STYLE
 ========================== */

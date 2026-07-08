@@ -15,6 +15,7 @@ const reviewScreen = document.getElementById("reviewScreen");
 
 const easyBtn = document.getElementById("easyBtn");
 const hardBtn = document.getElementById("hardBtn");
+const extremeBtn = document.getElementById("extremeBtn");
 
 const questionText = document.getElementById("questionText");
 const answerButtons = document.getElementById("answerButtons");
@@ -104,6 +105,16 @@ hardBtn.addEventListener("click", function(){
     selectedStage = "hard";
 
     QUESTIONS = HARD_QUESTIONS;
+
+    initializeExam();
+
+});
+
+extremeBtn.addEventListener("click", function(){
+
+    selectedStage = "extreme";
+
+    QUESTIONS = EXTREME_QUESTIONS;
 
     initializeExam();
 

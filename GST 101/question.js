@@ -217,3 +217,7 @@ const HARD_QUESTIONS = [
 }
 
 ];
+
+const EXTREME_QUESTIONS = [
+
+];
