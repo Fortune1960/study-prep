@@ -113,7 +113,7 @@ hardBtn.addEventListener("click", function(){
     INITIALIZE EXAM
 ===============================*/
 
-function initializeExam(){
+function initializeExam() {
 
     welcomeScreen.style.display = "none";
 
@@ -123,10 +123,21 @@ function initializeExam(){
 
     reviewScreen.style.display = "none";
 
+    // Show hidden sections
+    document.querySelector(".timer").style.display = "flex";
+
+    document.querySelector(".summary-card").style.display = "block";
+
+    document.querySelector(".palette-card").style.display = "block";
+
+    document.querySelector(".question-card").style.display = "block";
+
+    document.querySelector(".navigation-buttons").style.display = "flex";
+
+    submitBtn.style.display = "block";
+
     currentIndex = 0;
-
     score = 0;
-
     userAnswers = [];
 
     timeLeft = 900;
@@ -774,7 +785,40 @@ confirmSubmit.addEventListener("click", function(){
         SUBMIT EXAM
 ===============================*/
 
+/*==============================
+        SUBMIT EXAM
+===============================*/
+
 function submitExam(){
+
+    // Count answered questions
+    const answeredQuestions = userAnswers.filter(answer => answer !== undefined).length;
+
+    // Prevent submission if no question has been answered
+    if(answeredQuestions === 0){
+
+        alert("You have not answered any question yet. Please answer at least one question before submitting.");
+
+        return;
+
+    }
+
+    // Warn if some questions are unanswered
+    if(answeredQuestions < QUESTIONS.length){
+
+        const proceed = confirm(
+            "You have answered only " +
+            answeredQuestions +
+            " out of " +
+            QUESTIONS.length +
+            " questions.\n\nDo you still want to submit?"
+        );
+
+        if(!proceed){
+            return;
+        }
+
+    }
 
     stopTimer();
 
@@ -1033,8 +1077,7 @@ restartBtn.addEventListener("click", function(){
 
 backLevelsBtn.addEventListener("click", function(){
 
-    window.location.href = "../levels/levels.html";
-
+   window.location.href = "../levels.html";
 });
 
 
@@ -1124,5 +1167,33 @@ saveResult();
 window.addEventListener("load", function(){
 
     loadPreviousResult();
+
+});
+
+/*==============================
+      INITIAL PAGE SETUP
+===============================*/
+
+window.addEventListener("DOMContentLoaded", function(){
+
+    welcomeScreen.style.display = "block";
+
+    quizContainer.style.display = "none";
+
+    resultScreen.style.display = "none";
+
+    reviewScreen.style.display = "none";
+
+    document.querySelector(".timer").style.display = "none";
+
+    document.querySelector(".summary-card").style.display = "none";
+
+    document.querySelector(".palette-card").style.display = "none";
+
+    document.querySelector(".question-card").style.display = "none";
+
+    document.querySelector(".navigation-buttons").style.display = "none";
+
+    submitBtn.style.display = "none";
 
 });
