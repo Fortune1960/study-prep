@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GST 101 CBT | JOHESSA Study Prep</title>
+
+    <link rel="stylesheet" href="GST 101\gst-101.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+
+            <h2>Study<span>Prep</span></h2>
+
+        </div>
+
+        <div class="exam-details">
+
+            <span><i class="fas fa-book"></i> GST 101</span>
+
+            <span><i class="fas fa-layer-group"></i> Easy Stage</span>
+
+        </div>
+
+        <a href="levels.html" class="back-btn">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Exit
+
+        </a>
+
+    </nav>
+
+    <!-- ================= WELCOME SCREEN ================= -->
+
+    <section id="welcomeScreen" class="welcome-screen">
+
+        <div class="welcome-card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h1>
+
+                Welcome to GST 101 Practice Questions
+
+            </h1>
+
+            <p>
+
+                This CBT practice is designed to help Medical Laboratory Science students prepare for their examinations.
+
+            </p>
+
+            <div class="instruction-box">
+
+                <h3>Instructions</h3>
+
+                <ul>
+
+                    <li>There are 10 questions in this stage.</li>
+
+                    <li>Each question carries one mark.</li>
+
+                    <li>Select only one answer per question.</li>
+
+                    <li>You can move between questions using the navigation buttons.</li>
+
+                    <li>Your score will appear after you submit the test.</li>
+
+                    <li>Questions are marked only after submission.</li>
+
+                    <li>The examination has a countdown timer.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="difficulty-container">
+
+                <button id="easyBtn" class="difficulty easy">
+
+                    <i class="fas fa-seedling"></i>
+
+                    Easy Stage
+
+                </button>
+
+                <button id="hardBtn" class="difficulty hard">
+
+                    <i class="fas fa-fire"></i>
+
+                    Hard Stage
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CBT SECTION ================= -->
+
+    <main id="quizContainer" class="quiz-container">
+
+        <!-- LEFT SIDE -->
+
+        <section class="quiz-left">
+
+            <div class="top-bar">
+
+                <div class="timer">
+
+                    <i class="fas fa-clock"></i>
+
+                    <span id="time">15:00</span>
+
+                </div>
+
+                <div class="progress-text">
+
+                    Question
+
+                    <span id="currentQuestion">
+
+                        1
+
+                    </span>
+
+                    of
+
+                    <span id="totalQuestions">
+
+                        10
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+            <div class="question-card">
+
+                <h2 id="questionText">
+
+                    Question will appear here...
+
+                </h2>
+
+                <div id="answerButtons" class="answer-buttons">
+
+                    <!-- JavaScript will generate the options here -->
+
+                </div>
+
+            </div>
+
+            <div class="navigation-buttons">
+
+                <button id="prevBtn">
+
+                    <i class="fas fa-arrow-left"></i>
+
+                    Previous
+
+                </button>
+
+                <button id="nextBtn">
+
+                    Next
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+                    </section>
+
+        <!-- ================= RIGHT SIDEBAR ================= -->
+
+        <aside class="quiz-sidebar">
+
+            <!-- Student Information -->
+
+            <div class="student-card">
+
+                <img src="images/logo.png" alt="Student">
+
+                <h3>JOHESSA Study Prep</h3>
+
+                <p>Medical Laboratory Science</p>
+
+            </div>
+
+            <!-- Exam Summary -->
+
+            <div class="summary-card">
+
+                <h3>Exam Summary</h3>
+
+                <div class="summary-item">
+
+                    <span>Total Questions</span>
+
+                    <strong id="summaryTotal">10</strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>Answered</span>
+
+                    <strong id="answeredCount">0</strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>Remaining</span>
+
+                    <strong id="remainingCount">10</strong>
+
+                </div>
+
+            </div>
+
+            <!-- Question Palette -->
+
+            <div class="palette-card">
+
+                <h3>Question Palette</h3>
+
+                <p>Select any question below.</p>
+
+                <div id="questionPalette" class="question-palette">
+
+                    <button class="palette-btn active">1</button>
+                    <button class="palette-btn">2</button>
+                    <button class="palette-btn">3</button>
+                    <button class="palette-btn">4</button>
+                    <button class="palette-btn">5</button>
+                    <button class="palette-btn">6</button>
+                    <button class="palette-btn">7</button>
+                    <button class="palette-btn">8</button>
+                    <button class="palette-btn">9</button>
+                    <button class="palette-btn">10</button>
+
+                </div>
+
+                <div class="palette-legend">
+
+                    <div class="legend">
+
+                        <span class="legend-box current"></span>
+
+                        Current Question
+
+                    </div>
+
+                    <div class="legend">
+
+                        <span class="legend-box answered"></span>
+
+                        Answered
+
+                    </div>
+
+                    <div class="legend">
+
+                        <span class="legend-box unanswered"></span>
+
+                        Unanswered
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Submit Button -->
+
+            <button id="submitExamBtn" class="submit-btn">
+
+                <i class="fas fa-paper-plane"></i>
+
+                Submit Test
+
+            </button>
+
+        </aside>
+
+    </main>
+
+    <!-- ================= SUBMIT CONFIRMATION MODAL ================= -->
+
+    <div id="submitModal" class="modal">
+
+        <div class="modal-content">
+
+            <i class="fas fa-exclamation-circle"></i>
+
+            <h2>Submit Examination?</h2>
+
+            <p>
+
+                Are you sure you want to submit your CBT?
+
+                You will not be able to change your answers after submission.
+
+            </p>
+
+            <div class="modal-buttons">
+
+                <button id="cancelSubmit">
+
+                    Continue Exam
+
+                </button>
+
+                <button id="confirmSubmit">
+
+                    Submit
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <!-- ================= RESULT SECTION ================= -->
+
+    <section id="resultScreen" class="result-screen">
+
+        <div class="result-card">
+
+            <i class="fas fa-award trophy"></i>
+
+            <h1>Examination Completed</h1>
+
+            <p>You have successfully completed the CBT Practice.</p>
+
+            <div class="result-summary">
+
+                <div class="result-box">
+
+                    <h3>Score</h3>
+
+                    <span id="finalScore">0 / 10</span>
+
+                </div>
+
+                <div class="result-box">
+
+                    <h3>Percentage</h3>
+
+                    <span id="finalPercentage">0%</span>
+
+                </div>
+
+                <div class="result-box">
+
+                    <h3>Grade</h3>
+
+                    <span id="finalGrade">F</span>
+
+                </div>
+
+            </div>
+
+            <div class="performance">
+
+                <h2 id="performanceText">
+
+                    Good Job!
+
+                </h2>
+
+                <p id="performanceRemark">
+
+                    Continue practicing to improve your performance.
+
+                </p>
+
+            </div>
+
+            <div class="result-buttons">
+
+                <button id="reviewBtn">
+
+                    <i class="fas fa-eye"></i>
+
+                    Review Answers
+
+                </button>
+
+                <button id="restartBtn">
+
+                    <i class="fas fa-redo"></i>
+
+                    Practice Again
+
+                </button>
+
+                <button id="backLevelsBtn">
+
+                    <i class="fas fa-home"></i>
+
+                    Back to Levels
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= REVIEW ANSWERS ================= -->
+
+    <section id="reviewScreen" class="review-screen">
+
+        <div class="review-header">
+
+            <h1>
+
+                <i class="fas fa-clipboard-check"></i>
+
+                Review Answers
+
+            </h1>
+
+            <p>
+
+                Compare your answers with the correct answers.
+
+            </p>
+
+        </div>
+
+        <div id="reviewContainer">
+
+            <!-- JavaScript will generate review cards here -->
+
+        </div>
+
+        <div class="review-footer">
+
+            <button id="closeReview">
+
+                <i class="fas fa-arrow-left"></i>
+
+                Back to Result
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 JOHESSA E-Library |
+
+            Developed by
+
+            <strong>FENTECH</strong>
+
+        </p>
+
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="GST 101\question.js"></script>
+
+    <script src="GST 101\gst-101.js"></script>
+
+</body>
+
+</html>
