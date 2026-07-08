@@ -565,7 +565,7 @@ function startTimer(){
     // Stop any existing timer
     clearInterval(timer);
 
-    timeLeft = 900; // 15 Minutes
+    timeLeft = 1800; // 30 Minutes
 
     updateTimer();
 
@@ -652,7 +652,7 @@ function resetTimer(){
 
     stopTimer();
 
-    timeLeft = 900;
+    timeLeft = 1800;
 
     updateTimer();
 
