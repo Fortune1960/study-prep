@@ -1019,502 +1019,502 @@ const HARD_QUESTIONS = [
 const EXTREME_QUESTIONS = [
 
 {
-question: "1. The angle of inclination of the femur in a normal adult is approximately:",
+question: "1. Which structure forms the lateral boundary of the cubital fossa?",
 answers:[
-{text:"A. 90°", correct:false},
-{text:"B. 125°", correct:true},
-{text:"C. 150°", correct:false},
-{text:"D. 180°", correct:false}
+{text:"A. Pronator teres", correct:false},
+{text:"B. Brachioradialis", correct:true},
+{text:"C. Biceps brachii", correct:false},
+{text:"D. Triceps brachii", correct:false}
 ]
 },
 
 {
-question: "2. The blood supply to the head of the femur in adults is mainly from:",
+question: "2. The floor of the cubital fossa is formed by:",
 answers:[
-{text:"A. Obturator artery", correct:false},
-{text:"B. Medial circumflex femoral artery", correct:true},
-{text:"C. Inferior gluteal artery", correct:false},
-{text:"D. Popliteal artery", correct:false}
+{text:"A. Biceps brachii and brachialis", correct:false},
+{text:"B. Brachialis and supinator", correct:true},
+{text:"C. Pronator teres and supinator", correct:false},
+{text:"D. Supinator only", correct:false}
 ]
 },
 
 {
-question: "3. Which structure is attached to the intertrochanteric crest?",
+question: "3. The deepest structure in the cubital fossa is the:",
 answers:[
-{text:"A. Ligament of head of femur", correct:false},
-{text:"B. Quadrate tubercle", correct:true},
-{text:"C. Iliotibial tract", correct:false},
-{text:"D. Pectineus muscle", correct:false}
+{text:"A. Median nerve", correct:false},
+{text:"B. Brachial artery", correct:false},
+{text:"C. Tendon of biceps brachii", correct:false},
+{text:"D. Brachialis muscle", correct:true}
 ]
 },
 
 {
-question: "4. The fovea capitis serves as the attachment for:",
+question: "4. The roof of the cubital fossa is pierced by the:",
 answers:[
-{text:"A. Iliofemoral ligament", correct:false},
-{text:"B. Ligament of head of femur", correct:true},
-{text:"C. Gluteus minimus", correct:false},
-{text:"D. Vastus medialis", correct:false}
+{text:"A. Median cubital vein", correct:true},
+{text:"B. Axillary artery", correct:false},
+{text:"C. Radial nerve", correct:false},
+{text:"D. Ulnar artery", correct:false}
 ]
 },
 
 {
-question: "5. Which muscle inserts into the greater trochanter?",
+question: "5. The contents of the cubital fossa from lateral to medial follow the mnemonic:",
 answers:[
-{text:"A. Adductor longus", correct:false},
-{text:"B. Gluteus medius", correct:true},
-{text:"C. Gracilis", correct:false},
-{text:"D. Sartorius", correct:false}
+{text:"A. TAN", correct:true},
+{text:"B. ANT", correct:false},
+{text:"C. NTA", correct:false},
+{text:"D. TNA", correct:false}
 ]
 },
 
 {
-question: "6. The strongest ligament of the hip joint is the:",
+question: "6. Which artery divides into the radial and ulnar arteries within the cubital fossa?",
 answers:[
-{text:"A. Pubofemoral ligament", correct:false},
-{text:"B. Ischiofemoral ligament", correct:false},
-{text:"C. Iliofemoral ligament", correct:true},
-{text:"D. Ligamentum teres", correct:false}
+{text:"A. Axillary artery", correct:false},
+{text:"B. Subclavian artery", correct:false},
+{text:"C. Brachial artery", correct:true},
+{text:"D. Deep brachial artery", correct:false}
 ]
 },
 
 {
-question: "7. The linea aspera gives attachment to all EXCEPT:",
+question: "7. The apex of the axilla is directed toward the:",
 answers:[
-{text:"A. Adductor magnus", correct:false},
-{text:"B. Vastus medialis", correct:false},
-{text:"C. Gluteus maximus", correct:false},
-{text:"D. Biceps femoris short head", correct:true}
+{text:"A. Neck", correct:true},
+{text:"B. Elbow", correct:false},
+{text:"C. Shoulder joint", correct:false},
+{text:"D. Chest wall", correct:false}
 ]
 },
 
 {
-question: "8. The pectineal line is found on the:",
+question: "8. Which muscle forms the anterior wall of the axilla?",
 answers:[
-{text:"A. Posterior femur", correct:true},
-{text:"B. Tibia", correct:false},
-{text:"C. Fibula", correct:false},
-{text:"D. Patella", correct:false}
+{text:"A. Latissimus dorsi", correct:false},
+{text:"B. Pectoralis major", correct:true},
+{text:"C. Teres major", correct:false},
+{text:"D. Subscapularis", correct:false}
 ]
 },
 
 {
-question: "9. Which part of the hip bone forms the anterior two-thirds of the acetabulum?",
+question: "9. The posterior wall of the axilla is formed mainly by:",
 answers:[
-{text:"A. Pubis", correct:false},
-{text:"B. Ischium", correct:false},
-{text:"C. Ilium", correct:true},
-{text:"D. Sacrum", correct:false}
+{text:"A. Serratus anterior", correct:false},
+{text:"B. Latissimus dorsi and subscapularis", correct:true},
+{text:"C. Deltoid", correct:false},
+{text:"D. Pectoralis minor", correct:false}
 ]
 },
 
 {
-question: "10. The obturator canal transmits:",
+question: "10. The lateral wall of the axilla is the:",
 answers:[
-{text:"A. Femoral nerve", correct:false},
-{text:"B. Obturator nerve and vessels", correct:true},
-{text:"C. Sciatic nerve", correct:false},
-{text:"D. Tibial nerve", correct:false}
+{text:"A. Intertubercular groove of humerus", correct:true},
+{text:"B. Clavicle", correct:false},
+{text:"C. Coracoid process", correct:false},
+{text:"D. Spine of scapula", correct:false}
 ]
 },
 
 {
-question: "11. Which muscle forms the lateral boundary of the femoral triangle?",
+question: "11. Which artery is the continuation of the subclavian artery?",
 answers:[
-{text:"A. Sartorius", correct:true},
-{text:"B. Adductor longus", correct:false},
-{text:"C. Rectus femoris", correct:false},
-{text:"D. Gracilis", correct:false}
+{text:"A. Radial artery", correct:false},
+{text:"B. Axillary artery", correct:true},
+{text:"C. Ulnar artery", correct:false},
+{text:"D. Brachial artery", correct:false}
 ]
 },
 
 {
-question: "12. The roof of the femoral triangle is formed mainly by:",
+question: "12. The anatomical snuff box contains which artery?",
 answers:[
-{text:"A. Fascia lata", correct:true},
-{text:"B. Iliacus", correct:false},
-{text:"C. Pectineus", correct:false},
-{text:"D. Adductor longus", correct:false}
+{text:"A. Ulnar artery", correct:false},
+{text:"B. Radial artery", correct:true},
+{text:"C. Axillary artery", correct:false},
+{text:"D. Brachial artery", correct:false}
 ]
 },
 
 {
-question: "13. The floor of the femoral triangle includes all EXCEPT:",
+question: "13. The floor of the anatomical snuff box is formed by the:",
 answers:[
-{text:"A. Iliacus", correct:false},
-{text:"B. Pectineus", correct:false},
-{text:"C. Adductor longus", correct:false},
-{text:"D. Gracilis", correct:true}
+{text:"A. Scaphoid and trapezium", correct:true},
+{text:"B. Lunate and capitate", correct:false},
+{text:"C. Pisiform and hamate", correct:false},
+{text:"D. Radius only", correct:false}
 ]
 },
 
 {
-question: "14. The mnemonic NAVEL refers to:",
+question: "14. The medial boundary of the anatomical snuff box is formed by:",
 answers:[
-{text:"A. Nerve, Artery, Vein, Empty space, Lymphatics", correct:true},
-{text:"B. Nerve, Vein, Artery, Lymphatics", correct:false},
-{text:"C. Vein, Artery, Nerve", correct:false},
-{text:"D. Artery, Vein, Nerve", correct:false}
+{text:"A. Extensor pollicis brevis", correct:false},
+{text:"B. Extensor pollicis longus", correct:true},
+{text:"C. Abductor pollicis longus", correct:false},
+{text:"D. Flexor pollicis longus", correct:false}
 ]
 },
 
 {
-question: "15. The femoral sheath encloses all EXCEPT:",
+question: "15. The lateral boundary of the anatomical snuff box is formed by:",
 answers:[
-{text:"A. Femoral artery", correct:false},
-{text:"B. Femoral vein", correct:false},
-{text:"C. Femoral canal", correct:false},
-{text:"D. Femoral nerve", correct:true}
+{text:"A. EPL only", correct:false},
+{text:"B. APL and EPB", correct:true},
+{text:"C. FPL", correct:false},
+{text:"D. Palmaris longus", correct:false}
 ]
 },
 
 {
-question: "16. Which muscle is NOT supplied by the obturator nerve?",
+question: "16. Which muscle is NOT a component of the rotator cuff?",
 answers:[
-{text:"A. Adductor brevis", correct:false},
-{text:"B. Adductor longus", correct:false},
-{text:"C. Gracilis", correct:false},
-{text:"D. Sartorius", correct:true}
+{text:"A. Supraspinatus", correct:false},
+{text:"B. Infraspinatus", correct:false},
+{text:"C. Teres minor", correct:false},
+{text:"D. Teres major", correct:true}
 ]
 },
 
 {
-question: "17. The largest muscle in the medial compartment of the thigh is:",
+question: "17. The rotator cuff muscle responsible for initiating shoulder abduction is:",
 answers:[
-{text:"A. Adductor magnus", correct:true},
-{text:"B. Gracilis", correct:false},
-{text:"C. Pectineus", correct:false},
-{text:"D. Adductor brevis", correct:false}
+{text:"A. Deltoid", correct:false},
+{text:"B. Supraspinatus", correct:true},
+{text:"C. Infraspinatus", correct:false},
+{text:"D. Subscapularis", correct:false}
 ]
 },
 
 {
-question: "18. Which muscle is considered a transitional muscle between anterior and medial compartments?",
+question: "18. Which rotator cuff muscle medially rotates the arm?",
 answers:[
-{text:"A. Adductor longus", correct:false},
-{text:"B. Pectineus", correct:true},
-{text:"C. Gracilis", correct:false},
-{text:"D. Obturator externus", correct:false}
+{text:"A. Teres minor", correct:false},
+{text:"B. Subscapularis", correct:true},
+{text:"C. Infraspinatus", correct:false},
+{text:"D. Supraspinatus", correct:false}
 ]
 },
 
 {
-question: "19. The hamstring part of adductor magnus is supplied by:",
+question: "19. The superficial palmar arch is formed mainly by the:",
 answers:[
-{text:"A. Obturator nerve", correct:false},
-{text:"B. Femoral nerve", correct:false},
-{text:"C. Tibial division of sciatic nerve", correct:true},
-{text:"D. Common fibular nerve", correct:false}
+{text:"A. Radial artery", correct:false},
+{text:"B. Ulnar artery", correct:true},
+{text:"C. Axillary artery", correct:false},
+{text:"D. Brachial artery", correct:false}
 ]
 },
 
 {
-question: "20. Which muscle inserts into the pes anserinus?",
+question: "20. The superficial palmar arch is completed by the:",
 answers:[
-{text:"A. Adductor magnus", correct:false},
-{text:"B. Gracilis", correct:true},
-{text:"C. Pectineus", correct:false},
-{text:"D. Obturator externus", correct:false}
+{text:"A. Deep branch of radial artery", correct:false},
+{text:"B. Superficial palmar branch of radial artery", correct:true},
+{text:"C. Ulnar recurrent artery", correct:false},
+{text:"D. Princeps pollicis artery", correct:false}
 ]
 },
 
 {
-question: "21. Which artery becomes the popliteal artery after passing through the adductor hiatus?",
+question: "21. The superficial palmar arch gives rise to:",
 answers:[
-{text:"A. Profunda femoris artery", correct:false},
-{text:"B. Femoral artery", correct:true},
-{text:"C. Obturator artery", correct:false},
-{text:"D. Superior gluteal artery", correct:false}
+{text:"A. Common palmar digital arteries", correct:true},
+{text:"B. Radial recurrent artery", correct:false},
+{text:"C. Deep palmar branch", correct:false},
+{text:"D. Circumflex humeral artery", correct:false}
 ]
 },
 
 {
-question: "22. The adductor hiatus is found in:",
+question: "22. Which artery chiefly forms the deep palmar arch?",
 answers:[
-{text:"A. Sartorius", correct:false},
-{text:"B. Adductor magnus", correct:true},
-{text:"C. Gracilis", correct:false},
-{text:"D. Rectus femoris", correct:false}
+{text:"A. Radial artery", correct:true},
+{text:"B. Ulnar artery", correct:false},
+{text:"C. Brachial artery", correct:false},
+{text:"D. Axillary artery", correct:false}
 ]
 },
 
 {
-question: "23. The inferior ramus of the pubis gives origin to:",
+question: "23. The scapular anastomosis provides collateral circulation between:",
 answers:[
-{text:"A. Gracilis", correct:true},
-{text:"B. Rectus femoris", correct:false},
-{text:"C. Iliacus", correct:false},
-{text:"D. Tensor fascia lata", correct:false}
+{text:"A. Subclavian and axillary arteries", correct:true},
+{text:"B. Radial and ulnar arteries", correct:false},
+{text:"C. Femoral and popliteal arteries", correct:false},
+{text:"D. Internal thoracic and brachial arteries", correct:false}
 ]
 },
 
 {
-question: "24. The neck of the femur is directed:",
+question: "24. Which artery is NOT involved in the scapular anastomosis?",
 answers:[
-{text:"A. Downward and backward", correct:false},
-{text:"B. Upward, medially and forward", correct:true},
-{text:"C. Directly laterally", correct:false},
-{text:"D. Inferiorly only", correct:false}
+{text:"A. Suprascapular artery", correct:false},
+{text:"B. Dorsal scapular artery", correct:false},
+{text:"C. Circumflex scapular artery", correct:false},
+{text:"D. Radial artery", correct:true}
 ]
 },
 
 {
-question: "25. A fracture involving the neck of the femur most commonly threatens the blood supply from the:",
+question: "25. The circumflex scapular artery is a branch of the:",
 answers:[
-{text:"A. Superior gluteal artery", correct:false},
-{text:"B. Medial circumflex femoral artery", correct:true},
-{text:"C. Inferior gluteal artery", correct:false},
-{text:"D. Obturator artery only", correct:false}
+{text:"A. Thoracoacromial artery", correct:false},
+{text:"B. Subscapular artery", correct:true},
+{text:"C. Radial artery", correct:false},
+{text:"D. Ulnar artery", correct:false}
 ]
 },
 
 {
-question: "26. Which structure separates the greater and lesser sciatic foramina?",
+question: "26. Injury to the median nerve within the cubital fossa will primarily affect:",
 answers:[
-{text:"A. Ischial spine", correct:true},
-{text:"B. Ischial tuberosity", correct:false},
-{text:"C. Iliac crest", correct:false},
-{text:"D. Pubic tubercle", correct:false}
+{text:"A. Flexion of the thumb and index finger", correct:true},
+{text:"B. Extension of the elbow", correct:false},
+{text:"C. Abduction of the shoulder", correct:false},
+{text:"D. Supination of the forearm only", correct:false}
 ]
 },
 
 {
-question: "27. The posterior surface of the femur is characterized by the:",
+question: "27. The bicipital aponeurosis lies superficial to the:",
 answers:[
-{text:"A. Intertrochanteric line", correct:false},
-{text:"B. Linea aspera", correct:true},
-{text:"C. Gluteal line", correct:false},
-{text:"D. Pectineal crest", correct:false}
+{text:"A. Median nerve and brachial artery", correct:true},
+{text:"B. Radial nerve", correct:false},
+{text:"C. Ulnar nerve", correct:false},
+{text:"D. Cephalic vein", correct:false}
 ]
 },
 
 {
-question: "28. Which muscle laterally rotates the thigh and inserts into the trochanteric fossa?",
+question: "28. The cords of the brachial plexus are named according to their relationship to the:",
 answers:[
-{text:"A. Obturator externus", correct:true},
-{text:"B. Gracilis", correct:false},
-{text:"C. Adductor longus", correct:false},
-{text:"D. Pectineus", correct:false}
+{text:"A. Axillary artery", correct:true},
+{text:"B. Axillary vein", correct:false},
+{text:"C. Clavicle", correct:false},
+{text:"D. Brachial artery", correct:false}
 ]
 },
 
 {
-question: "29. The acetabular notch is bridged by the:",
+question: "29. Which wall of the axilla is formed mainly by serratus anterior?",
 answers:[
-{text:"A. Iliofemoral ligament", correct:false},
-{text:"B. Transverse acetabular ligament", correct:true},
-{text:"C. Ligamentum teres", correct:false},
-{text:"D. Pubofemoral ligament", correct:false}
+{text:"A. Medial wall", correct:true},
+{text:"B. Lateral wall", correct:false},
+{text:"C. Posterior wall", correct:false},
+{text:"D. Anterior wall", correct:false}
 ]
 },
 
 {
-question: "30. Which part of the femur articulates with the acetabulum?",
+question: "30. The axillary nerve passes through the:",
 answers:[
-{text:"A. Neck", correct:false},
-{text:"B. Head", correct:true},
-{text:"C. Greater trochanter", correct:false},
-{text:"D. Lesser trochanter", correct:false}
+{text:"A. Quadrangular space", correct:true},
+{text:"B. Cubital tunnel", correct:false},
+{text:"C. Carpal tunnel", correct:false},
+{text:"D. Triangular interval", correct:false}
 ]
 },
 
 {
-question: "31. The deepest muscle forming the floor of the femoral triangle is:",
+question: "31. A fracture of the surgical neck of the humerus commonly injures the:",
 answers:[
-{text:"A. Iliacus", correct:false},
-{text:"B. Pectineus", correct:true},
-{text:"C. Sartorius", correct:false},
-{text:"D. Gracilis", correct:false}
+{text:"A. Axillary nerve", correct:true},
+{text:"B. Median nerve", correct:false},
+{text:"C. Radial nerve", correct:false},
+{text:"D. Ulnar nerve", correct:false}
 ]
 },
 
 {
-question: "32. The strongest extensor of the hip joint is:",
+question: "32. The pulse felt in the anatomical snuff box belongs to the:",
 answers:[
-{text:"A. Gluteus maximus", correct:true},
-{text:"B. Gluteus medius", correct:false},
-{text:"C. Pectineus", correct:false},
-{text:"D. Adductor longus", correct:false}
+{text:"A. Radial artery", correct:true},
+{text:"B. Ulnar artery", correct:false},
+{text:"C. Brachial artery", correct:false},
+{text:"D. Deep palmar arch", correct:false}
 ]
 },
 
 {
-question: "33. Which muscle forms the medial boundary of the femoral triangle?",
+question: "33. Tenderness in the anatomical snuff box following a fall suggests fracture of the:",
 answers:[
-{text:"A. Adductor longus", correct:true},
-{text:"B. Sartorius", correct:false},
-{text:"C. Gracilis", correct:false},
-{text:"D. Vastus medialis", correct:false}
+{text:"A. Scaphoid", correct:true},
+{text:"B. Trapezium", correct:false},
+{text:"C. Capitate", correct:false},
+{text:"D. Hamate", correct:false}
 ]
 },
 
 {
-question: "34. The femoral canal normally contains:",
+question: "34. Which tendon forms the medial border of the anatomical snuff box?",
 answers:[
-{text:"A. Femoral artery", correct:false},
-{text:"B. Deep inguinal lymph node and fat", correct:true},
-{text:"C. Femoral nerve", correct:false},
-{text:"D. Great saphenous vein", correct:false}
+{text:"A. Extensor pollicis longus", correct:true},
+{text:"B. Abductor pollicis longus", correct:false},
+{text:"C. Extensor pollicis brevis", correct:false},
+{text:"D. Flexor pollicis longus", correct:false}
 ]
 },
 
 {
-question: "35. The pectineus muscle is primarily supplied by the:",
+question: "35. Which rotator cuff muscle is most frequently torn?",
 answers:[
-{text:"A. Femoral nerve", correct:true},
-{text:"B. Tibial nerve", correct:false},
-{text:"C. Common fibular nerve", correct:false},
-{text:"D. Superior gluteal nerve", correct:false}
+{text:"A. Supraspinatus", correct:true},
+{text:"B. Infraspinatus", correct:false},
+{text:"C. Teres minor", correct:false},
+{text:"D. Subscapularis", correct:false}
 ]
 },
 
 {
-question: "36. Which muscle adducts and flexes the thigh?",
+question: "36. The nerve supplying supraspinatus is the:",
 answers:[
-{text:"A. Pectineus", correct:true},
-{text:"B. Gluteus maximus", correct:false},
-{text:"C. Biceps femoris", correct:false},
-{text:"D. Tensor fascia lata", correct:false}
+{text:"A. Suprascapular nerve", correct:true},
+{text:"B. Axillary nerve", correct:false},
+{text:"C. Musculocutaneous nerve", correct:false},
+{text:"D. Radial nerve", correct:false}
 ]
 },
 
 {
-question: "37. The lesser trochanter provides insertion for:",
+question: "37. Which rotator cuff muscle inserts on the lesser tubercle of the humerus?",
 answers:[
-{text:"A. Iliopsoas", correct:true},
-{text:"B. Gluteus medius", correct:false},
-{text:"C. Gluteus minimus", correct:false},
-{text:"D. Piriformis", correct:false}
+{text:"A. Subscapularis", correct:true},
+{text:"B. Supraspinatus", correct:false},
+{text:"C. Infraspinatus", correct:false},
+{text:"D. Teres minor", correct:false}
 ]
 },
 
 {
-question: "38. Which artery is the principal blood supply to the thigh muscles?",
+question: "38. The principal function of the rotator cuff is to:",
 answers:[
-{text:"A. Profunda femoris artery", correct:true},
-{text:"B. Femoral artery", correct:false},
-{text:"C. Popliteal artery", correct:false},
-{text:"D. Obturator artery", correct:false}
+{text:"A. Stabilize the shoulder joint", correct:true},
+{text:"B. Flex the elbow", correct:false},
+{text:"C. Extend the wrist", correct:false},
+{text:"D. Rotate the forearm", correct:false}
 ]
 },
 
 {
-question: "39. The femoral pulse is best palpated:",
+question: "39. The superficial palmar arch lies:",
 answers:[
-{text:"A. At the midpoint of the inguinal ligament", correct:true},
-{text:"B. Behind the medial malleolus", correct:false},
-{text:"C. Popliteal fossa", correct:false},
-{text:"D. Dorsum of the foot", correct:false}
+{text:"A. Deep to the palmar aponeurosis", correct:true},
+{text:"B. Deep to the metacarpals", correct:false},
+{text:"C. Superficial to the skin", correct:false},
+{text:"D. Beneath the flexor retinaculum", correct:false}
 ]
 },
 
 {
-question: "40. Which muscle is absent from the medial compartment?",
+question: "40. The superficial palmar arch is accompanied by the:",
 answers:[
-{text:"A. Adductor brevis", correct:false},
-{text:"B. Gracilis", correct:false},
-{text:"C. Pectineus", correct:false},
-{text:"D. Vastus lateralis", correct:true}
+{text:"A. Superficial branch of the ulnar nerve", correct:true},
+{text:"B. Median nerve only", correct:false},
+{text:"C. Deep branch of radial nerve", correct:false},
+{text:"D. Posterior interosseous nerve", correct:false}
 ]
 },
 
 {
-question: "41. The neck-shaft angle decreases in:",
+question: "41. Which branch of the axillary artery gives rise to the circumflex scapular artery?",
 answers:[
-{text:"A. Coxa vara", correct:true},
-{text:"B. Coxa valga", correct:false},
-{text:"C. Osteomalacia only", correct:false},
-{text:"D. Normal adult", correct:false}
+{text:"A. Subscapular artery", correct:true},
+{text:"B. Thoracoacromial artery", correct:false},
+{text:"C. Lateral thoracic artery", correct:false},
+{text:"D. Superior thoracic artery", correct:false}
 ]
 },
 
 {
-question: "42. The linea aspera divides inferiorly into:",
+question: "42. The scapular anastomosis becomes clinically important when:",
 answers:[
-{text:"A. Medial and lateral supracondylar lines", correct:true},
-{text:"B. Two condyles", correct:false},
-{text:"C. Tibial lines", correct:false},
-{text:"D. Intertrochanteric lines", correct:false}
+{text:"A. The axillary artery is occluded", correct:true},
+{text:"B. The radial artery is cut", correct:false},
+{text:"C. The ulnar artery is blocked", correct:false},
+{text:"D. The brachial artery is compressed at the elbow", correct:false}
 ]
 },
 
 {
-question: "43. Which muscle inserts on the adductor tubercle?",
+question: "43. Which artery participates in both the shoulder and scapular anastomoses?",
 answers:[
-{text:"A. Hamstring part of adductor magnus", correct:true},
-{text:"B. Gracilis", correct:false},
-{text:"C. Sartorius", correct:false},
-{text:"D. Adductor brevis", correct:false}
+{text:"A. Suprascapular artery", correct:true},
+{text:"B. Radial artery", correct:false},
+{text:"C. Ulnar artery", correct:false},
+{text:"D. Brachial artery", correct:false}
 ]
 },
 
 {
-question: "44. The adductor canal transmits all EXCEPT:",
+question: "44. Compression of the median nerve in the cubital fossa may weaken:",
 answers:[
-{text:"A. Femoral artery", correct:false},
-{text:"B. Femoral vein", correct:false},
-{text:"C. Saphenous nerve", correct:false},
-{text:"D. Obturator nerve", correct:true}
+{text:"A. Forearm pronation", correct:true},
+{text:"B. Elbow extension", correct:false},
+{text:"C. Shoulder abduction", correct:false},
+{text:"D. Finger extension", correct:false}
 ]
 },
 
 {
-question: "45. Which bony landmark is palpable on the lateral aspect of the hip?",
+question: "45. The axillary sheath encloses the:",
 answers:[
-{text:"A. Greater trochanter", correct:true},
-{text:"B. Lesser trochanter", correct:false},
-{text:"C. Ischial spine", correct:false},
-{text:"D. Pubic crest", correct:false}
+{text:"A. Axillary artery and brachial plexus", correct:true},
+{text:"B. Axillary vein only", correct:false},
+{text:"C. Cephalic vein", correct:false},
+{text:"D. Deltoid muscle", correct:false}
 ]
 },
 
 {
-question: "46. The intercondylar fossa is located:",
+question: "46. Which muscle forms part of the posterior wall of the axilla but is NOT a rotator cuff muscle?",
 answers:[
-{text:"A. Between the femoral condyles posteriorly", correct:true},
-{text:"B. On the anterior femur", correct:false},
-{text:"C. On the neck of the femur", correct:false},
-{text:"D. On the tibia", correct:false}
+{text:"A. Teres major", correct:true},
+{text:"B. Teres minor", correct:false},
+{text:"C. Infraspinatus", correct:false},
+{text:"D. Subscapularis", correct:false}
 ]
 },
 
 {
-question: "47. Which structure prevents hyperextension of the hip?",
+question: "47. Which artery contributes most to the superficial palmar arch?",
 answers:[
-{text:"A. Iliofemoral ligament", correct:true},
-{text:"B. Ligament of head of femur", correct:false},
-{text:"C. Obturator membrane", correct:false},
-{text:"D. Acetabular labrum", correct:false}
+{text:"A. Ulnar artery", correct:true},
+{text:"B. Radial artery", correct:false},
+{text:"C. Brachial artery", correct:false},
+{text:"D. Interosseous artery", correct:false}
 ]
 },
 
 {
-question: "48. Which muscle is the most superficial adductor muscle?",
+question: "48. The radial artery enters the palm by passing:",
 answers:[
-{text:"A. Adductor longus", correct:true},
-{text:"B. Adductor brevis", correct:false},
-{text:"C. Adductor magnus", correct:false},
-{text:"D. Obturator externus", correct:false}
+{text:"A. Between the first dorsal interosseous muscles", correct:true},
+{text:"B. Through the carpal tunnel", correct:false},
+{text:"C. Deep to pronator teres", correct:false},
+{text:"D. Behind the medial epicondyle", correct:false}
 ]
 },
 
 {
-question: "49. The chief action of the adductor magnus is:",
+question: "49. The commonest site of compression of the brachial artery during blood pressure measurement is:",
 answers:[
-{text:"A. Adduction of the thigh", correct:true},
-{text:"B. Extension of the leg", correct:false},
-{text:"C. Flexion of the foot", correct:false},
-{text:"D. Abduction of the thigh", correct:false}
+{text:"A. Cubital fossa", correct:true},
+{text:"B. Anatomical snuff box", correct:false},
+{text:"C. Axilla", correct:false},
+{text:"D. Carpal tunnel", correct:false}
 ]
 },
 
 {
-question: "50. Injury to the medial circumflex femoral artery may result in:",
+question: "50. Damage to the suprascapular nerve would most directly impair:",
 answers:[
-{text:"A. Avascular necrosis of the femoral head", correct:true},
-{text:"B. Foot drop", correct:false},
-{text:"C. Femoral hernia", correct:false},
-{text:"D. Patellar dislocation", correct:false}
+{text:"A. Initiation of shoulder abduction and lateral rotation", correct:true},
+{text:"B. Flexion of the elbow", correct:false},
+{text:"C. Extension of the wrist", correct:false},
+{text:"D. Flexion of the thumb", correct:false}
 ]
 }
 

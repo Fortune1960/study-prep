@@ -1004,3 +1004,506 @@ answers: [
     ]
 }
 ];
+
+const EXTREME_QUESTIONS = [
+
+{
+question: "Which transmembrane proteins are primarily responsible for forming tight junctions?",
+answers:[
+{text:"Cadherins",correct:false},
+{text:"Claudins and Occludins",correct:true},
+{text:"Integrins",correct:false},
+{text:"Selectins",correct:false}
+]
+},
+
+{
+question: "The major function of tight junctions in epithelial tissue is to:",
+answers:[
+{text:"Increase blood flow",correct:false},
+{text:"Prevent paracellular movement of substances",correct:true},
+{text:"Store glycogen",correct:false},
+{text:"Produce collagen",correct:false}
+]
+},
+
+{
+question: "Tight junctions are also referred to as:",
+answers:[
+{text:"Macula adherens",correct:false},
+{text:"Zonula occludens",correct:true},
+{text:"Gap junctions",correct:false},
+{text:"Hemidesmosomes",correct:false}
+]
+},
+
+{
+question: "Microvilli increase:",
+answers:[
+{text:"Cell division",correct:false},
+{text:"Surface area for absorption",correct:true},
+{text:"Cell thickness",correct:false},
+{text:"Blood supply",correct:false}
+]
+},
+
+{
+question: "The structural core of a microvillus consists mainly of:",
+answers:[
+{text:"Microtubules",correct:false},
+{text:"Intermediate filaments",correct:false},
+{text:"Actin filaments",correct:true},
+{text:"Collagen fibers",correct:false}
+]
+},
+
+{
+question: "Which epithelial tissue typically possesses abundant microvilli?",
+answers:[
+{text:"Simple squamous epithelium",correct:false},
+{text:"Simple cuboidal epithelium of kidney tubules",correct:true},
+{text:"Stratified squamous epithelium",correct:false},
+{text:"Transitional epithelium",correct:false}
+]
+},
+
+{
+question: "Hyaline cartilage contains predominantly which type of collagen?",
+answers:[
+{text:"Type I",correct:false},
+{text:"Type II",correct:true},
+{text:"Type III",correct:false},
+{text:"Type IV",correct:false}
+]
+},
+
+{
+question: "Elastic cartilage differs from hyaline cartilage because it contains:",
+answers:[
+{text:"Reticular fibers",correct:false},
+{text:"Elastic fibers",correct:true},
+{text:"Smooth muscle fibers",correct:false},
+{text:"Dense collagen bundles",correct:false}
+]
+},
+
+{
+question: "Which cartilage is found in the external ear?",
+answers:[
+{text:"Fibrocartilage",correct:false},
+{text:"Elastic cartilage",correct:true},
+{text:"Hyaline cartilage",correct:false},
+{text:"Calcified cartilage",correct:false}
+]
+},
+
+{
+question: "The cells responsible for bone formation are:",
+answers:[
+{text:"Osteoclasts",correct:false},
+{text:"Osteoblasts",correct:true},
+{text:"Osteocytes",correct:false},
+{text:"Chondroblasts",correct:false}
+]
+},
+
+{
+question: "Bone resorption is carried out by:",
+answers:[
+{text:"Osteoblasts",correct:false},
+{text:"Osteocytes",correct:false},
+{text:"Osteoclasts",correct:true},
+{text:"Fibroblasts",correct:false}
+]
+},
+
+{
+question: "Which hormone strongly stimulates osteoclast activity?",
+answers:[
+{text:"Calcitonin",correct:false},
+{text:"Parathyroid hormone",correct:true},
+{text:"Insulin",correct:false},
+{text:"Growth hormone",correct:false}
+]
+},
+
+{
+question: "Connective tissue originates mainly from:",
+answers:[
+{text:"Endoderm",correct:false},
+{text:"Mesoderm",correct:true},
+{text:"Ectoderm",correct:false},
+{text:"Neural crest only",correct:false}
+]
+},
+
+{
+question: "The most abundant cell in connective tissue proper is:",
+answers:[
+{text:"Macrophage",correct:false},
+{text:"Fibroblast",correct:true},
+{text:"Mast cell",correct:false},
+{text:"Plasma cell",correct:false}
+]
+},
+
+{
+question: "Which fibers provide tensile strength in connective tissue?",
+answers:[
+{text:"Elastic fibers",correct:false},
+{text:"Collagen fibers",correct:true},
+{text:"Reticular fibers",correct:false},
+{text:"Smooth muscle fibers",correct:false}
+]
+},
+
+{
+question: "Reticular fibers are mainly composed of:",
+answers:[
+{text:"Type I collagen",correct:false},
+{text:"Type II collagen",correct:false},
+{text:"Type III collagen",correct:true},
+{text:"Type IV collagen",correct:false}
+]
+},
+
+{
+question: "Loose connective tissue is also known as:",
+answers:[
+{text:"Dense regular tissue",correct:false},
+{text:"Areolar tissue",correct:true},
+{text:"Elastic tissue",correct:false},
+{text:"Fibrocartilage",correct:false}
+]
+},
+
+{
+question: "Simple squamous epithelium is specialized mainly for:",
+answers:[
+{text:"Protection",correct:false},
+{text:"Diffusion and filtration",correct:true},
+{text:"Secretion only",correct:false},
+{text:"Support",correct:false}
+]
+},
+
+{
+question: "Which epithelium lines blood vessels?",
+answers:[
+{text:"Simple cuboidal",correct:false},
+{text:"Endothelium",correct:true},
+{text:"Stratified squamous",correct:false},
+{text:"Pseudostratified",correct:false}
+]
+},
+
+{
+question: "Transitional epithelium is primarily found in the:",
+answers:[
+{text:"Small intestine",correct:false},
+{text:"Urinary bladder",correct:true},
+{text:"Trachea",correct:false},
+{text:"Skin",correct:false}
+]
+},
+
+{
+question: "Goblet cells primarily secrete:",
+answers:[
+{text:"Collagen",correct:false},
+{text:"Mucus",correct:true},
+{text:"Keratin",correct:false},
+{text:"Elastin",correct:false}
+]
+},
+
+{
+question: "The basement membrane separates epithelium from:",
+answers:[
+{text:"Bone",correct:false},
+{text:"Connective tissue",correct:true},
+{text:"Blood",correct:false},
+{text:"Muscle",correct:false}
+]
+},
+
+{
+question: "Desmosomes primarily provide:",
+answers:[
+{text:"Selective transport",correct:false},
+{text:"Mechanical attachment between cells",correct:true},
+{text:"Hormone secretion",correct:false},
+{text:"Cell migration",correct:false}
+]
+},
+
+{
+question: "Gap junctions permit:",
+answers:[
+{text:"Protein synthesis",correct:false},
+{text:"Communication between adjacent cells",correct:true},
+{text:"Bone formation",correct:false},
+{text:"Cell death",correct:false}
+]
+},
+
+{
+question: "Which connective tissue cell releases histamine?",
+answers:[
+{text:"Fibroblast",correct:false},
+{text:"Mast cell",correct:true},
+{text:"Macrophage",correct:false},
+{text:"Adipocyte",correct:false}
+]
+},
+
+{
+question: "The Haversian canal primarily contains:",
+answers:[
+{text:"Chondrocytes",correct:false},
+{text:"Blood vessels and nerves",correct:true},
+{text:"Osteoclasts only",correct:false},
+{text:"Yellow bone marrow",correct:false}
+]
+},
+
+{
+question: "The concentric rings surrounding the Haversian canal are called:",
+answers:[
+{text:"Trabeculae",correct:false},
+{text:"Lamellae",correct:true},
+{text:"Canaliculi",correct:false},
+{text:"Lacunae",correct:false}
+]
+},
+
+{
+question: "Osteocytes are located within:",
+answers:[
+{text:"Canaliculi",correct:false},
+{text:"Lacunae",correct:true},
+{text:"Periosteum",correct:false},
+{text:"Lamellae",correct:false}
+]
+},
+
+{
+question: "Bone grows in thickness primarily by:",
+answers:[
+{text:"Interstitial growth",correct:false},
+{text:"Appositional growth",correct:true},
+{text:"Endochondral growth",correct:false},
+{text:"Longitudinal growth",correct:false}
+]
+},
+
+{
+question: "The periosteum is absent over:",
+answers:[
+{text:"Compact bone",correct:false},
+{text:"Articular cartilage",correct:true},
+{text:"Diaphysis",correct:false},
+{text:"Metaphysis",correct:false}
+]
+},
+
+{
+question: "Which stain is most commonly used in routine histology?",
+answers:[
+{text:"PAS stain",correct:false},
+{text:"Hematoxylin and Eosin",correct:true},
+{text:"Masson's Trichrome",correct:false},
+{text:"Silver stain",correct:false}
+]
+},
+
+{
+question: "Hematoxylin stains nuclei:",
+answers:[
+{text:"Pink",correct:false},
+{text:"Blue-purple",correct:true},
+{text:"Yellow",correct:false},
+{text:"Green",correct:false}
+]
+},
+
+{
+question: "Eosin stains the cytoplasm:",
+answers:[
+{text:"Blue",correct:false},
+{text:"Pink",correct:true},
+{text:"Black",correct:false},
+{text:"Purple",correct:false}
+]
+},
+
+{
+question: "Which epithelial tissue is best adapted for rapid diffusion?",
+answers:[
+{text:"Simple squamous",correct:true},
+{text:"Simple cuboidal",correct:false},
+{text:"Simple columnar",correct:false},
+{text:"Stratified cuboidal",correct:false}
+]
+},
+
+{
+question: "Keratinized stratified squamous epithelium is found mainly in the:",
+answers:[
+{text:"Esophagus",correct:false},
+{text:"Skin",correct:true},
+{text:"Urinary bladder",correct:false},
+{text:"Stomach",correct:false}
+]
+},
+
+{
+question: "Non-keratinized stratified squamous epithelium lines the:",
+answers:[
+{text:"Skin",correct:false},
+{text:"Esophagus",correct:true},
+{text:"Kidney",correct:false},
+{text:"Heart",correct:false}
+]
+},
+
+{
+question: "The principal function of cartilage is to:",
+answers:[
+{text:"Produce blood cells",correct:false},
+{text:"Provide support and flexibility",correct:true},
+{text:"Store calcium only",correct:false},
+{text:"Conduct impulses",correct:false}
+]
+},
+
+{
+question: "Which cartilage heals poorly because it lacks blood vessels?",
+answers:[
+{text:"Elastic cartilage",correct:false},
+{text:"All cartilage types",correct:true},
+{text:"Fibrocartilage only",correct:false},
+{text:"Hyaline cartilage only",correct:false}
+]
+},
+
+{
+question: "The matrix of connective tissue consists mainly of:",
+answers:[
+{text:"Cells only",correct:false},
+{text:"Fibers and ground substance",correct:true},
+{text:"Blood plasma",correct:false},
+{text:"Keratin",correct:false}
+]
+},
+
+{
+question: "Which connective tissue cell is specialized for phagocytosis?",
+answers:[
+{text:"Fibroblast",correct:false},
+{text:"Macrophage",correct:true},
+{text:"Mast cell",correct:false},
+{text:"Adipocyte",correct:false}
+]
+},
+
+{
+question: "Adipose tissue is classified as a specialized:",
+answers:[
+{text:"Muscle tissue",correct:false},
+{text:"Connective tissue",correct:true},
+{text:"Epithelial tissue",correct:false},
+{text:"Nervous tissue",correct:false}
+]
+},
+
+{
+question: "The basal lamina is composed mainly of:",
+answers:[
+{text:"Collagen I",correct:false},
+{text:"Collagen IV and laminin",correct:true},
+{text:"Elastic fibers",correct:false},
+{text:"Reticular fibers",correct:false}
+]
+},
+
+{
+question: "Which epithelial tissue is capable of stretching greatly?",
+answers:[
+{text:"Simple cuboidal",correct:false},
+{text:"Transitional epithelium",correct:true},
+{text:"Simple squamous",correct:false},
+{text:"Pseudostratified",correct:false}
+]
+},
+
+{
+question: "The brush border seen in kidney tubules consists of:",
+answers:[
+{text:"Cilia",correct:false},
+{text:"Microvilli",correct:true},
+{text:"Flagella",correct:false},
+{text:"Microtubules",correct:false}
+]
+},
+
+{
+question: "Which junction prevents leakage between adjacent epithelial cells?",
+answers:[
+{text:"Gap junction",correct:false},
+{text:"Tight junction",correct:true},
+{text:"Desmosome",correct:false},
+{text:"Hemidesmosome",correct:false}
+]
+},
+
+{
+question: "Fibrocartilage contains abundant:",
+answers:[
+{text:"Type II collagen only",correct:false},
+{text:"Type I collagen",correct:true},
+{text:"Elastic fibers",correct:false},
+{text:"Reticular fibers",correct:false}
+]
+},
+
+{
+question: "The strongest connective tissue fibers are:",
+answers:[
+{text:"Elastic fibers",correct:false},
+{text:"Collagen fibers",correct:true},
+{text:"Reticular fibers",correct:false},
+{text:"Microfilaments",correct:false}
+]
+},
+
+{
+question: "Which connective tissue stores energy in the body?",
+answers:[
+{text:"Dense connective tissue",correct:false},
+{text:"Adipose tissue",correct:true},
+{text:"Reticular tissue",correct:false},
+{text:"Elastic tissue",correct:false}
+]
+},
+
+{
+question: "The main function of osteoblasts during bone remodeling is to:",
+answers:[
+{text:"Resorb bone matrix",correct:false},
+{text:"Form new bone matrix",correct:true},
+{text:"Store fat",correct:false},
+{text:"Produce cartilage",correct:false}
+]
+},
+
+{
+question: "Which of the following best describes epithelial tissue?",
+answers:[
+{text:"Highly vascular with abundant extracellular matrix",correct:false},
+{text:"Closely packed cells with little extracellular matrix",correct:true},
+{text:"Contains osteocytes in lacunae",correct:false},
+{text:"Made up mainly of collagen fibers",correct:false}
+]
+}
+];
