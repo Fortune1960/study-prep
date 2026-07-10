@@ -1116,7 +1116,7 @@ function saveResult(){
 
     localStorage.setItem(
 
-        "GST101_RESULT",
+        "PHS231_RESULT",
 
         JSON.stringify(result)
 
@@ -1135,7 +1135,7 @@ function loadPreviousResult(){
 
     JSON.parse(
 
-        localStorage.getItem("GST101_RESULT")
+        localStorage.getItem("PHS231_RESULT")
 
     );
 

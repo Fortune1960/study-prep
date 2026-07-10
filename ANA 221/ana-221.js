@@ -1116,7 +1116,7 @@ function saveResult(){
 
     localStorage.setItem(
 
-        "GST101_RESULT",
+        "ANA221_RESULT",
 
         JSON.stringify(result)
 
@@ -1135,7 +1135,7 @@ function loadPreviousResult(){
 
     JSON.parse(
 
-        localStorage.getItem("GST101_RESULT")
+        localStorage.getItem("ANA221_RESULT")
 
     );
 
@@ -1146,29 +1146,6 @@ function loadPreviousResult(){
     }
 
 }
-
-
-/*==============================
-      MODIFY showResult()
-===============================*/
-
-/*
-Add this line inside your
-showResult() function
-immediately before the
-closing brace:
-
-saveResult();
-
-Example:
-
-performanceRemark.textContent =
-"...";
-
-saveResult();
-
-}
-*/
 
 
 /*==============================
