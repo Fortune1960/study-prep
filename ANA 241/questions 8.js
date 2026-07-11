@@ -908,3 +908,458 @@ const hardQuestions = [
 }
 
 ];
+
+const extremeQuestions = [
+
+{
+    question: "1. Which histochemical stain is the gold standard for demonstrating ferric iron in tissue?",
+    answers: [
+        { text: "Perls' Prussian Blue stain", correct: true },
+        { text: "Oil Red O", correct: false },
+        { text: "PAS stain", correct: false },
+        { text: "Sudan Black B", correct: false }
+    ]
+},
+{
+    question: "2. What color does ferric iron appear after Perls' Prussian Blue staining?",
+    answers: [
+        { text: "Bright blue", correct: true },
+        { text: "Bright red", correct: false },
+        { text: "Green", correct: false },
+        { text: "Yellow", correct: false }
+    ]
+},
+{
+    question: "3. Which form of iron is detected by Perls' stain?",
+    answers: [
+        { text: "Ferric iron (Fe³⁺)", correct: true },
+        { text: "Ferrous iron (Fe²⁺)", correct: false },
+        { text: "Metallic iron", correct: false },
+        { text: "Iron phosphate", correct: false }
+    ]
+},
+{
+    question: "4. Why can't Perls' stain detect ferrous iron?",
+    answers: [
+        { text: "The reaction is specific for ferric iron only", correct: true },
+        { text: "Ferrous iron evaporates during staining", correct: false },
+        { text: "Ferrous iron is colorless", correct: false },
+        { text: "Ferrous iron cannot bind dyes", correct: false }
+    ]
+},
+{
+    question: "5. Which organs are most commonly affected by hemosiderosis?",
+    answers: [
+        { text: "Liver and spleen", correct: true },
+        { text: "Brain and spinal cord", correct: false },
+        { text: "Skin and nails", correct: false },
+        { text: "Esophagus and stomach", correct: false }
+    ]
+},
+{
+    question: "6. Hemosiderin is best described as:",
+    answers: [
+        { text: "An intracellular iron-storage pigment", correct: true },
+        { text: "A connective tissue fiber", correct: false },
+        { text: "A lipid pigment", correct: false },
+        { text: "A carbohydrate granule", correct: false }
+    ]
+},
+{
+    question: "7. Which histochemical stain is primarily used to demonstrate glycogen?",
+    answers: [
+        { text: "Periodic Acid-Schiff (PAS)", correct: true },
+        { text: "Ziehl-Neelsen", correct: false },
+        { text: "Perls' stain", correct: false },
+        { text: "Sudan III", correct: false }
+    ]
+},
+{
+    question: "8. PAS-positive structures appear what color?",
+    answers: [
+        { text: "Magenta", correct: true },
+        { text: "Blue", correct: false },
+        { text: "Black", correct: false },
+        { text: "Brown", correct: false }
+    ]
+},
+{
+    question: "9. Which chemical oxidizes carbohydrates during the PAS reaction?",
+    answers: [
+        { text: "Periodic acid", correct: true },
+        { text: "Hydrochloric acid", correct: false },
+        { text: "Nitric acid", correct: false },
+        { text: "Acetic acid", correct: false }
+    ]
+},
+{
+    question: "10. Which reagent reacts with aldehyde groups in PAS staining?",
+    answers: [
+        { text: "Schiff reagent", correct: true },
+        { text: "Eosin", correct: false },
+        { text: "Hematoxylin", correct: false },
+        { text: "Crystal violet", correct: false }
+    ]
+},
+{
+    question: "11. Which enzyme is used to confirm that PAS positivity is due to glycogen?",
+    answers: [
+        { text: "Diastase (amylase)", correct: true },
+        { text: "Lipase", correct: false },
+        { text: "Protease", correct: false },
+        { text: "Catalase", correct: false }
+    ]
+},
+{
+    question: "12. What happens to glycogen after PAS-Diastase treatment?",
+    answers: [
+        { text: "It is digested and disappears", correct: true },
+        { text: "It turns blue", correct: false },
+        { text: "It becomes black", correct: false },
+        { text: "It stains more intensely", correct: false }
+    ]
+},
+{
+    question: "13. Which of the following is PAS-positive?",
+    answers: [
+        { text: "Basement membrane", correct: true },
+        { text: "Elastic fibers", correct: false },
+        { text: "Collagen only", correct: false },
+        { text: "Keratin", correct: false }
+    ]
+},
+{
+    question: "14. Which fixative is preferred for preserving glycogen?",
+    answers: [
+        { text: "Cold alcoholic fixatives", correct: true },
+        { text: "Bouin's solution", correct: false },
+        { text: "Zenker's fixative", correct: false },
+        { text: "Mercuric chloride", correct: false }
+    ]
+},
+{
+    question: "15. The PAS reaction is based on the oxidation of:",
+    answers: [
+        { text: "Vicinal glycol groups into aldehydes", correct: true },
+        { text: "Proteins into ketones", correct: false },
+        { text: "Lipids into fatty acids", correct: false },
+        { text: "DNA into nucleotides", correct: false }
+    ]
+},
+{
+    question: "16. Histochemistry is the study of:",
+    answers: [
+        { text: "Chemical constituents of tissues using specific reactions", correct: true },
+        { text: "Only tissue morphology", correct: false },
+        { text: "Microorganisms in culture", correct: false },
+        { text: "Blood cell counts", correct: false }
+    ]
+},
+{
+    question: "17. Enzyme histochemistry is used to:",
+    answers: [
+        { text: "Demonstrate enzyme activity within tissues", correct: true },
+        { text: "Measure blood enzymes only", correct: false },
+        { text: "Identify bacteria", correct: false },
+        { text: "Determine blood group", correct: false }
+    ]
+},
+{
+    question: "18. Why are frozen sections preferred for enzyme histochemistry?",
+    answers: [
+        { text: "They preserve enzyme activity", correct: true },
+        { text: "They are easier to stain", correct: false },
+        { text: "They are cheaper than paraffin sections", correct: false },
+        { text: "They produce permanent slides immediately", correct: false }
+    ]
+},
+{
+    question: "19. Paraffin processing is generally unsuitable for enzyme histochemistry because:",
+    answers: [
+        { text: "It destroys enzyme activity", correct: true },
+        { text: "It stains tissues blue", correct: false },
+        { text: "It increases enzyme concentration", correct: false },
+        { text: "It prevents fixation", correct: false }
+    ]
+},
+{
+    question: "20. Which enzyme is commonly used as a marker for lysosomes?",
+    answers: [
+        { text: "Acid phosphatase", correct: true },
+        { text: "Lipase", correct: false },
+        { text: "Amylase", correct: false },
+        { text: "Trypsin", correct: false }
+    ]
+},
+{
+    question: "21. Which enzyme is commonly used to demonstrate plasma membranes?",
+    answers: [
+        { text: "Alkaline phosphatase", correct: true },
+        { text: "Pepsin", correct: false },
+        { text: "Urease", correct: false },
+        { text: "DNA polymerase", correct: false }
+    ]
+},
+{
+    question: "22. Which enzyme is useful for identifying muscle fiber types histochemically?",
+    answers: [
+        { text: "ATPase", correct: true },
+        { text: "Catalase", correct: false },
+        { text: "Lactase", correct: false },
+        { text: "Lipoprotein lipase", correct: false }
+    ]
+},
+{
+    question: "23. Succinate dehydrogenase is mainly used to demonstrate:",
+    answers: [
+        { text: "Mitochondria", correct: true },
+        { text: "Nucleus", correct: false },
+        { text: "Golgi apparatus", correct: false },
+        { text: "Cell membrane", correct: false }
+    ]
+},
+{
+    question: "24. What is the purpose of incubating tissue sections during enzyme histochemistry?",
+    answers: [
+        { text: "To allow enzymes to react with their substrates", correct: true },
+        { text: "To dissolve the tissue", correct: false },
+        { text: "To remove the nucleus", correct: false },
+        { text: "To fix the tissue permanently", correct: false }
+    ]
+},
+{
+    question: "25. The final visible result of most enzyme histochemical reactions is:",
+    answers: [
+        { text: "An insoluble colored precipitate", correct: true },
+        { text: "A gas bubble", correct: false },
+        { text: "A fluorescent liquid", correct: false },
+        { text: "Complete tissue dissolution", correct: false }
+    ]
+},
+
+{
+    question: "26. What is radioautography?",
+    answers: [
+        { text: "A technique for localizing radioactive substances in tissues", correct: true },
+        { text: "A method for staining connective tissue", correct: false },
+        { text: "A procedure for culturing bacteria", correct: false },
+        { text: "A method for measuring blood glucose", correct: false }
+    ]
+},
+{
+    question: "27. Which of the following is a radioautography technique?",
+    answers: [
+        { text: "Dipping method", correct: true },
+        { text: "Gram staining", correct: false },
+        { text: "Ziehl-Neelsen staining", correct: false },
+        { text: "Feulgen reaction", correct: false }
+    ]
+},
+{
+    question: "28. Which radioactive isotope is commonly used to study DNA synthesis?",
+    answers: [
+        { text: "Tritium (³H)-thymidine", correct: true },
+        { text: "Carbon-14 glucose", correct: false },
+        { text: "Iodine-131", correct: false },
+        { text: "Phosphorus-30", correct: false }
+    ]
+},
+{
+    question: "29. What is the purpose of photographic emulsion in autoradiography?",
+    answers: [
+        { text: "To detect radiation emitted from radioactive isotopes", correct: true },
+        { text: "To preserve tissue proteins", correct: false },
+        { text: "To dissolve lipids", correct: false },
+        { text: "To stain nuclei blue", correct: false }
+    ]
+},
+{
+    question: "30. In autoradiography, silver grains indicate:",
+    answers: [
+        { text: "Sites of radioactive emissions", correct: true },
+        { text: "Areas of lipid accumulation", correct: false },
+        { text: "Collagen fibers", correct: false },
+        { text: "Glycogen deposits", correct: false }
+    ]
+},
+{
+    question: "31. Immunohistochemistry is primarily used to:",
+    answers: [
+        { text: "Detect specific antigens in tissue sections", correct: true },
+        { text: "Measure blood pH", correct: false },
+        { text: "Determine blood group", correct: false },
+        { text: "Culture microorganisms", correct: false }
+    ]
+},
+{
+    question: "32. Which antibody binds directly to the tissue antigen?",
+    answers: [
+        { text: "Primary antibody", correct: true },
+        { text: "Secondary antibody", correct: false },
+        { text: "Monoclonal enzyme", correct: false },
+        { text: "Complement antibody", correct: false }
+    ]
+},
+{
+    question: "33. The secondary antibody in immunohistochemistry binds to:",
+    answers: [
+        { text: "The primary antibody", correct: true },
+        { text: "The antigen directly", correct: false },
+        { text: "The tissue nucleus", correct: false },
+        { text: "DNA molecules", correct: false }
+    ]
+},
+{
+    question: "34. Which enzyme is most commonly used as a label in immunohistochemistry?",
+    answers: [
+        { text: "Horseradish peroxidase (HRP)", correct: true },
+        { text: "Lipase", correct: false },
+        { text: "Pepsin", correct: false },
+        { text: "Catalase", correct: false }
+    ]
+},
+{
+    question: "35. Which chromogen produces a brown reaction product in immunohistochemistry?",
+    answers: [
+        { text: "DAB (Diaminobenzidine)", correct: true },
+        { text: "Eosin", correct: false },
+        { text: "Methylene blue", correct: false },
+        { text: "Sudan IV", correct: false }
+    ]
+},
+{
+    question: "36. Antigen retrieval is performed to:",
+    answers: [
+        { text: "Unmask antigenic sites after fixation", correct: true },
+        { text: "Destroy antibodies", correct: false },
+        { text: "Remove lipids", correct: false },
+        { text: "Digest collagen fibers", correct: false }
+    ]
+},
+{
+    question: "37. Which of the following is an antigen retrieval method?",
+    answers: [
+        { text: "Heat-induced epitope retrieval", correct: true },
+        { text: "Gram staining", correct: false },
+        { text: "Acid-fast staining", correct: false },
+        { text: "Romanowsky staining", correct: false }
+    ]
+},
+{
+    question: "38. The antigen-antibody reaction is best described as:",
+    answers: [
+        { text: "A specific binding between an antigen and its corresponding antibody", correct: true },
+        { text: "A nonspecific protein precipitation", correct: false },
+        { text: "A lipid-carbohydrate interaction", correct: false },
+        { text: "A DNA-RNA hybridization", correct: false }
+    ]
+},
+{
+    question: "39. Which of the following methods detects antigen-antibody reactions?",
+    answers: [
+        { text: "ELISA", correct: true },
+        { text: "Gram stain", correct: false },
+        { text: "Perls' stain", correct: false },
+        { text: "Oil Red O", correct: false }
+    ]
+},
+{
+    question: "40. A lysochrome is:",
+    answers: [
+        { text: "A fat-soluble dye used for lipid staining", correct: true },
+        { text: "A nuclear stain", correct: false },
+        { text: "A bacterial stain", correct: false },
+        { text: "An enzyme substrate", correct: false }
+    ]
+},
+{
+    question: "41. Which of the following is a lipid stain?",
+    answers: [
+        { text: "Oil Red O", correct: true },
+        { text: "PAS", correct: false },
+        { text: "Perls' stain", correct: false },
+        { text: "Feulgen stain", correct: false }
+    ]
+},
+{
+    question: "42. Oil Red O is mainly used to stain:",
+    answers: [
+        { text: "Neutral fats and lipids", correct: true },
+        { text: "Iron deposits", correct: false },
+        { text: "DNA", correct: false },
+        { text: "Collagen fibers", correct: false }
+    ]
+},
+{
+    question: "43. Which type of tissue section is preferred for lipid staining?",
+    answers: [
+        { text: "Frozen section", correct: true },
+        { text: "Paraffin section", correct: false },
+        { text: "Plastic section", correct: false },
+        { text: "Cell smear", correct: false }
+    ]
+},
+{
+    question: "44. Why are lipids usually lost during paraffin processing?",
+    answers: [
+        { text: "Organic solvents dissolve them", correct: true },
+        { text: "Heat converts them into proteins", correct: false },
+        { text: "Fixatives stain them blue", correct: false },
+        { text: "Lipids evaporate naturally", correct: false }
+    ]
+},
+{
+    question: "45. Which principle is fundamental to histochemical reactions?",
+    answers: [
+        { text: "Specific chemical reactions occur at the site of the target substance", correct: true },
+        { text: "All tissues stain the same way", correct: false },
+        { text: "Only proteins can be demonstrated", correct: false },
+        { text: "Chemical reactions occur outside the tissue", correct: false }
+    ]
+},
+{
+    question: "46. Why is fixation important in histochemistry?",
+    answers: [
+        { text: "It preserves tissue morphology and prevents degradation", correct: true },
+        { text: "It removes all proteins", correct: false },
+        { text: "It dissolves connective tissue", correct: false },
+        { text: "It increases enzyme activity", correct: false }
+    ]
+},
+{
+    question: "47. The primary purpose of using controls in histochemistry is to:",
+    answers: [
+        { text: "Validate staining specificity and accuracy", correct: true },
+        { text: "Reduce staining time", correct: false },
+        { text: "Replace tissue fixation", correct: false },
+        { text: "Increase tissue thickness", correct: false }
+    ]
+},
+{
+    question: "48. A positive control is:",
+    answers: [
+        { text: "A tissue known to contain the target substance", correct: true },
+        { text: "A tissue without the target substance", correct: false },
+        { text: "An unstained tissue section", correct: false },
+        { text: "A damaged tissue sample", correct: false }
+    ]
+},
+{
+    question: "49. A negative control is:",
+    answers: [
+        { text: "A tissue or procedure lacking the target substance or primary reagent", correct: true },
+        { text: "A tissue rich in the target substance", correct: false },
+        { text: "A frozen tissue section", correct: false },
+        { text: "A tissue stained with PAS", correct: false }
+    ]
+},
+{
+    question: "50. The major advantage of histochemistry is its ability to:",
+    answers: [
+        { text: "Localize specific chemical substances within tissues", correct: true },
+        { text: "Replace all biochemical tests", correct: false },
+        { text: "Visualize viruses without stains", correct: false },
+        { text: "Measure blood glucose directly", correct: false }
+    ]
+}
+];
