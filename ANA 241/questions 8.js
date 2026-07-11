@@ -1,4 +1,4 @@
-const easyQuestions = [
+const EASY_QUESTIONS = [
 
 {
     question: "1. Histochemistry is the study of:",
@@ -454,7 +454,7 @@ const easyQuestions = [
 
 ];
 
-const hardQuestions = [
+const HARD_QUESTIONS = [
 
 {
     question: "1. Which statement best distinguishes Histochemistry from Cytochemistry?",
@@ -909,7 +909,7 @@ const hardQuestions = [
 
 ];
 
-const extremeQuestions = [
+const EXTREME_QUESTIONS = [
 
 {
     question: "1. Which histochemical stain is the gold standard for demonstrating ferric iron in tissue?",

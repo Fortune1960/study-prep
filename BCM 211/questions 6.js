@@ -501,7 +501,7 @@ const easyQuestions = [
 }
 ];
 
-const hardQuestions = [
+const HARD_QUESTIONS = [
 
 {
     question: "A 5% v/v solution is prepared by:",
@@ -1004,7 +1004,7 @@ const hardQuestions = [
 }
 ];
 
-const extremeQuestions = [
+const EXTREME_QUESTIONS = [
 
 {
     question: "Using the Henderson–Hasselbalch equation, if pH = 4.30 and pKa = 3.74, the ratio [HCO₃⁻]/[H₂CO₃] is approximately:",
