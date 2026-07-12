@@ -1,4 +1,4 @@
-const easyQuestions = [
+const EASY_QUESTIONS = [
 
 {
     question: "The end products of carbohydrate digestion are mainly:",
@@ -502,7 +502,7 @@ const easyQuestions = [
 
 ];
 
-const hardQuestions = [
+const HARD_QUESTIONS = [
 
 {
     question: "Which glycolytic enzyme is the major rate-limiting enzyme of glycolysis?",
@@ -1008,7 +1008,7 @@ const hardQuestions = [
 
 // ================= EXTREME STAGE (1-25) =================
 
-const extremeQuestions = [
+const EXTREME_QUESTIONS = [
 
 {
     question: "1. The cyclization of D-ribose occurs when which carbon atom reacts with the aldehyde carbon?",

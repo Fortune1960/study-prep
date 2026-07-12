@@ -1,4 +1,4 @@
-const easyQuestions = [
+const EASY_QUESTIONS = [
 
 {
     question: "What does BCM stand for in medical sciences?",
