@@ -751,7 +751,6 @@ const HARD_QUESTIONS = [
         { text: "Temporal cortex", correct: false }
     ]
 },
-
 {
     question: "The tract responsible for carrying pain and temperature sensations is:",
     answers: [
@@ -999,6 +998,508 @@ const HARD_QUESTIONS = [
         { text: "Diffusion increases with greater pressure difference", correct: true },
         { text: "Diffusion is independent of membrane thickness", correct: false },
         { text: "Diffusion occurs only in the lungs", correct: false }
+    ]
+}
+];
+
+const EXTREME_QUESTIONS = [
+
+{
+    question: "Which neuroglial cell is responsible for the formation of myelin in the central nervous system?",
+    answers: [
+        { text: "Schwann cell", correct: false },
+        { text: "Astrocyte", correct: false },
+        { text: "Oligodendrocyte", correct: true },
+        { text: "Microglia", correct: false }
+    ]
+},
+
+{
+    question: "The myelin sheath of peripheral nerves is produced by:",
+    answers: [
+        { text: "Microglia", correct: false },
+        { text: "Schwann cells", correct: true },
+        { text: "Astrocytes", correct: false },
+        { text: "Oligodendrocytes", correct: false }
+    ]
+},
+
+{
+    question: "Which neuroglial cell functions primarily as the macrophage of the CNS?",
+    answers: [
+        { text: "Astrocyte", correct: false },
+        { text: "Ependymal cell", correct: false },
+        { text: "Microglia", correct: true },
+        { text: "Schwann cell", correct: false }
+    ]
+},
+
+{
+    question: "Ependymal cells are mainly involved in:",
+    answers: [
+        { text: "Formation of myelin", correct: false },
+        { text: "Production and circulation of CSF", correct: true },
+        { text: "Transmission of impulses", correct: false },
+        { text: "Phagocytosis", correct: false }
+    ]
+},
+
+{
+    question: "The afferent neuron of a reflex arc carries impulses:",
+    answers: [
+        { text: "Away from the CNS", correct: false },
+        { text: "Toward the CNS", correct: true },
+        { text: "Between muscles", correct: false },
+        { text: "From glands only", correct: false }
+    ]
+},
+
+{
+    question: "The cell bodies of sensory neurons are located in the:",
+    answers: [
+        { text: "Anterior horn", correct: false },
+        { text: "Posterior horn", correct: false },
+        { text: "Dorsal root ganglion", correct: true },
+        { text: "Thalamus", correct: false }
+    ]
+},
+
+{
+    question: "Upper motor neurons originate primarily from the:",
+    answers: [
+        { text: "Anterior horn", correct: false },
+        { text: "Primary motor cortex", correct: true },
+        { text: "Basal ganglia", correct: false },
+        { text: "Cerebellum", correct: false }
+    ]
+},
+
+{
+    question: "The cell bodies of lower motor neurons are found in the:",
+    answers: [
+        { text: "Cerebral cortex", correct: false },
+        { text: "Anterior horn of the spinal cord", correct: true },
+        { text: "Posterior horn", correct: false },
+        { text: "Thalamus", correct: false }
+    ]
+},
+
+{
+    question: "The corticospinal tract is primarily responsible for:",
+    answers: [
+        { text: "Vision", correct: false },
+        { text: "Voluntary motor control", correct: true },
+        { text: "Balance", correct: false },
+        { text: "Pain sensation", correct: false }
+    ]
+},
+
+{
+    question: "Most corticospinal fibers decussate at the:",
+    answers: [
+        { text: "Midbrain", correct: false },
+        { text: "Pons", correct: false },
+        { text: "Pyramids of the medulla", correct: true },
+        { text: "Spinal cord", correct: false }
+    ]
+},
+
+{
+    question: "The anterolateral system mainly transmits:",
+    answers: [
+        { text: "Fine touch", correct: false },
+        { text: "Pain and temperature", correct: true },
+        { text: "Vision", correct: false },
+        { text: "Motor impulses", correct: false }
+    ]
+},
+
+{
+    question: "The first relay station for most sensory information is the:",
+    answers: [
+        { text: "Hypothalamus", correct: false },
+        { text: "Thalamus", correct: true },
+        { text: "Cerebellum", correct: false },
+        { text: "Pons", correct: false }
+    ]
+},
+
+{
+    question: "Which Brodmann area corresponds to the primary motor cortex?",
+    answers: [
+        { text: "Areas 17", correct: false },
+        { text: "Areas 3,1,2", correct: false },
+        { text: "Area 4", correct: true },
+        { text: "Area 22", correct: false }
+    ]
+},
+
+{
+    question: "The primary somatosensory cortex corresponds to Brodmann areas:",
+    answers: [
+        { text: "4", correct: false },
+        { text: "3, 1 and 2", correct: true },
+        { text: "17", correct: false },
+        { text: "44", correct: false }
+    ]
+},
+
+{
+    question: "The primary visual cortex is located in the:",
+    answers: [
+        { text: "Frontal lobe", correct: false },
+        { text: "Parietal lobe", correct: false },
+        { text: "Occipital lobe", correct: true },
+        { text: "Temporal lobe", correct: false }
+    ]
+},
+
+{
+    question: "Broca's speech area is usually found in the:",
+    answers: [
+        { text: "Dominant frontal lobe", correct: true },
+        { text: "Occipital lobe", correct: false },
+        { text: "Cerebellum", correct: false },
+        { text: "Medulla", correct: false }
+    ]
+},
+
+{
+    question: "The embryonic brain develops from how many primary brain vesicles?",
+    answers: [
+        { text: "Two", correct: false },
+        { text: "Three", correct: true },
+        { text: "Four", correct: false },
+        { text: "Five", correct: false }
+    ]
+},
+
+{
+    question: "The cerebrum develops from the:",
+    answers: [
+        { text: "Mesencephalon", correct: false },
+        { text: "Telencephalon", correct: true },
+        { text: "Metencephalon", correct: false },
+        { text: "Myelencephalon", correct: false }
+    ]
+},
+
+{
+    question: "The pons and cerebellum develop from the:",
+    answers: [
+        { text: "Metencephalon", correct: true },
+        { text: "Telencephalon", correct: false },
+        { text: "Mesencephalon", correct: false },
+        { text: "Diencephalon", correct: false }
+    ]
+},
+
+{
+    question: "The medulla oblongata develops from the:",
+    answers: [
+        { text: "Myelencephalon", correct: true },
+        { text: "Mesencephalon", correct: false },
+        { text: "Diencephalon", correct: false },
+        { text: "Telencephalon", correct: false }
+    ]
+},
+
+{
+    question: "During quiet inspiration, the principal muscle responsible is the:",
+    answers: [
+        { text: "External intercostal", correct: false },
+        { text: "Diaphragm", correct: true },
+        { text: "Internal intercostal", correct: false },
+        { text: "Abdominal muscles", correct: false }
+    ]
+},
+
+{
+    question: "The normal stimulus for breathing is an increase in:",
+    answers: [
+        { text: "Blood oxygen", correct: false },
+        { text: "Carbon dioxide concentration", correct: true },
+        { text: "Nitrogen concentration", correct: false },
+        { text: "Blood glucose", correct: false }
+    ]
+},
+
+{
+    question: "The respiratory center is primarily located in the:",
+    answers: [
+        { text: "Thalamus", correct: false },
+        { text: "Brainstem", correct: true },
+        { text: "Cerebrum", correct: false },
+        { text: "Basal ganglia", correct: false }
+    ]
+},
+
+{
+    question: "Spirometry is primarily used to assess:",
+    answers: [
+        { text: "Blood pressure", correct: false },
+        { text: "Lung function", correct: true },
+        { text: "Heart sounds", correct: false },
+        { text: "Blood glucose", correct: false }
+    ]
+},
+
+{
+    question: "Which spirometric parameter is most useful in diagnosing obstructive lung disease?",
+    answers: [
+        { text: "FEV1/FVC ratio", correct: true },
+        { text: "Residual volume", correct: false },
+        { text: "Cardiac output", correct: false },
+        { text: "Blood pH", correct: false }
+    ]
+},
+{
+    question: "The medullary respiratory center is located in the:",
+    answers: [
+        { text: "Medulla oblongata", correct: true },
+        { text: "Midbrain", correct: false },
+        { text: "Hypothalamus", correct: false },
+        { text: "Cerebellum", correct: false }
+    ]
+},
+
+{
+    question: "The dorsal respiratory group (DRG) primarily controls:",
+    answers: [
+        { text: "Inspiration", correct: true },
+        { text: "Expiration", correct: false },
+        { text: "Heart rate", correct: false },
+        { text: "Blood pressure", correct: false }
+    ]
+},
+
+{
+    question: "Which respiratory center becomes active mainly during forced expiration?",
+    answers: [
+        { text: "Ventral respiratory group", correct: true },
+        { text: "Dorsal respiratory group", correct: false },
+        { text: "Apneustic center", correct: false },
+        { text: "Pneumotaxic center", correct: false }
+    ]
+},
+
+{
+    question: "The corticospinal tract originates mainly from which cerebral region?",
+    answers: [
+        { text: "Primary motor cortex", correct: true },
+        { text: "Visual cortex", correct: false },
+        { text: "Auditory cortex", correct: false },
+        { text: "Occipital cortex", correct: false }
+    ]
+},
+
+{
+    question: "The corticospinal tract decussates mainly at the:",
+    answers: [
+        { text: "Pyramids of the medulla", correct: true },
+        { text: "Midbrain", correct: false },
+        { text: "Pons", correct: false },
+        { text: "Thalamus", correct: false }
+    ]
+},
+
+{
+    question: "The lateral corticospinal tract mainly controls:",
+    answers: [
+        { text: "Fine voluntary movement of distal limbs", correct: true },
+        { text: "Vision", correct: false },
+        { text: "Balance", correct: false },
+        { text: "Hearing", correct: false }
+    ]
+},
+
+{
+    question: "The spinothalamic tract transmits:",
+    answers: [
+        { text: "Pain and temperature", correct: true },
+        { text: "Vision", correct: false },
+        { text: "Smell", correct: false },
+        { text: "Taste", correct: false }
+    ]
+},
+
+{
+    question: "Which tract carries proprioception and vibration sensation?",
+    answers: [
+        { text: "Dorsal column-medial lemniscus pathway", correct: true },
+        { text: "Spinothalamic tract", correct: false },
+        { text: "Spinocerebellar tract", correct: false },
+        { text: "Vestibulospinal tract", correct: false }
+    ]
+},
+
+{
+    question: "The upper motor neuron cell body is located in the:",
+    answers: [
+        { text: "Cerebral cortex", correct: true },
+        { text: "Anterior horn", correct: false },
+        { text: "Dorsal root ganglion", correct: false },
+        { text: "Peripheral nerve", correct: false }
+    ]
+},
+
+{
+    question: "Lower motor neuron cell bodies are found in the:",
+    answers: [
+        { text: "Anterior horn of spinal cord", correct: true },
+        { text: "Posterior horn", correct: false },
+        { text: "Thalamus", correct: false },
+        { text: "Cerebellum", correct: false }
+    ]
+},
+
+{
+    question: "Damage to upper motor neurons commonly produces:",
+    answers: [
+        { text: "Spastic paralysis", correct: true },
+        { text: "Flaccid paralysis", correct: false },
+        { text: "Muscle atrophy only", correct: false },
+        { text: "Loss of sensation only", correct: false }
+    ]
+},
+
+{
+    question: "Damage to lower motor neurons typically results in:",
+    answers: [
+        { text: "Flaccid paralysis", correct: true },
+        { text: "Spastic paralysis", correct: false },
+        { text: "Hyperreflexia", correct: false },
+        { text: "Positive Babinski sign", correct: false }
+    ]
+},
+
+{
+    question: "The major neurotransmitter released at the neuromuscular junction is:",
+    answers: [
+        { text: "Acetylcholine", correct: true },
+        { text: "Dopamine", correct: false },
+        { text: "Serotonin", correct: false },
+        { text: "Norepinephrine", correct: false }
+    ]
+},
+
+{
+    question: "Spirometry cannot directly measure:",
+    answers: [
+        { text: "Residual volume", correct: true },
+        { text: "Vital capacity", correct: false },
+        { text: "Tidal volume", correct: false },
+        { text: "Inspiratory reserve volume", correct: false }
+    ]
+},
+
+{
+    question: "FEV1 is most useful in assessing:",
+    answers: [
+        { text: "Airway obstruction", correct: true },
+        { text: "Bone density", correct: false },
+        { text: "Blood glucose", correct: false },
+        { text: "Kidney function", correct: false }
+    ]
+},
+
+{
+    question: "A reduced FEV1/FVC ratio is characteristic of:",
+    answers: [
+        { text: "Obstructive lung disease", correct: true },
+        { text: "Restrictive lung disease only", correct: false },
+        { text: "Anemia", correct: false },
+        { text: "Hypertension", correct: false }
+    ]
+},
+
+{
+    question: "Pulmonary ventilation refers to:",
+    answers: [
+        { text: "Movement of air into and out of the lungs", correct: true },
+        { text: "Movement of blood through lungs", correct: false },
+        { text: "Diffusion of oxygen into tissues", correct: false },
+        { text: "Transport of oxygen by hemoglobin", correct: false }
+    ]
+},
+
+{
+    question: "The main function of surfactant is to:",
+    answers: [
+        { text: "Reduce alveolar surface tension", correct: true },
+        { text: "Increase mucus secretion", correct: false },
+        { text: "Stimulate coughing", correct: false },
+        { text: "Increase blood pressure", correct: false }
+    ]
+},
+
+{
+    question: "Which autonomic division generally causes bronchodilation?",
+    answers: [
+        { text: "Sympathetic nervous system", correct: true },
+        { text: "Parasympathetic nervous system", correct: false },
+        { text: "Enteric nervous system", correct: false },
+        { text: "Somatic nervous system", correct: false }
+    ]
+},
+
+{
+    question: "Parasympathetic stimulation of the respiratory tract causes:",
+    answers: [
+        { text: "Bronchoconstriction", correct: true },
+        { text: "Bronchodilation", correct: false },
+        { text: "Decreased mucus secretion", correct: false },
+        { text: "Complete cessation of breathing", correct: false }
+    ]
+},
+
+{
+    question: "The vagus nerve provides most parasympathetic innervation to the:",
+    answers: [
+        { text: "Respiratory tract", correct: true },
+        { text: "Retina", correct: false },
+        { text: "Skeletal muscles", correct: false },
+        { text: "Bone marrow", correct: false }
+    ]
+},
+
+{
+    question: "The principal stimulus for breathing under normal conditions is increased:",
+    answers: [
+        { text: "Carbon dioxide concentration", correct: true },
+        { text: "Oxygen concentration", correct: false },
+        { text: "Nitrogen concentration", correct: false },
+        { text: "Blood glucose", correct: false }
+    ]
+},
+
+{
+    question: "The blood-brain barrier is formed mainly by:",
+    answers: [
+        { text: "Capillary endothelial cells with tight junctions", correct: true },
+        { text: "Neurons only", correct: false },
+        { text: "Oligodendrocytes", correct: false },
+        { text: "Microglia only", correct: false }
+    ]
+},
+
+{
+    question: "The myelin sheath in the peripheral nervous system is produced by:",
+    answers: [
+        { text: "Schwann cells", correct: true },
+        { text: "Oligodendrocytes", correct: false },
+        { text: "Astrocytes", correct: false },
+        { text: "Microglia", correct: false }
+    ]
+},
+
+{
+    question: "According to Fick's law, diffusion of gases increases with:",
+    answers: [
+        { text: "Greater surface area and pressure gradient", correct: true },
+        { text: "Thicker respiratory membrane", correct: false },
+        { text: "Lower pressure gradient", correct: false },
+        { text: "Reduced alveolar surface area", correct: false }
     ]
 }
 ];
