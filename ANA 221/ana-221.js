@@ -157,6 +157,8 @@ function initializeExam() {
 
     summaryTotal.textContent = QUESTIONS.length;
 
+    QUESTIONS = [...QUESTIONS].sort(() => Math.random() - 0.5);
+
     createPalette();
 
     updateSummary();
@@ -267,6 +269,8 @@ function selectAnswer(index){
 
     updatePalette();
 
+    updateProgress();
+
 }
 
 
@@ -296,12 +300,13 @@ function restoreAnswer(){
 
 function updateProgress(){
 
-    let percentage =
+    const answered =
+        userAnswers.filter(answer => answer !== undefined).length;
 
-    ((currentIndex + 1) / QUESTIONS.length) * 100;
+    const percentage =
+        (answered / QUESTIONS.length) * 100;
 
     progressBar.style.width = percentage + "%";
-
 }
 
 
@@ -387,15 +392,20 @@ function updatePalette(){
 
 nextBtn.addEventListener("click", function(){
 
-    if(currentIndex < QUESTIONS.length - 1){
+    // If this is the last question
+    if(currentIndex === QUESTIONS.length - 1){
 
-        currentIndex++;
-
-        loadQuestion();
-
-        scrollToTop();
+        submitBtn.click(); // Opens the submit confirmation
+        return;
 
     }
+
+    // Otherwise go to the next question
+    currentIndex++;
+
+    loadQuestion();
+
+    scrollToTop();
 
 });
 
@@ -425,24 +435,27 @@ prevBtn.addEventListener("click", function(){
 
 function updateNavigationButtons(){
 
-    if(currentIndex === 0){
+    // Previous button
+    prevBtn.disabled = currentIndex === 0;
 
-        prevBtn.disabled = true;
-
-    }else{
-
-        prevBtn.disabled = false;
-
-    }
-
+    // Last question
     if(currentIndex === QUESTIONS.length - 1){
 
-        nextBtn.disabled = true;
+        nextBtn.innerHTML = `
+            Submit Test <i class="fas fa-paper-plane"></i>
+        `;
+
+        // Hide the normal submit button
+        submitBtn.style.display = "none";
 
     }else{
 
-        nextBtn.disabled = false;
+        nextBtn.innerHTML = `
+            Next <i class="fas fa-arrow-right"></i>
+        `;
 
+        // Show it on other questions
+        submitBtn.style.display = "block";
     }
 
 }
@@ -1012,22 +1025,26 @@ function showReview(){
 
             }
 
-            if(userAnswers[index] === answerIndex){
+           if(userAnswers[index] === answerIndex){
 
-                html +=
-                "<div class='review-answer " + className + "'>" +
-                "&#10004; " + answer.text +
-                "</div>";
+    // Student selected this answer
 
-            }
-            else{
+    let icon = answer.correct ? "&#10004;" : "&#10008;";
 
-                html +=
-                "<div class='review-answer " + className + "'>" +
-                answer.text +
-                "</div>";
+    html +=
+    "<div class='review-answer " + className + "'>" +
+    icon + " " + answer.text +
+    "</div>";
 
-            }
+}
+else{
+
+    html +=
+    "<div class='review-answer " + className + "'>" +
+    answer.text +
+    "</div>";
+
+}
 
         });
 
