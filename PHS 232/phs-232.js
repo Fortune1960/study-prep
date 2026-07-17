@@ -76,6 +76,8 @@ const cancelSubmit = document.getElementById("cancelSubmit");
 
 let QUESTIONS = [];
 
+let shuffledQuestions = [];
+
 let currentIndex = 0;
 
 let selectedStage = "";
@@ -163,7 +165,10 @@ function initializeExam() {
 
     summaryTotal.textContent = QUESTIONS.length;
 
-    QUESTIONS = [...QUESTIONS].sort(() => Math.random() - 0.5);
+    // Shuffle only once
+shuffledQuestions = [...QUESTIONS].sort(() => Math.random() - 0.5);
+
+QUESTIONS = shuffledQuestions;
 
     createQuestionSelector();
 
@@ -271,10 +276,11 @@ function selectAnswer(index){
 
     buttons[index].classList.add("selected");
 
-    updateSummary();
+   updateSummary();
 
 updateProgress();
 
+saveProgress();
 }
 
 
@@ -343,6 +349,8 @@ nextBtn.addEventListener("click", function () {
 
     currentIndex++;
 
+    saveProgress();
+
     console.log("After Next:", currentIndex);
 
     loadQuestion();
@@ -362,6 +370,8 @@ prevBtn.addEventListener("click", function(){
     if(currentIndex > 0){
 
         currentIndex--;
+
+        saveProgress();
 
         loadQuestion();
 
@@ -536,23 +546,25 @@ function startTimer(){
 
     updateTimer();
 
-    timer = setInterval(function(){
+   timer = setInterval(function(){
 
-        timeLeft--;
+    timeLeft--;
 
-        updateTimer();
+    updateTimer();
 
-        if(timeLeft <= 0){
+    saveProgress();
 
-            clearInterval(timer);
+    if(timeLeft <= 0){
 
-            alert("Time is up! Your exam will now be submitted.");
+        clearInterval(timer);
 
-            submitExam();
+        alert("Time is up!");
 
-        }
+        submitExam();
 
-    },1000);
+    }
+
+},1000);
 
 }
 
@@ -793,6 +805,9 @@ function submitExam(){
 
     showResult();
 
+    localStorage.removeItem("PHS232_PROGRESS"); 
+
+
 }
 
 
@@ -1027,6 +1042,8 @@ restartBtn.addEventListener("click", function(){
 
         userAnswers = [];
 
+        localStorage.removeItem("PHS232_PROGRESS");
+
         resultScreen.style.display = "none";
 
         reviewScreen.style.display = "none";
@@ -1076,9 +1093,35 @@ function saveResult(){
 
     localStorage.setItem(
 
-        "PHS242_RESULT",
+        "PHS232_RESULT",
 
         JSON.stringify(result)
+
+    );
+
+}
+
+function saveProgress(){
+
+    const progress = {
+
+        stage: selectedStage,
+
+        currentIndex: currentIndex,
+
+        userAnswers: userAnswers,
+
+        timeLeft: timeLeft,
+
+        shuffledQuestions: QUESTIONS
+
+    };
+
+    localStorage.setItem(
+
+        "PHS232_PROGRESS",
+
+        JSON.stringify(progress)
 
     );
 
@@ -1089,40 +1132,79 @@ function saveResult(){
       LOAD PREVIOUS RESULT
 ===============================*/
 
-function loadPreviousResult(){
+function loadProgress(){
 
-    const result =
+    const progress = JSON.parse(
 
-    JSON.parse(
-
-        localStorage.getItem("PHS242_RESULT")
+        localStorage.getItem("PHS232_PROGRESS")
 
     );
 
-    if(result){
+    if(!progress) return;
 
-        console.log(result);
+    selectedStage = progress.stage;
 
-    }
+    userAnswers = progress.userAnswers || [];
+
+    currentIndex = progress.currentIndex || 0;
+
+    timeLeft = progress.timeLeft || 1800;
+
+   QUESTIONS = progress.shuffledQuestions;
+
+// Safety check
+if(!QUESTIONS || QUESTIONS.length === 0){
+
+    localStorage.removeItem("PHS232_PROGRESS");
+
+    return;
 
 }
 
+welcomeScreen.style.display = "none";
 
-/*==============================
-      PAGE LOAD
-===============================*/
+quizContainer.style.display = "grid";
 
-window.addEventListener("load", function(){
+document.querySelector(".timer").style.display = "flex";
 
-    loadPreviousResult();
+document.querySelector(".summary-card").style.display = "block";
 
-});
+document.querySelector(".navigation-card").style.display = "block";
+
+document.querySelector(".question-card").style.display = "block";
+
+document.querySelector(".navigation-buttons").style.display = "flex";
+
+submitBtn.style.display = "block";
+
+    totalQuestions.textContent = QUESTIONS.length;
+
+    summaryTotal.textContent = QUESTIONS.length;
+
+    createQuestionSelector();
+
+    updateSummary();
+    updateProgress();
+
+    loadQuestion();
+
+    resumeTimer();
+
+}
 
 /*==============================
       INITIAL PAGE SETUP
 ===============================*/
 
 window.addEventListener("DOMContentLoaded", function(){
+
+    if(localStorage.getItem("PHS232_PROGRESS")){
+
+        loadProgress();
+
+        return;
+
+    }
 
     welcomeScreen.style.display = "block";
 
@@ -1164,12 +1246,13 @@ function createQuestionSelector(){
 
 }
 
-jumpBtn.addEventListener("click", () => {
+jumpBtn.addEventListener("click",()=>{
 
     currentIndex = Number(questionSelect.value);
 
-    console.log("Jumped to:", currentIndex);
+    saveProgress();
 
     loadQuestion();
 
 });
+
