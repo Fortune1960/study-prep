@@ -4,6 +4,12 @@
     PART 1
 ==================================================*/
 
+const questionSelect =
+document.getElementById("questionSelect");
+
+const jumpBtn =
+document.getElementById("jumpBtn");
+
 /*==============================
     DOM ELEMENTS
 ===============================*/
@@ -139,7 +145,7 @@ function initializeExam() {
 
     document.querySelector(".summary-card").style.display = "block";
 
-    document.querySelector(".palette-card").style.display = "block";
+    document.querySelector(".navigation-card").style.display = "block";
 
     document.querySelector(".question-card").style.display = "block";
 
@@ -159,7 +165,7 @@ function initializeExam() {
 
     QUESTIONS = [...QUESTIONS].sort(() => Math.random() - 0.5);
 
-    createPalette();
+    createQuestionSelector();
 
     updateSummary();
 
@@ -227,11 +233,11 @@ function loadQuestion(){
 
     restoreAnswer();
 
-    updateProgress();
+updateProgress();
 
-    updatePalette();
+updateNavigationButtons();
 
-    updateNavigationButtons();
+questionSelect.value = currentIndex;
 
 }
 
@@ -267,9 +273,7 @@ function selectAnswer(index){
 
     updateSummary();
 
-    updatePalette();
-
-    updateProgress();
+updateProgress();
 
 }
 
@@ -307,77 +311,12 @@ function updateProgress(){
         (answered / QUESTIONS.length) * 100;
 
     progressBar.style.width = percentage + "%";
+
+    document.getElementById("progressText").textContent =
+answered + " of " + QUESTIONS.length + " completed";
 }
 
 
-/*==============================
-      CREATE QUESTION PALETTE
-===============================*/
-
-function createPalette(){
-
-    const palette =
-
-    document.getElementById("questionPalette");
-
-    palette.innerHTML = "";
-
-    QUESTIONS.forEach((question,index)=>{
-
-        const btn =
-
-        document.createElement("button");
-
-        btn.classList.add("palette-btn");
-
-        btn.innerHTML = index + 1;
-
-        btn.addEventListener("click", function(){
-
-            currentIndex = index;
-
-            loadQuestion();
-
-        });
-
-        palette.appendChild(btn);
-
-    });
-
-}
-
-
-/*==============================
-      UPDATE QUESTION PALETTE
-===============================*/
-
-function updatePalette(){
-
-    let buttons =
-
-    document.querySelectorAll(".palette-btn");
-
-    buttons.forEach((btn,index)=>{
-
-        btn.classList.remove("active");
-
-        btn.classList.remove("answered");
-
-        if(index === currentIndex){
-
-            btn.classList.add("active");
-
-        }
-
-        if(userAnswers[index] !== undefined){
-
-            btn.classList.add("answered");
-
-        }
-
-    });
-
-}
 
 /*==================================================
     JOHESSA STUDY PREP CBT ENGINE
@@ -390,24 +329,28 @@ function updatePalette(){
         NEXT BUTTON
 ===============================*/
 
-nextBtn.addEventListener("click", function(){
+nextBtn.addEventListener("click", function () {
 
-    // If this is the last question
+    console.log("Before Next:", currentIndex);
+
     if(currentIndex === QUESTIONS.length - 1){
 
-        submitBtn.click(); // Opens the submit confirmation
+        submitBtn.click();
+
         return;
 
     }
 
-    // Otherwise go to the next question
     currentIndex++;
+
+    console.log("After Next:", currentIndex);
 
     loadQuestion();
 
     scrollToTop();
 
 });
+
 
 
 /*==============================
@@ -1133,7 +1076,7 @@ function saveResult(){
 
     localStorage.setItem(
 
-        "ANA231_RESULT",
+        "PHS242_RESULT",
 
         JSON.stringify(result)
 
@@ -1152,7 +1095,7 @@ function loadPreviousResult(){
 
     JSON.parse(
 
-        localStorage.getItem("ANA231_RESULT")
+        localStorage.getItem("PHS242_RESULT")
 
     );
 
@@ -1193,12 +1136,40 @@ window.addEventListener("DOMContentLoaded", function(){
 
     document.querySelector(".summary-card").style.display = "none";
 
-    document.querySelector(".palette-card").style.display = "none";
+    document.querySelector(".navigation-card").style.display = "none";
 
     document.querySelector(".question-card").style.display = "none";
 
     document.querySelector(".navigation-buttons").style.display = "none";
 
     submitBtn.style.display = "none";
+
+});
+
+function createQuestionSelector(){
+
+    questionSelect.innerHTML = "";
+
+    QUESTIONS.forEach((question, index)=>{
+
+        const option = document.createElement("option");
+
+        option.value = index;
+
+        option.textContent = "Question " + (index + 1);
+
+        questionSelect.appendChild(option);
+
+    });
+
+}
+
+jumpBtn.addEventListener("click", () => {
+
+    currentIndex = Number(questionSelect.value);
+
+    console.log("Jumped to:", currentIndex);
+
+    loadQuestion();
 
 });

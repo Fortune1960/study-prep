@@ -676,6 +676,14 @@ button{
 
     display:flex;
 
+    position:sticky;
+
+    bottom:0;
+
+    background:white;
+
+    padding:15px;
+
     justify-content:space-between;
 
     margin-top:40px;
@@ -868,7 +876,7 @@ button{
 
 /* ==========================
    QUESTION PALETTE
-========================== */
+
 
 .palette-card h3{
 
@@ -926,8 +934,9 @@ button{
     transform:scale(1.05);
 
 }
+    ========================== */
 
-/* Current Question */
+/* Current Question 
 
 .palette-btn.active{
 
@@ -936,8 +945,9 @@ button{
     color:#fff;
 
 }
+    */
 
-/* Answered */
+/* Answered 
 
 .palette-btn.answered{
 
@@ -946,10 +956,12 @@ button{
     color:#fff;
 
 }
+    */
+
 
 /* ==========================
    LEGEND
-========================== */
+
 
 .palette-legend{
 
@@ -1002,7 +1014,79 @@ button{
     border:1px solid #ccc;
 
 }
+========================== */
 
+.navigation-card{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.navigation-card h3{
+
+    color:#0d47a1;
+
+    margin-bottom:15px;
+
+}
+
+.navigation-card p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+#questionSelect{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:2px solid #dbe8f8;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+
+}
+
+#jumpBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#0d47a1;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+#jumpBtn:hover{
+
+    background:#08357f;
+
+}
 /* ==========================
    SUBMIT BUTTON
 ========================== */
@@ -1700,6 +1784,22 @@ flex-direction:column;
 .review-screen{
 
 padding:100px 20px 40px;
+
+}
+
+.quiz-container{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.quiz-sidebar{
+
+order:-1;
+
+margin-bottom:20px;
 
 }
 

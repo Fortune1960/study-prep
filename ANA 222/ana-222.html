@@ -33,7 +33,7 @@
 
         <div class="exam-details">
 
-            <span><i class="fas fa-book"></i> ANA 222</span>
+            <span><i class="fas fa-book"></i>ANA 222</span>
 
         </div>
 
@@ -160,11 +160,17 @@
 
             </div>
 
-            <div class="progress">
+           <div class="progress">
 
-                <div id="progressBar"></div>
+    <div id="progressBar"></div>
 
-            </div>
+</div>
+
+<p id="progressText">
+
+0 of 50 completed
+
+</p>
 
             <div class="question-card">
 
@@ -263,94 +269,23 @@
 
             <!-- Question Palette -->
 
-            <div class="palette-card">
+            <div class="navigation-card">
 
-                <h3>Question Palette</h3>
+    <h3>Quick Navigation</h3>
 
-                <p>Select any question below.</p>
+    <p>Jump to any question</p>
 
-                <div id="questionPalette" class="question-palette">
+    <select id="questionSelect">
 
-                    <button class="palette-btn active">1</button>
-                    <button class="palette-btn">2</button>
-                    <button class="palette-btn">3</button>
-                    <button class="palette-btn">4</button>
-                    <button class="palette-btn">5</button>
-                    <button class="palette-btn">6</button>
-                    <button class="palette-btn">7</button>
-                    <button class="palette-btn">8</button>
-                    <button class="palette-btn">9</button>
-                    <button class="palette-btn">10</button>
-                     <button class="palette-btn">11</button>
-                    <button class="palette-btn">12</button>
-                    <button class="palette-btn">13</button>
-                    <button class="palette-btn">14</button>
-                    <button class="palette-btn">15</button>
-                    <button class="palette-btn">16</button>
-                    <button class="palette-btn">17</button>
-                    <button class="palette-btn">18</button>
-                    <button class="palette-btn">19</button>
-                     <button class="palette-btn">20</button>
-                     <button class="palette-btn">21</button>
-                    <button class="palette-btn">22</button>
-                    <button class="palette-btn">23</button>
-                    <button class="palette-btn">24</button>
-                    <button class="palette-btn">25</button>
-                    <button class="palette-btn">26</button>
-                    <button class="palette-btn">27</button>
-                    <button class="palette-btn">28</button>
-                    <button class="palette-btn">29</button>
-                     <button class="palette-btn">30</button>
-                     <button class="palette-btn">31</button>
-                    <button class="palette-btn">32</button>
-                    <button class="palette-btn">33</button>
-                    <button class="palette-btn">34</button>
-                    <button class="palette-btn">35</button>
-                    <button class="palette-btn">36</button>
-                    <button class="palette-btn">37</button>
-                    <button class="palette-btn">38</button>
-                    <button class="palette-btn">39</button>
-                     <button class="palette-btn">40</button>
-                     <button class="palette-btn">41</button>
-                    <button class="palette-btn">42</button>
-                    <button class="palette-btn">43</button>
-                    <button class="palette-btn">44</button>
-                    <button class="palette-btn">45</button>
-                    <button class="palette-btn">46</button>
-                    <button class="palette-btn">47</button>
-                    <button class="palette-btn">48</button>
-                    <button class="palette-btn">49</button>
-                     <button class="palette-btn">50</button>
+    </select>
 
-                </div>
+    <button id="jumpBtn">
 
-                <div class="palette-legend">
+        Go to Question
 
-                    <div class="legend">
+    </button>
 
-                        <span class="legend-box current"></span>
-
-                        Current Question
-
-                    </div>
-
-                    <div class="legend">
-
-                        <span class="legend-box answered"></span>
-
-                        Answered
-
-                    </div>
-
-                    <div class="legend">
-
-                        <span class="legend-box unanswered"></span>
-
-                        Unanswered
-
-                    </div>
-
-                </div>
+</div>
 
             </div>
 
