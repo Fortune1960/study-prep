@@ -14,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -63,7 +62,8 @@
 
             <p>
 
-                This CBT practice is designed to help Medical Laboratory Science students prepare for their examinations.
+                This CBT practice is designed to help Medical Laboratory Science students prepare for their
+                examinations.
 
             </p>
 
@@ -110,9 +110,9 @@
                 </button>
 
                 <button id="extremeBtn" class="difficulty extreme">
-        <i class="fas fa-skull"></i>
-        Extreme Stage
-    </button>
+                    <i class="fas fa-skull"></i>
+                    Extreme Stage
+                </button>
 
             </div>
 
@@ -160,17 +160,17 @@
 
             </div>
 
-           <div class="progress">
+            <div class="progress">
 
-    <div id="progressBar"></div>
+                <div id="progressBar"></div>
 
-</div>
+            </div>
 
-<p id="progressText">
+            <p id="progressText">
 
-0 of 50 completed
+                0 of 50 completed
 
-</p>
+            </p>
 
             <div class="question-card">
 
@@ -180,11 +180,26 @@
 
                 </h2>
 
-                <div id="answerButtons" class="answer-buttons">
+                <!--  <div id="answerButtons" class="answer-buttons">
 
-                    <!-- JavaScript will generate the options here -->
+                     JavaScript will generate the options here 
 
-                </div>
+                </div>    -->
+
+                <div class="theory-answer-container">
+    <label for="studentAnswer">Your Answer</label>
+    <textarea
+        id="studentAnswer"
+        class="theory-answer"
+        placeholder="Type your answer here..."
+        rows="10"
+    ></textarea>
+
+   <div class="typing-info">
+    <span><strong id="wordCount">0</strong> Words</span>
+    <span><strong id="charCount">0</strong> Characters</span>
+</div>
+</div>
 
             </div>
 
@@ -208,9 +223,9 @@
 
             </div>
 
-                    
 
-                    
+
+
             <button id="submitExamBtn" class="submit-btn">
 
                 <i class="fas fa-paper-plane"></i>
@@ -219,7 +234,7 @@
 
             </button>
 
-    </section>
+        </section>
 
         <!-- ================= RIGHT SIDEBAR ================= -->
 
@@ -271,29 +286,29 @@
 
             <div class="navigation-card">
 
-    <h3>Quick Navigation</h3>
+                <h3>Quick Navigation</h3>
 
-    <p>Jump to any question</p>
+                <p>Jump to any question</p>
 
-    <select id="questionSelect">
+                <select id="questionSelect">
 
-    </select>
+                </select>
 
-    <button id="jumpBtn">
+                <button id="jumpBtn">
 
-        Go to Question
+                    Go to Question
 
-    </button>
-
-</div>
+                </button>
 
             </div>
 
-             </aside>
+            </div>
+
+        </aside>
 
     </main>
 
-            <!-- Submit Button -->
+    <!-- Submit Button -->
 
 
     <!-- ================= SUBMIT CONFIRMATION MODAL ================= -->
@@ -334,7 +349,7 @@
 
     </div>
 
-        <!-- ================= RESULT SECTION ================= -->
+    <!-- ================= RESULT SECTION ================= -->
 
     <section id="resultScreen" class="result-screen">
 

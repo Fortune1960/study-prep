@@ -1603,6 +1603,74 @@ footer{
 
 }
 
+/* ===============================
+   Theory Answer Box
+================================== */
+
+.theory-answer-container{
+    width:100%;
+    margin:25px 0;
+}
+
+.theory-answer-container label{
+    display:block;
+    font-size:18px;
+    font-weight:600;
+    color:#0d47a1;
+    margin-bottom:12px;
+}
+
+.theory-answer{
+    width:100%;
+    min-height:260px;
+    padding:18px;
+    border:2px solid #d6dbe5;
+    border-radius:15px;
+    resize:vertical;
+    font-size:17px;
+    line-height:1.8;
+    font-family:'Poppins',sans-serif;
+    background:#fafcff;
+    color:#222;
+    transition:0.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.theory-answer::placeholder{
+    color:#999;
+    font-style:italic;
+}
+
+.theory-answer:hover{
+    border-color:#1565c0;
+}
+
+.theory-answer:focus{
+    outline:none;
+    border-color:#1565c0;
+    background:#fff;
+    box-shadow:0 0 0 5px rgba(21,101,192,.15);
+}
+
+.typing-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:12px;
+    padding:10px 15px;
+    background:#f7f9fc;
+    border:1px solid #dbe5f3;
+    border-radius:10px;
+    font-size:14px;
+    color:#555;
+}
+
+.typing-info strong{
+    color:#0d47a1;
+    font-size:17px;
+}
+
+
 
 /* ==========================
    TABLET

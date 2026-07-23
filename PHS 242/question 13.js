@@ -1,1457 +1,2106 @@
-const EASY_QUESTIONS = [
+const EASY_THEORY_QUESTIONS = [
 
 {
-    question: "The functional unit of the kidney is the:",
-    answers: [
-        { text: "Neuron", correct: false },
-        { text: "Nephron", correct: true },
-        { text: "Glomerulus", correct: false },
-        { text: "Alveolus", correct: false }
-    ]
+    question: "Explain the functions of the kidneys.",
+
+    keywords: [
+        "excretion",
+        "fluid balance",
+        "electrolyte balance",
+        "acid base balance",
+        "blood pressure",
+        "erythropoietin"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which process is primarily responsible for blood filtration in the kidney?",
-    answers: [
-        { text: "Tubular secretion", correct: false },
-        { text: "Glomerular filtration", correct: true },
-        { text: "Tubular reabsorption", correct: false },
-        { text: "Excretion", correct: false }
-    ]
+    question: "Describe the structure of a nephron.",
+
+    keywords: [
+        "bowman's capsule",
+        "glomerulus",
+        "proximal convoluted tubule",
+        "loop of henle",
+        "distal convoluted tubule",
+        "collecting duct"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys help regulate the body's:",
-    answers: [
-        { text: "Hair growth", correct: false },
-        { text: "Fluid and electrolyte balance", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Speech", correct: false }
-    ]
+    question: "Explain the process of glomerular filtration.",
+
+    keywords: [
+        "glomerulus",
+        "blood pressure",
+        "filtration membrane",
+        "bowman's capsule",
+        "ultrafiltration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The hormone that increases water reabsorption in the kidneys is:",
-    answers: [
-        { text: "Insulin", correct: false },
-        { text: "ADH (Antidiuretic Hormone)", correct: true },
-        { text: "Thyroxine", correct: false },
-        { text: "Glucagon", correct: false }
-    ]
+    question: "Differentiate between cortical and juxtamedullary nephrons.",
+
+    keywords: [
+        "cortical nephron",
+        "juxtamedullary nephron",
+        "loop of henle",
+        "location",
+        "concentrated urine"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main function of the glomerulus is:",
-    answers: [
-        { text: "Urine storage", correct: false },
-        { text: "Blood filtration", correct: true },
-        { text: "Hormone secretion", correct: false },
-        { text: "Protein synthesis", correct: false }
-    ]
+    question: "State the functions of Bowman's capsule.",
+
+    keywords: [
+        "collect filtrate",
+        "surrounds glomerulus",
+        "filtration",
+        "renal corpuscle"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which structure carries urine from the kidney to the bladder?",
-    answers: [
-        { text: "Urethra", correct: false },
-        { text: "Ureter", correct: true },
-        { text: "Renal artery", correct: false },
-        { text: "Renal vein", correct: false }
-    ]
+    question: "Describe the pathway of urine from its formation to excretion.",
+
+    keywords: [
+        "collecting duct",
+        "renal pelvis",
+        "ureter",
+        "urinary bladder",
+        "urethra"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The renal cortex is located:",
-    answers: [
-        { text: "Inside the medulla", correct: false },
-        { text: "On the outer part of the kidney", correct: true },
-        { text: "Within the ureter", correct: false },
-        { text: "Inside the bladder", correct: false }
-    ]
+    question: "Explain the process of tubular reabsorption.",
+
+    keywords: [
+        "water",
+        "glucose",
+        "electrolytes",
+        "blood",
+        "selective reabsorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which substance is commonly used to measure GFR because it is freely filtered and neither secreted nor reabsorbed?",
-    answers: [
-        { text: "Glucose", correct: false },
-        { text: "Inulin", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Urea", correct: false }
-    ]
+    question: "What is tubular secretion? Explain its importance.",
+
+    keywords: [
+        "hydrogen ions",
+        "potassium",
+        "drugs",
+        "acid base balance",
+        "waste removal"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron is mainly responsible for producing concentrated urine?",
-    answers: [
-        { text: "Cortical nephron", correct: false },
-        { text: "Juxtamedullary nephron", correct: true },
-        { text: "Primitive nephron", correct: false },
-        { text: "Superficial nephron", correct: false }
-    ]
+    question: "Describe the functions of the proximal convoluted tubule.",
+
+    keywords: [
+        "reabsorption",
+        "glucose",
+        "amino acids",
+        "water",
+        "electrolytes"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following is a major function of the kidneys?",
-    answers: [
-        { text: "Production of digestive enzymes", correct: false },
-        { text: "Removal of metabolic waste", correct: true },
-        { text: "Storage of bile", correct: false },
-        { text: "Production of insulin", correct: false }
-    ]
+    question: "Explain the functions of the loop of Henle.",
+
+    keywords: [
+        "countercurrent",
+        "water reabsorption",
+        "sodium",
+        "concentrated urine",
+        "osmotic gradient"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal process by which kidneys maintain a relatively constant blood flow is called:",
-    answers: [
-        { text: "Hemostasis", correct: false },
-        { text: "Autoregulation", correct: true },
-        { text: "Osmosis", correct: false },
-        { text: "Dialysis", correct: false }
-    ]
+    question: "Discuss the functions of the distal convoluted tubule.",
+
+    keywords: [
+        "electrolyte regulation",
+        "aldosterone",
+        "calcium",
+        "acid base balance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main waste product excreted by the kidneys is:",
-    answers: [
-        { text: "Glucose", correct: false },
-        { text: "Urea", correct: true },
-        { text: "Protein", correct: false },
-        { text: "Calcium", correct: false }
-    ]
+    question: "Explain the functions of the collecting duct.",
+
+    keywords: [
+        "adh",
+        "water reabsorption",
+        "urine concentration",
+        "final urine"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone stimulates sodium reabsorption in the distal tubule?",
-    answers: [
-        { text: "Aldosterone", correct: true },
-        { text: "Estrogen", correct: false },
-        { text: "Insulin", correct: false },
-        { text: "Progesterone", correct: false }
-    ]
+    question: "Explain the role of ADH in kidney function.",
+
+    keywords: [
+        "antidiuretic hormone",
+        "water reabsorption",
+        "collecting duct",
+        "urine concentration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The Bowman's capsule surrounds the:",
-    answers: [
-        { text: "Loop of Henle", correct: false },
-        { text: "Glomerulus", correct: true },
-        { text: "Collecting duct", correct: false },
-        { text: "Renal pelvis", correct: false }
-    ]
+    question: "Describe the functions of aldosterone in the kidneys.",
+
+    keywords: [
+        "sodium reabsorption",
+        "potassium secretion",
+        "distal tubule",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which organ stores urine before excretion?",
-    answers: [
-        { text: "Kidney", correct: false },
-        { text: "Urinary bladder", correct: true },
-        { text: "Ureter", correct: false },
-        { text: "Liver", correct: false }
-    ]
+    question: "Explain how the kidneys regulate body fluid balance.",
+
+    keywords: [
+        "water balance",
+        "electrolytes",
+        "adh",
+        "aldosterone",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys contribute to acid-base balance mainly by:",
-    answers: [
-        { text: "Producing insulin", correct: false },
-        { text: "Excreting hydrogen ions and conserving bicarbonate", correct: true },
-        { text: "Digesting proteins", correct: false },
-        { text: "Producing bile", correct: false }
-    ]
+    question: "Discuss how the kidneys regulate acid-base balance.",
+
+    keywords: [
+        "hydrogen ions",
+        "bicarbonate",
+        "ph regulation",
+        "acid base balance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The skin helps regulate body temperature primarily by:",
-    answers: [
-        { text: "Producing bile", correct: false },
-        { text: "Sweating and altering blood flow", correct: true },
-        { text: "Filtering blood", correct: false },
-        { text: "Producing urine", correct: false }
-    ]
+    question: "Explain the role of the kidneys in blood pressure regulation.",
+
+    keywords: [
+        "renin",
+        "raas",
+        "sodium",
+        "water",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which layer is the outermost layer of the skin?",
-    answers: [
-        { text: "Dermis", correct: false },
-        { text: "Hypodermis", correct: false },
-        { text: "Epidermis", correct: true },
-        { text: "Subcutaneous fascia", correct: false }
-    ]
+    question: "Describe the formation of urine.",
+
+    keywords: [
+        "filtration",
+        "reabsorption",
+        "secretion",
+        "excretion"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Thermoreceptors are responsible for detecting:",
-    answers: [
-        { text: "Pain only", correct: false },
-        { text: "Temperature changes", correct: true },
-        { text: "Pressure only", correct: false },
-        { text: "Taste", correct: false }
-    ]
+    question: "Explain the importance of erythropoietin produced by the kidneys.",
+
+    keywords: [
+        "erythropoietin",
+        "red blood cells",
+        "bone marrow",
+        "anemia"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following is NOT a function of the renal system?",
-    answers: [
-        { text: "Regulation of blood pressure", correct: false },
-        { text: "Excretion of wastes", correct: false },
-        { text: "Maintenance of electrolyte balance", correct: false },
-        { text: "Production of digestive enzymes", correct: true }
-    ]
+    question: "State the endocrine functions of the kidneys.",
+
+    keywords: [
+        "erythropoietin",
+        "renin",
+        "vitamin d activation",
+        "hormones"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal pH of human blood is:",
-    answers: [
-        { text: "6.8–7.0", correct: false },
-        { text: "7.35–7.45", correct: true },
-        { text: "7.8–8.0", correct: false },
-        { text: "8.5–9.0", correct: false }
-    ]
+    question: "Describe the blood supply of the kidneys.",
+
+    keywords: [
+        "renal artery",
+        "segmental artery",
+        "afferent arteriole",
+        "glomerulus",
+        "efferent arteriole",
+        "renal vein"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys help regulate the body's:",
-    answers: [
-        { text: "Acid-base balance", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Hearing", correct: false },
-        { text: "Speech", correct: false }
-    ]
+    question: "Explain the importance of the renal cortex and renal medulla.",
+
+    keywords: [
+        "renal cortex",
+        "renal medulla",
+        "glomeruli",
+        "loops of henle",
+        "collecting ducts"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The renal artery carries ______ blood to the kidneys.",
-    answers: [
-        { text: "Deoxygenated", correct: false },
-        { text: "Oxygenated", correct: true },
-        { text: "Venous", correct: false },
-        { text: "Filtered", correct: false }
-    ]
+    question: "Describe the structure and functions of the glomerulus.",
+
+    keywords: [
+        "filtration",
+        "capillaries",
+        "bowman's capsule",
+        "blood filtration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The renal vein carries blood ______ the kidney.",
-    answers: [
-        { text: "Into", correct: false },
-        { text: "Around", correct: false },
-        { text: "Out of", correct: true },
-        { text: "Across", correct: false }
-    ]
+    question: "Explain the functions of the urinary bladder.",
+
+    keywords: [
+        "urine storage",
+        "temporary storage",
+        "micturition",
+        "smooth muscle"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The Bowman's capsule surrounds the:",
-    answers: [
-        { text: "Loop of Henle", correct: false },
-        { text: "Glomerulus", correct: true },
-        { text: "Collecting duct", correct: false },
-        { text: "Ureter", correct: false }
-    ]
+    question: "Describe the process of micturition.",
+
+    keywords: [
+        "urination",
+        "bladder contraction",
+        "sphincters",
+        "urethra",
+        "nervous control"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Urine leaves the kidney through the:",
-    answers: [
-        { text: "Urethra", correct: false },
-        { text: "Renal artery", correct: false },
-        { text: "Ureter", correct: true },
-        { text: "Renal vein", correct: false }
-    ]
+    question: "Explain the functions of the renal pelvis.",
+
+    keywords: [
+        "collects urine",
+        "funnels urine",
+        "connects to ureter",
+        "urine drainage",
+        "temporary collection"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone increases water reabsorption in the kidney?",
-    answers: [
-        { text: "Insulin", correct: false },
-        { text: "ADH", correct: true },
-        { text: "Thyroxine", correct: false },
-        { text: "Glucagon", correct: false }
-    ]
+    question: "Discuss the formation of urine in the nephron.",
+
+    keywords: [
+        "glomerular filtration",
+        "tubular reabsorption",
+        "tubular secretion",
+        "excretion",
+        "nephron"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The hormone aldosterone mainly increases the reabsorption of:",
-    answers: [
-        { text: "Calcium", correct: false },
-        { text: "Sodium", correct: true },
-        { text: "Potassium", correct: false },
-        { text: "Magnesium", correct: false }
-    ]
+    question: "Explain glomerular filtration.",
+
+    keywords: [
+        "blood filtration",
+        "glomerulus",
+        "bowman's capsule",
+        "hydrostatic pressure",
+        "filtrate"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main nitrogenous waste excreted in urine is:",
-    answers: [
-        { text: "Glucose", correct: false },
-        { text: "Urea", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Creatine", correct: false }
-    ]
+    question: "Describe tubular reabsorption.",
+
+    keywords: [
+        "movement to blood",
+        "water",
+        "glucose",
+        "electrolytes",
+        "selective"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The functional unit of the kidney is the:",
-    answers: [
-        { text: "Neuron", correct: false },
-        { text: "Nephron", correct: true },
-        { text: "Alveolus", correct: false },
-        { text: "Osteon", correct: false }
-    ]
+    question: "Explain tubular secretion.",
+
+    keywords: [
+        "movement into tubule",
+        "hydrogen ions",
+        "potassium",
+        "drugs",
+        "acid base balance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The urinary bladder temporarily stores:",
-    answers: [
-        { text: "Blood", correct: false },
-        { text: "Urine", correct: true },
-        { text: "Lymph", correct: false },
-        { text: "Plasma", correct: false }
-    ]
+    question: "State the composition of normal urine.",
+
+    keywords: [
+        "water",
+        "urea",
+        "electrolytes",
+        "creatinine",
+        "uric acid"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which structure carries urine from the bladder to the outside?",
-    answers: [
-        { text: "Ureter", correct: false },
-        { text: "Urethra", correct: true },
-        { text: "Nephron", correct: false },
-        { text: "Pelvis", correct: false }
-    ]
+    question: "Describe the pathway of urine from the kidney to the outside of the body.",
+
+    keywords: [
+        "collecting duct",
+        "renal pelvis",
+        "ureter",
+        "urinary bladder",
+        "urethra"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys receive about what percentage of cardiac output?",
-    answers: [
-        { text: "5%", correct: false },
-        { text: "10%", correct: false },
-        { text: "20–25%", correct: true },
-        { text: "50%", correct: false }
-    ]
+    question: "Explain the role of ADH in urine formation.",
+
+    keywords: [
+        "water reabsorption",
+        "collecting duct",
+        "concentrated urine",
+        "aquaporins",
+        "antidiuretic hormone"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which process moves substances from the blood into Bowman's capsule?",
-    answers: [
-        { text: "Tubular secretion", correct: false },
-        { text: "Glomerular filtration", correct: true },
-        { text: "Tubular reabsorption", correct: false },
-        { text: "Diffusion only", correct: false }
-    ]
+    question: "Describe the functions of aldosterone in the kidney.",
+
+    keywords: [
+        "sodium reabsorption",
+        "potassium secretion",
+        "distal tubule",
+        "collecting duct",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The hormone erythropoietin is produced mainly by the:",
-    answers: [
-        { text: "Liver", correct: false },
-        { text: "Kidney", correct: true },
-        { text: "Heart", correct: false },
-        { text: "Pancreas", correct: false }
-    ]
+    question: "Explain how the kidneys regulate blood pressure.",
+
+    keywords: [
+        "renin",
+        "RAAS",
+        "sodium retention",
+        "water retention",
+        "blood volume"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which substance is freely filtered at the glomerulus?",
-    answers: [
-        { text: "Red blood cells", correct: false },
-        { text: "Large plasma proteins", correct: false },
-        { text: "Water", correct: true },
-        { text: "Platelets", correct: false }
-    ]
+    question: "Describe the role of erythropoietin.",
+
+    keywords: [
+        "kidney",
+        "red blood cells",
+        "bone marrow",
+        "erythropoiesis",
+        "hypoxia"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys help maintain electrolyte balance by regulating:",
-    answers: [
-        { text: "Sodium and potassium", correct: true },
-        { text: "Only oxygen", correct: false },
-        { text: "Only carbon dioxide", correct: false },
-        { text: "Only glucose", correct: false }
-    ]
+    question: "Explain the importance of vitamin D activation by the kidney.",
+
+    keywords: [
+        "calcitriol",
+        "calcium absorption",
+        "phosphate",
+        "bone health",
+        "kidney"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of these is a waste product commonly measured to assess kidney function?",
-    answers: [
-        { text: "Creatinine", correct: true },
-        { text: "Hemoglobin", correct: false },
-        { text: "Bilirubin", correct: false },
-        { text: "Albumin", correct: false }
-    ]
+    question: "Discuss the importance of electrolyte balance.",
+
+    keywords: [
+        "sodium",
+        "potassium",
+        "chloride",
+        "homeostasis",
+        "kidney"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main function of the loop of Henle is:",
-    answers: [
-        { text: "Concentrating urine", correct: true },
-        { text: "Producing bile", correct: false },
-        { text: "Pumping blood", correct: false },
-        { text: "Digesting proteins", correct: false }
-    ]
+    question: "Explain the regulation of water balance by the kidneys.",
+
+    keywords: [
+        "ADH",
+        "water reabsorption",
+        "osmolarity",
+        "urine concentration",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Healthy kidneys normally prevent the loss of:",
-    answers: [
-        { text: "Large amounts of protein into urine", correct: true },
-        { text: "Water into urine", correct: false },
-        { text: "Urea into urine", correct: false },
-        { text: "Creatinine into urine", correct: false }
-    ]
+    question: "Describe the importance of acid-base balance.",
+
+    keywords: [
+        "hydrogen ions",
+        "bicarbonate",
+        "blood pH",
+        "kidney",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The primary function of the kidneys is to:",
-    answers: [
-        { text: "Filter blood and form urine", correct: true },
-        { text: "Produce digestive enzymes", correct: false },
-        { text: "Store bile", correct: false },
-        { text: "Produce insulin", correct: false }
-    ]
+    question: "Explain the causes of dehydration.",
+
+    keywords: [
+        "water loss",
+        "vomiting",
+        "diarrhea",
+        "sweating",
+        "reduced intake"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The renal pelvis is located:",
-    answers: [
-        { text: "Inside the kidney", correct: true },
-        { text: "Inside the bladder", correct: false },
-        { text: "Inside the liver", correct: false },
-        { text: "Inside the heart", correct: false }
-    ]
+    question: "Describe the effects of dehydration on kidney function.",
+
+    keywords: [
+        "reduced GFR",
+        "concentrated urine",
+        "ADH",
+        "reduced urine output",
+        "water conservation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal color of healthy urine is usually:",
-    answers: [
-        { text: "Blue", correct: false },
-        { text: "Straw-yellow", correct: true },
-        { text: "Black", correct: false },
-        { text: "Bright red", correct: false }
-    ]
+    question: "Discuss the functions of the skin in thermoregulation.",
+
+    keywords: [
+        "sweating",
+        "vasodilation",
+        "vasoconstriction",
+        "heat loss",
+        "temperature regulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys regulate blood pressure mainly through the:",
-    answers: [
-        { text: "Renin-Angiotensin-Aldosterone System", correct: true },
-        { text: "Digestive system", correct: false },
-        { text: "Respiratory system", correct: false },
-        { text: "Visual system", correct: false }
-    ]
+    question: "Explain the mechanism of sweating.",
+
+    keywords: [
+        "sweat glands",
+        "evaporation",
+        "cooling",
+        "heat loss",
+        "thermoregulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which organ receives urine directly from the ureters?",
-    answers: [
-        { text: "Kidney", correct: false },
-        { text: "Urinary bladder", correct: true },
-        { text: "Urethra", correct: false },
-        { text: "Liver", correct: false }
-    ]
+    question: "Describe the role of vasodilation in body temperature regulation.",
+
+    keywords: [
+        "blood vessels",
+        "heat loss",
+        "skin",
+        "temperature",
+        "increased blood flow"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the role of vasoconstriction during cold exposure.",
+
+    keywords: [
+        "reduced heat loss",
+        "blood vessels",
+        "skin",
+        "temperature conservation",
+        "cold"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the importance of homeostasis.",
+
+    keywords: [
+        "stable internal environment",
+        "temperature",
+        "pH",
+        "water balance",
+        "electrolytes"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the functions of thermoreceptors.",
+
+    keywords: [
+        "temperature detection",
+        "skin",
+        "hypothalamus",
+        "heat",
+        "cold"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the role of the hypothalamus in temperature regulation.",
+
+    keywords: [
+        "temperature control",
+        "thermoregulation",
+        "heat loss",
+        "heat production",
+        "homeostasis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the relationship between the kidneys and overall homeostasis.",
+
+    keywords: [
+        "fluid balance",
+        "electrolytes",
+        "acid base balance",
+        "blood pressure",
+        "waste removal"
+    ],
+
+    marks: 10
 }
 
 ];
 
-const HARD_QUESTIONS = [
+const HARD_THEORY_QUESTIONS = [
 
 {
-    question: "Which of the following is the best indicator of glomerular filtration rate (GFR)?",
-    answers: [
-        { text: "Inulin clearance", correct: true },
-        { text: "Urea clearance", correct: false },
-        { text: "Glucose clearance", correct: false },
-        { text: "Creatinine excretion", correct: false }
-    ]
+    question: "Explain the process of glomerular filtration.",
+
+    keywords: [
+        "glomerulus",
+        "bowman's capsule",
+        "hydrostatic pressure",
+        "filtration membrane",
+        "glomerular filtrate"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The myogenic mechanism of renal autoregulation primarily occurs in the:",
-    answers: [
-        { text: "Afferent arteriole", correct: true },
-        { text: "Efferent arteriole", correct: false },
-        { text: "Collecting duct", correct: false },
-        { text: "Loop of Henle", correct: false }
-    ]
+    question: "Describe the structure and functions of the nephron.",
+
+    keywords: [
+        "renal corpuscle",
+        "proximal convoluted tubule",
+        "loop of henle",
+        "distal convoluted tubule",
+        "collecting duct"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Macula densa cells are located in the:",
-    answers: [
-        { text: "Distal convoluted tubule", correct: true },
-        { text: "Proximal convoluted tubule", correct: false },
-        { text: "Collecting duct", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Discuss the mechanism of renal autoregulation.",
+
+    keywords: [
+        "myogenic mechanism",
+        "tubuloglomerular feedback",
+        "afferent arteriole",
+        "stable gfr",
+        "renal blood flow"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Juxtamedullary nephrons are specialized mainly for:",
-    answers: [
-        { text: "Concentrating urine", correct: true },
-        { text: "Protein synthesis", correct: false },
-        { text: "Glucose production", correct: false },
-        { text: "Hormone secretion", correct: false }
-    ]
+    question: "Explain how the kidneys regulate acid-base balance.",
+
+    keywords: [
+        "hydrogen ion secretion",
+        "bicarbonate reabsorption",
+        "ammonia",
+        "acid excretion",
+        "ph regulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Approximately what percentage of filtered sodium is reabsorbed in the proximal convoluted tubule?",
-    answers: [
-        { text: "10%", correct: false },
-        { text: "25%", correct: false },
-        { text: "65%", correct: true },
-        { text: "90%", correct: false }
-    ]
+    question: "Describe the Renin-Angiotensin-Aldosterone System (RAAS).",
+
+    keywords: [
+        "renin",
+        "angiotensin ii",
+        "aldosterone",
+        "blood pressure",
+        "sodium retention"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The descending limb of the loop of Henle is highly permeable to:",
-    answers: [
-        { text: "Water", correct: true },
-        { text: "Sodium", correct: false },
-        { text: "Urea only", correct: false },
-        { text: "Potassium", correct: false }
-    ]
+    question: "Explain the mechanism of urine concentration in the kidney.",
+
+    keywords: [
+        "countercurrent multiplier",
+        "loop of henle",
+        "adh",
+        "collecting duct",
+        "medullary osmotic gradient"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The thick ascending limb of the loop of Henle is impermeable to:",
-    answers: [
-        { text: "Water", correct: true },
-        { text: "Sodium", correct: false },
-        { text: "Chloride", correct: false },
-        { text: "Potassium", correct: false }
-    ]
+    question: "Describe the functions of the proximal convoluted tubule.",
+
+    keywords: [
+        "reabsorption",
+        "glucose",
+        "amino acids",
+        "water",
+        "electrolytes"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone directly stimulates sodium reabsorption in the distal nephron?",
-    answers: [
-        { text: "Aldosterone", correct: true },
-        { text: "ADH", correct: false },
-        { text: "Insulin", correct: false },
-        { text: "Calcitonin", correct: false }
-    ]
+    question: "Discuss the physiological functions of aldosterone.",
+
+    keywords: [
+        "sodium reabsorption",
+        "potassium secretion",
+        "distal tubule",
+        "collecting duct",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "ADH increases water permeability by inserting:",
-    answers: [
-        { text: "Aquaporin-2 channels", correct: true },
-        { text: "Sodium channels", correct: false },
-        { text: "Calcium channels", correct: false },
-        { text: "Potassium pumps", correct: false }
-    ]
+    question: "Explain the mechanism of action of Antidiuretic Hormone (ADH).",
+
+    keywords: [
+        "aquaporin",
+        "collecting duct",
+        "water reabsorption",
+        "plasma osmolarity",
+        "vasopressin"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The principal cells of the collecting duct primarily reabsorb:",
-    answers: [
-        { text: "Sodium and water", correct: true },
-        { text: "Proteins", correct: false },
-        { text: "Glucose", correct: false },
-        { text: "Phosphate", correct: false }
-    ]
+    question: "Describe the process of tubular reabsorption.",
+
+    keywords: [
+        "selective reabsorption",
+        "water",
+        "glucose",
+        "electrolytes",
+        "peritubular capillaries"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Intercalated cells of the collecting duct are important for:",
-    answers: [
-        { text: "Acid-base regulation", correct: true },
-        { text: "Protein digestion", correct: false },
-        { text: "Lipid absorption", correct: false },
-        { text: "Red blood cell production", correct: false }
-    ]
+    question: "Discuss the process of tubular secretion.",
+
+    keywords: [
+        "hydrogen ions",
+        "potassium",
+        "drugs",
+        "acid-base balance",
+        "distal tubule"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Renin is secreted by:",
-    answers: [
-        { text: "Juxtaglomerular cells", correct: true },
-        { text: "Podocytes", correct: false },
-        { text: "Mesangial cells", correct: false },
-        { text: "Macula densa cells", correct: false }
-    ]
+    question: "Explain how the kidneys regulate blood pressure.",
+
+    keywords: [
+        "raas",
+        "renin",
+        "fluid balance",
+        "vasoconstriction",
+        "blood volume"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Angiotensin II preferentially constricts the:",
-    answers: [
-        { text: "Efferent arteriole", correct: true },
-        { text: "Afferent arteriole", correct: false },
-        { text: "Renal vein", correct: false },
-        { text: "Interlobular artery", correct: false }
-    ]
+    question: "Describe the structure and functions of the glomerular filtration membrane.",
+
+    keywords: [
+        "fenestrated endothelium",
+        "basement membrane",
+        "podocytes",
+        "filtration barrier",
+        "selective permeability"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A decrease in renal perfusion pressure stimulates:",
-    answers: [
-        { text: "Renin release", correct: true },
-        { text: "Reduced ADH secretion", correct: false },
-        { text: "Reduced aldosterone release", correct: false },
-        { text: "Increased GFR immediately", correct: false }
-    ]
+    question: "Discuss the formation and composition of urine.",
+
+    keywords: [
+        "glomerular filtration",
+        "reabsorption",
+        "secretion",
+        "water",
+        "urea"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Creatinine clearance is commonly used because creatinine is:",
-    answers: [
-        { text: "Freely filtered with minimal reabsorption", correct: true },
-        { text: "Completely reabsorbed", correct: false },
-        { text: "Actively secreted only", correct: false },
-        { text: "Bound to plasma proteins", correct: false }
-    ]
+    question: "Explain the role of erythropoietin in the body.",
+
+    keywords: [
+        "kidney",
+        "red blood cell production",
+        "bone marrow",
+        "hypoxia",
+        "erythropoiesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron segment is most metabolically active?",
-    answers: [
-        { text: "Proximal convoluted tubule", correct: true },
-        { text: "Bowman's capsule", correct: false },
-        { text: "Collecting duct", correct: false },
-        { text: "Thin descending limb", correct: false }
-    ]
+    question: "Describe the countercurrent multiplier mechanism.",
+
+    keywords: [
+        "loop of henle",
+        "ascending limb",
+        "descending limb",
+        "osmotic gradient",
+        "urine concentration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Tubuloglomerular feedback primarily depends on sensing:",
-    answers: [
-        { text: "Sodium chloride concentration", correct: true },
-        { text: "Glucose concentration", correct: false },
-        { text: "Protein concentration", correct: false },
-        { text: "Potassium concentration", correct: false }
-    ]
+    question: "Discuss the physiological importance of the vasa recta.",
+
+    keywords: [
+        "countercurrent exchange",
+        "medullary gradient",
+        "blood supply",
+        "water conservation",
+        "osmolarity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The countercurrent multiplier mechanism occurs mainly in the:",
-    answers: [
-        { text: "Loop of Henle", correct: true },
-        { text: "Proximal tubule", correct: false },
-        { text: "Distal tubule", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Explain the factors affecting glomerular filtration rate (GFR).",
+
+    keywords: [
+        "blood pressure",
+        "afferent arteriole",
+        "efferent arteriole",
+        "filtration pressure",
+        "renal autoregulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which substance is almost completely reabsorbed under normal physiological conditions?",
-    answers: [
-        { text: "Glucose", correct: true },
-        { text: "Creatinine", correct: false },
-        { text: "Inulin", correct: false },
-        { text: "Urea", correct: false }
-    ]
+    question: "Describe the functions of the distal convoluted tubule.",
+
+    keywords: [
+        "electrolyte regulation",
+        "aldosterone",
+        "calcium reabsorption",
+        "acid-base balance",
+        "fine adjustment"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The transport maximum (Tm) is most commonly associated with:",
-    answers: [
-        { text: "Glucose reabsorption", correct: true },
-        { text: "Water filtration", correct: false },
-        { text: "Protein synthesis", correct: false },
-        { text: "Oxygen diffusion", correct: false }
-    ]
+    question: "Explain the transport maximum (Tm) for glucose.",
+
+    keywords: [
+        "glucose reabsorption",
+        "proximal tubule",
+        "renal threshold",
+        "carrier saturation",
+        "glycosuria"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which acid-base disorder is compensated primarily by increased bicarbonate reabsorption?",
-    answers: [
-        { text: "Metabolic acidosis", correct: true },
-        { text: "Metabolic alkalosis", correct: false },
-        { text: "Respiratory alkalosis", correct: false },
-        { text: "Respiratory acidosis only", correct: false }
-    ]
+    question: "Discuss the endocrine functions of the kidneys.",
+
+    keywords: [
+        "erythropoietin",
+        "renin",
+        "calcitriol",
+        "blood pressure",
+        "calcium metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The filtration barrier of the glomerulus does NOT include:",
-    answers: [
-        { text: "Collecting duct epithelium", correct: true },
-        { text: "Fenestrated endothelium", correct: false },
-        { text: "Basement membrane", correct: false },
-        { text: "Podocyte slit diaphragm", correct: false }
-    ]
+    question: "Describe the mechanism of sodium reabsorption in the nephron.",
+
+    keywords: [
+        "active transport",
+        "na potassium pump",
+        "aldosterone",
+        "proximal tubule",
+        "distal tubule"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which Starling force favors glomerular filtration?",
-    answers: [
-        { text: "Glomerular capillary hydrostatic pressure", correct: true },
-        { text: "Plasma colloid osmotic pressure", correct: false },
-        { text: "Bowman's capsule hydrostatic pressure", correct: false },
-        { text: "Capsular oncotic pressure", correct: false }
-    ]
+    question: "Explain the causes and consequences of proteinuria.",
+
+    keywords: [
+        "glomerular damage",
+        "albumin",
+        "filtration barrier",
+        "kidney disease",
+        "urinalysis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The majority of bicarbonate reabsorption occurs in the:",
-    answers: [
-        { text: "Proximal convoluted tubule", correct: true },
-        { text: "Distal convoluted tubule", correct: false },
-        { text: "Collecting duct", correct: false },
-        { text: "Loop of Henle", correct: false }
-    ]
+    question: "Discuss the physiological importance of electrolyte balance.",
+
+    keywords: [
+        "sodium",
+        "potassium",
+        "calcium",
+        "homeostasis",
+        "kidney"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Failure of the kidneys to concentrate urine may result from damage to the:",
-    answers: [
-        { text: "Loop of Henle and collecting ducts", correct: true },
-        { text: "Renal artery only", correct: false },
-        { text: "Renal capsule", correct: false },
-        { text: "Bowman's capsule alone", correct: false }
-    ]
+    question: "Explain the role of the kidneys in maintaining body fluid homeostasis.",
+
+    keywords: [
+        "water balance",
+        "electrolytes",
+        "osmolarity",
+        "blood volume",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
+
+// HARD THEORY QUESTIONS (PART 2: Questions 26–50)
+
 {
-    question: "The major stimulus for aldosterone secretion is:",
-    answers: [
-        { text: "High plasma potassium concentration", correct: true },
-        { text: "Low sodium concentration", correct: false },
-        { text: "High glucose concentration", correct: false },
-        { text: "High calcium concentration", correct: false }
-    ]
+    question: "Discuss the mechanisms by which the kidneys regulate acid-base balance.",
+
+    keywords: [
+        "hydrogen ion secretion",
+        "bicarbonate reabsorption",
+        "ammonium production",
+        "phosphate buffer",
+        "blood pH"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which part of the nephron is impermeable to water but actively reabsorbs sodium and chloride?",
-    answers: [
-        { text: "Descending limb of loop of Henle", correct: false },
-        { text: "Thin ascending limb", correct: false },
-        { text: "Thick ascending limb", correct: true },
-        { text: "Collecting duct", correct: false }
-    ]
+    question: "Explain the transport maximum (Tm) for glucose and its clinical significance.",
+
+    keywords: [
+        "transport maximum",
+        "renal threshold",
+        "glucose reabsorption",
+        "glycosuria",
+        "diabetes mellitus"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Tubuloglomerular feedback is mediated by the:",
-    answers: [
-        { text: "Podocytes", correct: false },
-        { text: "Mesangial cells", correct: false },
-        { text: "Macula densa", correct: true },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Describe the factors that determine glomerular filtration rate (GFR).",
+
+    keywords: [
+        "hydrostatic pressure",
+        "oncotic pressure",
+        "Bowman's capsule pressure",
+        "filtration coefficient",
+        "Starling forces"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone increases water permeability in the collecting ducts?",
-    answers: [
-        { text: "Aldosterone", correct: false },
-        { text: "Renin", correct: false },
-        { text: "Antidiuretic hormone (ADH)", correct: true },
-        { text: "Atrial natriuretic peptide", correct: false }
-    ]
+    question: "Explain the physiological functions of erythropoietin.",
+
+    keywords: [
+        "kidney",
+        "red blood cells",
+        "bone marrow",
+        "hypoxia",
+        "erythropoiesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The primary source of renin in the kidney is the:",
-    answers: [
-        { text: "Macula densa cells", correct: false },
-        { text: "Juxtaglomerular cells", correct: true },
-        { text: "Mesangial cells", correct: false },
-        { text: "Podocytes", correct: false }
-    ]
+    question: "Describe the filtration barrier of the glomerulus.",
+
+    keywords: [
+        "fenestrated endothelium",
+        "basement membrane",
+        "podocytes",
+        "filtration slit",
+        "selective permeability"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Inulin clearance is equal to:",
-    answers: [
-        { text: "Renal plasma flow", correct: false },
-        { text: "Filtration fraction", correct: false },
-        { text: "Glomerular filtration rate", correct: true },
-        { text: "Renal blood flow", correct: false }
-    ]
+    question: "Explain how creatinine clearance is used to estimate GFR.",
+
+    keywords: [
+        "creatinine",
+        "clearance",
+        "glomerular filtration rate",
+        "kidney function",
+        "clinical assessment"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron segment is mainly responsible for urine acidification?",
-    answers: [
-        { text: "Proximal convoluted tubule", correct: false },
-        { text: "Collecting duct", correct: true },
-        { text: "Thin descending limb", correct: false },
-        { text: "Loop of Henle", correct: false }
-    ]
+    question: "Describe the mechanism of glucose reabsorption in the proximal convoluted tubule.",
+
+    keywords: [
+        "SGLT",
+        "secondary active transport",
+        "proximal tubule",
+        "sodium",
+        "GLUT transporter"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The filtration barrier of the glomerulus consists of all EXCEPT:",
-    answers: [
-        { text: "Fenestrated endothelium", correct: false },
-        { text: "Glomerular basement membrane", correct: false },
-        { text: "Podocyte slit diaphragm", correct: false },
-        { text: "Mesangial matrix", correct: true }
-    ]
+    question: "Discuss the physiological importance of renal autoregulation.",
+
+    keywords: [
+        "constant blood flow",
+        "stable GFR",
+        "myogenic mechanism",
+        "tubuloglomerular feedback",
+        "kidney protection"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The most concentrated urine that humans can produce depends primarily on:",
-    answers: [
-        { text: "High renal blood flow", correct: false },
-        { text: "Countercurrent multiplier mechanism", correct: true },
-        { text: "High filtration fraction", correct: false },
-        { text: "Low plasma protein concentration", correct: false }
-    ]
+    question: "Explain the role of aldosterone in electrolyte regulation.",
+
+    keywords: [
+        "sodium reabsorption",
+        "potassium secretion",
+        "distal tubule",
+        "collecting duct",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The vasa recta primarily functions to:",
-    answers: [
-        { text: "Filter plasma", correct: false },
-        { text: "Maintain the medullary osmotic gradient", correct: true },
-        { text: "Produce erythropoietin", correct: false },
-        { text: "Secrete renin", correct: false }
-    ]
+    question: "Describe the formation and significance of the corticomedullary osmotic gradient.",
+
+    keywords: [
+        "loop of Henle",
+        "countercurrent multiplier",
+        "vasa recta",
+        "urine concentration",
+        "osmolarity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which acid-base disorder is compensated primarily by the kidneys?",
-    answers: [
-        { text: "Respiratory acidosis", correct: true },
-        { text: "Metabolic alkalosis", correct: false },
-        { text: "Respiratory alkalosis", correct: false },
-        { text: "None of the above", correct: false }
-    ]
+    question: "Discuss the role of the kidneys in maintaining body fluid volume.",
+
+    keywords: [
+        "water balance",
+        "sodium regulation",
+        "ADH",
+        "aldosterone",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which transport process reabsorbs glucose in the proximal tubule?",
-    answers: [
-        { text: "Simple diffusion", correct: false },
-        { text: "Facilitated diffusion", correct: false },
-        { text: "Secondary active transport", correct: true },
-        { text: "Primary active transport", correct: false }
-    ]
+    question: "Explain the causes and consequences of reduced glomerular filtration rate.",
+
+    keywords: [
+        "renal disease",
+        "creatinine",
+        "urea",
+        "waste accumulation",
+        "kidney failure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal filtration fraction is approximately:",
-    answers: [
-        { text: "10%", correct: false },
-        { text: "20%", correct: true },
-        { text: "40%", correct: false },
-        { text: "60%", correct: false }
-    ]
+    question: "Describe the physiological functions of the collecting duct.",
+
+    keywords: [
+        "water reabsorption",
+        "ADH",
+        "acid base regulation",
+        "principal cells",
+        "intercalated cells"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which electrolyte is most affected in hyperaldosteronism?",
-    answers: [
-        { text: "Potassium", correct: true },
-        { text: "Calcium", correct: false },
-        { text: "Phosphate", correct: false },
-        { text: "Magnesium", correct: false }
-    ]
+    question: "Explain how the kidneys regulate potassium balance.",
+
+    keywords: [
+        "potassium secretion",
+        "distal tubule",
+        "collecting duct",
+        "aldosterone",
+        "electrolyte balance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The majority of bicarbonate reabsorption occurs in the:",
-    answers: [
-        { text: "Collecting duct", correct: false },
-        { text: "Loop of Henle", correct: false },
-        { text: "Proximal convoluted tubule", correct: true },
-        { text: "Distal convoluted tubule", correct: false }
-    ]
+    question: "Discuss the physiological basis of renal plasma clearance.",
+
+    keywords: [
+        "clearance",
+        "inulin",
+        "PAH",
+        "GFR",
+        "renal plasma flow"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which renal process requires ATP directly?",
-    answers: [
-        { text: "Simple diffusion", correct: false },
-        { text: "Primary active transport", correct: true },
-        { text: "Facilitated diffusion", correct: false },
-        { text: "Osmosis", correct: false }
-    ]
+    question: "Describe the role of bicarbonate in acid-base homeostasis.",
+
+    keywords: [
+        "buffer",
+        "blood pH",
+        "bicarbonate",
+        "kidney",
+        "carbonic acid"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The osmolarity of fluid leaving the thick ascending limb is:",
-    answers: [
-        { text: "Hyperosmotic", correct: false },
-        { text: "Hypoosmotic", correct: true },
-        { text: "Iso-osmotic", correct: false },
-        { text: "Variable only with ADH", correct: false }
-    ]
+    question: "Explain the role of the vasa recta in urine concentration.",
+
+    keywords: [
+        "countercurrent exchange",
+        "medullary gradient",
+        "blood supply",
+        "osmolarity",
+        "urine concentration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone promotes sodium excretion by the kidney?",
-    answers: [
-        { text: "Renin", correct: false },
-        { text: "Aldosterone", correct: false },
-        { text: "Atrial natriuretic peptide", correct: true },
-        { text: "ADH", correct: false }
-    ]
+    question: "Describe the hormonal regulation of renal function.",
+
+    keywords: [
+        "ADH",
+        "aldosterone",
+        "renin",
+        "ANP",
+        "parathyroid hormone"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidneys contribute to blood pressure regulation mainly through:",
-    answers: [
-        { text: "Erythropoietin secretion", correct: false },
-        { text: "Renin-Angiotensin-Aldosterone System", correct: true },
-        { text: "Vitamin D activation", correct: false },
-        { text: "Urea production", correct: false }
-    ]
+    question: "Discuss the physiological effects of atrial natriuretic peptide (ANP).",
+
+    keywords: [
+        "natriuresis",
+        "diuresis",
+        "reduced blood pressure",
+        "inhibits aldosterone",
+        "increased sodium excretion"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The preferred indicator of glomerular filtration rate in research studies is:",
-    answers: [
-        { text: "Creatinine clearance", correct: false },
-        { text: "Inulin clearance", correct: true },
-        { text: "Urea clearance", correct: false },
-        { text: "PAH clearance", correct: false }
-    ]
+    question: "Explain the mechanism of tubular secretion and its physiological importance.",
+
+    keywords: [
+        "hydrogen ions",
+        "potassium",
+        "organic acids",
+        "drug excretion",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Hydrogen ion secretion is greatest in the:",
-    answers: [
-        { text: "Collecting duct intercalated cells", correct: true },
-        { text: "Thin descending limb", correct: false },
-        { text: "Glomerulus", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Describe the role of the kidneys in vitamin D metabolism.",
+
+    keywords: [
+        "calcitriol",
+        "vitamin D activation",
+        "calcium absorption",
+        "phosphate",
+        "kidney"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron segment is the principal site of potassium secretion?",
-    answers: [
-        { text: "Proximal convoluted tubule", correct: false },
-        { text: "Distal convoluted tubule and collecting duct", correct: true },
-        { text: "Descending limb", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Discuss the causes and physiological effects of proteinuria.",
+
+    keywords: [
+        "glomerular damage",
+        "albumin",
+        "filtration barrier",
+        "kidney disease",
+        "urine protein"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The mechanism responsible for maintaining constant renal blood flow is:",
-    answers: [
-        { text: "Countercurrent exchange", correct: false },
-        { text: "Renal autoregulation", correct: true },
-        { text: "Osmosis", correct: false },
-        { text: "Diffusion", correct: false }
-    ]
+    question: "Explain the mechanism of renal compensation in respiratory acidosis.",
+
+    keywords: [
+        "bicarbonate reabsorption",
+        "hydrogen ion secretion",
+        "blood pH",
+        "kidney compensation",
+        "acid base balance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Renal failure commonly results in decreased production of:",
-    answers: [
-        { text: "Insulin", correct: false },
-        { text: "Erythropoietin", correct: true },
-        { text: "Growth hormone", correct: false },
-        { text: "Glucagon", correct: false }
-    ]
+    question: "Describe the physiological changes that occur during dehydration.",
+
+    keywords: [
+        "ADH secretion",
+        "water conservation",
+        "urine concentration",
+        "osmolarity",
+        "thirst"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The functional unit responsible for urine formation is the:",
-    answers: [
-        { text: "Renal pelvis", correct: false },
-        { text: "Nephron", correct: true },
-        { text: "Ureter", correct: false },
-        { text: "Minor calyx", correct: false }
-    ]
+    question: "Discuss the physiological importance of the kidneys in maintaining internal homeostasis.",
+
+    keywords: [
+        "excretion",
+        "fluid balance",
+        "electrolyte balance",
+        "acid base balance",
+        "blood pressure regulation"
+    ],
+
+    marks: 10
 }
+
 ];
 
-const EXTREME_QUESTIONS = [
+const EXTREME_THEORY_QUESTIONS = [
 
 {
-    question: "The juxtamedullary nephron is primarily responsible for:",
-    answers: [
-        { text: "Glucose reabsorption", correct: false },
-        { text: "Formation of concentrated urine", correct: true },
-        { text: "Protein filtration", correct: false },
-        { text: "Renin degradation", correct: false }
-    ]
+    question: "Discuss the mechanism of glomerular filtration in the kidney.",
+
+    keywords: [
+        "glomerular filtration",
+        "glomerulus",
+        "bowman's capsule",
+        "hydrostatic pressure",
+        "filtration membrane"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The anatomical reserve of the kidney refers to:",
-    answers: [
-        { text: "Extra renal arteries", correct: false },
-        { text: "The ability of remaining nephrons to compensate after nephron loss", correct: true },
-        { text: "Storage of urine in the renal pelvis", correct: false },
-        { text: "Presence of accessory kidneys", correct: false }
-    ]
+    question: "Explain the structure and functions of the nephron.",
+
+    keywords: [
+        "nephron",
+        "glomerulus",
+        "proximal tubule",
+        "loop of henle",
+        "distal tubule",
+        "collecting duct"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Star vessels (vasa recta) are essential because they:",
-    answers: [
-        { text: "Increase glomerular filtration", correct: false },
-        { text: "Maintain the medullary osmotic gradient", correct: true },
-        { text: "Secrete erythropoietin", correct: false },
-        { text: "Produce ADH", correct: false }
-    ]
+    question: "Describe the countercurrent multiplier mechanism and its role in urine concentration.",
+
+    keywords: [
+        "countercurrent multiplier",
+        "loop of henle",
+        "osmotic gradient",
+        "medulla",
+        "concentrated urine"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major site of ADH action is the:",
-    answers: [
-        { text: "Bowman's capsule", correct: false },
-        { text: "Collecting ducts", correct: true },
-        { text: "Proximal tubule", correct: false },
-        { text: "Glomerulus", correct: false }
-    ]
+    question: "Discuss the renin-angiotensin-aldosterone system (RAAS) in the regulation of blood pressure.",
+
+    keywords: [
+        "renin",
+        "angiotensin ii",
+        "aldosterone",
+        "blood pressure",
+        "vasoconstriction"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which mechanism is mainly responsible for renal autoregulation?",
-    answers: [
-        { text: "Countercurrent exchange", correct: false },
-        { text: "Myogenic response and tubuloglomerular feedback", correct: true },
-        { text: "Renin secretion only", correct: false },
-        { text: "Aldosterone secretion", correct: false }
-    ]
+    question: "Explain how the kidneys regulate acid-base balance.",
+
+    keywords: [
+        "hydrogen ion",
+        "bicarbonate",
+        "acid base balance",
+        "ammonia",
+        "ph regulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A decrease in renal perfusion pressure initially stimulates:",
-    answers: [
-        { text: "ANP release", correct: false },
-        { text: "Renin secretion", correct: true },
-        { text: "ADH inhibition", correct: false },
-        { text: "Glucose excretion", correct: false }
-    ]
+    question: "Describe the physiological functions of antidiuretic hormone (ADH) in the kidney.",
+
+    keywords: [
+        "adh",
+        "collecting duct",
+        "aquaporin",
+        "water reabsorption",
+        "osmolarity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The gold standard for measuring glomerular filtration rate is:",
-    answers: [
-        { text: "Creatinine clearance", correct: false },
-        { text: "Inulin clearance", correct: true },
-        { text: "Urea clearance", correct: false },
-        { text: "PAH clearance", correct: false }
-    ]
+    question: "Explain the mechanisms involved in tubular reabsorption.",
+
+    keywords: [
+        "tubular reabsorption",
+        "active transport",
+        "passive transport",
+        "glucose",
+        "water"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Para-aminohippuric acid (PAH) clearance is used to estimate:",
-    answers: [
-        { text: "Glomerular filtration rate", correct: false },
-        { text: "Renal plasma flow", correct: true },
-        { text: "Filtration fraction", correct: false },
-        { text: "Tubular maximum", correct: false }
-    ]
+    question: "Describe the process of tubular secretion and state its physiological importance.",
+
+    keywords: [
+        "tubular secretion",
+        "hydrogen ions",
+        "potassium",
+        "drugs",
+        "acid base regulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron segment is impermeable to water under normal conditions?",
-    answers: [
-        { text: "Descending limb", correct: false },
-        { text: "Thin ascending limb", correct: false },
-        { text: "Thick ascending limb", correct: true },
-        { text: "Collecting duct", correct: false }
-    ]
+    question: "Discuss renal autoregulation and explain how it maintains a constant glomerular filtration rate.",
+
+    keywords: [
+        "renal autoregulation",
+        "myogenic mechanism",
+        "tubuloglomerular feedback",
+        "gfr",
+        "afferent arteriole"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Failure of the kidneys to excrete hydrogen ions primarily causes:",
-    answers: [
-        { text: "Respiratory alkalosis", correct: false },
-        { text: "Metabolic acidosis", correct: true },
-        { text: "Respiratory acidosis", correct: false },
-        { text: "Metabolic alkalosis", correct: false }
-    ]
+    question: "Explain the composition of the glomerular filtration barrier.",
+
+    keywords: [
+        "fenestrated endothelium",
+        "basement membrane",
+        "podocytes",
+        "filtration slits",
+        "selective permeability"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The strongest stimulus for ADH secretion is:",
-    answers: [
-        { text: "Low blood glucose", correct: false },
-        { text: "Increased plasma osmolarity", correct: true },
-        { text: "High calcium level", correct: false },
-        { text: "Low potassium level", correct: false }
-    ]
+    question: "Discuss the factors that influence glomerular filtration rate (GFR).",
+
+    keywords: [
+        "gfr",
+        "hydrostatic pressure",
+        "oncotic pressure",
+        "renal blood flow",
+        "filtration coefficient"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which structure senses sodium chloride concentration in the distal tubule?",
-    answers: [
-        { text: "Podocytes", correct: false },
-        { text: "Macula densa", correct: true },
-        { text: "Mesangial cells", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Explain the physiological basis of inulin clearance as the gold standard for measuring GFR.",
+
+    keywords: [
+        "inulin",
+        "clearance",
+        "gfr",
+        "filtration",
+        "not reabsorbed"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The filtration fraction is calculated as:",
-    answers: [
-        { text: "GFR ÷ Renal plasma flow", correct: true },
-        { text: "Renal plasma flow ÷ GFR", correct: false },
-        { text: "Cardiac output ÷ GFR", correct: false },
-        { text: "Urine flow ÷ GFR", correct: false }
-    ]
+    question: "Discuss the role of the proximal convoluted tubule in urine formation.",
+
+    keywords: [
+        "proximal convoluted tubule",
+        "reabsorption",
+        "glucose",
+        "amino acids",
+        "bicarbonate"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The principal cells of the collecting duct mainly regulate:",
-    answers: [
-        { text: "Hydrogen ion secretion", correct: false },
-        { text: "Sodium and water balance", correct: true },
-        { text: "Protein synthesis", correct: false },
-        { text: "Glucose filtration", correct: false }
-    ]
+    question: "Explain the transport mechanisms operating in the thick ascending limb of the loop of Henle.",
+
+    keywords: [
+        "thick ascending limb",
+        "nkcc transporter",
+        "sodium",
+        "chloride",
+        "water impermeable"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which acid-base buffer acts immediately in body fluids?",
-    answers: [
-        { text: "Renal buffer system", correct: false },
-        { text: "Bicarbonate buffer system", correct: true },
-        { text: "Respiratory system", correct: false },
-        { text: "Bone buffer only", correct: false }
-    ]
+    question: "Describe the functions of the collecting duct in the regulation of body fluids.",
+
+    keywords: [
+        "collecting duct",
+        "adh",
+        "aldosterone",
+        "water balance",
+        "electrolytes"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A patient with chronic renal failure commonly develops anemia because of reduced:",
-    answers: [
-        { text: "Insulin", correct: false },
-        { text: "Erythropoietin", correct: true },
-        { text: "Calcitonin", correct: false },
-        { text: "Renin", correct: false }
-    ]
+    question: "Discuss the endocrine functions of the kidney.",
+
+    keywords: [
+        "erythropoietin",
+        "renin",
+        "calcitriol",
+        "vitamin d",
+        "hormones"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which electrolyte disturbance is most associated with renal failure?",
-    answers: [
-        { text: "Hypokalemia", correct: false },
-        { text: "Hyperkalemia", correct: true },
-        { text: "Hypocalcemia only", correct: false },
-        { text: "Hypernatremia", correct: false }
-    ]
+    question: "Explain the physiological mechanisms responsible for maintaining body fluid and electrolyte balance.",
+
+    keywords: [
+        "electrolytes",
+        "fluid balance",
+        "sodium",
+        "potassium",
+        "kidney"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which layer of the glomerular filtration barrier provides the greatest charge selectivity?",
-    answers: [
-        { text: "Fenestrated endothelium", correct: false },
-        { text: "Glomerular basement membrane", correct: true },
-        { text: "Bowman's capsule", correct: false },
-        { text: "Mesangial cells", correct: false }
-    ]
+    question: "Describe the role of the kidney in calcium and phosphate homeostasis.",
+
+    keywords: [
+        "calcium",
+        "phosphate",
+        "calcitriol",
+        "parathyroid hormone",
+        "reabsorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Tubuloglomerular feedback primarily prevents:",
-    answers: [
-        { text: "Protein synthesis", correct: false },
-        { text: "Large fluctuations in GFR", correct: true },
-        { text: "Renin release", correct: false },
-        { text: "Urine formation", correct: false }
-    ]
+    question: "Discuss the mechanism of urine concentration and dilution.",
+
+    keywords: [
+        "urine concentration",
+        "urine dilution",
+        "adh",
+        "countercurrent mechanism",
+        "osmotic gradient"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major limiting factor for successful kidney transplantation is:",
-    answers: [
-        { text: "High blood glucose", correct: false },
-        { text: "Immune rejection", correct: true },
-        { text: "Low blood pressure", correct: false },
-        { text: "High urine output", correct: false }
-    ]
+    question: "Explain the mechanism of tubuloglomerular feedback.",
+
+    keywords: [
+        "macula densa",
+        "afferent arteriole",
+        "gfr",
+        "feedback",
+        "renal autoregulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which condition is a common cause of chronic renal failure?",
-    answers: [
-        { text: "Hypertension", correct: true },
-        { text: "Asthma", correct: false },
-        { text: "Migraine", correct: false },
-        { text: "Peptic ulcer", correct: false }
-    ]
+    question: "Describe the structure and physiological importance of the juxtaglomerular apparatus.",
+
+    keywords: [
+        "juxtaglomerular apparatus",
+        "macula densa",
+        "juxtaglomerular cells",
+        "renin",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following best evaluates acid-base balance clinically?",
-    answers: [
-        { text: "Complete blood count", correct: false },
-        { text: "Arterial blood gas analysis", correct: true },
-        { text: "Urinalysis only", correct: false },
-        { text: "Blood glucose test", correct: false }
-    ]
+    question: "Discuss the physiological basis of renal plasma flow measurement using para-aminohippuric acid (PAH).",
+
+    keywords: [
+        "pah",
+        "renal plasma flow",
+        "clearance",
+        "secretion",
+        "renal circulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal arterial blood pH is approximately:",
-    answers: [
-        { text: "6.8–7.0", correct: false },
-        { text: "7.35–7.45", correct: true },
-        { text: "7.60–7.80", correct: false },
-        { text: "8.00–8.20", correct: false }
-    ]
+    question: "Explain how chronic kidney disease affects erythropoiesis.",
+
+    keywords: [
+        "chronic kidney disease",
+        "erythropoietin",
+        "anemia",
+        "bone marrow",
+        "red blood cells"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which organ provides the fastest compensation for metabolic acidosis?",
-    answers: [
-        { text: "Kidney", correct: false },
-        { text: "Lungs", correct: true },
-        { text: "Liver", correct: false },
-        { text: "Skin", correct: false }
-    ]
+    question: "Discuss the mechanisms responsible for potassium homeostasis in the kidney.",
+
+    keywords: [
+        "potassium",
+        "aldosterone",
+        "distal tubule",
+        "collecting duct",
+        "secretion"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main function of intercalated cells in the collecting duct is:",
-    answers: [
-        { text: "Water reabsorption", correct: false },
-        { text: "Acid-base regulation", correct: true },
-        { text: "Glucose transport", correct: false },
-        { text: "Protein filtration", correct: false }
-    ]
-},
-{
-    question: "Which of the following best explains why loop diuretics reduce the kidney's ability to concentrate urine?",
-    answers: [
-        { text: "They inhibit sodium reabsorption in the proximal tubule", correct: false },
-        { text: "They abolish the corticomedullary osmotic gradient by inhibiting the Na⁺-K⁺-2Cl⁻ transporter", correct: true },
-        { text: "They increase ADH secretion", correct: false },
-        { text: "They stimulate aquaporin insertion", correct: false }
-    ]
+    question: "Describe the pathophysiological changes that occur during acute renal failure.",
+
+    keywords: [
+        "acute renal failure",
+        "decreased gfr",
+        "uremia",
+        "electrolyte imbalance",
+        "oliguria"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron segment is impermeable to water even in the presence of ADH?",
-    answers: [
-        { text: "Descending thin limb", correct: false },
-        { text: "Thin ascending limb", correct: true },
-        { text: "Collecting duct", correct: false },
-        { text: "Proximal convoluted tubule", correct: false }
-    ]
+    question: "Describe the role of the kidneys in maintaining extracellular fluid homeostasis.",
+
+    keywords: [
+        "water balance",
+        "electrolytes",
+        "osmolarity",
+        "blood volume",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The thick ascending limb is commonly referred to as the:",
-    answers: [
-        { text: "Diluting segment", correct: true },
-        { text: "Concentrating segment", correct: false },
-        { text: "Filtration segment", correct: false },
-        { text: "Secretory segment", correct: false }
-    ]
+    question: "Explain the mechanism of countercurrent multiplication in the loop of Henle.",
+
+    keywords: [
+        "descending limb",
+        "ascending limb",
+        "osmotic gradient",
+        "Na-K-2Cl transporter",
+        "concentrated urine"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A patient with chronic kidney disease commonly develops anemia because of reduced production of:",
-    answers: [
-        { text: "Renin", correct: false },
-        { text: "Calcitriol", correct: false },
-        { text: "Erythropoietin", correct: true },
-        { text: "Aldosterone", correct: false }
-    ]
+    question: "Discuss the role of the vasa recta in urine concentration.",
+
+    keywords: [
+        "countercurrent exchange",
+        "medullary gradient",
+        "blood flow",
+        "solute preservation",
+        "water conservation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone increases calcium reabsorption in the distal convoluted tubule?",
-    answers: [
-        { text: "ADH", correct: false },
-        { text: "Parathyroid hormone", correct: true },
-        { text: "Insulin", correct: false },
-        { text: "Glucagon", correct: false }
-    ]
+    question: "Explain the hormonal regulation of sodium balance in the kidneys.",
+
+    keywords: [
+        "aldosterone",
+        "RAAS",
+        "distal tubule",
+        "collecting duct",
+        "sodium reabsorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The majority of bicarbonate reabsorption occurs in the:",
-    answers: [
-        { text: "Collecting duct", correct: false },
-        { text: "Loop of Henle", correct: false },
-        { text: "Proximal convoluted tubule", correct: true },
-        { text: "Distal convoluted tubule", correct: false }
-    ]
+    question: "Discuss the physiological effects of antidiuretic hormone (ADH) on the kidneys.",
+
+    keywords: [
+        "ADH",
+        "aquaporin",
+        "collecting duct",
+        "water reabsorption",
+        "urine concentration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The principal cells of the collecting duct primarily respond to:",
-    answers: [
-        { text: "Parathyroid hormone", correct: false },
-        { text: "ADH and aldosterone", correct: true },
-        { text: "Calcitonin", correct: false },
-        { text: "Growth hormone", correct: false }
-    ]
+    question: "Describe the mechanism of renal acidification of urine.",
+
+    keywords: [
+        "hydrogen ions",
+        "intercalated cells",
+        "bicarbonate",
+        "ammonium",
+        "acid-base balance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Intercalated cells are mainly responsible for:",
-    answers: [
-        { text: "Glucose reabsorption", correct: false },
-        { text: "Acid-base regulation", correct: true },
-        { text: "Protein synthesis", correct: false },
-        { text: "Water filtration", correct: false }
-    ]
+    question: "Explain the renal handling of bicarbonate.",
+
+    keywords: [
+        "proximal tubule",
+        "carbonic anhydrase",
+        "reabsorption",
+        "acid-base regulation",
+        "bicarbonate conservation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major stimulus for renin secretion is:",
-    answers: [
-        { text: "High blood pressure", correct: false },
-        { text: "Reduced renal perfusion pressure", correct: true },
-        { text: "Hypercalcemia", correct: false },
-        { text: "Hyperglycemia", correct: false }
-    ]
+    question: "Discuss the role of the kidneys in long-term regulation of blood pressure.",
+
+    keywords: [
+        "renin",
+        "angiotensin II",
+        "aldosterone",
+        "RAAS",
+        "blood volume"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The renal threshold for glucose is exceeded in:",
-    answers: [
-        { text: "Diabetes mellitus", correct: true },
-        { text: "Diabetes insipidus", correct: false },
-        { text: "Hypertension", correct: false },
-        { text: "Hypothyroidism", correct: false }
-    ]
+    question: "Explain the clearance principle and its application in renal physiology.",
+
+    keywords: [
+        "clearance",
+        "GFR",
+        "renal plasma flow",
+        "inulin",
+        "creatinine"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which acid-base disorder is characterized by decreased plasma bicarbonate concentration?",
-    answers: [
-        { text: "Metabolic acidosis", correct: true },
-        { text: "Respiratory alkalosis", correct: false },
-        { text: "Respiratory acidosis", correct: false },
-        { text: "Metabolic alkalosis", correct: false }
-    ]
+    question: "Compare inulin clearance with creatinine clearance.",
+
+    keywords: [
+        "GFR",
+        "inulin",
+        "creatinine",
+        "clinical estimation",
+        "filtration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major intracellular buffer system consists mainly of:",
-    answers: [
-        { text: "Hemoglobin", correct: false },
-        { text: "Proteins and phosphate", correct: true },
-        { text: "Bicarbonate", correct: false },
-        { text: "Ammonia", correct: false }
-    ]
+    question: "Describe the physiological basis of renal autoregulation.",
+
+    keywords: [
+        "myogenic mechanism",
+        "tubuloglomerular feedback",
+        "afferent arteriole",
+        "GFR",
+        "renal blood flow"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A reduction in GFR causes:",
-    answers: [
-        { text: "Increased plasma creatinine", correct: true },
-        { text: "Decreased plasma urea", correct: false },
-        { text: "Increased urine output", correct: false },
-        { text: "Reduced plasma potassium", correct: false }
-    ]
+    question: "Discuss the importance of the juxtaglomerular apparatus.",
+
+    keywords: [
+        "macula densa",
+        "juxtaglomerular cells",
+        "renin",
+        "blood pressure",
+        "GFR"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which structure forms the filtration slits in the glomerulus?",
-    answers: [
-        { text: "Mesangial cells", correct: false },
-        { text: "Podocyte foot processes", correct: true },
-        { text: "Fenestrated endothelium", correct: false },
-        { text: "Basement membrane", correct: false }
-    ]
+    question: "Explain how the kidneys compensate for respiratory acidosis.",
+
+    keywords: [
+        "bicarbonate reabsorption",
+        "hydrogen ion secretion",
+        "ammonia",
+        "acid-base balance",
+        "renal compensation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidney activates vitamin D into:",
-    answers: [
-        { text: "Calcifediol", correct: false },
-        { text: "Calcitriol", correct: true },
-        { text: "Ergocalciferol", correct: false },
-        { text: "Cholecalciferol", correct: false }
-    ]
+    question: "Describe the mechanism of glucose reabsorption in the proximal tubule.",
+
+    keywords: [
+        "SGLT",
+        "secondary active transport",
+        "transport maximum",
+        "renal threshold",
+        "proximal tubule"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which condition is most likely to produce metabolic acidosis?",
-    answers: [
-        { text: "Persistent vomiting", correct: false },
-        { text: "Severe diarrhea", correct: true },
-        { text: "Hyperventilation", correct: false },
-        { text: "Excess aldosterone", correct: false }
-    ]
+    question: "Explain the concept of transport maximum (Tm) in renal physiology.",
+
+    keywords: [
+        "transport maximum",
+        "glucose",
+        "renal threshold",
+        "carrier saturation",
+        "glycosuria"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Countercurrent multiplication primarily occurs in the:",
-    answers: [
-        { text: "Collecting duct", correct: false },
-        { text: "Loop of Henle", correct: true },
-        { text: "Proximal tubule", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Discuss the role of the kidneys in calcium and phosphate homeostasis.",
+
+    keywords: [
+        "parathyroid hormone",
+        "calcitriol",
+        "calcium",
+        "phosphate",
+        "reabsorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidney contributes to long-term blood pressure regulation mainly through:",
-    answers: [
-        { text: "Sympathetic stimulation only", correct: false },
-        { text: "Renin-Angiotensin-Aldosterone System", correct: true },
-        { text: "Calcitonin release", correct: false },
-        { text: "Insulin secretion", correct: false }
-    ]
+    question: "Explain the activation of vitamin D by the kidneys.",
+
+    keywords: [
+        "calcitriol",
+        "1-alpha hydroxylase",
+        "vitamin D",
+        "calcium absorption",
+        "kidney"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal plasma osmolarity is approximately:",
-    answers: [
-        { text: "150–180 mOsm/L", correct: false },
-        { text: "285–295 mOsm/L", correct: true },
-        { text: "350–400 mOsm/L", correct: false },
-        { text: "450–500 mOsm/L", correct: false }
-    ]
+    question: "Discuss the pathophysiology of chronic kidney disease.",
+
+    keywords: [
+        "nephron loss",
+        "reduced GFR",
+        "uremia",
+        "fibrosis",
+        "renal failure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Failure of ADH secretion results in:",
-    answers: [
-        { text: "Diabetes mellitus", correct: false },
-        { text: "Diabetes insipidus", correct: true },
-        { text: "Nephrotic syndrome", correct: false },
-        { text: "Glomerulonephritis", correct: false }
-    ]
+    question: "Explain why chronic kidney disease commonly causes anemia.",
+
+    keywords: [
+        "erythropoietin",
+        "bone marrow",
+        "red blood cells",
+        "kidney",
+        "anemia"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The skin conserves body heat primarily through:",
-    answers: [
-        { text: "Sweating", correct: false },
-        { text: "Cutaneous vasoconstriction", correct: true },
-        { text: "Sebum secretion", correct: false },
-        { text: "Hair growth", correct: false }
-    ]
+    question: "Describe the electrolyte disturbances associated with renal failure.",
+
+    keywords: [
+        "hyperkalemia",
+        "hyponatremia",
+        "metabolic acidosis",
+        "phosphate",
+        "calcium"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Basal metabolic rate is primarily influenced by:",
-    answers: [
-        { text: "Growth hormone", correct: false },
-        { text: "Thyroid hormones", correct: true },
-        { text: "Insulin", correct: false },
-        { text: "Glucagon", correct: false }
-    ]
+    question: "Discuss the physiological principles of dialysis.",
+
+    keywords: [
+        "diffusion",
+        "osmosis",
+        "ultrafiltration",
+        "dialysis membrane",
+        "waste removal"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron type is mainly responsible for producing concentrated urine?",
-    answers: [
-        { text: "Cortical nephron", correct: false },
-        { text: "Juxtamedullary nephron", correct: true },
-        { text: "Primitive nephron", correct: false },
-        { text: "Fetal nephron", correct: false }
-    ]
+    question: "Explain the mechanism of edema formation in nephrotic syndrome.",
+
+    keywords: [
+        "proteinuria",
+        "hypoalbuminemia",
+        "oncotic pressure",
+        "fluid accumulation",
+        "edema"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The most reliable endogenous marker used clinically to estimate GFR is:",
-    answers: [
-        { text: "Albumin", correct: false },
-        { text: "Creatinine", correct: true },
-        { text: "Glucose", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
+    question: "Discuss the immunological basis of kidney transplant rejection.",
+
+    keywords: [
+        "immune response",
+        "HLA",
+        "T lymphocytes",
+        "rejection",
+        "immunosuppressants"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The final common pathway responsible for maintaining extracellular fluid homeostasis is the:",
-    answers: [
-        { text: "Respiratory system", correct: false },
-        { text: "Renal system", correct: true },
-        { text: "Digestive system", correct: false },
-        { text: "Endocrine pancreas", correct: false }
-    ]
+    question: "Describe the physiological responses of the kidneys to dehydration.",
+
+    keywords: [
+        "ADH",
+        "RAAS",
+        "water conservation",
+        "concentrated urine",
+        "osmolarity"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the integrated role of the kidneys in maintaining internal homeostasis.",
+
+    keywords: [
+        "fluid balance",
+        "electrolytes",
+        "acid-base balance",
+        "blood pressure",
+        "waste excretion"
+    ],
+
+    marks: 10
 }
+
 ];
