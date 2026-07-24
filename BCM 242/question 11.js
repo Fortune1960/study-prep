@@ -1,1511 +1,2177 @@
-const EASY_QUESTIONS = [
+const EASY_THEORY_QUESTIONS = [
+
+    // EASY THEORY QUESTIONS (PART 1)
 
 {
-    question: "Amino acids are primarily known as the building blocks of:",
-    answers: [
-        { text: "Lipids", correct: false },
-        { text: "Proteins", correct: true },
-        { text: "Carbohydrates", correct: false },
-        { text: "Nucleic acids", correct: false }
-    ]
+    question: "Define amphoteric substances and explain why amino acids are described as amphoteric.",
+
+    keywords: [
+        "amphoteric",
+        "acid",
+        "base",
+        "amino group",
+        "carboxyl group"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which property allows amino acids to act as both acids and bases?",
-    answers: [
-        { text: "Hydrophobicity", correct: false },
-        { text: "Amphoteric nature", correct: true },
-        { text: "Optical activity", correct: false },
-        { text: "Denaturation", correct: false }
-    ]
+    question: "State five characteristics of amino acids.",
+
+    keywords: [
+        "building blocks",
+        "protein",
+        "amino group",
+        "carboxyl group",
+        "side chain"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The amino group of an amino acid is represented by:",
-    answers: [
-        { text: "-COOH", correct: false },
-        { text: "-NH₂", correct: true },
-        { text: "-OH", correct: false },
-        { text: "-SH", correct: false }
-    ]
+    question: "Explain the structure of a general amino acid with the aid of a labelled diagram.",
+
+    keywords: [
+        "alpha carbon",
+        "amino group",
+        "carboxyl group",
+        "hydrogen",
+        "R group"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The carboxyl group of an amino acid is represented by:",
-    answers: [
-        { text: "-COOH", correct: true },
-        { text: "-NH₂", correct: false },
-        { text: "-CH₃", correct: false },
-        { text: "-PO₄", correct: false }
-    ]
+    question: "Differentiate between essential and non-essential amino acids with suitable examples.",
+
+    keywords: [
+        "essential amino acids",
+        "non-essential amino acids",
+        "diet",
+        "examples",
+        "synthesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Proteins are polymers made from:",
-    answers: [
-        { text: "Fatty acids", correct: false },
-        { text: "Monosaccharides", correct: false },
-        { text: "Amino acids", correct: true },
-        { text: "Nucleotides", correct: false }
-    ]
+    question: "List five essential amino acids and state their importance.",
+
+    keywords: [
+        "leucine",
+        "lysine",
+        "valine",
+        "diet",
+        "growth"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which bond joins amino acids together?",
-    answers: [
-        { text: "Hydrogen bond", correct: false },
-        { text: "Peptide bond", correct: true },
-        { text: "Ionic bond", correct: false },
-        { text: "Phosphodiester bond", correct: false }
-    ]
+    question: "Explain the meaning of zwitterion and describe how amino acids exist as zwitterions.",
+
+    keywords: [
+        "zwitterion",
+        "positive charge",
+        "negative charge",
+        "neutral",
+        "ionic form"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Protein denaturation mainly affects the protein's:",
-    answers: [
-        { text: "Primary structure", correct: false },
-        { text: "Secondary and tertiary structures", correct: true },
-        { text: "Amino acid sequence", correct: false },
-        { text: "Peptide bonds", correct: false }
-    ]
+    question: "Define the isoelectric point (pI) of amino acids and state its significance.",
+
+    keywords: [
+        "isoelectric point",
+        "net charge",
+        "neutral",
+        "pH",
+        "migration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Albumin is mainly synthesized in the:",
-    answers: [
-        { text: "Kidney", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Heart", correct: false },
-        { text: "Pancreas", correct: false }
-    ]
+    question: "Discuss the physical properties of amino acids.",
+
+    keywords: [
+        "solubility",
+        "crystals",
+        "melting point",
+        "water",
+        "ionic"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which plasma protein is most abundant?",
-    answers: [
-        { text: "Globulin", correct: false },
-        { text: "Albumin", correct: true },
-        { text: "Fibrinogen", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
+    question: "Define ketogenic amino acids and list four examples.",
+
+    keywords: [
+        "ketogenic",
+        "lysine",
+        "leucine",
+        "acetyl-CoA",
+        "ketone bodies"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Globulins mainly function in:",
-    answers: [
-        { text: "Energy production", correct: false },
-        { text: "Immune defense", correct: true },
-        { text: "Fat digestion", correct: false },
-        { text: "DNA replication", correct: false }
-    ]
+    question: "Differentiate between ketogenic and glucogenic amino acids.",
+
+    keywords: [
+        "ketogenic",
+        "glucogenic",
+        "glucose",
+        "acetyl-CoA",
+        "metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Denaturation of proteins may be caused by:",
-    answers: [
-        { text: "Heat", correct: true },
-        { text: "Cold water only", correct: false },
-        { text: "Sunlight only", correct: false },
-        { text: "Oxygen only", correct: false }
-    ]
+    question: "State the biological importance of amino acids in the human body.",
+
+    keywords: [
+        "protein synthesis",
+        "enzymes",
+        "hormones",
+        "energy",
+        "repair"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The process of removing the amino group from amino acids is called:",
-    answers: [
-        { text: "Hydrolysis", correct: false },
-        { text: "Deamination", correct: true },
-        { text: "Oxidation", correct: false },
-        { text: "Phosphorylation", correct: false }
-    ]
+    question: "Define protein denaturation and list four agents that can cause it.",
+
+    keywords: [
+        "denaturation",
+        "heat",
+        "acid",
+        "alkali",
+        "chemicals"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Transamination involves transfer of:",
-    answers: [
-        { text: "Carboxyl group", correct: false },
-        { text: "Amino group", correct: true },
-        { text: "Hydroxyl group", correct: false },
-        { text: "Phosphate group", correct: false }
-    ]
+    question: "Describe four effects of protein denaturation.",
+
+    keywords: [
+        "loss of function",
+        "coagulation",
+        "solubility",
+        "structure",
+        "activity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The liver is the major site of:",
-    answers: [
-        { text: "Protein digestion", correct: false },
-        { text: "Amino acid metabolism", correct: true },
-        { text: "DNA replication", correct: false },
-        { text: "Vitamin synthesis", correct: false }
-    ]
+    question: "State five factors that influence protein denaturation.",
+
+    keywords: [
+        "temperature",
+        "pH",
+        "heavy metals",
+        "organic solvents",
+        "radiation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main toxic product formed during amino acid breakdown is:",
-    answers: [
-        { text: "Carbon dioxide", correct: false },
-        { text: "Ammonia", correct: true },
-        { text: "Water", correct: false },
-        { text: "Oxygen", correct: false }
-    ]
+    question: "Differentiate between reversible and irreversible denaturation.",
+
+    keywords: [
+        "reversible",
+        "irreversible",
+        "protein structure",
+        "function",
+        "renaturation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Ammonia is converted into which less toxic compound in humans?",
-    answers: [
-        { text: "Creatinine", correct: false },
-        { text: "Urea", correct: true },
-        { text: "Glucose", correct: false },
-        { text: "Ketone bodies", correct: false }
-    ]
+    question: "Define albumins and state four important functions they perform in the body.",
+
+    keywords: [
+        "albumin",
+        "transport",
+        "osmotic pressure",
+        "plasma protein",
+        "nutrition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The urea cycle mainly occurs in the:",
-    answers: [
-        { text: "Brain", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Heart", correct: false },
-        { text: "Lungs", correct: false }
-    ]
+    question: "Describe the major characteristics of globulins.",
+
+    keywords: [
+        "globulin",
+        "immunity",
+        "transport",
+        "plasma protein",
+        "antibodies"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Phenylketonuria results from deficiency of:",
-    answers: [
-        { text: "Phenylalanine hydroxylase", correct: true },
-        { text: "Hexokinase", correct: false },
-        { text: "Pepsin", correct: false },
-        { text: "Lipase", correct: false }
-    ]
+    question: "Differentiate between albumins and globulins.",
+
+    keywords: [
+        "albumins",
+        "globulins",
+        "solubility",
+        "function",
+        "examples"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Phenylketonuria is an inherited disorder affecting:",
-    answers: [
-        { text: "Carbohydrate metabolism", correct: false },
-        { text: "Protein metabolism", correct: true },
-        { text: "Lipid metabolism", correct: false },
-        { text: "Vitamin metabolism", correct: false }
-    ]
+    question: "State five biological functions of plasma proteins.",
+
+    keywords: [
+        "transport",
+        "immunity",
+        "buffer",
+        "clotting",
+        "osmotic pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Ketogenic amino acids are amino acids that produce:",
-    answers: [
-        { text: "Glucose only", correct: false },
-        { text: "Ketone bodies", correct: true },
-        { text: "Lactic acid", correct: false },
-        { text: "Pyruvate only", correct: false }
-    ]
+    question: "Define transamination and explain its importance in amino acid metabolism.",
+
+    keywords: [
+        "transamination",
+        "aminotransferase",
+        "amino group",
+        "metabolism",
+        "alpha-keto acid"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Leucine is classified as a:",
-    answers: [
-        { text: "Ketogenic amino acid", correct: true },
-        { text: "Glucogenic amino acid", correct: false },
-        { text: "Essential fatty acid", correct: false },
-        { text: "Vitamin", correct: false }
-    ]
+    question: "List the enzymes involved in transamination and state the coenzyme required.",
+
+    keywords: [
+        "aminotransferase",
+        "ALT",
+        "AST",
+        "PLP",
+        "vitamin B6"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The process of breaking proteins into amino acids is called:",
-    answers: [
-        { text: "Hydrolysis", correct: true },
-        { text: "Condensation", correct: false },
-        { text: "Replication", correct: false },
-        { text: "Oxidation", correct: false }
-    ]
+    question: "Explain the role of vitamin B6 in amino acid metabolism.",
+
+    keywords: [
+        "vitamin B6",
+        "PLP",
+        "transamination",
+        "enzyme",
+        "coenzyme"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Protein digestion begins in the:",
-    answers: [
-        { text: "Mouth", correct: false },
-        { text: "Stomach", correct: true },
-        { text: "Small intestine", correct: false },
-        { text: "Colon", correct: false }
-    ]
+    question: "Define oxidative deamination and state where it occurs.",
+
+    keywords: [
+        "oxidative deamination",
+        "glutamate",
+        "liver",
+        "ammonia",
+        "mitochondria"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme pepsin functions best in:",
-    answers: [
-        { text: "Acidic medium", correct: true },
-        { text: "Neutral medium", correct: false },
-        { text: "Alkaline medium", correct: false },
-        { text: "Distilled water", correct: false }
-    ]
+    question: "State the importance of oxidative deamination in protein metabolism.",
+
+    keywords: [
+        "ammonia",
+        "urea cycle",
+        "energy",
+        "nitrogen metabolism",
+        "glutamate"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following is an essential amino acid?",
-    answers: [
-        { text: "Leucine", correct: true },
-        { text: "Alanine", correct: false },
-        { text: "Glycine", correct: false },
-        { text: "Serine", correct: false }
-    ]
+    question: "Explain the relationship between transamination and oxidative deamination.",
+
+    keywords: [
+        "transamination",
+        "oxidative deamination",
+        "glutamate",
+        "ammonia",
+        "nitrogen metabolism"
+    ],
+
+    marks: 10
+},
+
+// EASY THEORY QUESTIONS (PART 2)
+
+{
+    question: "Define carbamoyl phosphate synthetase I (CPS I) and state where it is located.",
+
+    keywords: [
+        "CPS I",
+        "mitochondria",
+        "liver",
+        "urea cycle",
+        "enzyme"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The main nitrogenous waste product excreted by humans is:",
-    answers: [
-        { text: "Ammonia", correct: false },
-        { text: "Urea", correct: true },
-        { text: "Uric acid", correct: false },
-        { text: "Creatinine", correct: false }
-    ]
+    question: "State the function of carbamoyl phosphate synthetase I in the urea cycle.",
+
+    keywords: [
+        "carbamoyl phosphate",
+        "ammonia",
+        "ATP",
+        "urea cycle",
+        "nitrogen disposal"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme responsible for converting phenylalanine to tyrosine is:",
-    answers: [
-        { text: "Phenylalanine hydroxylase", correct: true },
-        { text: "Tyrosinase", correct: false },
-        { text: "Hexokinase", correct: false },
-        { text: "Pepsin", correct: false }
-    ]
+    question: "List the substrates required for the carbamoyl phosphate synthetase I reaction.",
+
+    keywords: [
+        "ammonia",
+        "carbon dioxide",
+        "ATP",
+        "N-acetylglutamate",
+        "enzyme"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which organ is primarily responsible for eliminating urea from the body?",
-    answers: [
-        { text: "Liver", correct: false },
-        { text: "Kidney", correct: true },
-        { text: "Heart", correct: false },
-        { text: "Pancreas", correct: false }
-    ]
+    question: "Explain the importance of the urea cycle in amino acid metabolism.",
+
+    keywords: [
+        "urea cycle",
+        "ammonia",
+        "nitrogen",
+        "detoxification",
+        "liver"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Proteins lose their biological activity mainly because of:",
-    answers: [
-        { text: "Denaturation", correct: true },
-        { text: "Hydrolysis", correct: false },
-        { text: "Digestion", correct: false },
-        { text: "Filtration", correct: false }
-    ]
+    question: "Define phenylketonuria (PKU).",
+
+    keywords: [
+        "phenylketonuria",
+        "genetic disorder",
+        "phenylalanine",
+        "enzyme deficiency",
+        "metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The process by which proteins are synthesized from amino acids is called:",
-    answers: [
-        { text: "Translation", correct: true },
-        { text: "Transcription", correct: false },
-        { text: "Replication", correct: false },
-        { text: "Deamination", correct: false }
-    ]
+    question: "State the enzyme deficiency responsible for phenylketonuria.",
+
+    keywords: [
+        "phenylalanine hydroxylase",
+        "enzyme deficiency",
+        "phenylalanine",
+        "tyrosine",
+        "PKU"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Amino acids that cannot be synthesized by the body are called:",
-    answers: [
-        { text: "Non-essential amino acids", correct: false },
-        { text: "Essential amino acids", correct: true },
-        { text: "Ketogenic amino acids", correct: false },
-        { text: "Glucogenic amino acids", correct: false }
-    ]
+    question: "List five clinical features of phenylketonuria.",
+
+    keywords: [
+        "mental retardation",
+        "musty odor",
+        "seizures",
+        "developmental delay",
+        "hypopigmentation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following is a non-essential amino acid?",
-    answers: [
-        { text: "Valine", correct: false },
-        { text: "Lysine", correct: false },
-        { text: "Alanine", correct: true },
-        { text: "Methionine", correct: false }
-    ]
+    question: "Explain how phenylketonuria is diagnosed.",
+
+    keywords: [
+        "newborn screening",
+        "blood test",
+        "phenylalanine",
+        "Guthrie test",
+        "laboratory diagnosis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The precursor of catecholamines is:",
-    answers: [
-        { text: "Tyrosine", correct: true },
-        { text: "Leucine", correct: false },
-        { text: "Glycine", correct: false },
-        { text: "Histidine", correct: false }
-    ]
+    question: "Outline the management of phenylketonuria.",
+
+    keywords: [
+        "low phenylalanine diet",
+        "tyrosine supplementation",
+        "screening",
+        "monitoring",
+        "early treatment"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Histamine is synthesized from:",
-    answers: [
-        { text: "Histidine", correct: true },
-        { text: "Tryptophan", correct: false },
-        { text: "Tyrosine", correct: false },
-        { text: "Arginine", correct: false }
-    ]
+    question: "State five functions of proteins in the human body.",
+
+    keywords: [
+        "growth",
+        "repair",
+        "enzymes",
+        "transport",
+        "hormones"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Serotonin is synthesized from:",
-    answers: [
-        { text: "Tryptophan", correct: true },
-        { text: "Tyrosine", correct: false },
-        { text: "Histidine", correct: false },
-        { text: "Valine", correct: false }
-    ]
+    question: "Differentiate between simple proteins and conjugated proteins.",
+
+    keywords: [
+        "simple proteins",
+        "conjugated proteins",
+        "prosthetic group",
+        "composition",
+        "examples"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The primary function of albumin in blood is to:",
-    answers: [
-        { text: "Fight infection", correct: false },
-        { text: "Maintain osmotic pressure", correct: true },
-        { text: "Transport oxygen", correct: false },
-        { text: "Digest proteins", correct: false }
-    ]
+    question: "List five examples of biologically important proteins.",
+
+    keywords: [
+        "hemoglobin",
+        "albumin",
+        "collagen",
+        "insulin",
+        "keratin"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Immunoglobulins belong to which class of plasma proteins?",
-    answers: [
-        { text: "Albumins", correct: false },
-        { text: "Globulins", correct: true },
-        { text: "Collagens", correct: false },
-        { text: "Keratins", correct: false }
-    ]
+    question: "State the nutritional importance of proteins.",
+
+    keywords: [
+        "growth",
+        "repair",
+        "enzymes",
+        "body building",
+        "nutrition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid contains sulfur?",
-    answers: [
-        { text: "Methionine", correct: true },
-        { text: "Alanine", correct: false },
-        { text: "Valine", correct: false },
-        { text: "Proline", correct: false }
-    ]
+    question: "Explain why proteins are described as polymers of amino acids.",
+
+    keywords: [
+        "peptide bond",
+        "polymer",
+        "amino acids",
+        "polypeptide",
+        "protein"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme pepsin is secreted by:",
-    answers: [
-        { text: "Chief cells of the stomach", correct: true },
-        { text: "Parietal cells", correct: false },
-        { text: "Goblet cells", correct: false },
-        { text: "Hepatocytes", correct: false }
-    ]
+    question: "Describe the formation of a peptide bond.",
+
+    keywords: [
+        "condensation reaction",
+        "water",
+        "amino group",
+        "carboxyl group",
+        "peptide bond"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The inactive precursor of pepsin is:",
-    answers: [
-        { text: "Trypsinogen", correct: false },
-        { text: "Pepsinogen", correct: true },
-        { text: "Chymotrypsinogen", correct: false },
-        { text: "Proelastase", correct: false }
-    ]
+    question: "Differentiate between dipeptides, tripeptides and polypeptides.",
+
+    keywords: [
+        "dipeptide",
+        "tripeptide",
+        "polypeptide",
+        "amino acids",
+        "chain length"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major site of protein digestion after the stomach is the:",
-    answers: [
-        { text: "Large intestine", correct: false },
-        { text: "Small intestine", correct: true },
-        { text: "Esophagus", correct: false },
-        { text: "Rectum", correct: false }
-    ]
+    question: "State four levels of protein structure.",
+
+    keywords: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "quaternary",
+        "structure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Trypsin is secreted by the:",
-    answers: [
-        { text: "Pancreas", correct: true },
-        { text: "Liver", correct: false },
-        { text: "Stomach", correct: false },
-        { text: "Kidney", correct: false }
-    ]
+    question: "Explain the importance of the primary structure of proteins.",
+
+    keywords: [
+        "amino acid sequence",
+        "function",
+        "genetics",
+        "protein folding",
+        "mutation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The process of synthesizing glucose from amino acids is called:",
-    answers: [
-        { text: "Glycolysis", correct: false },
-        { text: "Gluconeogenesis", correct: true },
-        { text: "Glycogenesis", correct: false },
-        { text: "Lipogenesis", correct: false }
-    ]
+    question: "List five factors that influence protein structure.",
+
+    keywords: [
+        "temperature",
+        "pH",
+        "mutations",
+        "chemical agents",
+        "ionic interactions"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which vitamin is required for transamination reactions?",
-    answers: [
-        { text: "Vitamin B6", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
+    question: "Explain why enzymes involved in amino acid metabolism are important.",
+
+    keywords: [
+        "enzyme",
+        "metabolism",
+        "catalysis",
+        "amino acids",
+        "biochemical reactions"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The central molecule that accepts amino groups during transamination is:",
-    answers: [
-        { text: "α-Ketoglutarate", correct: true },
-        { text: "Pyruvate", correct: false },
-        { text: "Oxaloacetate", correct: false },
-        { text: "Lactate", correct: false }
-    ]
+    question: "State the significance of nitrogen balance in the body.",
+
+    keywords: [
+        "nitrogen balance",
+        "protein synthesis",
+        "protein breakdown",
+        "growth",
+        "nutrition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is exclusively ketogenic?",
-    answers: [
-        { text: "Leucine", correct: true },
-        { text: "Alanine", correct: false },
-        { text: "Glycine", correct: false },
-        { text: "Aspartate", correct: false }
-    ]
+    question: "Differentiate between positive and negative nitrogen balance.",
+
+    keywords: [
+        "positive balance",
+        "negative balance",
+        "growth",
+        "starvation",
+        "protein metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The first enzyme of the urea cycle is:",
-    answers: [
-        { text: "Carbamoyl phosphate synthetase I", correct: true },
-        { text: "Arginase", correct: false },
-        { text: "Ornithine transcarbamylase", correct: false },
-        { text: "Argininosuccinate lyase", correct: false }
-    ]
+    question: "Explain the importance of amino acid metabolism in maintaining body homeostasis.",
+
+    keywords: [
+        "homeostasis",
+        "energy",
+        "protein synthesis",
+        "nitrogen balance",
+        "metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The urea cycle occurs partly in the:",
-    answers: [
-        { text: "Mitochondria", correct: true },
-        { text: "Nucleus", correct: false },
-        { text: "Golgi apparatus", correct: false },
-        { text: "Lysosome", correct: false }
-    ]
+    question: "Discuss the overall importance of protein metabolism in human health.",
+
+    keywords: [
+        "protein metabolism",
+        "growth",
+        "repair",
+        "enzyme production",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which plasma protein is essential for blood clotting?",
-    answers: [
-        { text: "Fibrinogen", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Globulin", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
-},
+    question: "Summarize the major pathways involved in amino acid metabolism.",
 
-{
-    question: "The major function of transamination is to:",
-    answers: [
-        { text: "Produce fatty acids", correct: false },
-        { text: "Transfer amino groups between amino acids and keto acids", correct: true },
-        { text: "Break peptide bonds", correct: false },
-        { text: "Digest proteins in the stomach", correct: false }
-    ]
+    keywords: [
+        "transamination",
+        "deamination",
+        "urea cycle",
+        "protein synthesis",
+        "catabolism"
+    ],
+
+    marks: 10
 }
-
 ];
 
-const HARD_QUESTIONS = [
+const HARD_THEORY_QUESTIONS = [
+
+    // HARD THEORY QUESTIONS (PART 1)
 
 {
-    question: "An amino acid exists predominantly as a zwitterion because it:",
-    answers: [
-        { text: "Contains only a carboxyl group", correct: false },
-        { text: "Contains both ionized amino and carboxyl groups simultaneously", correct: true },
-        { text: "Contains only an amino group", correct: false },
-        { text: "Lacks charged groups", correct: false }
-    ]
+    question: "Evaluate the amphoteric nature of amino acids and explain how changes in pH influence their ionic forms.",
+
+    keywords: [
+        "amphoteric",
+        "zwitterion",
+        "acidic pH",
+        "alkaline pH",
+        "ionic forms"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is both glucogenic and ketogenic?",
-    answers: [
-        { text: "Leucine", correct: false },
-        { text: "Lysine", correct: false },
-        { text: "Isoleucine", correct: true },
-        { text: "Alanine", correct: false }
-    ]
+    question: "Discuss the biochemical significance of the isoelectric point (pI) of amino acids in laboratory and clinical practice.",
+
+    keywords: [
+        "isoelectric point",
+        "net charge",
+        "electrophoresis",
+        "protein separation",
+        "clinical significance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The coenzyme required for most transamination reactions is:",
-    answers: [
-        { text: "Biotin", correct: false },
-        { text: "Pyridoxal phosphate (PLP)", correct: true },
-        { text: "Thiamine pyrophosphate", correct: false },
-        { text: "Coenzyme A", correct: false }
-    ]
+    question: "Compare the structural and metabolic characteristics of ketogenic and glucogenic amino acids with suitable examples.",
+
+    keywords: [
+        "ketogenic",
+        "glucogenic",
+        "acetyl-CoA",
+        "glucose",
+        "examples"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "During transamination, the amino group is transferred primarily to:",
-    answers: [
-        { text: "Pyruvate", correct: false },
-        { text: "α-Ketoglutarate", correct: true },
-        { text: "Lactate", correct: false },
-        { text: "Acetyl-CoA", correct: false }
-    ]
+    question: "Explain why leucine and lysine are classified as exclusively ketogenic amino acids.",
+
+    keywords: [
+        "leucine",
+        "lysine",
+        "ketogenic",
+        "ketone bodies",
+        "acetyl-CoA"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme that catalyzes oxidative deamination of glutamate is:",
-    answers: [
-        { text: "Alanine aminotransferase", correct: false },
-        { text: "Glutamate dehydrogenase", correct: true },
-        { text: "Aspartate aminotransferase", correct: false },
-        { text: "Arginase", correct: false }
-    ]
+    question: "Discuss the physiological importance of amino acid buffering in maintaining acid-base balance.",
+
+    keywords: [
+        "buffer",
+        "acid-base balance",
+        "amino acids",
+        "pH regulation",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following amino acids is exclusively ketogenic?",
-    answers: [
-        { text: "Tyrosine", correct: false },
-        { text: "Phenylalanine", correct: false },
-        { text: "Leucine", correct: true },
-        { text: "Valine", correct: false }
-    ]
+    question: "Describe the molecular basis of protein denaturation and explain how it affects protein function.",
+
+    keywords: [
+        "denaturation",
+        "secondary structure",
+        "tertiary structure",
+        "loss of function",
+        "non-covalent bonds"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The first committed step of the urea cycle is catalyzed by:",
-    answers: [
-        { text: "Carbamoyl phosphate synthetase I", correct: true },
-        { text: "Arginase", correct: false },
-        { text: "Ornithine transcarbamylase", correct: false },
-        { text: "Argininosuccinate synthetase", correct: false }
-    ]
+    question: "Evaluate the effects of heat, acids, alkalis and heavy metals on protein denaturation.",
+
+    keywords: [
+        "heat",
+        "acids",
+        "alkalis",
+        "heavy metals",
+        "protein denaturation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Carbamoyl phosphate synthetase I is activated by:",
-    answers: [
-        { text: "ATP", correct: false },
-        { text: "N-Acetylglutamate", correct: true },
-        { text: "Glutamine", correct: false },
-        { text: "Ammonia", correct: false }
-    ]
+    question: "Differentiate between reversible and irreversible protein denaturation using suitable examples.",
+
+    keywords: [
+        "reversible",
+        "irreversible",
+        "renaturation",
+        "egg albumin",
+        "protein structure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Phenylketonuria results from deficiency of:",
-    answers: [
-        { text: "Tyrosinase", correct: false },
-        { text: "Phenylalanine hydroxylase", correct: true },
-        { text: "Tryptophan hydroxylase", correct: false },
-        { text: "Glutamate dehydrogenase", correct: false }
-    ]
+    question: "Discuss the biochemical properties and physiological importance of serum albumin.",
+
+    keywords: [
+        "albumin",
+        "osmotic pressure",
+        "transport",
+        "plasma protein",
+        "liver"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is the precursor of catecholamines?",
-    answers: [
-        { text: "Histidine", correct: false },
-        { text: "Tyrosine", correct: true },
-        { text: "Tryptophan", correct: false },
-        { text: "Arginine", correct: false }
-    ]
+    question: "Explain the classification, functions and clinical importance of plasma globulins.",
+
+    keywords: [
+        "alpha globulin",
+        "beta globulin",
+        "gamma globulin",
+        "antibodies",
+        "transport"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Serotonin is synthesized directly from:",
-    answers: [
-        { text: "Tyrosine", correct: false },
-        { text: "Phenylalanine", correct: false },
-        { text: "Tryptophan", correct: true },
-        { text: "Histidine", correct: false }
-    ]
+    question: "Compare albumins and globulins based on structure, function and electrophoretic mobility.",
+
+    keywords: [
+        "albumin",
+        "globulin",
+        "electrophoresis",
+        "structure",
+        "function"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Histamine is formed by decarboxylation of:",
-    answers: [
-        { text: "Tyrosine", correct: false },
-        { text: "Histidine", correct: true },
-        { text: "Phenylalanine", correct: false },
-        { text: "Leucine", correct: false }
-    ]
+    question: "Describe the mechanism of transamination and explain its role in amino acid metabolism.",
+
+    keywords: [
+        "transamination",
+        "aminotransferase",
+        "PLP",
+        "alpha-keto acid",
+        "amino acid metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The primary function of albumin in plasma is:",
-    answers: [
-        { text: "Blood clotting", correct: false },
-        { text: "Maintenance of colloid osmotic pressure", correct: true },
-        { text: "Oxygen transport", correct: false },
-        { text: "Immune defense", correct: false }
-    ]
+    question: "Discuss the role of pyridoxal phosphate (PLP) in transamination reactions.",
+
+    keywords: [
+        "PLP",
+        "vitamin B6",
+        "coenzyme",
+        "transamination",
+        "aminotransferase"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Protein denaturation does NOT involve disruption of:",
-    answers: [
-        { text: "Hydrogen bonds", correct: false },
-        { text: "Peptide bonds", correct: true },
-        { text: "Hydrophobic interactions", correct: false },
-        { text: "Ionic interactions", correct: false }
-    ]
+    question: "Explain the biochemical relationship between transamination and oxidative deamination.",
+
+    keywords: [
+        "transamination",
+        "oxidative deamination",
+        "glutamate",
+        "ammonia",
+        "nitrogen metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which factor is LEAST likely to denature a protein?",
-    answers: [
-        { text: "Extreme pH", correct: false },
-        { text: "Heat", correct: false },
-        { text: "Organic solvents", correct: false },
-        { text: "Distilled water at room temperature", correct: true }
-    ]
+    question: "Discuss the mechanism and significance of oxidative deamination in nitrogen metabolism.",
+
+    keywords: [
+        "oxidative deamination",
+        "glutamate dehydrogenase",
+        "ammonia",
+        "NAD",
+        "liver"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major transport form of ammonia from peripheral tissues is:",
-    answers: [
-        { text: "Alanine", correct: false },
-        { text: "Glutamine", correct: true },
-        { text: "Aspartate", correct: false },
-        { text: "Ornithine", correct: false }
-    ]
+    question: "Explain how excess amino nitrogen is safely eliminated from the human body.",
+
+    keywords: [
+        "ammonia",
+        "urea cycle",
+        "liver",
+        "detoxification",
+        "nitrogen disposal"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The glucose-alanine cycle primarily transports:",
-    answers: [
-        { text: "Fatty acids", correct: false },
-        { text: "Nitrogen from muscle to liver", correct: true },
-        { text: "Ketone bodies", correct: false },
-        { text: "Triglycerides", correct: false }
-    ]
+    question: "Discuss the role of carbamoyl phosphate synthetase I in the regulation of the urea cycle.",
+
+    keywords: [
+        "CPS I",
+        "urea cycle",
+        "mitochondria",
+        "ammonia",
+        "regulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Arginase catalyzes the conversion of arginine into:",
-    answers: [
-        { text: "Ornithine and urea", correct: true },
-        { text: "Citrulline and ammonia", correct: false },
-        { text: "Argininosuccinate", correct: false },
-        { text: "Carbamoyl phosphate", correct: false }
-    ]
+    question: "Explain the activation and regulation of carbamoyl phosphate synthetase I.",
+
+    keywords: [
+        "N-acetylglutamate",
+        "activation",
+        "CPS I",
+        "allosteric regulation",
+        "urea cycle"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is an important precursor for nitric oxide synthesis?",
-    answers: [
-        { text: "Arginine", correct: true },
-        { text: "Leucine", correct: false },
-        { text: "Methionine", correct: false },
-        { text: "Valine", correct: false }
-    ]
+    question: "Describe the biochemical pathway through which ammonia is converted to urea.",
+
+    keywords: [
+        "urea cycle",
+        "ornithine",
+        "citrulline",
+        "arginine",
+        "urea"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Globulins are primarily responsible for:",
-    answers: [
-        { text: "Maintaining osmotic pressure", correct: false },
-        { text: "Immune protection", correct: true },
-        { text: "Blood glucose regulation", correct: false },
-        { text: "Lipid digestion", correct: false }
-    ]
+    question: "Explain the metabolic consequences of carbamoyl phosphate synthetase I deficiency.",
+
+    keywords: [
+        "hyperammonemia",
+        "CPS I deficiency",
+        "urea cycle disorder",
+        "neurological symptoms",
+        "ammonia"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme pepsin is secreted in the form of:",
-    answers: [
-        { text: "Pepsinase", correct: false },
-        { text: "Pepsinogen", correct: true },
-        { text: "Trypsinogen", correct: false },
-        { text: "Proelastase", correct: false }
-    ]
+    question: "Discuss the biochemical basis of phenylketonuria (PKU).",
+
+    keywords: [
+        "phenylalanine",
+        "phenylalanine hydroxylase",
+        "tyrosine",
+        "genetic disorder",
+        "PKU"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Trypsinogen is activated in the small intestine by:",
-    answers: [
-        { text: "Pepsin", correct: false },
-        { text: "Enteropeptidase", correct: true },
-        { text: "Lipase", correct: false },
-        { text: "Elastase", correct: false }
-    ]
+    question: "Explain the clinical manifestations and biochemical diagnosis of phenylketonuria.",
+
+    keywords: [
+        "mental retardation",
+        "newborn screening",
+        "phenylalanine",
+        "musty odor",
+        "diagnosis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which plasma protein serves as the precursor of fibrin during coagulation?",
-    answers: [
-        { text: "Albumin", correct: false },
-        { text: "Fibrinogen", correct: true },
-        { text: "Transferrin", correct: false },
-        { text: "Ceruloplasmin", correct: false }
-    ]
+    question: "Discuss the principles involved in the dietary management of phenylketonuria.",
+
+    keywords: [
+        "low phenylalanine diet",
+        "tyrosine",
+        "lifelong treatment",
+        "nutrition",
+        "monitoring"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The nitrogen atom that enters the urea cycle is derived mainly from:",
-    answers: [
-        { text: "Ammonia and aspartate", correct: true },
-        { text: "Alanine and glycine", correct: false },
-        { text: "Tyrosine and glutamine", correct: false },
-        { text: "Leucine and lysine", correct: false }
-    ]
+    question: "Evaluate the importance of early diagnosis and treatment of phenylketonuria in preventing complications.",
+
+    keywords: [
+        "newborn screening",
+        "early treatment",
+        "brain development",
+        "mental retardation",
+        "prognosis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major site for complete metabolism of excess amino acids is the:",
-    answers: [
-        { text: "Brain", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Heart", correct: false },
-        { text: "Spleen", correct: false }
-    ]
+    question: "Discuss the integrated metabolism of amino acids from digestion through nitrogen excretion.",
+
+    keywords: [
+        "digestion",
+        "absorption",
+        "transamination",
+        "urea cycle",
+        "nitrogen excretion"
+    ],
+
+    marks: 10
+},
+
+// HARD THEORY QUESTIONS (PART 2)
+
+{
+    question: "Discuss the significance of nitrogen balance in health and disease, highlighting conditions that produce positive and negative nitrogen balance.",
+
+    keywords: [
+        "nitrogen balance",
+        "positive balance",
+        "negative balance",
+        "growth",
+        "starvation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Deficiency of ornithine transcarbamylase leads to accumulation of:",
-    answers: [
-        { text: "Urea", correct: false },
-        { text: "Ammonia", correct: true },
-        { text: "Glucose", correct: false },
-        { text: "Pyruvate", correct: false }
-    ]
+    question: "Evaluate the biochemical importance of protein turnover in maintaining normal body functions.",
+
+    keywords: [
+        "protein turnover",
+        "protein synthesis",
+        "protein degradation",
+        "homeostasis",
+        "metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The carbon atom in urea is derived directly from:",
-    answers: [
-        { text: "Carbon dioxide (HCO₃⁻)", correct: true },
-        { text: "Glucose", correct: false },
-        { text: "Alanine", correct: false },
-        { text: "Pyruvate", correct: false }
-    ]
+    question: "Discuss the biochemical processes involved in amino acid catabolism and the fate of the carbon skeleton.",
+
+    keywords: [
+        "amino acid catabolism",
+        "carbon skeleton",
+        "deamination",
+        "TCA cycle",
+        "energy production"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The amino acid that directly donates the second nitrogen atom of urea is:",
-    answers: [
-        { text: "Aspartate", correct: true },
-        { text: "Glutamate", correct: false },
-        { text: "Alanine", correct: false },
-        { text: "Glycine", correct: false }
-    ]
+    question: "Explain how amino acids contribute to glucose production during prolonged fasting.",
+
+    keywords: [
+        "gluconeogenesis",
+        "glucogenic amino acids",
+        "fasting",
+        "glucose",
+        "liver"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The isoelectric point (pI) of an amino acid is the pH at which:",
-    answers: [
-        { text: "The amino acid is completely protonated", correct: false },
-        { text: "The amino acid has no net electrical charge", correct: true },
-        { text: "The amino acid becomes negatively charged", correct: false },
-        { text: "The amino acid is fully denatured", correct: false }
-    ]
+    question: "Discuss the metabolic importance of ketogenic amino acids during starvation.",
+
+    keywords: [
+        "ketogenic amino acids",
+        "ketone bodies",
+        "starvation",
+        "energy",
+        "acetyl-CoA"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid contains an imidazole side chain?",
-    answers: [
-        { text: "Histidine", correct: true },
-        { text: "Arginine", correct: false },
-        { text: "Lysine", correct: false },
-        { text: "Methionine", correct: false }
-    ]
+    question: "Evaluate the biochemical basis of hyperammonemia and its effects on the central nervous system.",
+
+    keywords: [
+        "hyperammonemia",
+        "ammonia",
+        "brain",
+        "urea cycle",
+        "neurological symptoms"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The sulfur-containing amino acid that serves as the universal methyl donor after activation is:",
-    answers: [
-        { text: "Methionine", correct: true },
-        { text: "Cysteine", correct: false },
-        { text: "Serine", correct: false },
-        { text: "Tyrosine", correct: false }
-    ]
+    question: "Describe the metabolic pathways responsible for the detoxification of ammonia in humans.",
+
+    keywords: [
+        "ammonia",
+        "urea cycle",
+        "glutamine",
+        "detoxification",
+        "liver"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which plasma protein primarily transports iron in circulation?",
-    answers: [
-        { text: "Albumin", correct: false },
-        { text: "Transferrin", correct: true },
-        { text: "Globulin", correct: false },
-        { text: "Ferritin", correct: false }
-    ]
+    question: "Explain the relationship between amino acid metabolism and energy production.",
+
+    keywords: [
+        "ATP",
+        "energy metabolism",
+        "TCA cycle",
+        "amino acids",
+        "catabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The immediate precursor of creatine is:",
-    answers: [
-        { text: "Arginine and glycine", correct: true },
-        { text: "Leucine and lysine", correct: false },
-        { text: "Phenylalanine and tyrosine", correct: false },
-        { text: "Aspartate and glutamate", correct: false }
-    ]
+    question: "Discuss the importance of liver function in protein and amino acid metabolism.",
+
+    keywords: [
+        "liver",
+        "transamination",
+        "urea cycle",
+        "protein synthesis",
+        "albumin"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major storage protein for iron is:",
-    answers: [
-        { text: "Transferrin", correct: false },
-        { text: "Ferritin", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Ceruloplasmin", correct: false }
-    ]
+    question: "Describe the consequences of severe liver disease on plasma protein synthesis and nitrogen metabolism.",
+
+    keywords: [
+        "liver disease",
+        "albumin",
+        "urea cycle",
+        "edema",
+        "hyperammonemia"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is synthesized from phenylalanine?",
-    answers: [
-        { text: "Tyrosine", correct: true },
-        { text: "Histidine", correct: false },
-        { text: "Methionine", correct: false },
-        { text: "Leucine", correct: false }
-    ]
+    question: "Evaluate the clinical importance of measuring serum albumin and globulin concentrations.",
+
+    keywords: [
+        "albumin",
+        "globulin",
+        "A/G ratio",
+        "clinical diagnosis",
+        "plasma proteins"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A deficiency of phenylalanine hydroxylase results in accumulation of:",
-    answers: [
-        { text: "Phenylalanine", correct: true },
-        { text: "Tyrosine", correct: false },
-        { text: "Methionine", correct: false },
-        { text: "Histidine", correct: false }
-    ]
+    question: "Discuss the biochemical principles behind electrophoretic separation of plasma proteins.",
+
+    keywords: [
+        "electrophoresis",
+        "albumin",
+        "globulin",
+        "charge",
+        "protein separation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is the precursor of melanin?",
-    answers: [
-        { text: "Tyrosine", correct: true },
-        { text: "Tryptophan", correct: false },
-        { text: "Histidine", correct: false },
-        { text: "Leucine", correct: false }
-    ]
+    question: "Explain how amino acid metabolism is integrated with carbohydrate metabolism.",
+
+    keywords: [
+        "gluconeogenesis",
+        "pyruvate",
+        "TCA cycle",
+        "glucose",
+        "integration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major intracellular buffer among amino acids is:",
-    answers: [
-        { text: "Histidine", correct: true },
-        { text: "Alanine", correct: false },
-        { text: "Valine", correct: false },
-        { text: "Leucine", correct: false }
-    ]
+    question: "Discuss the relationship between amino acid metabolism and lipid metabolism.",
+
+    keywords: [
+        "lipid metabolism",
+        "ketone bodies",
+        "acetyl-CoA",
+        "fatty acids",
+        "integration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The digestion of dietary proteins in the small intestine is completed mainly by:",
-    answers: [
-        { text: "Pancreatic proteases and intestinal peptidases", correct: true },
-        { text: "Salivary amylase", correct: false },
-        { text: "Pepsin only", correct: false },
-        { text: "Lipase", correct: false }
-    ]
+    question: "Describe the metabolic adaptations of protein metabolism during prolonged starvation.",
+
+    keywords: [
+        "starvation",
+        "protein breakdown",
+        "ketosis",
+        "gluconeogenesis",
+        "adaptation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The end product of complete oxidation of the carbon skeleton of amino acids enters:",
-    answers: [
-        { text: "Central metabolic pathways such as the TCA cycle", correct: true },
-        { text: "The urea cycle only", correct: false },
-        { text: "DNA synthesis", correct: false },
-        { text: "RNA transcription", correct: false }
-    ]
+    question: "Explain the biochemical importance of maintaining amino acid pools within the body.",
+
+    keywords: [
+        "amino acid pool",
+        "protein synthesis",
+        "catabolism",
+        "homeostasis",
+        "nutrition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which enzyme converts fumarate formed in the urea cycle into malate?",
-    answers: [
-        { text: "Fumarase", correct: true },
-        { text: "Arginase", correct: false },
-        { text: "Malate dehydrogenase", correct: false },
-        { text: "Succinate dehydrogenase", correct: false }
-    ]
+    question: "Discuss the physiological significance of transamination in the synthesis of non-essential amino acids.",
+
+    keywords: [
+        "transamination",
+        "non-essential amino acids",
+        "aminotransferase",
+        "biosynthesis",
+        "PLP"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A positive nitrogen balance is commonly seen during:",
-    answers: [
-        { text: "Growth and pregnancy", correct: true },
-        { text: "Starvation", correct: false },
-        { text: "Severe burns", correct: false },
-        { text: "Protein deficiency", correct: false }
-    ]
+    question: "Explain the mechanisms by which protein denaturation affects enzyme activity.",
+
+    keywords: [
+        "enzyme activity",
+        "denaturation",
+        "active site",
+        "protein folding",
+        "function"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Negative nitrogen balance is commonly associated with:",
-    answers: [
-        { text: "Severe trauma and starvation", correct: true },
-        { text: "Childhood growth", correct: false },
-        { text: "Pregnancy", correct: false },
-        { text: "Recovery from illness", correct: false }
-    ]
+    question: "Discuss the clinical applications of serum transaminases (ALT and AST) in disease diagnosis.",
+
+    keywords: [
+        "ALT",
+        "AST",
+        "liver disease",
+        "diagnosis",
+        "enzymes"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major purpose of the urea cycle is to:",
-    answers: [
-        { text: "Detoxify ammonia", correct: true },
-        { text: "Produce glucose", correct: false },
-        { text: "Digest proteins", correct: false },
-        { text: "Generate ATP", correct: false }
-    ]
+    question: "Evaluate the importance of vitamin B6 deficiency in disorders of amino acid metabolism.",
+
+    keywords: [
+        "vitamin B6",
+        "PLP",
+        "transamination",
+        "enzyme deficiency",
+        "amino acid metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid is both an essential amino acid and aromatic?",
-    answers: [
-        { text: "Phenylalanine", correct: true },
-        { text: "Alanine", correct: false },
-        { text: "Glycine", correct: false },
-        { text: "Aspartate", correct: false }
-    ]
+    question: "Discuss the regulation of amino acid metabolism under fed and fasting conditions.",
+
+    keywords: [
+        "fed state",
+        "fasting",
+        "insulin",
+        "glucagon",
+        "protein metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major transport protein responsible for maintaining plasma oncotic pressure is:",
-    answers: [
-        { text: "Albumin", correct: true },
-        { text: "Globulin", correct: false },
-        { text: "Fibrinogen", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
+    question: "Describe the metabolic importance of glucogenic amino acids in maintaining blood glucose concentration.",
+
+    keywords: [
+        "glucogenic amino acids",
+        "gluconeogenesis",
+        "blood glucose",
+        "liver",
+        "fasting"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which amino acid serves as the precursor for thyroid hormones?",
-    answers: [
-        { text: "Tyrosine", correct: true },
-        { text: "Histidine", correct: false },
-        { text: "Tryptophan", correct: false },
-        { text: "Arginine", correct: false }
-    ]
+    question: "Explain the biochemical consequences of inherited defects affecting amino acid metabolism.",
+
+    keywords: [
+        "inborn errors",
+        "phenylketonuria",
+        "metabolic disorders",
+        "enzyme deficiency",
+        "genetics"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme that catalyzes the final reaction of the urea cycle is:",
-    answers: [
-        { text: "Arginase", correct: true },
-        { text: "Argininosuccinate lyase", correct: false },
-        { text: "Carbamoyl phosphate synthetase I", correct: false },
-        { text: "Ornithine transcarbamylase", correct: false }
-    ]
+    question: "Discuss the coordinated roles of transamination, oxidative deamination and the urea cycle in nitrogen metabolism.",
+
+    keywords: [
+        "transamination",
+        "oxidative deamination",
+        "urea cycle",
+        "nitrogen metabolism",
+        "ammonia"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Protein denaturation by heavy metals occurs primarily because they:",
-    answers: [
-        { text: "Interact with sulfhydryl (-SH) groups", correct: true },
-        { text: "Break peptide bonds", correct: false },
-        { text: "Hydrolyze amino acids", correct: false },
-        { text: "Convert proteins into carbohydrates", correct: false }
-    ]
-},
+    question: "Critically evaluate the integrated metabolism of amino acids and proteins from dietary intake to nitrogen excretion, highlighting the clinical significance of disorders affecting these pathways.",
 
-{
-    question: "A patient with hyperammonemia is most likely suffering from a defect in:",
-    answers: [
-        { text: "The urea cycle", correct: true },
-        { text: "Glycolysis", correct: false },
-        { text: "β-oxidation", correct: false },
-        { text: "Glycogenesis", correct: false }
-    ]
+    keywords: [
+        "protein digestion",
+        "amino acid metabolism",
+        "transamination",
+        "urea cycle",
+        "clinical significance"
+    ],
+
+    marks: 10
 }
-
 ];
 
-const EXTREME_QUESTIONS = [
+const EXTREME_THEORY_QUESTIONS = [
+
 
 {
-    question: "Which amino acid is classified as both glucogenic and ketogenic?",
-    answers: [
-        { text: "Leucine", correct: false },
-        { text: "Lysine", correct: false },
-        { text: "Isoleucine", correct: true },
-        { text: "Glycine", correct: false }
-    ]
+    question: "Critically evaluate the biochemical basis of protein denaturation and explain why primary protein structure is generally preserved during denaturation.",
+
+    keywords: [
+        "protein denaturation",
+        "primary structure",
+        "secondary structure",
+        "tertiary structure",
+        "quaternary structure",
+        "non-covalent bonds",
+        "disulfide bonds"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The peptide bond has which of the following properties?",
-    answers: [
-        { text: "Free rotation", correct: false },
-        { text: "Partial double bond character", correct: true },
-        { text: "Highly ionic", correct: false },
-        { text: "Easily hydrolyzed at neutral pH", correct: false }
-    ]
+    question: "Compare reversible and irreversible protein denaturation, giving the molecular basis and physiological significance of each.",
+
+    keywords: [
+        "reversible denaturation",
+        "irreversible denaturation",
+        "protein folding",
+        "renaturation",
+        "aggregation",
+        "heat",
+        "chemical agents"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which enzyme catalyzes the first reaction of the urea cycle?",
-    answers: [
-        { text: "Arginase", correct: false },
-        { text: "Carbamoyl phosphate synthetase I", correct: true },
-        { text: "Argininosuccinate synthetase", correct: false },
-        { text: "Ornithine transcarbamylase", correct: false }
-    ]
+    question: "Discuss the peptide bond in detail, highlighting its chemical properties, resonance stabilization, rigidity, and biological importance.",
+
+    keywords: [
+        "peptide bond",
+        "resonance",
+        "planarity",
+        "partial double bond",
+        "trans configuration",
+        "protein structure",
+        "stability"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The activator of Carbamoyl Phosphate Synthetase I is:",
-    answers: [
-        { text: "ATP", correct: false },
-        { text: "Biotin", correct: false },
-        { text: "N-Acetylglutamate", correct: true },
-        { text: "Glutamine", correct: false }
-    ]
+    question: "Explain how peptide bond properties influence the formation of secondary, tertiary, and quaternary structures of proteins.",
+
+    keywords: [
+        "peptide bond",
+        "secondary structure",
+        "tertiary structure",
+        "quaternary structure",
+        "protein folding",
+        "hydrogen bonds"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is exclusively ketogenic?",
-    answers: [
-        { text: "Tyrosine", correct: false },
-        { text: "Phenylalanine", correct: false },
-        { text: "Leucine", correct: true },
-        { text: "Methionine", correct: false }
-    ]
+    question: "Evaluate the structural basis of the buffering action of amino acids at acidic, neutral, and alkaline pH.",
+
+    keywords: [
+        "buffering",
+        "zwitterion",
+        "acidic pH",
+        "alkaline pH",
+        "amino group",
+        "carboxyl group",
+        "isoelectric point"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Transamination reactions require which coenzyme?",
-    answers: [
-        { text: "FAD", correct: false },
-        { text: "NAD+", correct: false },
-        { text: "Pyridoxal phosphate (PLP)", correct: true },
-        { text: "Coenzyme A", correct: false }
-    ]
+    question: "Discuss the concept of amphotericity in amino acids and explain its physiological significance in maintaining acid-base balance.",
+
+    keywords: [
+        "amphoteric",
+        "acid-base balance",
+        "zwitterion",
+        "proton donor",
+        "proton acceptor",
+        "buffer"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Phenylketonuria results primarily from deficiency of:",
-    answers: [
-        { text: "Tyrosinase", correct: false },
-        { text: "Phenylalanine hydroxylase", correct: true },
-        { text: "Homogentisate oxidase", correct: false },
-        { text: "Arginase", correct: false }
-    ]
+    question: "Describe the complete process of digestion and absorption of dietary proteins from the mouth to the small intestine.",
+
+    keywords: [
+        "protein digestion",
+        "pepsin",
+        "trypsin",
+        "chymotrypsin",
+        "carboxypeptidase",
+        "brush border enzymes",
+        "absorption"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The major nitrogen carrier from muscle to liver is:",
-    answers: [
-        { text: "Glutamate", correct: false },
-        { text: "Alanine", correct: true },
-        { text: "Aspartate", correct: false },
-        { text: "Serine", correct: false }
-    ]
+    question: "Discuss the mechanisms involved in intestinal absorption of amino acids and small peptides.",
+
+    keywords: [
+        "amino acid absorption",
+        "dipeptides",
+        "tripeptides",
+        "transport proteins",
+        "active transport",
+        "PEPT1"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is the principal carrier of ammonia in blood?",
-    answers: [
-        { text: "Alanine", correct: false },
-        { text: "Glutamine", correct: true },
-        { text: "Aspartate", correct: false },
-        { text: "Arginine", correct: false }
-    ]
+    question: "Explain transamination in detail and discuss its importance in amino acid metabolism.",
+
+    keywords: [
+        "transamination",
+        "aminotransferase",
+        "ALT",
+        "AST",
+        "PLP",
+        "alpha-ketoglutarate",
+        "glutamate"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Protein denaturation primarily affects the:",
-    answers: [
-        { text: "Primary structure", correct: false },
-        { text: "Secondary and tertiary structures", correct: true },
-        { text: "Peptide bonds", correct: false },
-        { text: "Amino acid sequence", correct: false }
-    ]
+    question: "Evaluate the relationship between transamination, oxidative deamination, and the urea cycle in nitrogen metabolism.",
+
+    keywords: [
+        "transamination",
+        "oxidative deamination",
+        "glutamate dehydrogenase",
+        "urea cycle",
+        "nitrogen metabolism",
+        "ammonia"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid forms disulfide bonds?",
-    answers: [
-        { text: "Serine", correct: false },
-        { text: "Methionine", correct: false },
-        { text: "Cysteine", correct: true },
-        { text: "Tyrosine", correct: false }
-    ]
+    question: "Discuss the biochemical pathway of the urea cycle, including enzymes, intermediates, regulation, and energy requirements.",
+
+    keywords: [
+        "urea cycle",
+        "ornithine",
+        "citrulline",
+        "argininosuccinate",
+        "arginine",
+        "carbamoyl phosphate",
+        "ATP"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The final product of the urea cycle is:",
-    answers: [
-        { text: "Ammonia", correct: false },
-        { text: "Creatinine", correct: false },
-        { text: "Urea", correct: true },
-        { text: "Uric acid", correct: false }
-    ]
+    question: "Critically explain the regulation of carbamoyl phosphate synthetase I and its role in ureotelic organisms.",
+
+    keywords: [
+        "CPS I",
+        "N-acetylglutamate",
+        "urea cycle",
+        "mitochondria",
+        "ammonia detoxification"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is a precursor for nitric oxide synthesis?",
-    answers: [
-        { text: "Arginine", correct: true },
-        { text: "Lysine", correct: false },
-        { text: "Valine", correct: false },
-        { text: "Glutamine", correct: false }
-    ]
+    question: "Discuss inherited disorders of the urea cycle, explaining their biochemical defects, clinical manifestations, and management.",
+
+    keywords: [
+        "urea cycle disorders",
+        "hyperammonemia",
+        "OTC deficiency",
+        "argininosuccinate",
+        "enzyme deficiency",
+        "treatment"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which plasma protein is primarily responsible for maintaining colloid osmotic pressure?",
-    answers: [
-        { text: "Globulin", correct: false },
-        { text: "Albumin", correct: true },
-        { text: "Fibrinogen", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
+    question: "Explain the biochemical basis, diagnosis, and dietary management of phenylketonuria.",
+
+    keywords: [
+        "phenylketonuria",
+        "phenylalanine hydroxylase",
+        "tyrosine",
+        "BH4",
+        "newborn screening",
+        "dietary restriction"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The enzyme that hydrolyzes peptide bonds in the stomach is:",
-    answers: [
-        { text: "Trypsin", correct: false },
-        { text: "Pepsin", correct: true },
-        { text: "Elastase", correct: false },
-        { text: "Carboxypeptidase", correct: false }
-    ]
+    question: "Discuss the metabolism of phenylalanine and explain how defects lead to phenylketonuria.",
+
+    keywords: [
+        "phenylalanine",
+        "tyrosine",
+        "phenylalanine hydroxylase",
+        "PKU",
+        "metabolism"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is hydroxylated to form DOPA?",
-    answers: [
-        { text: "Tyrosine", correct: true },
-        { text: "Phenylalanine", correct: false },
-        { text: "Tryptophan", correct: false },
-        { text: "Histidine", correct: false }
-    ]
+    question: "Discuss the classification of amino acids based on nutritional value, polarity, side chains, and metabolic fate.",
+
+    keywords: [
+        "essential amino acids",
+        "non-essential amino acids",
+        "polar",
+        "nonpolar",
+        "glucogenic",
+        "ketogenic"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The isoelectric point of a protein is the pH at which it:",
-    answers: [
-        { text: "Has maximum solubility", correct: false },
-        { text: "Has no net electrical charge", correct: true },
-        { text: "Becomes positively charged", correct: false },
-        { text: "Is fully denatured", correct: false }
-    ]
+    question: "Explain the biochemical significance of glucogenic and ketogenic amino acids, giving suitable examples.",
+
+    keywords: [
+        "glucogenic",
+        "ketogenic",
+        "leucine",
+        "lysine",
+        "energy metabolism",
+        "ketone bodies"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Kwashiorkor is primarily caused by deficiency of:",
-    answers: [
-        { text: "Carbohydrates", correct: false },
-        { text: "Lipids", correct: false },
-        { text: "Protein", correct: true },
-        { text: "Vitamin C", correct: false }
-    ]
+    question: "Describe the biological importance of plasma proteins, distinguishing between albumins and globulins.",
+
+    keywords: [
+        "albumin",
+        "globulin",
+        "osmotic pressure",
+        "transport",
+        "immunity",
+        "blood proteins"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is converted directly to serotonin?",
-    answers: [
-        { text: "Tyrosine", correct: false },
-        { text: "Tryptophan", correct: true },
-        { text: "Phenylalanine", correct: false },
-        { text: "Histidine", correct: false }
-    ]
+    question: "Compare albumins and globulins with respect to structure, synthesis, functions, and clinical importance.",
+
+    keywords: [
+        "albumin",
+        "globulin",
+        "liver",
+        "immune proteins",
+        "transport proteins",
+        "clinical significance"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The amino acid responsible for buffering blood through histidine residues is mainly found in:",
-    answers: [
-        { text: "Albumin", correct: false },
-        { text: "Hemoglobin", correct: true },
-        { text: "Collagen", correct: false },
-        { text: "Elastin", correct: false }
-    ]
+    question: "Discuss the relationship between protein structure and biological function using specific examples.",
+
+    keywords: [
+        "protein structure",
+        "function",
+        "hemoglobin",
+        "collagen",
+        "enzymes",
+        "structure-function relationship"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which enzyme converts phenylalanine to tyrosine?",
-    answers: [
-        { text: "Tyrosinase", correct: false },
-        { text: "Phenylalanine hydroxylase", correct: true },
-        { text: "Tyrosine aminotransferase", correct: false },
-        { text: "Monoamine oxidase", correct: false }
-    ]
+    question: "Explain the forces responsible for maintaining protein tertiary and quaternary structures.",
+
+    keywords: [
+        "hydrogen bonds",
+        "hydrophobic interactions",
+        "ionic bonds",
+        "disulfide bonds",
+        "van der Waals forces",
+        "protein folding"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid contains an imidazole side chain?",
-    answers: [
-        { text: "Histidine", correct: true },
-        { text: "Arginine", correct: false },
-        { text: "Lysine", correct: false },
-        { text: "Glutamate", correct: false }
-    ]
+    question: "Discuss the process of protein folding and explain the role of molecular chaperones.",
+
+    keywords: [
+        "protein folding",
+        "molecular chaperones",
+        "heat shock proteins",
+        "protein stability",
+        "misfolding"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The major transport form of nitrogen from peripheral tissues is:",
-    answers: [
-        { text: "Ammonia", correct: false },
-        { text: "Glutamine", correct: true },
-        { text: "Aspartate", correct: false },
-        { text: "Urea", correct: false }
-    ]
+    question: "Critically evaluate the causes, consequences, and biochemical mechanisms of protein misfolding diseases.",
+
+    keywords: [
+        "protein misfolding",
+        "amyloid",
+        "Alzheimer disease",
+        "Parkinson disease",
+        "aggregation",
+        "prions"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid cannot undergo transamination?",
-    answers: [
-        { text: "Lysine", correct: true },
-        { text: "Alanine", correct: false },
-        { text: "Aspartate", correct: false },
-        { text: "Glutamate", correct: false }
-    ]
+    question: "Describe the biochemical properties of the side chains of cysteine, isoleucine, glutamate, glutamine, and phenylalanine.",
+
+    keywords: [
+        "cysteine",
+        "isoleucine",
+        "glutamate",
+        "glutamine",
+        "phenylalanine",
+        "side chains"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which protein is the major structural protein of connective tissue?",
-    answers: [
-        { text: "Keratin", correct: false },
-        { text: "Collagen", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Myosin", correct: false }
-    ]
+    question: "Explain how the structural characteristics of amino acid side chains influence protein function and stability.",
+
+    keywords: [
+        "amino acid side chains",
+        "protein stability",
+        "hydrophobicity",
+        "charge",
+        "protein function",
+        "chemical properties"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The enzyme that converts arginine to urea and ornithine is:",
-    answers: [
-        { text: "Arginase", correct: true },
-        { text: "Argininosuccinate lyase", correct: false },
-        { text: "Ornithine transcarbamylase", correct: false },
-        { text: "Carbamoyl phosphate synthetase I", correct: false }
-    ]
+    question: "Discuss the complete catabolism of amino acids from dietary intake to the excretion of nitrogenous waste, highlighting the biochemical pathways involved.",
+
+    keywords: [
+        "protein digestion",
+        "amino acid catabolism",
+        "transamination",
+        "deamination",
+        "urea cycle",
+        "nitrogen excretion",
+        "liver"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Phenylketonuria is primarily caused by deficiency of:",
-    answers: [
-        { text: "Phenylalanine hydroxylase", correct: true },
-        { text: "Tyrosinase", correct: false },
-        { text: "Homogentisate oxidase", correct: false },
-        { text: "Branched-chain aminotransferase", correct: false }
-    ]
+    question: "Evaluate the regulation of amino acid metabolism during starvation, prolonged fasting, and uncontrolled diabetes mellitus.",
+
+    keywords: [
+        "fasting",
+        "starvation",
+        "diabetes mellitus",
+        "protein breakdown",
+        "gluconeogenesis",
+        "amino acids",
+        "hormonal regulation"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is exclusively ketogenic?",
-    answers: [
-        { text: "Leucine", correct: true },
-        { text: "Valine", correct: false },
-        { text: "Alanine", correct: false },
-        { text: "Glutamate", correct: false }
-    ]
+    question: "Discuss the biochemical basis of nitrogen balance and explain positive, negative, and equilibrium nitrogen balance with clinical examples.",
+
+    keywords: [
+        "nitrogen balance",
+        "positive balance",
+        "negative balance",
+        "protein metabolism",
+        "growth",
+        "malnutrition",
+        "pregnancy"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The first reaction in β-oxidation of fatty acids is catalyzed by:",
-    answers: [
-        { text: "Acyl-CoA dehydrogenase", correct: true },
-        { text: "Enoyl-CoA hydratase", correct: false },
-        { text: "Thiolase", correct: false },
-        { text: "β-Hydroxyacyl-CoA dehydrogenase", correct: false }
-    ]
+    question: "Explain the mechanisms responsible for protein turnover and discuss their physiological importance.",
+
+    keywords: [
+        "protein turnover",
+        "protein synthesis",
+        "protein degradation",
+        "ubiquitin",
+        "proteasome",
+        "cell renewal"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which vitamin is required for transamination reactions?",
-    answers: [
-        { text: "Vitamin B6 (Pyridoxal phosphate)", correct: true },
-        { text: "Vitamin B12", correct: false },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin D", correct: false }
-    ]
+    question: "Critically discuss the ubiquitin-proteasome pathway and its role in intracellular protein degradation.",
+
+    keywords: [
+        "ubiquitin",
+        "proteasome",
+        "ATP",
+        "protein degradation",
+        "intracellular proteins",
+        "protein quality control"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The principal storage form of nitrogen in skeletal muscle is:",
-    answers: [
-        { text: "Glutamine", correct: true },
-        { text: "Ammonia", correct: false },
-        { text: "Urea", correct: false },
-        { text: "Creatinine", correct: false }
-    ]
+    question: "Discuss the synthesis and biological significance of biologically active compounds derived from amino acids.",
+
+    keywords: [
+        "biogenic amines",
+        "dopamine",
+        "serotonin",
+        "histamine",
+        "thyroxine",
+        "nitric oxide"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The amino acid responsible for disulfide bond formation is:",
-    answers: [
-        { text: "Cysteine", correct: true },
-        { text: "Methionine", correct: false },
-        { text: "Lysine", correct: false },
-        { text: "Histidine", correct: false }
-    ]
+    question: "Explain how amino acids serve as precursors for neurotransmitters, hormones, and other specialized products.",
+
+    keywords: [
+        "tyrosine",
+        "tryptophan",
+        "histidine",
+        "glycine",
+        "catecholamines",
+        "serotonin",
+        "GABA"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Albumin contributes mainly to:",
-    answers: [
-        { text: "Maintenance of plasma oncotic pressure", correct: true },
-        { text: "Blood clotting", correct: false },
-        { text: "Immune defense", correct: false },
-        { text: "Oxygen transport", correct: false }
-    ]
+    question: "Discuss the biochemical mechanisms involved in ammonia detoxification and explain why ammonia is toxic to the central nervous system.",
+
+    keywords: [
+        "ammonia",
+        "glutamine",
+        "brain toxicity",
+        "astrocytes",
+        "hyperammonemia",
+        "urea cycle"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The major nitrogen-containing waste product in humans is:",
-    answers: [
-        { text: "Urea", correct: true },
-        { text: "Uric acid", correct: false },
-        { text: "Creatine", correct: false },
-        { text: "Ammonium chloride", correct: false }
-    ]
+    question: "Explain the biochemical basis, diagnosis, and management of hyperammonemia.",
+
+    keywords: [
+        "hyperammonemia",
+        "ammonia",
+        "urea cycle",
+        "liver failure",
+        "neurological symptoms",
+        "treatment"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which enzyme catalyzes oxidative deamination of glutamate?",
-    answers: [
-        { text: "Glutamate dehydrogenase", correct: true },
-        { text: "Alanine aminotransferase", correct: false },
-        { text: "Aspartate aminotransferase", correct: false },
-        { text: "Glutaminase", correct: false }
-    ]
+    question: "Describe the metabolic fate of carbon skeletons following amino acid deamination and discuss their importance in energy metabolism.",
+
+    keywords: [
+        "carbon skeleton",
+        "gluconeogenesis",
+        "ketogenesis",
+        "TCA cycle",
+        "energy production",
+        "amino acid metabolism"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The α-helix is stabilized primarily by:",
-    answers: [
-        { text: "Hydrogen bonds", correct: true },
-        { text: "Disulfide bonds", correct: false },
-        { text: "Ionic bonds", correct: false },
-        { text: "Hydrophobic interactions only", correct: false }
-    ]
+    question: "Discuss the metabolic integration of carbohydrate, lipid, and protein metabolism during the fed and fasting states.",
+
+    keywords: [
+        "fed state",
+        "fasting state",
+        "carbohydrate metabolism",
+        "lipid metabolism",
+        "protein metabolism",
+        "metabolic integration"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which plasma protein is primarily responsible for transporting iron?",
-    answers: [
-        { text: "Transferrin", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Ferritin", correct: false },
-        { text: "Ceruloplasmin", correct: false }
-    ]
+    question: "Evaluate the hormonal regulation of protein metabolism by insulin, glucagon, cortisol, growth hormone, and thyroid hormones.",
+
+    keywords: [
+        "insulin",
+        "glucagon",
+        "cortisol",
+        "growth hormone",
+        "thyroid hormone",
+        "protein metabolism"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The peptide bond possesses partial:",
-    answers: [
-        { text: "Double-bond character", correct: true },
-        { text: "Triple-bond character", correct: false },
-        { text: "Ionic character only", correct: false },
-        { text: "Hydrophobic character", correct: false }
-    ]
+    question: "Discuss inherited disorders of amino acid metabolism other than phenylketonuria, highlighting their biochemical defects and clinical features.",
+
+    keywords: [
+        "alkaptonuria",
+        "maple syrup urine disease",
+        "homocystinuria",
+        "tyrosinemia",
+        "amino acid disorders",
+        "clinical features"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The committed step of the urea cycle is catalyzed by:",
-    answers: [
-        { text: "Carbamoyl phosphate synthetase I", correct: true },
-        { text: "Arginase", correct: false },
-        { text: "Glutaminase", correct: false },
-        { text: "Aspartate aminotransferase", correct: false }
-    ]
+    question: "Explain the laboratory investigations commonly used in the diagnosis of disorders of protein and amino acid metabolism.",
+
+    keywords: [
+        "plasma amino acids",
+        "urine amino acids",
+        "blood ammonia",
+        "liver function tests",
+        "newborn screening",
+        "diagnosis"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The process of removing the amino group from an amino acid is called:",
-    answers: [
-        { text: "Deamination", correct: true },
-        { text: "Transamination", correct: false },
-        { text: "Carboxylation", correct: false },
-        { text: "Hydroxylation", correct: false }
-    ]
+    question: "Discuss protein-energy malnutrition, explaining its biochemical basis, clinical manifestations, and metabolic adaptations.",
+
+    keywords: [
+        "protein-energy malnutrition",
+        "kwashiorkor",
+        "marasmus",
+        "hypoalbuminemia",
+        "muscle wasting",
+        "nutrition"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Protein digestion in the small intestine is completed mainly by:",
-    answers: [
-        { text: "Pancreatic proteases and brush border peptidases", correct: true },
-        { text: "Salivary amylase", correct: false },
-        { text: "Lingual lipase", correct: false },
-        { text: "Bile salts", correct: false }
-    ]
+    question: "Explain the biochemical changes that occur during prolonged protein deficiency and their effects on major organs.",
+
+    keywords: [
+        "protein deficiency",
+        "muscle wasting",
+        "liver",
+        "immune system",
+        "growth retardation",
+        "hypoproteinemia"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid serves as a precursor for serotonin synthesis?",
-    answers: [
-        { text: "Tryptophan", correct: true },
-        { text: "Tyrosine", correct: false },
-        { text: "Histidine", correct: false },
-        { text: "Methionine", correct: false }
-    ]
+    question: "Discuss the biochemical importance of sulfur-containing amino acids and explain their metabolic functions.",
+
+    keywords: [
+        "methionine",
+        "cysteine",
+        "sulfur amino acids",
+        "SAM",
+        "glutathione",
+        "transsulfuration"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The most abundant protein in the human body is:",
-    answers: [
-        { text: "Collagen", correct: true },
-        { text: "Albumin", correct: false },
-        { text: "Keratin", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
+    question: "Explain the methionine cycle and discuss its relationship with homocysteine metabolism.",
+
+    keywords: [
+        "methionine cycle",
+        "homocysteine",
+        "SAM",
+        "methylation",
+        "vitamin B12",
+        "folate"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Amino acids are absorbed from the intestine mainly by:",
-    answers: [
-        { text: "Sodium-dependent active transport", correct: true },
-        { text: "Simple diffusion only", correct: false },
-        { text: "Facilitated diffusion only", correct: false },
-        { text: "Pinocytosis", correct: false }
-    ]
+    question: "Critically discuss the synthesis, functions, and clinical importance of glutathione.",
+
+    keywords: [
+        "glutathione",
+        "antioxidant",
+        "oxidative stress",
+        "glutamate",
+        "glycine",
+        "cysteine"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The primary function of chaperone proteins is to:",
-    answers: [
-        { text: "Assist proper protein folding", correct: true },
-        { text: "Digest proteins", correct: false },
-        { text: "Transport oxygen", correct: false },
-        { text: "Store amino acids", correct: false }
-    ]
+    question: "Discuss oxidative stress and explain the protective roles of protein-derived antioxidants in the human body.",
+
+    keywords: [
+        "oxidative stress",
+        "free radicals",
+        "glutathione",
+        "antioxidants",
+        "cell damage",
+        "ROS"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which condition is caused by deficiency of homogentisate oxidase?",
-    answers: [
-        { text: "Alkaptonuria", correct: true },
-        { text: "Phenylketonuria", correct: false },
-        { text: "Maple syrup urine disease", correct: false },
-        { text: "Cystinuria", correct: false }
-    ]
+    question: "Describe the complete metabolic pathways of essential amino acids and discuss their physiological significance.",
+
+    keywords: [
+        "essential amino acids",
+        "metabolism",
+        "physiological role",
+        "nutrition",
+        "catabolism",
+        "biosynthesis"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which amino acid is converted directly into nitric oxide in the body?",
-    answers: [
-        { text: "Arginine", correct: true },
-        { text: "Glycine", correct: false },
-        { text: "Valine", correct: false },
-        { text: "Proline", correct: false }
-    ]
+    question: "Discuss the role of amino acids in gluconeogenesis during prolonged fasting and starvation.",
+
+    keywords: [
+        "gluconeogenesis",
+        "alanine",
+        "glutamine",
+        "fasting",
+        "starvation",
+        "liver"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The major product formed after complete oxidation of ketogenic amino acids is:",
-    answers: [
-        { text: "Acetyl-CoA", correct: true },
-        { text: "Pyruvate", correct: false },
-        { text: "Oxaloacetate", correct: false },
-        { text: "Succinyl-CoA", correct: false }
-    ]
+    question: "Evaluate the clinical significance of serum albumin and plasma proteins in assessing nutritional and liver status.",
+
+    keywords: [
+        "serum albumin",
+        "plasma proteins",
+        "nutrition",
+        "liver disease",
+        "clinical assessment",
+        "protein deficiency"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The nitrogen atom of urea is derived mainly from:",
-    answers: [
-        { text: "Ammonia and aspartate", correct: true },
-        { text: "Alanine only", correct: false },
-        { text: "Glucose", correct: false },
-        { text: "Pyruvate", correct: false }
-    ]
+    question: "Discuss the integrated regulation of amino acid metabolism in health and disease, emphasizing enzyme regulation and metabolic adaptation.",
+
+    keywords: [
+        "enzyme regulation",
+        "protein metabolism",
+        "metabolic adaptation",
+        "health",
+        "disease",
+        "homeostasis"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which statement about protein denaturation is correct?",
-    answers: [
-        { text: "It destroys secondary and tertiary structures without breaking peptide bonds", correct: true },
-        { text: "It completely hydrolyzes peptide bonds", correct: false },
-        { text: "It converts proteins into carbohydrates", correct: false },
-        { text: "It always produces biologically active proteins", correct: false }
-    ]
+    question: "Critically evaluate the biochemical relationship between protein digestion, amino acid metabolism, nitrogen disposal, and overall metabolic homeostasis.",
+
+    keywords: [
+        "protein digestion",
+        "amino acid metabolism",
+        "nitrogen disposal",
+        "urea cycle",
+        "homeostasis",
+        "metabolic integration",
+        "clinical relevance"
+    ],
+
+    marks: 20
 }
 
 ];

@@ -1,1505 +1,1986 @@
-const EASY_QUESTIONS = [
+const EASY_THEORY_QUESTIONS = [
 
 {
-    question: "The largest part of the human brain is the:",
-    answers: [
-        { text: "Cerebellum", correct: false },
-        { text: "Medulla oblongata", correct: false },
-        { text: "Cerebrum", correct: true },
-        { text: "Pons", correct: false }
-    ]
+    question: "Define the cerebral cortex.",
+    keywords: [
+        "outer layer",
+        "gray matter",
+        "cerebrum",
+        "higher functions",
+        "brain"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which lobe of the brain contains the primary motor cortex?",
-    answers: [
-        { text: "Parietal lobe", correct: false },
-        { text: "Frontal lobe", correct: true },
-        { text: "Temporal lobe", correct: false },
-        { text: "Occipital lobe", correct: false }
-    ]
+    question: "State five functions of the cerebral cortex.",
+    keywords: [
+        "memory",
+        "thinking",
+        "voluntary movement",
+        "sensation",
+        "language"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary visual cortex is located in the:",
-    answers: [
-        { text: "Temporal lobe", correct: false },
-        { text: "Frontal lobe", correct: false },
-        { text: "Occipital lobe", correct: true },
-        { text: "Parietal lobe", correct: false }
-    ]
+    question: "Describe the frontal lobe and state its functions.",
+    keywords: [
+        "frontal lobe",
+        "motor control",
+        "speech",
+        "planning",
+        "personality"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which lobe is primarily responsible for hearing?",
-    answers: [
-        { text: "Frontal lobe", correct: false },
-        { text: "Temporal lobe", correct: true },
-        { text: "Occipital lobe", correct: false },
-        { text: "Parietal lobe", correct: false }
-    ]
+    question: "Describe the parietal lobe and state its functions.",
+    keywords: [
+        "parietal lobe",
+        "sensory",
+        "touch",
+        "temperature",
+        "pressure"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary somatosensory cortex is located in the:",
-    answers: [
-        { text: "Precentral gyrus", correct: false },
-        { text: "Postcentral gyrus", correct: true },
-        { text: "Superior temporal gyrus", correct: false },
-        { text: "Occipital cortex", correct: false }
-    ]
+    question: "Describe the temporal lobe and state its functions.",
+    keywords: [
+        "temporal lobe",
+        "hearing",
+        "memory",
+        "language",
+        "auditory"
+    ],
+    marks: 10
 },
 
 {
-    question: "The spinal cord begins at the level of the:",
-    answers: [
-        { text: "Atlas (C1)", correct: false },
-        { text: "Foramen magnum", correct: true },
-        { text: "Axis (C2)", correct: false },
-        { text: "T1 vertebra", correct: false }
-    ]
+    question: "Describe the occipital lobe and state its functions.",
+    keywords: [
+        "occipital lobe",
+        "vision",
+        "visual cortex",
+        "sight",
+        "interpretation"
+    ],
+    marks: 10
 },
 
 {
-    question: "The basic functional unit of the nervous system is the:",
-    answers: [
-        { text: "Nephron", correct: false },
-        { text: "Neuron", correct: true },
-        { text: "Sarcomere", correct: false },
-        { text: "Osteon", correct: false }
-    ]
+    question: "Explain the function of the primary motor cortex.",
+    keywords: [
+        "voluntary movement",
+        "frontal lobe",
+        "precentral gyrus",
+        "motor",
+        "muscles"
+    ],
+    marks: 10
 },
 
 {
-    question: "Sensory information enters the spinal cord through the:",
-    answers: [
-        { text: "Ventral root", correct: false },
-        { text: "Dorsal root", correct: true },
-        { text: "Anterior horn", correct: false },
-        { text: "Lateral horn", correct: false }
-    ]
+    question: "Explain the function of the primary sensory cortex.",
+    keywords: [
+        "postcentral gyrus",
+        "touch",
+        "pain",
+        "temperature",
+        "sensory"
+    ],
+    marks: 10
 },
 
 {
-    question: "Motor impulses leave the spinal cord through the:",
-    answers: [
-        { text: "Dorsal root", correct: false },
-        { text: "Ventral root", correct: true },
-        { text: "Posterior horn", correct: false },
-        { text: "Dorsal ganglion", correct: false }
-    ]
+    question: "What are Brodmann areas?",
+    keywords: [
+        "cerebral cortex",
+        "numbered regions",
+        "function",
+        "histology",
+        "brain"
+    ],
+    marks: 10
 },
 
 {
-    question: "A reflex action is best described as:",
-    answers: [
-        { text: "A voluntary movement", correct: false },
-        { text: "A rapid automatic response to a stimulus", correct: true },
-        { text: "A conscious response", correct: false },
-        { text: "A learned behavior", correct: false }
-    ]
+    question: "State the functions of Brodmann Area 4.",
+    keywords: [
+        "primary motor cortex",
+        "voluntary movement",
+        "motor",
+        "frontal lobe",
+        "movement"
+    ],
+    marks: 10
 },
 
 {
-    question: "The receptor is the first component of a:",
-    answers: [
-        { text: "Motor pathway", correct: false },
-        { text: "Reflex arc", correct: true },
-        { text: "Respiratory pathway", correct: false },
-        { text: "Visual pathway", correct: false }
-    ]
+    question: "State the functions of Brodmann Areas 1, 2 and 3.",
+    keywords: [
+        "primary sensory cortex",
+        "touch",
+        "pain",
+        "temperature",
+        "proprioception"
+    ],
+    marks: 10
 },
 
 {
-    question: "The central nervous system consists of the:",
-    answers: [
-        { text: "Brain and spinal cord", correct: true },
-        { text: "Brain and nerves", correct: false },
-        { text: "Spinal cord and ganglia", correct: false },
-        { text: "Brain only", correct: false }
-    ]
+    question: "Differentiate between the central nervous system and the peripheral nervous system.",
+    keywords: [
+        "brain",
+        "spinal cord",
+        "cranial nerves",
+        "spinal nerves",
+        "difference"
+    ],
+    marks: 10
 },
 
 {
-    question: "The peripheral nervous system consists mainly of:",
-    answers: [
-        { text: "Brain tissue", correct: false },
-        { text: "Spinal cord", correct: false },
-        { text: "Cranial and spinal nerves", correct: true },
-        { text: "Cerebral cortex", correct: false }
-    ]
+    question: "State the divisions of the peripheral nervous system.",
+    keywords: [
+        "somatic",
+        "autonomic",
+        "sympathetic",
+        "parasympathetic",
+        "enteric"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which division of the nervous system controls voluntary skeletal muscle movement?",
-    answers: [
-        { text: "Autonomic nervous system", correct: false },
-        { text: "Somatic nervous system", correct: true },
-        { text: "Enteric nervous system", correct: false },
-        { text: "Sympathetic nervous system", correct: false }
-    ]
+    question: "Describe the sensory division of the nervous system.",
+    keywords: [
+        "afferent",
+        "receptors",
+        "central nervous system",
+        "sensory impulses",
+        "stimulus"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which autonomic division prepares the body for 'fight or flight'?",
-    answers: [
-        { text: "Parasympathetic division", correct: false },
-        { text: "Sympathetic division", correct: true },
-        { text: "Somatic division", correct: false },
-        { text: "Sensory division", correct: false }
-    ]
+    question: "Describe the motor division of the nervous system.",
+    keywords: [
+        "efferent",
+        "effectors",
+        "muscles",
+        "glands",
+        "motor impulses"
+    ],
+    marks: 10
 },
 
 {
-    question: "The parasympathetic nervous system is associated with:",
-    answers: [
-        { text: "Fight or flight", correct: false },
-        { text: "Rest and digest", correct: true },
-        { text: "Voluntary movement", correct: false },
-        { text: "Pain sensation", correct: false }
-    ]
+    question: "Define the spinal cord.",
+    keywords: [
+        "central nervous system",
+        "vertebral canal",
+        "brainstem",
+        "impulses",
+        "reflexes"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which Brodmann area is the primary motor cortex?",
-    answers: [
-        { text: "Area 17", correct: false },
-        { text: "Area 4", correct: true },
-        { text: "Area 3", correct: false },
-        { text: "Area 22", correct: false }
-    ]
+    question: "State five functions of the spinal cord.",
+    keywords: [
+        "conduction",
+        "reflex",
+        "coordination",
+        "sensory",
+        "motor"
+    ],
+    marks: 10
 },
 
 {
-    question: "Brodmann area 17 is responsible for:",
-    answers: [
-        { text: "Hearing", correct: false },
-        { text: "Vision", correct: true },
-        { text: "Touch", correct: false },
-        { text: "Speech", correct: false }
-    ]
+    question: "What is a reflex arc?",
+    keywords: [
+        "automatic",
+        "response",
+        "receptor",
+        "spinal cord",
+        "effector"
+    ],
+    marks: 10
 },
 
 {
-    question: "The respiratory membrane is the site where:",
-    answers: [
-        { text: "Blood is formed", correct: false },
-        { text: "Gas exchange occurs", correct: true },
-        { text: "Food is digested", correct: false },
-        { text: "Urine is produced", correct: false }
-    ]
+    question: "List the components of a reflex arc.",
+    keywords: [
+        "receptor",
+        "sensory neuron",
+        "interneuron",
+        "motor neuron",
+        "effector"
+    ],
+    marks: 10
 },
 
 {
-    question: "According to Fick's law, diffusion increases when:",
-    answers: [
-        { text: "Surface area decreases", correct: false },
-        { text: "Diffusion distance increases", correct: false },
-        { text: "Concentration gradient increases", correct: true },
-        { text: "Membrane thickness increases", correct: false }
-    ]
+    question: "Define General Somatic Afferent (GSA).",
+    keywords: [
+        "sensory",
+        "skin",
+        "muscles",
+        "joints",
+        "somatic"
+    ],
+    marks: 10
 },
 
 {
-    question: "The gas that diffuses from the alveoli into the blood is:",
-    answers: [
-        { text: "Carbon dioxide", correct: false },
-        { text: "Nitrogen", correct: false },
-        { text: "Oxygen", correct: true },
-        { text: "Hydrogen", correct: false }
-    ]
+    question: "Define General Somatic Efferent (GSE).",
+    keywords: [
+        "motor",
+        "skeletal muscles",
+        "somatic",
+        "efferent",
+        "voluntary"
+    ],
+    marks: 10
 },
 
 {
-    question: "Carbon dioxide diffuses from the:",
-    answers: [
-        { text: "Alveoli into blood", correct: false },
-        { text: "Blood into alveoli", correct: true },
-        { text: "Blood into muscles", correct: false },
-        { text: "Lungs into tissues", correct: false }
-    ]
+    question: "Define General Visceral Afferent (GVA).",
+    keywords: [
+        "visceral",
+        "organs",
+        "sensory",
+        "internal organs",
+        "afferent"
+    ],
+    marks: 10
 },
 
 {
-    question: "Pulmonary respiration occurs between the:",
-    answers: [
-        { text: "Blood and body tissues", correct: false },
-        { text: "Alveoli and pulmonary capillaries", correct: true },
-        { text: "Cells and mitochondria", correct: false },
-        { text: "Heart and lungs", correct: false }
-    ]
+    question: "Define General Visceral Efferent (GVE).",
+    keywords: [
+        "autonomic",
+        "smooth muscle",
+        "cardiac muscle",
+        "glands",
+        "visceral"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which structure carries impulses from receptors to the CNS?",
-    answers: [
-        { text: "Motor neuron", correct: false },
-        { text: "Sensory neuron", correct: true },
-        { text: "Interneuron", correct: false },
-        { text: "Schwann cell", correct: false }
-    ]
+    question: "State the pathway of General Somatic Afferent (GSA) fibers.",
+    keywords: [
+        "receptor",
+        "sensory neuron",
+        "spinal cord",
+        "brain",
+        "afferent pathway"
+    ],
+    marks: 10
 },
 
 {
-    question: "The effector in a reflex arc is usually a:",
-    answers: [
-        { text: "Receptor", correct: false },
-        { text: "Muscle or gland", correct: true },
-        { text: "Sensory neuron", correct: false },
-        { text: "Dorsal root ganglion", correct: false }
-    ]
+    question: "State the pathway of General Somatic Efferent (GSE) fibers.",
+    keywords: [
+        "motor cortex",
+        "spinal cord",
+        "motor neuron",
+        "skeletal muscle",
+        "efferent pathway"
+    ],
+    marks: 10
 },
 
 {
-    question: "The respiratory center responsible for regulating breathing is located in the:",
-    answers: [
-        { text: "Cerebrum", correct: false },
-        { text: "Medulla oblongata", correct: true },
-        { text: "Cerebellum", correct: false },
-        { text: "Thalamus", correct: false }
-    ]
+    question: "State the pathway of General Visceral Afferent (GVA) fibers.",
+    keywords: [
+        "visceral receptors",
+        "sensory neuron",
+        "cranial nerves",
+        "spinal cord",
+        "brain"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which cranial nerve is responsible for the sense of smell?",
-    answers: [
-        { text: "Optic nerve", correct: false },
-        { text: "Olfactory nerve", correct: true },
-        { text: "Facial nerve", correct: false },
-        { text: "Vagus nerve", correct: false }
-    ]
+    question: "State the pathway of General Visceral Efferent (GVE) fibers.",
+    keywords: [
+        "autonomic centers",
+        "preganglionic neuron",
+        "autonomic ganglion",
+        "postganglionic neuron",
+        "effector organ"
+    ],
+    marks: 10
 },
 
 {
-    question: "The spinal cord is protected by the:",
-    answers: [
-        { text: "Skull", correct: false },
-        { text: "Vertebral column", correct: true },
-        { text: "Ribs", correct: false },
-        { text: "Pelvis", correct: false }
-    ]
+    question: "List five modalities carried by General Somatic Afferent (GSA) fibers.",
+    keywords: [
+        "touch",
+        "pain",
+        "temperature",
+        "pressure",
+        "proprioception"
+    ],
+    marks: 10
 },
 
 {
-    question: "The largest lobe of the human brain is the:",
-    answers: [
-        { text: "Occipital lobe", correct: false },
-        { text: "Parietal lobe", correct: false },
-        { text: "Frontal lobe", correct: true },
-        { text: "Temporal lobe", correct: false }
-    ]
+    question: "List five organs supplied by General Visceral Efferent (GVE) fibers.",
+    keywords: [
+        "heart",
+        "lungs",
+        "stomach",
+        "intestines",
+        "urinary bladder"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which lobe of the brain primarily processes vision?",
-    answers: [
-        { text: "Frontal lobe", correct: false },
-        { text: "Temporal lobe", correct: false },
-        { text: "Occipital lobe", correct: true },
-        { text: "Parietal lobe", correct: false }
-    ]
+    question: "Define diffusion.",
+    keywords: [
+        "movement",
+        "molecules",
+        "high concentration",
+        "low concentration",
+        "gradient"
+    ],
+    marks: 10
 },
 
 {
-    question: "The functional unit of the nervous system is the:",
-    answers: [
-        { text: "Neuron", correct: true },
-        { text: "Nephron", correct: false },
-        { text: "Osteon", correct: false },
-        { text: "Alveolus", correct: false }
-    ]
+    question: "State Fick's Principle of Diffusion.",
+    keywords: [
+        "diffusion rate",
+        "surface area",
+        "concentration gradient",
+        "membrane thickness",
+        "diffusion coefficient"
+    ],
+    marks: 10
 },
 
 {
-    question: "Sensory neurons carry impulses:",
-    answers: [
-        { text: "From the brain to muscles", correct: false },
-        { text: "From receptors to the CNS", correct: true },
-        { text: "Between muscles", correct: false },
-        { text: "From glands to skin", correct: false }
-    ]
+    question: "List the factors affecting diffusion according to Fick's Principle.",
+    keywords: [
+        "surface area",
+        "concentration gradient",
+        "membrane thickness",
+        "diffusion coefficient",
+        "distance"
+    ],
+    marks: 10
 },
 
 {
-    question: "Motor neurons transmit impulses from the:",
-    answers: [
-        { text: "Receptors to spinal cord", correct: false },
-        { text: "CNS to effectors", correct: true },
-        { text: "Skin to brain", correct: false },
-        { text: "Blood to tissues", correct: false }
-    ]
+    question: "Define the respiratory membrane.",
+    keywords: [
+        "alveolar wall",
+        "capillary wall",
+        "gas exchange",
+        "thin membrane",
+        "diffusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The reflex arc is mainly controlled by the:",
-    answers: [
-        { text: "Cerebrum", correct: false },
-        { text: "Spinal cord", correct: true },
-        { text: "Cerebellum", correct: false },
-        { text: "Hypothalamus", correct: false }
-    ]
+    question: "State the layers of the respiratory membrane.",
+    keywords: [
+        "alveolar epithelium",
+        "basement membrane",
+        "capillary endothelium",
+        "interstitial space",
+        "fusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary motor cortex is located in the:",
-    answers: [
-        { text: "Frontal lobe", correct: true },
-        { text: "Temporal lobe", correct: false },
-        { text: "Occipital lobe", correct: false },
-        { text: "Parietal lobe", correct: false }
-    ]
+    question: "Explain how oxygen diffuses across the respiratory membrane.",
+    keywords: [
+        "alveoli",
+        "capillaries",
+        "partial pressure",
+        "diffusion",
+        "blood"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which part of the neuron receives incoming signals?",
-    answers: [
-        { text: "Axon", correct: false },
-        { text: "Dendrite", correct: true },
-        { text: "Myelin sheath", correct: false },
-        { text: "Node of Ranvier", correct: false }
-    ]
+    question: "Explain how carbon dioxide diffuses across the respiratory membrane.",
+    keywords: [
+        "blood",
+        "alveoli",
+        "partial pressure",
+        "diffusion",
+        "expiration"
+    ],
+    marks: 10
 },
 
 {
-    question: "The myelin sheath functions to:",
-    answers: [
-        { text: "Slow nerve impulse conduction", correct: false },
-        { text: "Increase the speed of impulse conduction", correct: true },
-        { text: "Produce neurotransmitters", correct: false },
-        { text: "Destroy neurons", correct: false }
-    ]
+    question: "State five factors that increase the rate of gas diffusion across the respiratory membrane.",
+    keywords: [
+        "large surface area",
+        "thin membrane",
+        "high pressure gradient",
+        "healthy alveoli",
+        "good perfusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The autonomic nervous system mainly controls:",
-    answers: [
-        { text: "Voluntary skeletal muscle movement", correct: false },
-        { text: "Involuntary body functions", correct: true },
-        { text: "Speech", correct: false },
-        { text: "Vision only", correct: false }
-    ]
+    question: "State five conditions that reduce diffusion across the respiratory membrane.",
+    keywords: [
+        "pulmonary edema",
+        "fibrosis",
+        "emphysema",
+        "thick membrane",
+        "reduced surface area"
+    ],
+    marks: 10
 },
 
 {
-    question: "The sympathetic nervous system prepares the body for:",
-    answers: [
-        { text: "Digestion", correct: false },
-        { text: "Rest and relaxation", correct: false },
-        { text: "Fight or flight response", correct: true },
-        { text: "Sleeping", correct: false }
-    ]
+    question: "Define pulmonary respiration.",
+    keywords: [
+        "external respiration",
+        "lungs",
+        "alveoli",
+        "gas exchange",
+        "blood"
+    ],
+    marks: 10
 },
 
 {
-    question: "The parasympathetic nervous system is responsible for:",
-    answers: [
-        { text: "Increasing heart rate", correct: false },
-        { text: "Fight or flight", correct: false },
-        { text: "Rest and digestion", correct: true },
-        { text: "Pain sensation", correct: false }
-    ]
+    question: "Define alveolar respiration.",
+    keywords: [
+        "alveoli",
+        "gas exchange",
+        "oxygen",
+        "carbon dioxide",
+        "pulmonary capillaries"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which cells produce myelin in the central nervous system?",
-    answers: [
-        { text: "Schwann cells", correct: false },
-        { text: "Astrocytes", correct: false },
-        { text: "Oligodendrocytes", correct: true },
-        { text: "Microglia", correct: false }
-    ]
+    question: "Differentiate between pulmonary respiration and alveolar respiration.",
+    keywords: [
+        "lungs",
+        "alveoli",
+        "gas exchange",
+        "external respiration",
+        "site"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which type of glial cell produces myelin in the peripheral nervous system?",
-    answers: [
-        { text: "Oligodendrocytes", correct: false },
-        { text: "Microglia", correct: false },
-        { text: "Schwann cells", correct: true },
-        { text: "Astrocytes", correct: false }
-    ]
+    question: "State five functions of the alveoli in respiration.",
+    keywords: [
+        "gas exchange",
+        "oxygen uptake",
+        "carbon dioxide removal",
+        "large surface area",
+        "diffusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The blood-brain barrier mainly protects the:",
-    answers: [
-        { text: "Heart", correct: false },
-        { text: "Brain", correct: true },
-        { text: "Lungs", correct: false },
-        { text: "Kidneys", correct: false }
-    ]
+    question: "State five characteristics of an efficient respiratory membrane.",
+    keywords: [
+        "thin",
+        "large surface area",
+        "moist",
+        "permeable",
+        "rich blood supply"
+    ],
+    marks: 10
 },
 
 {
-    question: "The exchange of oxygen and carbon dioxide occurs in the:",
-    answers: [
-        { text: "Bronchi", correct: false },
-        { text: "Trachea", correct: false },
-        { text: "Alveoli", correct: true },
-        { text: "Pleura", correct: false }
-    ]
+    question: "Explain why the respiratory membrane is very thin.",
+    keywords: [
+        "rapid diffusion",
+        "short distance",
+        "efficient gas exchange",
+        "oxygen",
+        "carbon dioxide"
+    ],
+    marks: 10
 },
 
 {
-    question: "According to Fick's law, diffusion increases when the surface area is:",
-    answers: [
-        { text: "Reduced", correct: false },
-        { text: "Increased", correct: true },
-        { text: "Zero", correct: false },
-        { text: "Constantly decreasing", correct: false }
-    ]
+    question: "State the importance of partial pressure in gas exchange.",
+    keywords: [
+        "diffusion",
+        "pressure gradient",
+        "oxygen",
+        "carbon dioxide",
+        "movement"
+    ],
+    marks: 10
 },
 
 {
-    question: "Pulmonary ventilation refers to:",
-    answers: [
-        { text: "Exchange of gases in tissues", correct: false },
-        { text: "Movement of air into and out of the lungs", correct: true },
-        { text: "Transport of oxygen by blood", correct: false },
-        { text: "Cellular respiration", correct: false }
-    ]
+    question: "State five functions of oxygen in the human body.",
+    keywords: [
+        "cellular respiration",
+        "ATP production",
+        "energy",
+        "metabolism",
+        "survival"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary function of alveoli is:",
-    answers: [
-        { text: "Filter blood", correct: false },
-        { text: "Produce mucus", correct: false },
-        { text: "Gas exchange", correct: true },
-        { text: "Warm inspired air", correct: false }
-    ]
+    question: "State five functions of carbon dioxide in the human body.",
+    keywords: [
+        "acid-base balance",
+        "respiration",
+        "blood pH",
+        "bicarbonate",
+        "ventilation"
+    ],
+    marks: 10
 },
 
 {
-    question: "The main respiratory muscle is the:",
-    answers: [
-        { text: "Intercostal muscle", correct: false },
-        { text: "Diaphragm", correct: true },
-        { text: "Rectus abdominis", correct: false },
-        { text: "Pectoralis major", correct: false }
-    ]
+    question: "Explain the importance of the concentration gradient in diffusion.",
+    keywords: [
+        "high concentration",
+        "low concentration",
+        "movement",
+        "diffusion",
+        "gradient"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which gas diffuses from the alveoli into the blood?",
-    answers: [
-        { text: "Carbon dioxide", correct: false },
-        { text: "Nitrogen", correct: false },
-        { text: "Oxygen", correct: true },
-        { text: "Hydrogen", correct: false }
-    ]
+    question: "List five structures involved in gas exchange in the lungs.",
+    keywords: [
+        "alveoli",
+        "alveolar ducts",
+        "respiratory bronchioles",
+        "capillaries",
+        "respiratory membrane"
+    ],
+    marks: 10
 },
 
 {
-    question: "The major function of the cerebral cortex is:",
-    answers: [
-        { text: "Production of red blood cells", correct: false },
-        { text: "Higher mental functions and voluntary activities", correct: true },
-        { text: "Digestion", correct: false },
-        { text: "Urine formation", correct: false }
-    ]
+    question: "State five reasons why the lungs are efficient organs for gaseous exchange.",
+    keywords: [
+        "large surface area",
+        "thin membrane",
+        "rich blood supply",
+        "moist surface",
+        "ventilation"
+    ],
+    marks: 10
 }
+
 ];
 
-const HARD_QUESTIONS = [
-    {
-    question: "The primary motor cortex is located in the:",
-    answers: [
-        { text: "Postcentral gyrus", correct: false },
-        { text: "Precentral gyrus", correct: true },
-        { text: "Temporal lobe", correct: false },
-        { text: "Occipital lobe", correct: false }
-    ]
+const HARD_THEORY_QUESTIONS = [
+
+{
+    question: "Explain the structural organization of the cerebral cortex and discuss its significance in higher brain functions.",
+    keywords: [
+        "gray matter",
+        "neurons",
+        "cerebrum",
+        "higher functions",
+        "integration"
+    ],
+    marks: 10
 },
 
 {
-    question: "Damage to Broca's area results in:",
-    answers: [
-        { text: "Loss of hearing", correct: false },
-        { text: "Motor aphasia (difficulty speaking)", correct: true },
-        { text: "Blindness", correct: false },
-        { text: "Loss of smell", correct: false }
-    ]
+    question: "Evaluate the functional importance of the frontal lobe in human behaviour and voluntary activities.",
+    keywords: [
+        "motor control",
+        "planning",
+        "judgment",
+        "personality",
+        "speech"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which Brodmann area is known as the primary visual cortex?",
-    answers: [
-        { text: "Area 4", correct: false },
-        { text: "Area 17", correct: true },
-        { text: "Area 41", correct: false },
-        { text: "Area 44", correct: false }
-    ]
+    question: "Discuss the sensory functions of the parietal lobe and explain its clinical importance.",
+    keywords: [
+        "somatic sensation",
+        "touch",
+        "pain",
+        "temperature",
+        "proprioception"
+    ],
+    marks: 10
 },
 
 {
-    question: "The sensory division of the nervous system carries impulses:",
-    answers: [
-        { text: "Away from the CNS", correct: false },
-        { text: "Toward the CNS", correct: true },
-        { text: "Between muscles", correct: false },
-        { text: "Only to glands", correct: false }
-    ]
+    question: "Explain the role of the temporal lobe in hearing, language and memory.",
+    keywords: [
+        "auditory cortex",
+        "memory",
+        "language",
+        "hearing",
+        "interpretation"
+    ],
+    marks: 10
 },
 
 {
-    question: "The autonomic nervous system controls:",
-    answers: [
-        { text: "Voluntary skeletal muscles", correct: false },
-        { text: "Involuntary visceral activities", correct: true },
-        { text: "Vision only", correct: false },
-        { text: "Speech only", correct: false }
-    ]
+    question: "Discuss the role of the occipital lobe in visual perception.",
+    keywords: [
+        "vision",
+        "visual cortex",
+        "occipital lobe",
+        "interpretation",
+        "visual information"
+    ],
+    marks: 10
 },
 
 {
-    question: "General Somatic Afferent (GSA) fibers transmit:",
-    answers: [
-        { text: "Motor impulses to muscles", correct: false },
-        { text: "Sensory impulses from skin and muscles", correct: true },
-        { text: "Parasympathetic impulses", correct: false },
-        { text: "Special senses only", correct: false }
-    ]
+    question: "Compare the primary motor cortex with the primary sensory cortex.",
+    keywords: [
+        "precentral gyrus",
+        "postcentral gyrus",
+        "movement",
+        "sensation",
+        "difference"
+    ],
+    marks: 10
 },
 
 {
-    question: "General Somatic Efferent (GSE) fibers innervate:",
-    answers: [
-        { text: "Smooth muscles", correct: false },
-        { text: "Cardiac muscles", correct: false },
-        { text: "Skeletal muscles", correct: true },
-        { text: "Glands", correct: false }
-    ]
+    question: "Explain the functional significance of Brodmann Areas in the cerebral cortex.",
+    keywords: [
+        "functional localization",
+        "numbered regions",
+        "histology",
+        "brain function",
+        "cortex"
+    ],
+    marks: 10
 },
 
 {
-    question: "General Visceral Afferent (GVA) fibers carry sensations from:",
-    answers: [
-        { text: "Bones", correct: false },
-        { text: "Internal organs", correct: true },
-        { text: "Skin only", correct: false },
-        { text: "Eyes", correct: false }
-    ]
+    question: "Discuss the importance of Brodmann Area 4 in voluntary movement.",
+    keywords: [
+        "primary motor cortex",
+        "voluntary movement",
+        "motor neurons",
+        "frontal lobe",
+        "execution"
+    ],
+    marks: 10
 },
 
 {
-    question: "General Visceral Efferent (GVE) fibers supply:",
-    answers: [
-        { text: "Skeletal muscles", correct: false },
-        { text: "Smooth muscle, cardiac muscle and glands", correct: true },
-        { text: "Bones", correct: false },
-        { text: "Skin only", correct: false }
-    ]
+    question: "Explain the relationship between Brodmann Areas 1, 2 and 3 in sensory perception.",
+    keywords: [
+        "primary sensory cortex",
+        "touch",
+        "pain",
+        "temperature",
+        "sensory integration"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which of the following is NOT part of a simple reflex arc?",
-    answers: [
-        { text: "Receptor", correct: false },
-        { text: "Effector", correct: false },
-        { text: "Synapse", correct: false },
-        { text: "Cerebral cortex", correct: true }
-    ]
+    question: "Compare the central nervous system with the peripheral nervous system in terms of structure and function.",
+    keywords: [
+        "brain",
+        "spinal cord",
+        "cranial nerves",
+        "spinal nerves",
+        "comparison"
+    ],
+    marks: 10
 },
 
 {
-    question: "According to Fick's law, diffusion rate increases with:",
-    answers: [
-        { text: "Increased membrane thickness", correct: false },
-        { text: "Greater surface area", correct: true },
-        { text: "Lower pressure gradient", correct: false },
-        { text: "Reduced diffusion coefficient", correct: false }
-    ]
+    question: "Discuss the organization of the sensory and motor divisions of the nervous system.",
+    keywords: [
+        "afferent",
+        "efferent",
+        "receptors",
+        "effectors",
+        "coordination"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which gas diffuses faster across the respiratory membrane?",
-    answers: [
-        { text: "Nitrogen", correct: false },
-        { text: "Carbon dioxide", correct: true },
-        { text: "Helium", correct: false },
-        { text: "Hydrogen", correct: false }
-    ]
+    question: "Explain the functional relationship between the somatic and autonomic nervous systems.",
+    keywords: [
+        "somatic",
+        "autonomic",
+        "voluntary",
+        "involuntary",
+        "effectors"
+    ],
+    marks: 10
 },
 
 {
-    question: "The respiratory membrane mainly consists of:",
-    answers: [
-        { text: "Pleura and ribs", correct: false },
-        { text: "Alveolar epithelium and capillary endothelium", correct: true },
-        { text: "Bronchi and trachea", correct: false },
-        { text: "Diaphragm and pleura", correct: false }
-    ]
+    question: "Describe the gross anatomy of the spinal cord and explain its major functions.",
+    keywords: [
+        "gray matter",
+        "white matter",
+        "ascending tracts",
+        "descending tracts",
+        "reflexes"
+    ],
+    marks: 10
 },
 
 {
-    question: "Pulmonary ventilation refers to:",
-    answers: [
-        { text: "Exchange of gases between blood and tissues", correct: false },
-        { text: "Movement of air into and out of the lungs", correct: true },
-        { text: "Transport of oxygen in blood", correct: false },
-        { text: "Cellular respiration", correct: false }
-    ]
+    question: "Discuss the physiological importance of the spinal cord in transmitting nerve impulses.",
+    keywords: [
+        "sensory impulses",
+        "motor impulses",
+        "ascending pathways",
+        "descending pathways",
+        "communication"
+    ],
+    marks: 10
 },
 
 {
-    question: "Alveolar respiration specifically involves:",
-    answers: [
-        { text: "Movement of air through the nose", correct: false },
-        { text: "Gas exchange between alveoli and pulmonary capillaries", correct: true },
-        { text: "Movement of oxygen into mitochondria", correct: false },
-        { text: "Gas exchange in body tissues", correct: false }
-    ]
+    question: "Explain the mechanism of a spinal reflex using a reflex arc.",
+    keywords: [
+        "receptor",
+        "sensory neuron",
+        "interneuron",
+        "motor neuron",
+        "effector"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which Brodmann areas are associated with Broca's speech area?",
-    answers: [
-        { text: "17 and 18", correct: false },
-        { text: "44 and 45", correct: true },
-        { text: "3, 1 and 2", correct: false },
-        { text: "41 and 42", correct: false }
-    ]
+    question: "Discuss the importance of reflex actions in protecting the human body.",
+    keywords: [
+        "rapid response",
+        "protection",
+        "spinal cord",
+        "automatic",
+        "survival"
+    ],
+    marks: 10
 },
 
 {
-    question: "The main function of the association cortex is to:",
-    answers: [
-        { text: "Generate reflexes", correct: false },
-        { text: "Integrate and interpret information", correct: true },
-        { text: "Control heartbeat directly", correct: false },
-        { text: "Produce cerebrospinal fluid", correct: false }
-    ]
+    question: "Describe the pathway and functional significance of General Somatic Afferent (GSA) fibers.",
+    keywords: [
+        "sensory receptors",
+        "skin",
+        "spinal cord",
+        "brain",
+        "afferent"
+    ],
+    marks: 10
 },
 
 {
-    question: "The diffusion of oxygen across the alveolar membrane occurs because:",
-    answers: [
-        { text: "Alveolar oxygen pressure is lower than blood oxygen pressure", correct: false },
-        { text: "Alveolar oxygen pressure is higher than blood oxygen pressure", correct: true },
-        { text: "Carbon dioxide pushes oxygen", correct: false },
-        { text: "Active transport is involved", correct: false }
-    ]
+    question: "Explain the pathway and function of General Somatic Efferent (GSE) fibers.",
+    keywords: [
+        "motor cortex",
+        "skeletal muscle",
+        "motor neuron",
+        "voluntary movement",
+        "efferent"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which factor would decrease the rate of gas diffusion according to Fick's law?",
-    answers: [
-        { text: "Large surface area", correct: false },
-        { text: "Thin respiratory membrane", correct: false },
-        { text: "Increased membrane thickness", correct: true },
-        { text: "High pressure gradient", correct: false }
-    ]
+    question: "Discuss the pathway and physiological role of General Visceral Afferent (GVA) fibers.",
+    keywords: [
+        "visceral organs",
+        "sensory information",
+        "autonomic",
+        "brainstem",
+        "afferent"
+    ],
+    marks: 10
 },
 
 {
-    question: "The cerebral cortex responsible for conscious interpretation of sensory information is the:",
-    answers: [
-        { text: "Sensory cortex", correct: true },
-        { text: "Motor cortex", correct: false },
-        { text: "Brainstem", correct: false },
-        { text: "Cerebellum", correct: false }
-    ]
+    question: "Explain the pathway and functions of General Visceral Efferent (GVE) fibers.",
+    keywords: [
+        "autonomic nervous system",
+        "preganglionic neuron",
+        "postganglionic neuron",
+        "smooth muscle",
+        "glands"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which cranial lobe primarily contains the auditory cortex?",
-    answers: [
-        { text: "Frontal lobe", correct: false },
-        { text: "Temporal lobe", correct: true },
-        { text: "Parietal lobe", correct: false },
-        { text: "Occipital lobe", correct: false }
-    ]
+    question: "Compare GSA, GSE, GVA and GVE fibers with suitable examples.",
+    keywords: [
+        "somatic",
+        "visceral",
+        "afferent",
+        "efferent",
+        "comparison"
+    ],
+    marks: 10
 },
 
 {
-    question: "The receptor in a reflex arc functions to:",
-    answers: [
-        { text: "Carry impulses to muscles", correct: false },
-        { text: "Detect a stimulus", correct: true },
-        { text: "Produce hormones", correct: false },
-        { text: "Interpret sensations", correct: false }
-    ]
+    question: "Discuss the clinical importance of understanding sensory and motor pathways.",
+    keywords: [
+        "diagnosis",
+        "neurological disorders",
+        "injury",
+        "assessment",
+        "treatment"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which of the following best describes GSE fibers?",
-    answers: [
-        { text: "Visceral sensory fibers", correct: false },
-        { text: "Somatic motor fibers", correct: true },
-        { text: "Autonomic sensory fibers", correct: false },
-        { text: "Parasympathetic sensory fibers", correct: false }
-    ]
+    question: "Explain the significance of ascending and descending tracts in the spinal cord.",
+    keywords: [
+        "ascending",
+        "descending",
+        "sensory",
+        "motor",
+        "communication"
+    ],
+    marks: 10
 },
 
 {
-    question: "Carbon dioxide diffuses more rapidly than oxygen because it:",
-    answers: [
-        { text: "Has a smaller molecular weight", correct: false },
-        { text: "Has greater solubility in biological membranes", correct: true },
-        { text: "Requires active transport", correct: false },
-        { text: "Has a higher atmospheric concentration", correct: false }
-    ]
+    question: "Describe how nerve impulses travel through the spinal cord during voluntary movement.",
+    keywords: [
+        "motor cortex",
+        "descending tract",
+        "motor neuron",
+        "skeletal muscle",
+        "movement"
+    ],
+    marks: 10
 },
 
 {
-    question: "The sensory homunculus is located in the:",
-    answers: [
-        { text: "Precentral gyrus", correct: false },
-        { text: "Postcentral gyrus", correct: true },
-        { text: "Occipital cortex", correct: false },
-        { text: "Temporal cortex", correct: false }
-    ]
-},
-{
-    question: "The tract responsible for carrying pain and temperature sensations is:",
-    answers: [
-        { text: "Dorsal column-medial lemniscus", correct: false },
-        { text: "Spinothalamic tract", correct: true },
-        { text: "Corticospinal tract", correct: false },
-        { text: "Vestibulospinal tract", correct: false }
-    ]
+    question: "Analyze the relationship between the spinal cord and reflex activity.",
+    keywords: [
+        "reflex arc",
+        "spinal cord",
+        "coordination",
+        "automatic response",
+        "protection"
+    ],
+    marks: 10
 },
 
 {
-    question: "The first-order neuron of the general somatic afferent pathway has its cell body in the:",
-    answers: [
-        { text: "Anterior horn", correct: false },
-        { text: "Dorsal root ganglion", correct: true },
-        { text: "Thalamus", correct: false },
-        { text: "Cerebellum", correct: false }
-    ]
+    question: "Evaluate Fick's Principle of Diffusion and explain its importance in respiratory physiology.",
+    keywords: [
+        "diffusion rate",
+        "surface area",
+        "concentration gradient",
+        "membrane thickness",
+        "gas exchange"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which cranial nerve carries the majority of parasympathetic fibers to the thoracic and abdominal organs?",
-    answers: [
-        { text: "Trigeminal nerve", correct: false },
-        { text: "Facial nerve", correct: false },
-        { text: "Vagus nerve", correct: true },
-        { text: "Glossopharyngeal nerve", correct: false }
-    ]
+    question: "Explain how Fick's Principle applies to the movement of oxygen from the alveoli into the blood.",
+    keywords: [
+        "oxygen",
+        "alveoli",
+        "partial pressure",
+        "diffusion",
+        "capillaries"
+    ],
+    marks: 10
 },
 
 {
-    question: "The cerebral cortex responsible for planning voluntary movement is the:",
-    answers: [
-        { text: "Primary auditory cortex", correct: false },
-        { text: "Premotor cortex", correct: true },
-        { text: "Primary visual cortex", correct: false },
-        { text: "Broca's area", correct: false }
-    ]
+    question: "Discuss the factors that determine the efficiency of gaseous diffusion across the respiratory membrane.",
+    keywords: [
+        "surface area",
+        "membrane thickness",
+        "pressure gradient",
+        "diffusion coefficient",
+        "perfusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The functional unit of the nervous system is the:",
-    answers: [
-        { text: "Neuroglia", correct: false },
-        { text: "Neuron", correct: true },
-        { text: "Astrocyte", correct: false },
-        { text: "Oligodendrocyte", correct: false }
-    ]
+    question: "Describe the structure of the respiratory membrane and explain how its design facilitates gaseous exchange.",
+    keywords: [
+        "alveolar epithelium",
+        "basement membrane",
+        "capillary endothelium",
+        "thin membrane",
+        "diffusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The major neurotransmitter released at the neuromuscular junction is:",
-    answers: [
-        { text: "Dopamine", correct: false },
-        { text: "Acetylcholine", correct: true },
-        { text: "Serotonin", correct: false },
-        { text: "GABA", correct: false }
-    ]
+    question: "Explain why oxygen diffuses more slowly than carbon dioxide despite its physiological importance.",
+    keywords: [
+        "diffusion coefficient",
+        "solubility",
+        "partial pressure",
+        "oxygen",
+        "carbon dioxide"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which structure separates the right and left cerebral hemispheres?",
-    answers: [
-        { text: "Corpus callosum", correct: false },
-        { text: "Longitudinal fissure", correct: true },
-        { text: "Central sulcus", correct: false },
-        { text: "Lateral sulcus", correct: false }
-    ]
+    question: "Discuss the physiological factors responsible for efficient oxygen transport across the respiratory membrane.",
+    keywords: [
+        "alveoli",
+        "partial pressure",
+        "thin membrane",
+        "large surface area",
+        "blood flow"
+    ],
+    marks: 10
 },
 
 {
-    question: "The blood-brain barrier is mainly formed by:",
-    answers: [
-        { text: "Neurons", correct: false },
-        { text: "Capillary endothelial tight junctions", correct: true },
-        { text: "Microglia", correct: false },
-        { text: "Ependymal cells", correct: false }
-    ]
+    question: "Evaluate the effect of increased respiratory membrane thickness on gaseous exchange.",
+    keywords: [
+        "fibrosis",
+        "pulmonary edema",
+        "diffusion",
+        "oxygen",
+        "reduced gas exchange"
+    ],
+    marks: 10
 },
 
 {
-    question: "The largest commissural fiber tract connecting both cerebral hemispheres is:",
-    answers: [
-        { text: "Internal capsule", correct: false },
-        { text: "Corpus callosum", correct: true },
-        { text: "Corona radiata", correct: false },
-        { text: "Fornix", correct: false }
-    ]
+    question: "Explain how emphysema affects Fick's Principle of Diffusion.",
+    keywords: [
+        "surface area",
+        "alveoli",
+        "gas exchange",
+        "diffusion",
+        "emphysema"
+    ],
+    marks: 10
 },
 
 {
-    question: "Fick's law states that diffusion is directly proportional to:",
-    answers: [
-        { text: "Membrane thickness", correct: false },
-        { text: "Surface area and pressure gradient", correct: true },
-        { text: "Blood viscosity", correct: false },
-        { text: "Airway resistance", correct: false }
-    ]
+    question: "Describe the sequence of events involved in pulmonary gas exchange.",
+    keywords: [
+        "ventilation",
+        "alveoli",
+        "diffusion",
+        "capillaries",
+        "oxygen"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which factor decreases the rate of diffusion across the respiratory membrane?",
-    answers: [
-        { text: "Large surface area", correct: false },
-        { text: "Thin membrane", correct: false },
-        { text: "Increased membrane thickness", correct: true },
-        { text: "High pressure gradient", correct: false }
-    ]
+    question: "Discuss the physiological significance of partial pressure gradients during gaseous exchange.",
+    keywords: [
+        "partial pressure",
+        "oxygen",
+        "carbon dioxide",
+        "diffusion",
+        "gradient"
+    ],
+    marks: 10
 },
 
 {
-    question: "Pulmonary ventilation refers to:",
-    answers: [
-        { text: "Exchange of gases between blood and tissues", correct: false },
-        { text: "Movement of air into and out of the lungs", correct: true },
-        { text: "Transport of oxygen in blood", correct: false },
-        { text: "Cellular respiration", correct: false }
-    ]
+    question: "Differentiate between pulmonary respiration and alveolar respiration with suitable illustrations.",
+    keywords: [
+        "pulmonary respiration",
+        "alveolar respiration",
+        "gas exchange",
+        "lungs",
+        "comparison"
+    ],
+    marks: 10
 },
 
 {
-    question: "Alveolar respiration primarily involves:",
-    answers: [
-        { text: "Movement of air through bronchi", correct: false },
-        { text: "Gas exchange between alveoli and pulmonary capillaries", correct: true },
-        { text: "Gas exchange between blood and tissues", correct: false },
-        { text: "Respiration within mitochondria", correct: false }
-    ]
+    question: "Explain the relationship between ventilation, diffusion and perfusion in maintaining efficient respiration.",
+    keywords: [
+        "ventilation",
+        "diffusion",
+        "perfusion",
+        "gas exchange",
+        "oxygenation"
+    ],
+    marks: 10
 },
 
 {
-    question: "The neurotransmitter released by postganglionic sympathetic neurons is usually:",
-    answers: [
-        { text: "Acetylcholine", correct: false },
-        { text: "Norepinephrine", correct: true },
-        { text: "Dopamine", correct: false },
-        { text: "Serotonin", correct: false }
-    ]
+    question: "Discuss the physiological adaptations of the lungs that maximize gaseous exchange.",
+    keywords: [
+        "large surface area",
+        "thin membrane",
+        "rich blood supply",
+        "moist surface",
+        "elasticity"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary motor cortex is located in the:",
-    answers: [
-        { text: "Postcentral gyrus", correct: false },
-        { text: "Precentral gyrus", correct: true },
-        { text: "Occipital lobe", correct: false },
-        { text: "Temporal lobe", correct: false }
-    ]
+    question: "Evaluate the importance of the respiratory membrane in maintaining normal blood oxygen levels.",
+    keywords: [
+        "oxygenation",
+        "diffusion",
+        "alveoli",
+        "capillaries",
+        "homeostasis"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary somatosensory cortex is found in the:",
-    answers: [
-        { text: "Precentral gyrus", correct: false },
-        { text: "Postcentral gyrus", correct: true },
-        { text: "Superior temporal gyrus", correct: false },
-        { text: "Inferior frontal gyrus", correct: false }
-    ]
+    question: "Explain how pulmonary diseases interfere with gaseous diffusion across the respiratory membrane.",
+    keywords: [
+        "fibrosis",
+        "edema",
+        "emphysema",
+        "diffusion",
+        "hypoxia"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which cranial nerve is purely sensory?",
-    answers: [
-        { text: "Facial nerve", correct: false },
-        { text: "Olfactory nerve", correct: true },
-        { text: "Glossopharyngeal nerve", correct: false },
-        { text: "Vagus nerve", correct: false }
-    ]
+    question: "Discuss the physiological consequences of reduced alveolar surface area.",
+    keywords: [
+        "gas exchange",
+        "oxygen",
+        "carbon dioxide",
+        "emphysema",
+        "diffusion"
+    ],
+    marks: 10
 },
 
 {
-    question: "The respiratory membrane is composed mainly of alveolar epithelium and:",
-    answers: [
-        { text: "Bronchial cartilage", correct: false },
-        { text: "Capillary endothelium", correct: true },
-        { text: "Smooth muscle", correct: false },
-        { text: "Pleural membrane", correct: false }
-    ]
+    question: "Explain the role of the respiratory membrane in maintaining acid-base balance.",
+    keywords: [
+        "carbon dioxide",
+        "blood pH",
+        "ventilation",
+        "acid-base balance",
+        "gas exchange"
+    ],
+    marks: 10
 },
 
 {
-    question: "Damage to Broca's area results primarily in:",
-    answers: [
-        { text: "Loss of hearing", correct: false },
-        { text: "Motor aphasia", correct: true },
-        { text: "Blindness", correct: false },
-        { text: "Memory loss", correct: false }
-    ]
+    question: "Analyze the role of carbon dioxide diffusion in maintaining normal respiratory function.",
+    keywords: [
+        "carbon dioxide",
+        "diffusion",
+        "alveoli",
+        "ventilation",
+        "acid-base balance"
+    ],
+    marks: 10
 },
 
 {
-    question: "The cerebellum is primarily responsible for:",
-    answers: [
-        { text: "Language comprehension", correct: false },
-        { text: "Coordination of voluntary movement", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Hearing", correct: false }
-    ]
+    question: "Evaluate the importance of the alveoli as the primary site of gaseous exchange.",
+    keywords: [
+        "alveoli",
+        "gas exchange",
+        "surface area",
+        "capillaries",
+        "oxygen"
+    ],
+    marks: 10
 },
 
 {
-    question: "The meninges are arranged from superficial to deep as:",
-    answers: [
-        { text: "Pia, arachnoid, dura", correct: false },
-        { text: "Dura, arachnoid, pia", correct: true },
-        { text: "Arachnoid, dura, pia", correct: false },
-        { text: "Pia, dura, arachnoid", correct: false }
-    ]
+    question: "Discuss the mechanisms that ensure continuous diffusion of gases between the lungs and blood.",
+    keywords: [
+        "ventilation",
+        "perfusion",
+        "partial pressure",
+        "diffusion",
+        "gas exchange"
+    ],
+    marks: 10
 },
 
 {
-    question: "The reflex arc does NOT require which of the following for a simple reflex?",
-    answers: [
-        { text: "Receptor", correct: false },
-        { text: "Brain cortex", correct: true },
-        { text: "Effector", correct: false },
-        { text: "Sensory neuron", correct: false }
-    ]
+    question: "Compare the movement of oxygen and carbon dioxide across the respiratory membrane.",
+    keywords: [
+        "oxygen",
+        "carbon dioxide",
+        "partial pressure",
+        "diffusion",
+        "comparison"
+    ],
+    marks: 10
 },
 
 {
-    question: "The central canal is located within the:",
-    answers: [
-        { text: "Medulla", correct: false },
-        { text: "Spinal cord", correct: true },
-        { text: "Thalamus", correct: false },
-        { text: "Cerebellum", correct: false }
-    ]
+    question: "Discuss the integrated role of the respiratory membrane and circulatory system in oxygen delivery.",
+    keywords: [
+        "respiratory membrane",
+        "blood",
+        "oxygen transport",
+        "capillaries",
+        "circulation"
+    ],
+    marks: 10
 },
 
 {
-    question: "General visceral efferent (GVE) fibers supply:",
-    answers: [
-        { text: "Skeletal muscles", correct: false },
-        { text: "Smooth muscle, cardiac muscle and glands", correct: true },
-        { text: "Skin only", correct: false },
-        { text: "Bones only", correct: false }
-    ]
+    question: "Explain why Fick's Principle is regarded as the fundamental law governing gaseous diffusion in the lungs.",
+    keywords: [
+        "diffusion rate",
+        "surface area",
+        "membrane thickness",
+        "pressure gradient",
+        "respiratory physiology"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which statement about Fick's law is CORRECT?",
-    answers: [
-        { text: "Diffusion decreases as surface area increases", correct: false },
-        { text: "Diffusion increases with greater pressure difference", correct: true },
-        { text: "Diffusion is independent of membrane thickness", correct: false },
-        { text: "Diffusion occurs only in the lungs", correct: false }
-    ]
+    question: "Analyze the relationship between nervous system function and respiration in maintaining normal body physiology.",
+    keywords: [
+        "nervous system",
+        "respiration",
+        "coordination",
+        "homeostasis",
+        "integration"
+    ],
+    marks: 10
+},
+
+{
+    question: "Evaluate the integrated roles of the cerebral cortex, spinal cord and respiratory membrane in maintaining normal physiological function.",
+    keywords: [
+        "cerebral cortex",
+        "spinal cord",
+        "respiratory membrane",
+        "coordination",
+        "homeostasis"
+    ],
+    marks: 10
 }
+
 ];
 
-const EXTREME_QUESTIONS = [
+const EXTREME_THEORY_QUESTIONS = [
 
 {
-    question: "Which neuroglial cell is responsible for the formation of myelin in the central nervous system?",
-    answers: [
-        { text: "Schwann cell", correct: false },
-        { text: "Astrocyte", correct: false },
-        { text: "Oligodendrocyte", correct: true },
-        { text: "Microglia", correct: false }
-    ]
+    question: "Critically evaluate the structural classification of neurons and explain how each structural type is adapted to its physiological function.",
+    keywords: [
+        "multipolar",
+        "bipolar",
+        "unipolar",
+        "structure",
+        "function"
+    ],
+    marks: 10
 },
 
 {
-    question: "The myelin sheath of peripheral nerves is produced by:",
-    answers: [
-        { text: "Microglia", correct: false },
-        { text: "Schwann cells", correct: true },
-        { text: "Astrocytes", correct: false },
-        { text: "Oligodendrocytes", correct: false }
-    ]
+    question: "Analyze the functional classification of neurons and discuss their coordinated role in the transmission of nerve impulses.",
+    keywords: [
+        "sensory neurons",
+        "motor neurons",
+        "interneurons",
+        "integration",
+        "transmission"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which neuroglial cell functions primarily as the macrophage of the CNS?",
-    answers: [
-        { text: "Astrocyte", correct: false },
-        { text: "Ependymal cell", correct: false },
-        { text: "Microglia", correct: true },
-        { text: "Schwann cell", correct: false }
-    ]
+    question: "Evaluate the importance of neuroglial cells in maintaining neuronal survival and efficient nervous system function.",
+    keywords: [
+        "support",
+        "protection",
+        "nutrition",
+        "myelination",
+        "homeostasis"
+    ],
+    marks: 10
 },
 
 {
-    question: "Ependymal cells are mainly involved in:",
-    answers: [
-        { text: "Formation of myelin", correct: false },
-        { text: "Production and circulation of CSF", correct: true },
-        { text: "Transmission of impulses", correct: false },
-        { text: "Phagocytosis", correct: false }
-    ]
+    question: "Compare astrocytes, oligodendrocytes, microglia and ependymal cells with respect to structure, location and physiological function.",
+    keywords: [
+        "astrocytes",
+        "oligodendrocytes",
+        "microglia",
+        "ependymal cells",
+        "comparison"
+    ],
+    marks: 10
 },
 
 {
-    question: "The afferent neuron of a reflex arc carries impulses:",
-    answers: [
-        { text: "Away from the CNS", correct: false },
-        { text: "Toward the CNS", correct: true },
-        { text: "Between muscles", correct: false },
-        { text: "From glands only", correct: false }
-    ]
+    question: "Discuss the consequences of damage to neuroglial cells on the normal functioning of the central nervous system.",
+    keywords: [
+        "demyelination",
+        "neuronal damage",
+        "infection",
+        "repair",
+        "neurological disorders"
+    ],
+    marks: 10
 },
 
 {
-    question: "The cell bodies of sensory neurons are located in the:",
-    answers: [
-        { text: "Anterior horn", correct: false },
-        { text: "Posterior horn", correct: false },
-        { text: "Dorsal root ganglion", correct: true },
-        { text: "Thalamus", correct: false }
-    ]
+    question: "Explain the anatomical organization of the spinal cord and evaluate the significance of its roots in neural communication.",
+    keywords: [
+        "dorsal root",
+        "ventral root",
+        "sensory",
+        "motor",
+        "spinal nerves"
+    ],
+    marks: 10
 },
 
 {
-    question: "Upper motor neurons originate primarily from the:",
-    answers: [
-        { text: "Anterior horn", correct: false },
-        { text: "Primary motor cortex", correct: true },
-        { text: "Basal ganglia", correct: false },
-        { text: "Cerebellum", correct: false }
-    ]
+    question: "Analyze the physiological basis of reflex activity and explain how the reflex arc maintains body protection.",
+    keywords: [
+        "receptor",
+        "sensory neuron",
+        "interneuron",
+        "motor neuron",
+        "effector"
+    ],
+    marks: 10
 },
 
 {
-    question: "The cell bodies of lower motor neurons are found in the:",
-    answers: [
-        { text: "Cerebral cortex", correct: false },
-        { text: "Anterior horn of the spinal cord", correct: true },
-        { text: "Posterior horn", correct: false },
-        { text: "Thalamus", correct: false }
-    ]
+    question: "Critically evaluate the importance of the reflex arc in clinical diagnosis of neurological disorders.",
+    keywords: [
+        "reflex testing",
+        "neurological examination",
+        "spinal cord",
+        "diagnosis",
+        "clinical relevance"
+    ],
+    marks: 10
 },
 
 {
-    question: "The corticospinal tract is primarily responsible for:",
-    answers: [
-        { text: "Vision", correct: false },
-        { text: "Voluntary motor control", correct: true },
-        { text: "Balance", correct: false },
-        { text: "Pain sensation", correct: false }
-    ]
+    question: "Differentiate comprehensively between upper motor neurons and lower motor neurons with emphasis on their anatomical pathways and clinical lesions.",
+    keywords: [
+        "upper motor neuron",
+        "lower motor neuron",
+        "spastic paralysis",
+        "flaccid paralysis",
+        "lesions"
+    ],
+    marks: 10
 },
 
 {
-    question: "Most corticospinal fibers decussate at the:",
-    answers: [
-        { text: "Midbrain", correct: false },
-        { text: "Pons", correct: false },
-        { text: "Pyramids of the medulla", correct: true },
-        { text: "Spinal cord", correct: false }
-    ]
+    question: "Evaluate the physiological significance of upper motor neurons in the control of voluntary movement.",
+    keywords: [
+        "motor cortex",
+        "corticospinal tract",
+        "voluntary movement",
+        "coordination",
+        "control"
+    ],
+    marks: 10
 },
 
 {
-    question: "The anterolateral system mainly transmits:",
-    answers: [
-        { text: "Fine touch", correct: false },
-        { text: "Pain and temperature", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Motor impulses", correct: false }
-    ]
+    question: "Discuss the functional importance of lower motor neurons in skeletal muscle activity.",
+    keywords: [
+        "anterior horn",
+        "skeletal muscle",
+        "neuromuscular junction",
+        "motor output",
+        "contraction"
+    ],
+    marks: 10
 },
 
 {
-    question: "The first relay station for most sensory information is the:",
-    answers: [
-        { text: "Hypothalamus", correct: false },
-        { text: "Thalamus", correct: true },
-        { text: "Cerebellum", correct: false },
-        { text: "Pons", correct: false }
-    ]
+    question: "Explain how lesions affecting upper motor neurons differ clinically from lesions affecting lower motor neurons.",
+    keywords: [
+        "hyperreflexia",
+        "hyporeflexia",
+        "muscle tone",
+        "Babinski sign",
+        "atrophy"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which Brodmann area corresponds to the primary motor cortex?",
-    answers: [
-        { text: "Areas 17", correct: false },
-        { text: "Areas 3,1,2", correct: false },
-        { text: "Area 4", correct: true },
-        { text: "Area 22", correct: false }
-    ]
+    question: "Evaluate the organization of the cerebral cortex and explain how cortical specialization contributes to complex human behaviour.",
+    keywords: [
+        "gray matter",
+        "functional localization",
+        "integration",
+        "higher functions",
+        "cognition"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary somatosensory cortex corresponds to Brodmann areas:",
-    answers: [
-        { text: "4", correct: false },
-        { text: "3, 1 and 2", correct: true },
-        { text: "17", correct: false },
-        { text: "44", correct: false }
-    ]
+    question: "Analyze the relationship between the central gyri and voluntary sensory-motor integration.",
+    keywords: [
+        "precentral gyrus",
+        "postcentral gyrus",
+        "motor cortex",
+        "sensory cortex",
+        "integration"
+    ],
+    marks: 10
 },
 
 {
-    question: "The primary visual cortex is located in the:",
-    answers: [
-        { text: "Frontal lobe", correct: false },
-        { text: "Parietal lobe", correct: false },
-        { text: "Occipital lobe", correct: true },
-        { text: "Temporal lobe", correct: false }
-    ]
+    question: "Discuss the clinical significance of damage to the frontal, parietal, temporal and occipital lobes.",
+    keywords: [
+        "frontal lobe",
+        "parietal lobe",
+        "temporal lobe",
+        "occipital lobe",
+        "neurological deficits"
+    ],
+    marks: 10
 },
 
 {
-    question: "Broca's speech area is usually found in the:",
-    answers: [
-        { text: "Dominant frontal lobe", correct: true },
-        { text: "Occipital lobe", correct: false },
-        { text: "Cerebellum", correct: false },
-        { text: "Medulla", correct: false }
-    ]
+    question: "Evaluate the functional importance of Brodmann areas in cortical localization and neurological diagnosis.",
+    keywords: [
+        "Brodmann areas",
+        "localization",
+        "motor cortex",
+        "sensory cortex",
+        "diagnosis"
+    ],
+    marks: 10
 },
 
 {
-    question: "The embryonic brain develops from how many primary brain vesicles?",
-    answers: [
-        { text: "Two", correct: false },
-        { text: "Three", correct: true },
-        { text: "Four", correct: false },
-        { text: "Five", correct: false }
-    ]
+    question: "Discuss the embryological development of the brain from the primary brain vesicles to the secondary brain vesicles and their adult derivatives.",
+    keywords: [
+        "prosencephalon",
+        "mesencephalon",
+        "rhombencephalon",
+        "secondary vesicles",
+        "derivatives"
+    ],
+    marks: 10
 },
 
 {
-    question: "The cerebrum develops from the:",
-    answers: [
-        { text: "Mesencephalon", correct: false },
-        { text: "Telencephalon", correct: true },
-        { text: "Metencephalon", correct: false },
-        { text: "Myelencephalon", correct: false }
-    ]
+    question: "Analyze how abnormalities during embryonic brain development may affect neurological function after birth.",
+    keywords: [
+        "brain development",
+        "congenital anomalies",
+        "neural tube",
+        "malformations",
+        "neurological disorders"
+    ],
+    marks: 10
 },
 
 {
-    question: "The pons and cerebellum develop from the:",
-    answers: [
-        { text: "Metencephalon", correct: true },
-        { text: "Telencephalon", correct: false },
-        { text: "Mesencephalon", correct: false },
-        { text: "Diencephalon", correct: false }
-    ]
+    question: "Explain the anatomical course of the corticospinal tract and evaluate its significance in voluntary motor control.",
+    keywords: [
+        "motor cortex",
+        "internal capsule",
+        "medulla",
+        "decussation",
+        "spinal cord"
+    ],
+    marks: 10
 },
 
 {
-    question: "The medulla oblongata develops from the:",
-    answers: [
-        { text: "Myelencephalon", correct: true },
-        { text: "Mesencephalon", correct: false },
-        { text: "Diencephalon", correct: false },
-        { text: "Telencephalon", correct: false }
-    ]
+    question: "Discuss the physiological role of the corticospinal tract in fine skilled movements.",
+    keywords: [
+        "fine movement",
+        "precision",
+        "voluntary control",
+        "skeletal muscles",
+        "motor cortex"
+    ],
+    marks: 10
 },
 
 {
-    question: "During quiet inspiration, the principal muscle responsible is the:",
-    answers: [
-        { text: "External intercostal", correct: false },
-        { text: "Diaphragm", correct: true },
-        { text: "Internal intercostal", correct: false },
-        { text: "Abdominal muscles", correct: false }
-    ]
+    question: "Critically evaluate the organization and functions of the anterolateral tract in sensory transmission.",
+    keywords: [
+        "pain",
+        "temperature",
+        "crude touch",
+        "spinothalamic tract",
+        "sensory pathway"
+    ],
+    marks: 10
 },
 
 {
-    question: "The normal stimulus for breathing is an increase in:",
-    answers: [
-        { text: "Blood oxygen", correct: false },
-        { text: "Carbon dioxide concentration", correct: true },
-        { text: "Nitrogen concentration", correct: false },
-        { text: "Blood glucose", correct: false }
-    ]
+    question: "Compare the corticospinal tract with the anterolateral tract in terms of origin, pathway, decussation and function.",
+    keywords: [
+        "origin",
+        "pathway",
+        "decussation",
+        "motor",
+        "sensory"
+    ],
+    marks: 10
 },
 
 {
-    question: "The respiratory center is primarily located in the:",
-    answers: [
-        { text: "Thalamus", correct: false },
-        { text: "Brainstem", correct: true },
-        { text: "Cerebrum", correct: false },
-        { text: "Basal ganglia", correct: false }
-    ]
+    question: "Evaluate the clinical manifestations associated with lesions affecting the corticospinal and anterolateral tracts.",
+    keywords: [
+        "paralysis",
+        "loss of pain",
+        "motor deficits",
+        "sensory deficits",
+        "tract lesions"
+    ],
+    marks: 10
 },
 
 {
-    question: "Spirometry is primarily used to assess:",
-    answers: [
-        { text: "Blood pressure", correct: false },
-        { text: "Lung function", correct: true },
-        { text: "Heart sounds", correct: false },
-        { text: "Blood glucose", correct: false }
-    ]
+    question: "Discuss the coordinated roles of the cerebral cortex, corticospinal tract and lower motor neurons in producing voluntary movement.",
+    keywords: [
+        "motor cortex",
+        "corticospinal tract",
+        "lower motor neuron",
+        "skeletal muscle",
+        "coordination"
+    ],
+    marks: 10
 },
 
 {
-    question: "Which spirometric parameter is most useful in diagnosing obstructive lung disease?",
-    answers: [
-        { text: "FEV1/FVC ratio", correct: true },
-        { text: "Residual volume", correct: false },
-        { text: "Cardiac output", correct: false },
-        { text: "Blood pH", correct: false }
-    ]
-},
-{
-    question: "The medullary respiratory center is located in the:",
-    answers: [
-        { text: "Medulla oblongata", correct: true },
-        { text: "Midbrain", correct: false },
-        { text: "Hypothalamus", correct: false },
-        { text: "Cerebellum", correct: false }
-    ]
+    question: "Integrate your knowledge of neurons, neuroglial cells, spinal pathways and cortical organization to explain how the nervous system maintains coordinated body function.",
+    keywords: [
+        "neurons",
+        "neuroglia",
+        "spinal cord",
+        "cerebral cortex",
+        "coordination"
+    ],
+    marks: 10
 },
 
 {
-    question: "The dorsal respiratory group (DRG) primarily controls:",
-    answers: [
-        { text: "Inspiration", correct: true },
-        { text: "Expiration", correct: false },
-        { text: "Heart rate", correct: false },
-        { text: "Blood pressure", correct: false }
-    ]
+    question: "Illustrate and explain the complete corticospinal (pyramidal) tract from its origin in the cerebral cortex to its termination in the spinal cord, including the significance of pyramidal decussation.",
+
+    keywords: [
+        "primary motor cortex",
+        "premotor cortex",
+        "internal capsule",
+        "cerebral peduncle",
+        "pons",
+        "medullary pyramid",
+        "pyramidal decussation",
+        "lateral corticospinal tract",
+        "anterior corticospinal tract",
+        "anterior horn cell"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which respiratory center becomes active mainly during forced expiration?",
-    answers: [
-        { text: "Ventral respiratory group", correct: true },
-        { text: "Dorsal respiratory group", correct: false },
-        { text: "Apneustic center", correct: false },
-        { text: "Pneumotaxic center", correct: false }
-    ]
+    question: "Critically evaluate the functional organization of the cerebral cortex, highlighting the interaction between primary, association and multimodal cortical areas.",
+
+    keywords: [
+        "primary cortex",
+        "association cortex",
+        "multimodal cortex",
+        "integration",
+        "brodmann areas",
+        "motor planning",
+        "sensory processing",
+        "language",
+        "memory",
+        "higher functions"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The corticospinal tract originates mainly from which cerebral region?",
-    answers: [
-        { text: "Primary motor cortex", correct: true },
-        { text: "Visual cortex", correct: false },
-        { text: "Auditory cortex", correct: false },
-        { text: "Occipital cortex", correct: false }
-    ]
+    question: "Compare and contrast the lateral corticospinal tract with the anterior corticospinal tract in terms of origin, decussation, pathway, termination and functions.",
+
+    keywords: [
+        "origin",
+        "decussation",
+        "lateral corticospinal",
+        "anterior corticospinal",
+        "voluntary movement",
+        "axial muscles",
+        "distal muscles",
+        "internal capsule",
+        "motor neurons",
+        "spinal cord"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The corticospinal tract decussates mainly at the:",
-    answers: [
-        { text: "Pyramids of the medulla", correct: true },
-        { text: "Midbrain", correct: false },
-        { text: "Pons", correct: false },
-        { text: "Thalamus", correct: false }
-    ]
+    question: "Evaluate the role of the medulla oblongata in regulating respiration and cardiovascular functions, emphasizing its autonomic centers.",
+
+    keywords: [
+        "medulla oblongata",
+        "respiratory center",
+        "cardiac center",
+        "vasomotor center",
+        "blood pressure",
+        "heart rate",
+        "autonomic nervous system",
+        "vagus nerve",
+        "sympathetic",
+        "parasympathetic"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The lateral corticospinal tract mainly controls:",
-    answers: [
-        { text: "Fine voluntary movement of distal limbs", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Balance", correct: false },
-        { text: "Hearing", correct: false }
-    ]
+    question: "Discuss the physiological basis of pulmonary ventilation, explaining how pressure changes within the thoracic cavity facilitate inspiration and expiration.",
+
+    keywords: [
+        "pulmonary ventilation",
+        "inspiration",
+        "expiration",
+        "thoracic cavity",
+        "diaphragm",
+        "intercostal muscles",
+        "intrapleural pressure",
+        "alveolar pressure",
+        "boyle law",
+        "pressure gradient"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The spinothalamic tract transmits:",
-    answers: [
-        { text: "Pain and temperature", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Smell", correct: false },
-        { text: "Taste", correct: false }
-    ]
+    question: "Explain the neural mechanisms responsible for maintaining rhythmic breathing under normal physiological conditions.",
+
+    keywords: [
+        "medulla",
+        "pons",
+        "dorsal respiratory group",
+        "ventral respiratory group",
+        "pontine centers",
+        "respiratory rhythm",
+        "chemoreceptors",
+        "stretch receptors",
+        "phrenic nerve",
+        "automatic control"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which tract carries proprioception and vibration sensation?",
-    answers: [
-        { text: "Dorsal column-medial lemniscus pathway", correct: true },
-        { text: "Spinothalamic tract", correct: false },
-        { text: "Spinocerebellar tract", correct: false },
-        { text: "Vestibulospinal tract", correct: false }
-    ]
+    question: "Discuss the physiological mechanisms that regulate cerebral blood flow and explain their importance in maintaining normal brain function.",
+
+    keywords: [
+        "cerebral blood flow",
+        "autoregulation",
+        "carbon dioxide",
+        "oxygen",
+        "blood pressure",
+        "neuronal metabolism",
+        "vasodilation",
+        "vasoconstriction",
+        "brain perfusion",
+        "homeostasis"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The upper motor neuron cell body is located in the:",
-    answers: [
-        { text: "Cerebral cortex", correct: true },
-        { text: "Anterior horn", correct: false },
-        { text: "Dorsal root ganglion", correct: false },
-        { text: "Peripheral nerve", correct: false }
-    ]
+    question: "Critically discuss the importance of Brodmann's cortical areas in localization of neurological functions and clinical diagnosis.",
+
+    keywords: [
+        "brodmann areas",
+        "motor cortex",
+        "sensory cortex",
+        "visual cortex",
+        "auditory cortex",
+        "broca area",
+        "wernicke area",
+        "clinical localization",
+        "speech",
+        "function"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Lower motor neuron cell bodies are found in the:",
-    answers: [
-        { text: "Anterior horn of spinal cord", correct: true },
-        { text: "Posterior horn", correct: false },
-        { text: "Thalamus", correct: false },
-        { text: "Cerebellum", correct: false }
-    ]
+    question: "Describe the embryological development of the forebrain, midbrain and hindbrain and explain how their derivatives contribute to adult brain functions.",
+
+    keywords: [
+        "prosencephalon",
+        "mesencephalon",
+        "rhombencephalon",
+        "telencephalon",
+        "diencephalon",
+        "metencephalon",
+        "myelencephalon",
+        "derivatives",
+        "brain development",
+        "adult structures"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Damage to upper motor neurons commonly produces:",
-    answers: [
-        { text: "Spastic paralysis", correct: true },
-        { text: "Flaccid paralysis", correct: false },
-        { text: "Muscle atrophy only", correct: false },
-        { text: "Loss of sensation only", correct: false }
-    ]
+    question: "Explain the organization of the sensory pathways responsible for pain and temperature sensation from the skin to the cerebral cortex.",
+
+    keywords: [
+        "pain",
+        "temperature",
+        "spinothalamic tract",
+        "posterior horn",
+        "crossing",
+        "thalamus",
+        "somatosensory cortex",
+        "second order neuron",
+        "third order neuron",
+        "receptors"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Damage to lower motor neurons typically results in:",
-    answers: [
-        { text: "Flaccid paralysis", correct: true },
-        { text: "Spastic paralysis", correct: false },
-        { text: "Hyperreflexia", correct: false },
-        { text: "Positive Babinski sign", correct: false }
-    ]
+    question: "Discuss the role of autonomic innervation in regulating airway resistance, mucus secretion and pulmonary blood flow.",
+
+    keywords: [
+        "autonomic nervous system",
+        "sympathetic",
+        "parasympathetic",
+        "bronchodilation",
+        "bronchoconstriction",
+        "mucus secretion",
+        "vagus nerve",
+        "pulmonary circulation",
+        "smooth muscle",
+        "airway resistance"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The major neurotransmitter released at the neuromuscular junction is:",
-    answers: [
-        { text: "Acetylcholine", correct: true },
-        { text: "Dopamine", correct: false },
-        { text: "Serotonin", correct: false },
-        { text: "Norepinephrine", correct: false }
-    ]
+    question: "Explain how spirometry can differentiate between obstructive and restrictive lung diseases using appropriate respiratory parameters.",
+
+    keywords: [
+        "spirometry",
+        "obstructive",
+        "restrictive",
+        "FEV1",
+        "FVC",
+        "FEV1/FVC ratio",
+        "lung volumes",
+        "airflow limitation",
+        "pulmonary function",
+        "diagnosis"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Spirometry cannot directly measure:",
-    answers: [
-        { text: "Residual volume", correct: true },
-        { text: "Vital capacity", correct: false },
-        { text: "Tidal volume", correct: false },
-        { text: "Inspiratory reserve volume", correct: false }
-    ]
+    question: "Discuss the mechanisms responsible for the regulation of blood gases during exercise and explain the physiological adaptations involved.",
+
+    keywords: [
+        "exercise",
+        "oxygen",
+        "carbon dioxide",
+        "ventilation",
+        "chemoreceptors",
+        "cardiac output",
+        "alveolar ventilation",
+        "gas exchange",
+        "respiration",
+        "metabolism"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "FEV1 is most useful in assessing:",
-    answers: [
-        { text: "Airway obstruction", correct: true },
-        { text: "Bone density", correct: false },
-        { text: "Blood glucose", correct: false },
-        { text: "Kidney function", correct: false }
-    ]
+    question: "Evaluate the physiological basis of reflexes by explaining the organization and functional importance of the reflex arc.",
+
+    keywords: [
+        "reflex arc",
+        "receptor",
+        "sensory neuron",
+        "interneuron",
+        "motor neuron",
+        "effector",
+        "spinal cord",
+        "integration",
+        "response",
+        "protection"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "A reduced FEV1/FVC ratio is characteristic of:",
-    answers: [
-        { text: "Obstructive lung disease", correct: true },
-        { text: "Restrictive lung disease only", correct: false },
-        { text: "Anemia", correct: false },
-        { text: "Hypertension", correct: false }
-    ]
+    question: "Explain the differences between upper motor neuron and lower motor neuron lesions, including their clinical manifestations and physiological basis.",
+
+    keywords: [
+        "upper motor neuron",
+        "lower motor neuron",
+        "spastic paralysis",
+        "flaccid paralysis",
+        "hyperreflexia",
+        "hyporeflexia",
+        "babinski sign",
+        "muscle atrophy",
+        "fasciculation",
+        "motor control"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Pulmonary ventilation refers to:",
-    answers: [
-        { text: "Movement of air into and out of the lungs", correct: true },
-        { text: "Movement of blood through lungs", correct: false },
-        { text: "Diffusion of oxygen into tissues", correct: false },
-        { text: "Transport of oxygen by hemoglobin", correct: false }
-    ]
+    question: "Discuss the functional significance of the central sulcus and the gyri bordering it in sensory and motor integration.",
+
+    keywords: [
+        "central sulcus",
+        "precentral gyrus",
+        "postcentral gyrus",
+        "motor cortex",
+        "somatosensory cortex",
+        "brodmann area 4",
+        "brodmann areas 3",
+        "integration",
+        "movement",
+        "sensation"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The main function of surfactant is to:",
-    answers: [
-        { text: "Reduce alveolar surface tension", correct: true },
-        { text: "Increase mucus secretion", correct: false },
-        { text: "Stimulate coughing", correct: false },
-        { text: "Increase blood pressure", correct: false }
-    ]
+    question: "Critically discuss the physiological relationship between ventilation, perfusion and diffusion in maintaining efficient gas exchange.",
+
+    keywords: [
+        "ventilation",
+        "perfusion",
+        "diffusion",
+        "V/Q ratio",
+        "alveoli",
+        "pulmonary capillaries",
+        "oxygen transport",
+        "carbon dioxide transport",
+        "respiratory membrane",
+        "gas exchange"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Which autonomic division generally causes bronchodilation?",
-    answers: [
-        { text: "Sympathetic nervous system", correct: true },
-        { text: "Parasympathetic nervous system", correct: false },
-        { text: "Enteric nervous system", correct: false },
-        { text: "Somatic nervous system", correct: false }
-    ]
+    question: "Explain the anatomical and physiological basis of voluntary movement from cortical initiation to skeletal muscle contraction.",
+
+    keywords: [
+        "motor cortex",
+        "upper motor neuron",
+        "corticospinal tract",
+        "lower motor neuron",
+        "neuromuscular junction",
+        "acetylcholine",
+        "muscle contraction",
+        "action potential",
+        "motor unit",
+        "skeletal muscle"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "Parasympathetic stimulation of the respiratory tract causes:",
-    answers: [
-        { text: "Bronchoconstriction", correct: true },
-        { text: "Bronchodilation", correct: false },
-        { text: "Decreased mucus secretion", correct: false },
-        { text: "Complete cessation of breathing", correct: false }
-    ]
+    question: "Evaluate the physiological importance of neuroglial cells in maintaining neuronal survival, synaptic function and central nervous system homeostasis.",
+
+    keywords: [
+        "astrocytes",
+        "oligodendrocytes",
+        "microglia",
+        "ependymal cells",
+        "myelin",
+        "blood brain barrier",
+        "support",
+        "nutrition",
+        "immune defense",
+        "homeostasis"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The vagus nerve provides most parasympathetic innervation to the:",
-    answers: [
-        { text: "Respiratory tract", correct: true },
-        { text: "Retina", correct: false },
-        { text: "Skeletal muscles", correct: false },
-        { text: "Bone marrow", correct: false }
-    ]
+    question: "Discuss the integration of the nervous and respiratory systems in maintaining oxygen delivery and carbon dioxide removal during physiological stress.",
+
+    keywords: [
+        "nervous system",
+        "respiratory system",
+        "chemoreceptors",
+        "brainstem",
+        "autonomic nervous system",
+        "ventilation",
+        "oxygen delivery",
+        "carbon dioxide removal",
+        "homeostasis",
+        "physiological stress"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The principal stimulus for breathing under normal conditions is increased:",
-    answers: [
-        { text: "Carbon dioxide concentration", correct: true },
-        { text: "Oxygen concentration", correct: false },
-        { text: "Nitrogen concentration", correct: false },
-        { text: "Blood glucose", correct: false }
-    ]
+    question: "Critically analyze how lesions affecting different regions of the cerebral cortex produce characteristic neurological deficits.",
+
+    keywords: [
+        "frontal lobe",
+        "parietal lobe",
+        "temporal lobe",
+        "occipital lobe",
+        "motor deficit",
+        "sensory deficit",
+        "aphasia",
+        "visual impairment",
+        "cortical lesion",
+        "neurological deficit"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The blood-brain barrier is formed mainly by:",
-    answers: [
-        { text: "Capillary endothelial cells with tight junctions", correct: true },
-        { text: "Neurons only", correct: false },
-        { text: "Oligodendrocytes", correct: false },
-        { text: "Microglia only", correct: false }
-    ]
+    question: "Describe the complete pathway of conscious proprioception from peripheral receptors to the cerebral cortex and explain its physiological significance.",
+
+    keywords: [
+        "proprioception",
+        "muscle spindle",
+        "golgi tendon organ",
+        "posterior column",
+        "gracile fasciculus",
+        "cuneate fasciculus",
+        "medial lemniscus",
+        "thalamus",
+        "somatosensory cortex",
+        "position sense"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "The myelin sheath in the peripheral nervous system is produced by:",
-    answers: [
-        { text: "Schwann cells", correct: true },
-        { text: "Oligodendrocytes", correct: false },
-        { text: "Astrocytes", correct: false },
-        { text: "Microglia", correct: false }
-    ]
+    question: "Discuss the physiological consequences of damage to the respiratory centers of the brainstem and explain the resulting patterns of abnormal respiration.",
+
+    keywords: [
+        "brainstem",
+        "medulla",
+        "pons",
+        "respiratory centers",
+        "apnea",
+        "ataxic breathing",
+        "cheyne stokes",
+        "central regulation",
+        "ventilation",
+        "respiratory failure"
+    ],
+
+    marks: 20
 },
 
 {
-    question: "According to Fick's law, diffusion of gases increases with:",
-    answers: [
-        { text: "Greater surface area and pressure gradient", correct: true },
-        { text: "Thicker respiratory membrane", correct: false },
-        { text: "Lower pressure gradient", correct: false },
-        { text: "Reduced alveolar surface area", correct: false }
-    ]
+    question: "Explain the mechanisms by which the central nervous system coordinates posture, balance and voluntary movement through interactions with the cerebellum and basal ganglia.",
+
+    keywords: [
+        "cerebellum",
+        "basal ganglia",
+        "posture",
+        "balance",
+        "motor coordination",
+        "muscle tone",
+        "voluntary movement",
+        "feedback",
+        "motor planning",
+        "equilibrium"
+    ],
+
+    marks: 20
+},
+
+{
+    question: "Integrate your knowledge of neurophysiology and respiratory physiology to explain how the body maintains homeostasis during acute hypoxia.",
+
+    keywords: [
+        "hypoxia",
+        "chemoreceptors",
+        "brainstem",
+        "ventilation",
+        "sympathetic nervous system",
+        "oxygen transport",
+        "cardiac output",
+        "pulmonary ventilation",
+        "homeostasis",
+        "compensation"
+    ],
+
+    marks: 20
 }
+
 ];

@@ -1,1365 +1,1208 @@
-const EASY_QUESTIONS = [
+const EASY_THEORY_QUESTIONS = [
 
-{
-    question: "1. Histochemistry is the study of:",
-    answers: [
-        { text: "Chemical composition of tissues", correct: true },
-        { text: "Body physiology", correct: false },
-        { text: "Human genetics", correct: false },
-        { text: "Microbiology", correct: false }
-    ]
-},
-{
-    question: "2. Cytochemistry mainly studies the chemical components of:",
-    answers: [
-        { text: "Bones", correct: false },
-        { text: "Cells", correct: true },
-        { text: "Blood vessels", correct: false },
-        { text: "Organs", correct: false }
-    ]
-},
-{
-    question: "3. Histochemistry combines which two sciences?",
-    answers: [
-        { text: "Physics and Chemistry", correct: false },
-        { text: "Histology and Chemistry", correct: true },
-        { text: "Biology and Physics", correct: false },
-        { text: "Microbiology and Anatomy", correct: false }
-    ]
-},
-{
-    question: "4. Which of the following is the main aim of histochemistry?",
-    answers: [
-        { text: "To identify chemical substances in tissues", correct: true },
-        { text: "To culture bacteria", correct: false },
-        { text: "To identify blood groups", correct: false },
-        { text: "To diagnose malaria", correct: false }
-    ]
-},
-{
-    question: "5. Cytochemistry focuses on:",
-    answers: [
-        { text: "Whole organs", correct: false },
-        { text: "Individual cells", correct: true },
-        { text: "Bones only", correct: false },
-        { text: "Muscles only", correct: false }
-    ]
-},
-{
-    question: "6. One basic principle of histochemistry is:",
-    answers: [
-        { text: "Specific chemical reactions", correct: true },
-        { text: "Cell division", correct: false },
-        { text: "DNA replication", correct: false },
-        { text: "Protein synthesis", correct: false }
-    ]
-},
-{
-    question: "7. Which fixative best preserves tissue chemicals?",
-    answers: [
-        { text: "Appropriate fixative", correct: true },
-        { text: "Boiling water", correct: false },
-        { text: "Normal saline", correct: false },
-        { text: "Soap solution", correct: false }
-    ]
-},
-{
-    question: "8. PAS stands for:",
-    answers: [
-        { text: "Periodic Acid-Schiff", correct: true },
-        { text: "Primary Acid Stain", correct: false },
-        { text: "Protein Analysis Solution", correct: false },
-        { text: "Periodic Alcohol Stain", correct: false }
-    ]
-},
-{
-    question: "9. PAS stain is mainly used to demonstrate:",
-    answers: [
-        { text: "Carbohydrates", correct: true },
-        { text: "Lipids", correct: false },
-        { text: "Proteins", correct: false },
-        { text: "DNA", correct: false }
-    ]
-},
-{
-    question: "10. Glycogen gives what color with PAS stain?",
-    answers: [
-        { text: "Magenta", correct: true },
-        { text: "Blue", correct: false },
-        { text: "Green", correct: false },
-        { text: "Yellow", correct: false }
-    ]
-},
-{
-    question: "11. Mucin can be demonstrated using:",
-    answers: [
-        { text: "PAS stain", correct: true },
-        { text: "Gram stain", correct: false },
-        { text: "Ziehl-Neelsen stain", correct: false },
-        { text: "Leishman stain", correct: false }
-    ]
-},
-{
-    question: "12. Which acid is used first in PAS staining?",
-    answers: [
-        { text: "Periodic acid", correct: true },
-        { text: "Hydrochloric acid", correct: false },
-        { text: "Sulfuric acid", correct: false },
-        { text: "Nitric acid", correct: false }
-    ]
-},
-{
-    question: "13. Schiff reagent reacts with:",
-    answers: [
-        { text: "Aldehyde groups", correct: true },
-        { text: "Proteins", correct: false },
-        { text: "Lipids", correct: false },
-        { text: "Calcium", correct: false }
-    ]
-},
-{
-    question: "14. Enzyme histochemistry demonstrates:",
-    answers: [
-        { text: "Enzyme activity", correct: true },
-        { text: "Bone growth", correct: false },
-        { text: "Blood clotting", correct: false },
-        { text: "DNA replication", correct: false }
-    ]
-},
-{
-    question: "15. Which factor is important during enzyme demonstration?",
-    answers: [
-        { text: "Preserving enzyme activity", correct: true },
-        { text: "High temperature", correct: false },
-        { text: "Boiling tissues", correct: false },
-        { text: "Strong acids", correct: false }
-    ]
-},
-{
-    question: "16. Radioautography is used to detect:",
-    answers: [
-        { text: "Radioactive substances", correct: true },
-        { text: "Bacteria", correct: false },
-        { text: "Viruses", correct: false },
-        { text: "Fungi", correct: false }
-    ]
-},
-{
-    question: "17. Radioautography requires:",
-    answers: [
-        { text: "Photographic emulsion", correct: true },
-        { text: "Gram stain", correct: false },
-        { text: "Immersion oil", correct: false },
-        { text: "Acetic acid", correct: false }
-    ]
-},
-{
-    question: "18. Fluorescence microscopy uses:",
-    answers: [
-        { text: "Fluorescent dyes", correct: true },
-        { text: "Gram stain", correct: false },
-        { text: "India ink", correct: false },
-        { text: "Romanowsky stain", correct: false }
-    ]
-},
-{
-    question: "19. Fluorescence microscopy produces images that appear:",
-    answers: [
-        { text: "Bright on a dark background", correct: true },
-        { text: "Black on white", correct: false },
-        { text: "Colorless", correct: false },
-        { text: "Brown only", correct: false }
-    ]
-},
-{
-    question: "20. Which light source is commonly used in fluorescence microscopy?",
-    answers: [
-        { text: "Ultraviolet light", correct: true },
-        { text: "Infrared light", correct: false },
-        { text: "Sunlight", correct: false },
-        { text: "Candle light", correct: false }
-    ]
-},
-{
-    question: "21. Histochemical reactions should be:",
-    answers: [
-        { text: "Specific", correct: true },
-        { text: "Random", correct: false },
-        { text: "Irreversible only", correct: false },
-        { text: "Colorless", correct: false }
-    ]
-},
-{
-    question: "22. PAS-positive substances include:",
-    answers: [
-        { text: "Glycogen", correct: true },
-        { text: "Hemoglobin", correct: false },
-        { text: "Collagen", correct: false },
-        { text: "Calcium", correct: false }
-    ]
-},
-{
-    question: "23. Cytochemistry is mainly performed on:",
-    answers: [
-        { text: "Individual cells", correct: true },
-        { text: "Whole organs", correct: false },
-        { text: "Bones", correct: false },
-        { text: "Muscles", correct: false }
-    ]
-},
-{
-    question: "24. Histochemistry is important because it helps identify:",
-    answers: [
-        { text: "Chemical constituents of tissues", correct: true },
-        { text: "Blood pressure", correct: false },
-        { text: "Heart sounds", correct: false },
-        { text: "Body temperature", correct: false }
-    ]
-},
-{
-    question: "25. One application of histochemistry is:",
-    answers: [
-        { text: "Disease diagnosis", correct: true },
-        { text: "Measuring height", correct: false },
-        { text: "Checking pulse rate", correct: false },
-        { text: "Taking blood pressure", correct: false }
-    ]
+    {
+    question: "Define Histochemistry.",
+    keywords: [
+        "definition",
+        "chemical constituents",
+        "tissue",
+        "microscopy",
+        "localization"
+    ],
+    marks: 10
 },
 
 {
-    question: "26. Which reagent gives the characteristic magenta color in the PAS technique?",
-    answers: [
-        { text: "Schiff reagent", correct: true },
-        { text: "Hematoxylin", correct: false },
-        { text: "Eosin", correct: false },
-        { text: "Silver nitrate", correct: false }
-    ]
+    question: "Define Cytochemistry.",
+    keywords: [
+        "definition",
+        "cell",
+        "chemical constituents",
+        "microscopy",
+        "localization"
+    ],
+    marks: 10
 },
+
 {
-    question: "27. Histochemistry is widely used in:",
-    answers: [
-        { text: "Pathology laboratories", correct: true },
-        { text: "Mechanical engineering", correct: false },
-        { text: "Civil engineering", correct: false },
-        { text: "Astronomy", correct: false }
-    ]
+    question: "Differentiate between Histochemistry and Cytochemistry.",
+    keywords: [
+        "histochemistry",
+        "cytochemistry",
+        "tissue",
+        "cell",
+        "difference"
+    ],
+    marks: 10
 },
+
 {
-    question: "28. Cytochemical techniques help identify:",
-    answers: [
-        { text: "Cellular chemical components", correct: true },
-        { text: "Bone fractures", correct: false },
-        { text: "Blood pressure", correct: false },
-        { text: "Heart sounds", correct: false }
-    ]
+    question: "State five objectives of Histochemistry.",
+    keywords: [
+        "objectives",
+        "diagnosis",
+        "identification",
+        "localization",
+        "research"
+    ],
+    marks: 10
 },
+
 {
-    question: "29. Which substance is commonly demonstrated by PAS in liver tissue?",
-    answers: [
-        { text: "Glycogen", correct: true },
-        { text: "Collagen", correct: false },
-        { text: "Elastin", correct: false },
-        { text: "Calcium", correct: false }
-    ]
+    question: "List five applications of Histochemistry in medical science.",
+    keywords: [
+        "diagnosis",
+        "research",
+        "enzyme detection",
+        "pathology",
+        "clinical"
+    ],
+    marks: 10
 },
+
 {
-    question: "30. Before applying Schiff reagent, tissue sections are treated with:",
-    answers: [
-        { text: "Periodic acid", correct: true },
-        { text: "Hydrochloric acid", correct: false },
-        { text: "Nitric acid", correct: false },
-        { text: "Sulfuric acid", correct: false }
-    ]
+    question: "Outline the basic principles of Histochemistry.",
+    keywords: [
+        "principles",
+        "preservation",
+        "specificity",
+        "localization",
+        "reaction"
+    ],
+    marks: 10
 },
+
 {
-    question: "31. The main purpose of fixation in histochemistry is to:",
-    answers: [
-        { text: "Preserve tissue structure and chemicals", correct: true },
-        { text: "Destroy tissues", correct: false },
-        { text: "Increase tissue size", correct: false },
-        { text: "Change tissue color", correct: false }
-    ]
+    question: "Explain why tissue preservation is important in Histochemistry.",
+    keywords: [
+        "preservation",
+        "fixation",
+        "enzyme",
+        "integrity",
+        "accuracy"
+    ],
+    marks: 10
 },
+
 {
-    question: "32. Which microscope is used in fluorescence microscopy?",
-    answers: [
-        { text: "Fluorescence microscope", correct: true },
-        { text: "Electron microscope", correct: false },
-        { text: "Dissecting microscope", correct: false },
-        { text: "Stereo microscope", correct: false }
-    ]
+    question: "List the steps involved in preparing tissues for Histochemical staining.",
+    keywords: [
+        "fixation",
+        "processing",
+        "embedding",
+        "sectioning",
+        "staining"
+    ],
+    marks: 10
 },
+
 {
-    question: "33. Radioautography is useful for studying:",
-    answers: [
-        { text: "Metabolic activity", correct: true },
-        { text: "Blood pressure", correct: false },
-        { text: "Respiration rate", correct: false },
-        { text: "Vision", correct: false }
-    ]
+    question: "What is enzyme histochemistry?",
+    keywords: [
+        "enzyme",
+        "histochemistry",
+        "localization",
+        "activity",
+        "definition"
+    ],
+    marks: 10
 },
+
 {
-    question: "34. Which of the following is PAS positive?",
-    answers: [
-        { text: "Basement membrane", correct: true },
-        { text: "Red blood cells", correct: false },
-        { text: "Muscle fibers", correct: false },
-        { text: "Neurons", correct: false }
-    ]
+    question: "Mention four enzymes commonly demonstrated by Histochemical techniques.",
+    keywords: [
+        "alkaline phosphatase",
+        "acid phosphatase",
+        "esterase",
+        "peroxidase",
+        "examples"
+    ],
+    marks: 10
 },
+
 {
-    question: "35. Fluorescent dyes emit light after being excited by:",
-    answers: [
-        { text: "Ultraviolet light", correct: true },
-        { text: "Microwaves", correct: false },
-        { text: "Sound waves", correct: false },
-        { text: "Radio waves", correct: false }
-    ]
+    question: "Outline the methods used for enzyme demonstration.",
+    keywords: [
+        "direct",
+        "indirect",
+        "capture",
+        "substrate",
+        "enzyme methods"
+    ],
+    marks: 10
 },
+
 {
-    question: "36. Enzyme histochemistry is mainly concerned with:",
-    answers: [
-        { text: "Localization of enzymes", correct: true },
-        { text: "DNA sequencing", correct: false },
-        { text: "RNA synthesis", correct: false },
-        { text: "Bone formation", correct: false }
-    ]
+    question: "State four factors affecting enzyme demonstration in tissues.",
+    keywords: [
+        "temperature",
+        "pH",
+        "fixation",
+        "substrate",
+        "enzyme activity"
+    ],
+    marks: 10
 },
+
 {
-    question: "37. Histochemistry can help diagnose:",
-    answers: [
-        { text: "Metabolic diseases", correct: true },
-        { text: "Fractures only", correct: false },
-        { text: "Hypertension only", correct: false },
-        { text: "Blindness only", correct: false }
-    ]
+    question: "Define Periodic Acid-Schiff (PAS) reaction.",
+    keywords: [
+        "PAS",
+        "definition",
+        "periodic acid",
+        "Schiff reagent",
+        "reaction"
+    ],
+    marks: 10
 },
+
 {
-    question: "38. Glycogen is classified as a:",
-    answers: [
-        { text: "Polysaccharide", correct: true },
-        { text: "Protein", correct: false },
-        { text: "Lipid", correct: false },
-        { text: "Vitamin", correct: false }
-    ]
+    question: "Mention the substances demonstrated by PAS staining.",
+    keywords: [
+        "glycogen",
+        "mucin",
+        "basement membrane",
+        "carbohydrates",
+        "glycoproteins"
+    ],
+    marks: 10
 },
+
 {
-    question: "39. The final color produced in a positive PAS reaction is:",
-    answers: [
-        { text: "Magenta", correct: true },
-        { text: "Blue", correct: false },
-        { text: "Green", correct: false },
-        { text: "Brown", correct: false }
-    ]
+    question: "Explain the principle of PAS staining.",
+    keywords: [
+        "oxidation",
+        "aldehydes",
+        "Schiff reagent",
+        "magenta",
+        "reaction"
+    ],
+    marks: 10
 },
+
 {
-    question: "40. Histochemistry is best described as a combination of:",
-    answers: [
-        { text: "Histology and chemistry", correct: true },
-        { text: "Physics and mathematics", correct: false },
-        { text: "Microbiology and zoology", correct: false },
-        { text: "Anatomy and physiology", correct: false }
-    ]
+    question: "State four clinical applications of PAS staining.",
+    keywords: [
+        "glycogen",
+        "fungi",
+        "kidney",
+        "mucin",
+        "diagnosis"
+    ],
+    marks: 10
 },
+
 {
-    question: "41. Which tissue component is demonstrated by PAS staining?",
-    answers: [
-        { text: "Basement membrane", correct: true },
-        { text: "Elastic fibers", correct: false },
-        { text: "Keratin", correct: false },
-        { text: "Collagen fibers", correct: false }
-    ]
+    question: "Differentiate between glycogen and mucin.",
+    keywords: [
+        "glycogen",
+        "mucin",
+        "storage",
+        "composition",
+        "difference"
+    ],
+    marks: 10
 },
+
 {
-    question: "42. Histochemical stains are designed to be:",
-    answers: [
-        { text: "Specific for target substances", correct: true },
-        { text: "Random", correct: false },
-        { text: "Temporary only", correct: false },
-        { text: "Non-selective", correct: false }
-    ]
+    question: "What is Radioautography?",
+    keywords: [
+        "radioautography",
+        "radioisotope",
+        "autoradiography",
+        "definition",
+        "exposure"
+    ],
+    marks: 10
 },
+
 {
-    question: "43. Radioactive isotopes used in radioautography are called:",
-    answers: [
-        { text: "Radiotracers", correct: true },
-        { text: "Catalysts", correct: false },
-        { text: "Pigments", correct: false },
-        { text: "Chromogens", correct: false }
-    ]
+    question: "State the principle of Radioautography.",
+    keywords: [
+        "radioactive isotope",
+        "emulsion",
+        "exposure",
+        "silver grains",
+        "principle"
+    ],
+    marks: 10
 },
+
 {
-    question: "44. Fluorescence microscopy is especially useful for detecting:",
-    answers: [
-        { text: "Specific molecules in cells", correct: true },
-        { text: "Bone density", correct: false },
-        { text: "Blood pressure", correct: false },
-        { text: "Body temperature", correct: false }
-    ]
+    question: "Mention four applications of Radioautography.",
+    keywords: [
+        "DNA synthesis",
+        "cell division",
+        "protein synthesis",
+        "research",
+        "diagnosis"
+    ],
+    marks: 10
 },
+
 {
-    question: "45. Which of the following is an application of cytochemistry?",
-    answers: [
-        { text: "Identifying intracellular substances", correct: true },
-        { text: "Measuring body weight", correct: false },
-        { text: "Treating fractures", correct: false },
-        { text: "Measuring pulse rate", correct: false }
-    ]
+    question: "Define Fluorescence Microscopy.",
+    keywords: [
+        "fluorescence",
+        "microscope",
+        "definition",
+        "fluorochrome",
+        "light"
+    ],
+    marks: 10
 },
+
 {
-    question: "46. Histochemical methods depend mainly on:",
-    answers: [
-        { text: "Chemical reactions", correct: true },
-        { text: "Mechanical pressure", correct: false },
-        { text: "Electric current", correct: false },
-        { text: "Magnetic force", correct: false }
-    ]
+    question: "List the major components of a fluorescence microscope.",
+    keywords: [
+        "light source",
+        "filter",
+        "objective",
+        "detector",
+        "mirror"
+    ],
+    marks: 10
 },
+
 {
-    question: "47. Which stain is commonly used as a counterstain in PAS technique?",
-    answers: [
-        { text: "Hematoxylin", correct: true },
-        { text: "Safranin", correct: false },
-        { text: "Crystal violet", correct: false },
-        { text: "Methylene blue", correct: false }
-    ]
+    question: "Explain the principle of fluorescence microscopy.",
+    keywords: [
+        "excitation",
+        "emission",
+        "fluorochrome",
+        "light",
+        "fluorescence"
+    ],
+    marks: 10
 },
+
 {
-    question: "48. The study of chemical constituents within tissues is known as:",
-    answers: [
-        { text: "Histochemistry", correct: true },
-        { text: "Physiology", correct: false },
-        { text: "Anatomy", correct: false },
-        { text: "Embryology", correct: false }
-    ]
+    question: "Mention four fluorochromes commonly used in fluorescence microscopy.",
+    keywords: [
+        "FITC",
+        "rhodamine",
+        "DAPI",
+        "acridine orange",
+        "fluorochromes"
+    ],
+    marks: 10
 },
+
 {
-    question: "49. Cytochemistry differs from histochemistry because it focuses mainly on:",
-    answers: [
-        { text: "Individual cells", correct: true },
-        { text: "Whole organs", correct: false },
-        { text: "Body systems", correct: false },
-        { text: "Bones", correct: false }
-    ]
+    question: "State four advantages of fluorescence microscopy.",
+    keywords: [
+        "sensitivity",
+        "specificity",
+        "rapid",
+        "bright images",
+        "diagnosis"
+    ],
+    marks: 10
 },
+
 {
-    question: "50. Histochemistry is most useful in demonstrating the location of:",
-    answers: [
-        { text: "Chemical substances in tissues", correct: true },
-        { text: "Blood pressure", correct: false },
-        { text: "Body temperature", correct: false },
-        { text: "Heart rate", correct: false }
-    ]
+    question: "State four limitations of fluorescence microscopy.",
+    keywords: [
+        "photobleaching",
+        "cost",
+        "fluorochrome fading",
+        "special equipment",
+        "limitations"
+    ],
+    marks: 10
+},
+
+{
+    question: "Differentiate between bright-field microscopy and fluorescence microscopy.",
+    keywords: [
+        "bright-field",
+        "fluorescence",
+        "illumination",
+        "contrast",
+        "difference"
+    ],
+    marks: 10
+},
+
+{
+    question: "Explain the role of fluorochromes in fluorescence microscopy.",
+    keywords: [
+        "fluorochromes",
+        "labeling",
+        "excitation",
+        "emission",
+        "visualization"
+    ],
+    marks: 10
+},
+
+{
+    question: "State five precautions necessary during Histochemical staining.",
+    keywords: [
+        "fresh reagents",
+        "temperature",
+        "timing",
+        "clean slides",
+        "proper fixation"
+    ],
+    marks: 10
+},
+
+{
+    question: "Mention five characteristics of a good Histochemical stain.",
+    keywords: [
+        "specificity",
+        "sensitivity",
+        "clarity",
+        "reproducibility",
+        "stability"
+    ],
+    marks: 10
+},
+
+{
+    question: "Outline the importance of fixation in Histochemistry.",
+    keywords: [
+        "preservation",
+        "enzyme activity",
+        "morphology",
+        "autolysis",
+        "accuracy"
+    ],
+    marks: 10
+},
+
+{
+    question: "Explain why frozen tissue sections are preferred for enzyme Histochemistry.",
+    keywords: [
+        "enzyme preservation",
+        "fresh tissue",
+        "activity",
+        "fixation",
+        "frozen sections"
+    ],
+    marks: 10
+},
+
+{
+    question: "List five examples of carbohydrates demonstrated by Histochemical techniques.",
+    keywords: [
+        "glycogen",
+        "mucin",
+        "glycoproteins",
+        "proteoglycans",
+        "basement membrane"
+    ],
+    marks: 10
+},
+
+{
+    question: "Describe the appearance of a positive PAS reaction.",
+    keywords: [
+        "magenta",
+        "purple-red",
+        "glycogen",
+        "positive staining",
+        "PAS"
+    ],
+    marks: 10
+},
+
+{
+    question: "State five precautions to observe when performing PAS staining.",
+    keywords: [
+        "fresh reagent",
+        "oxidation time",
+        "washing",
+        "fixation",
+        "control tissue"
+    ],
+    marks: 10
+},
+
+{
+    question: "Mention five uses of Cytochemistry in laboratory diagnosis.",
+    keywords: [
+        "leukemia",
+        "cell identification",
+        "enzyme localization",
+        "diagnosis",
+        "classification"
+    ],
+    marks: 10
+},
+
+{
+    question: "Outline the importance of Histochemistry in pathology.",
+    keywords: [
+        "diagnosis",
+        "tumor identification",
+        "carbohydrates",
+        "enzyme localization",
+        "disease detection"
+    ],
+    marks: 10
+},
+
+{
+    question: "List four examples of tissues commonly examined using Histochemical methods.",
+    keywords: [
+        "liver",
+        "kidney",
+        "muscle",
+        "brain",
+        "tissues"
+    ],
+    marks: 10
+},
+
+{
+    question: "Explain the importance of control sections in Histochemical procedures.",
+    keywords: [
+        "control",
+        "comparison",
+        "accuracy",
+        "validation",
+        "quality assurance"
+    ],
+    marks: 10
+},
+
+{
+    question: "State five advantages of Histochemistry over ordinary staining techniques.",
+    keywords: [
+        "specificity",
+        "chemical localization",
+        "diagnosis",
+        "enzyme detection",
+        "research"
+    ],
+    marks: 10
+},
+
+{
+    question: "Mention four radioactive isotopes commonly used in Radioautography.",
+    keywords: [
+        "tritium",
+        "carbon-14",
+        "phosphorus-32",
+        "sulfur-35",
+        "radioisotopes"
+    ],
+    marks: 10
+},
+
+{
+    question: "State four safety precautions observed during Radioautography.",
+    keywords: [
+        "protective clothing",
+        "radiation shielding",
+        "dosimeter",
+        "proper disposal",
+        "safety"
+    ],
+    marks: 10
+},
+
+{
+    question: "List four limitations of Radioautography.",
+    keywords: [
+        "radiation hazard",
+        "long exposure",
+        "expensive",
+        "special facilities",
+        "limitations"
+    ],
+    marks: 10
+},
+
+{
+    question: "Explain the importance of fluorescence microscopy in immunology.",
+    keywords: [
+        "antigen",
+        "antibody",
+        "immunofluorescence",
+        "diagnosis",
+        "localization"
+    ],
+    marks: 10
+},
+
+{
+    question: "State five clinical applications of fluorescence microscopy.",
+    keywords: [
+        "autoimmune diseases",
+        "microbiology",
+        "renal biopsy",
+        "immunology",
+        "tumor diagnosis"
+    ],
+    marks: 10
+},
+
+{
+    question: "Outline the differences between direct and indirect immunofluorescence.",
+    keywords: [
+        "direct",
+        "indirect",
+        "primary antibody",
+        "secondary antibody",
+        "comparison"
+    ],
+    marks: 10
+},
+
+{
+    question: "Discuss the importance of Histochemistry in biomedical research.",
+    keywords: [
+        "research",
+        "localization",
+        "drug development",
+        "disease mechanisms",
+        "diagnosis"
+    ],
+    marks: 10
+},
+
+{
+    question: "State five factors that influence the quality of Histochemical staining.",
+    keywords: [
+        "fixation",
+        "reagents",
+        "temperature",
+        "time",
+        "tissue preparation"
+    ],
+    marks: 10
+},
+
+{
+    question: "Summarize the major laboratory techniques used in Histochemistry.",
+    keywords: [
+        "PAS",
+        "enzyme histochemistry",
+        "fluorescence microscopy",
+        "radioautography",
+        "cytochemistry"
+    ],
+    marks: 10
+},
+
+{
+    question: "Evaluate the significance of Histochemistry in modern medical laboratory practice.",
+    keywords: [
+        "diagnosis",
+        "research",
+        "disease detection",
+        "clinical relevance",
+        "laboratory medicine"
+    ],
+    marks: 10
 }
-
 ];
 
-const HARD_QUESTIONS = [
+const HARD_THEORY_QUESTIONS = [
+
+    {
+    question: "Discuss the relationship between Histochemistry and Cytochemistry, highlighting their similarities, differences, and applications in modern medical diagnosis.",
+    keywords: [
+        "histochemistry",
+        "cytochemistry",
+        "comparison",
+        "applications",
+        "diagnosis"
+    ],
+    marks: 15
+},
 
 {
-    question: "1. Which statement best distinguishes Histochemistry from Cytochemistry?",
-    answers: [
-        { text: "Histochemistry studies tissues while Cytochemistry studies the chemical composition of individual cells.", correct: true },
-        { text: "Both study only DNA.", correct: false },
-        { text: "Histochemistry studies microorganisms only.", correct: false },
-        { text: "Cytochemistry studies only connective tissues.", correct: false }
-    ]
+    question: "Explain the fundamental principles of Histochemistry and discuss how each principle contributes to accurate tissue analysis.",
+    keywords: [
+        "principles",
+        "specificity",
+        "preservation",
+        "localization",
+        "accuracy"
+    ],
+    marks: 15
 },
+
 {
-    question: "2. The main objective of Histochemistry is to:",
-    answers: [
-        { text: "Identify and localize specific chemical substances within tissues", correct: true },
-        { text: "Measure blood pressure", correct: false },
-        { text: "Determine blood groups", correct: false },
-        { text: "Study chromosome numbers", correct: false }
-    ]
+    question: "Describe the complete procedure for preparing tissue sections for Histochemical analysis, explaining the importance of each step.",
+    keywords: [
+        "fixation",
+        "processing",
+        "embedding",
+        "sectioning",
+        "staining"
+    ],
+    marks: 15
 },
+
 {
-    question: "3. Which principle is fundamental to all histochemical techniques?",
-    answers: [
-        { text: "Specific chemical reactions between reagents and tissue components", correct: true },
-        { text: "Mechanical separation of tissues", correct: false },
-        { text: "Electrical stimulation of tissues", correct: false },
-        { text: "Heat denaturation of enzymes", correct: false }
-    ]
+    question: "Discuss the factors that influence successful Histochemical staining and explain how each factor affects staining quality.",
+    keywords: [
+        "fixation",
+        "temperature",
+        "pH",
+        "reagents",
+        "staining quality"
+    ],
+    marks: 15
 },
+
 {
-    question: "4. The Periodic Acid-Schiff (PAS) reaction detects carbohydrates because periodic acid:",
-    answers: [
-        { text: "Oxidizes vicinal glycol groups to aldehydes", correct: true },
-        { text: "Removes proteins from tissues", correct: false },
-        { text: "Hydrolyzes lipids", correct: false },
-        { text: "Destroys glycogen completely", correct: false }
-    ]
+    question: "Explain the biochemical basis of enzyme Histochemistry and discuss its importance in disease diagnosis.",
+    keywords: [
+        "enzyme histochemistry",
+        "enzyme activity",
+        "substrate",
+        "diagnosis",
+        "localization"
+    ],
+    marks: 15
 },
+
 {
-    question: "5. Schiff reagent reacts specifically with:",
-    answers: [
-        { text: "Aldehyde groups", correct: true },
-        { text: "Ketone groups", correct: false },
-        { text: "Carboxyl groups", correct: false },
-        { text: "Amino groups", correct: false }
-    ]
+    question: "Discuss the various methods used for enzyme demonstration in tissues and compare their advantages and limitations.",
+    keywords: [
+        "enzyme demonstration",
+        "methods",
+        "advantages",
+        "limitations",
+        "comparison"
+    ],
+    marks: 15
 },
+
 {
-    question: "6. Which tissue component is strongly PAS-positive?",
-    answers: [
-        { text: "Basement membrane", correct: true },
-        { text: "Elastic fibers", correct: false },
-        { text: "Keratin", correct: false },
-        { text: "Collagen type I only", correct: false }
-    ]
+    question: "Describe the Periodic Acid-Schiff (PAS) reaction in detail, including its principle, procedure, and diagnostic significance.",
+    keywords: [
+        "PAS reaction",
+        "principle",
+        "procedure",
+        "glycogen",
+        "diagnostic significance"
+    ],
+    marks: 15
 },
+
 {
-    question: "7. Which control is commonly used to confirm glycogen staining in PAS technique?",
-    answers: [
-        { text: "Diastase digestion", correct: true },
-        { text: "Acid-fast staining", correct: false },
-        { text: "Gram staining", correct: false },
-        { text: "Silver staining", correct: false }
-    ]
+    question: "Explain the chemical reactions involved in PAS staining from oxidation to colour development.",
+    keywords: [
+        "periodic acid",
+        "aldehydes",
+        "Schiff reagent",
+        "oxidation",
+        "magenta colour"
+    ],
+    marks: 15
 },
+
 {
-    question: "8. Enzyme histochemistry requires tissues to be:",
-    answers: [
-        { text: "Handled in a way that preserves enzyme activity", correct: true },
-        { text: "Boiled before staining", correct: false },
-        { text: "Completely dehydrated", correct: false },
-        { text: "Fixed with concentrated acid", correct: false }
-    ]
+    question: "Discuss the role of PAS staining in the diagnosis of diseases affecting the kidney, liver, and gastrointestinal tract.",
+    keywords: [
+        "PAS",
+        "kidney",
+        "liver",
+        "gastrointestinal tract",
+        "diagnosis"
+    ],
+    marks: 15
 },
+
 {
-    question: "9. Which factor most affects enzyme histochemical reactions?",
-    answers: [
-        { text: "Temperature and pH", correct: true },
-        { text: "Body weight", correct: false },
-        { text: "Blood pressure", correct: false },
-        { text: "Eye color", correct: false }
-    ]
+    question: "Compare PAS staining with routine Hematoxylin and Eosin (H&E) staining, highlighting their diagnostic importance.",
+    keywords: [
+        "PAS",
+        "H&E",
+        "comparison",
+        "diagnosis",
+        "staining"
+    ],
+    marks: 15
 },
+
 {
-    question: "10. Which enzyme is commonly demonstrated in alkaline phosphatase staining?",
-    answers: [
-        { text: "Alkaline phosphatase", correct: true },
-        { text: "Catalase", correct: false },
-        { text: "Pepsin", correct: false },
-        { text: "Amylase", correct: false }
-    ]
+    question: "Discuss the importance of demonstrating glycogen and mucins in Histochemistry and explain their clinical significance.",
+    keywords: [
+        "glycogen",
+        "mucin",
+        "PAS",
+        "clinical significance",
+        "histochemistry"
+    ],
+    marks: 15
 },
+
 {
-    question: "11. Radioautography is primarily used to study:",
-    answers: [
-        { text: "Distribution of radioactive molecules within tissues", correct: true },
-        { text: "Blood cell morphology", correct: false },
-        { text: "Muscle contraction", correct: false },
-        { text: "Bone fractures", correct: false }
-    ]
+    question: "Explain the principles, procedures, and applications of Radioautography in biomedical research.",
+    keywords: [
+        "radioautography",
+        "principle",
+        "procedure",
+        "applications",
+        "research"
+    ],
+    marks: 15
 },
+
 {
-    question: "12. Which isotope is commonly used in biological radioautography?",
-    answers: [
-        { text: "Tritium (³H)", correct: true },
-        { text: "Helium", correct: false },
-        { text: "Neon", correct: false },
-        { text: "Argon", correct: false }
-    ]
+    question: "Describe the process involved in preparing a Radioautograph from tissue collection to image development.",
+    keywords: [
+        "radioactive isotope",
+        "sectioning",
+        "emulsion",
+        "exposure",
+        "development"
+    ],
+    marks: 15
 },
+
 {
-    question: "13. In radioautography, silver grains indicate:",
-    answers: [
-        { text: "Sites containing radioactive substances", correct: true },
-        { text: "Dead cells only", correct: false },
-        { text: "Areas of fibrosis", correct: false },
-        { text: "Areas lacking enzymes", correct: false }
-    ]
+    question: "Discuss the advantages and limitations of Radioautography as a Histochemical technique.",
+    keywords: [
+        "advantages",
+        "limitations",
+        "radioautography",
+        "applications",
+        "comparison"
+    ],
+    marks: 15
 },
+
 {
-    question: "14. Fluorescence microscopy depends on substances that:",
-    answers: [
-        { text: "Absorb one wavelength and emit another", correct: true },
-        { text: "Reflect sound waves", correct: false },
-        { text: "Generate heat", correct: false },
-        { text: "Produce radioactivity", correct: false }
-    ]
+    question: "Explain how radioactive isotopes are used to study DNA synthesis, protein synthesis, and metabolic activities in tissues.",
+    keywords: [
+        "radioisotopes",
+        "DNA synthesis",
+        "protein synthesis",
+        "metabolism",
+        "cell activity"
+    ],
+    marks: 15
 },
+
 {
-    question: "15. Which component is essential in a fluorescence microscope?",
-    answers: [
-        { text: "Excitation and barrier filters", correct: true },
-        { text: "Oil immersion lens only", correct: false },
-        { text: "Mechanical stage only", correct: false },
-        { text: "Gram stain kit", correct: false }
-    ]
+    question: "Discuss the principle of fluorescence microscopy and explain how fluorescence is produced.",
+    keywords: [
+        "fluorescence",
+        "excitation",
+        "emission",
+        "fluorochromes",
+        "principle"
+    ],
+    marks: 15
 },
+
 {
-    question: "16. Fluorochromes are compounds that:",
-    answers: [
-        { text: "Emit visible light after excitation", correct: true },
-        { text: "Digest carbohydrates", correct: false },
-        { text: "Destroy proteins", correct: false },
-        { text: "Increase tissue hardness", correct: false }
-    ]
+    question: "Describe the components of a fluorescence microscope and explain the function of each component.",
+    keywords: [
+        "light source",
+        "filters",
+        "objective",
+        "mirror",
+        "components"
+    ],
+    marks: 15
 },
+
 {
-    question: "17. Which fluorochrome commonly binds DNA?",
-    answers: [
-        { text: "DAPI", correct: true },
-        { text: "PAS", correct: false },
-        { text: "Eosin", correct: false },
-        { text: "Sudan Black", correct: false }
-    ]
+    question: "Explain the applications of fluorescence microscopy in pathology, microbiology, and immunology.",
+    keywords: [
+        "fluorescence microscopy",
+        "pathology",
+        "microbiology",
+        "immunology",
+        "applications"
+    ],
+    marks: 15
 },
+
 {
-    question: "18. Histochemical specificity means:",
-    answers: [
-        { text: "Only the intended tissue component reacts with the reagent", correct: true },
-        { text: "Every tissue stains the same", correct: false },
-        { text: "Only proteins stain", correct: false },
-        { text: "No control is required", correct: false }
-    ]
+    question: "Compare fluorescence microscopy with light microscopy, emphasizing their principles and clinical applications.",
+    keywords: [
+        "fluorescence microscopy",
+        "light microscopy",
+        "comparison",
+        "applications",
+        "advantages"
+    ],
+    marks: 15
 },
+
 {
-    question: "19. Which carbohydrate is most commonly demonstrated in liver using PAS?",
-    answers: [
-        { text: "Glycogen", correct: true },
-        { text: "Cellulose", correct: false },
-        { text: "Chitin", correct: false },
-        { text: "Lactose", correct: false }
-    ]
+    question: "Discuss direct and indirect immunofluorescence techniques and explain their diagnostic applications.",
+    keywords: [
+        "direct immunofluorescence",
+        "indirect immunofluorescence",
+        "antibodies",
+        "diagnosis",
+        "comparison"
+    ],
+    marks: 15
 },
+
 {
-    question: "20. Mucins are best classified as:",
-    answers: [
-        { text: "Glycoproteins", correct: true },
-        { text: "Lipids", correct: false },
-        { text: "Nucleic acids", correct: false },
-        { text: "Steroids", correct: false }
-    ]
+    question: "Explain the importance of fluorochromes in Histochemical investigations and describe the characteristics of an ideal fluorochrome.",
+    keywords: [
+        "fluorochromes",
+        "properties",
+        "fluorescence",
+        "labeling",
+        "importance"
+    ],
+    marks: 15
 },
+
 {
-    question: "21. Which microscope is most suitable for immunofluorescence studies?",
-    answers: [
-        { text: "Fluorescence microscope", correct: true },
-        { text: "Light microscope only", correct: false },
-        { text: "Stereo microscope", correct: false },
-        { text: "Dissecting microscope", correct: false }
-    ]
+    question: "Discuss quality control measures necessary for obtaining reliable Histochemical staining results.",
+    keywords: [
+        "quality control",
+        "controls",
+        "reagents",
+        "accuracy",
+        "reliability"
+    ],
+    marks: 15
 },
+
 {
-    question: "22. A false-positive histochemical reaction usually results from:",
-    answers: [
-        { text: "Poor specificity of the staining method", correct: true },
-        { text: "Correct fixation", correct: false },
-        { text: "Proper washing", correct: false },
-        { text: "Use of controls", correct: false }
-    ]
+    question: "Explain the role of Histochemistry in cancer diagnosis and tissue characterization.",
+    keywords: [
+        "cancer",
+        "tumor",
+        "histochemistry",
+        "diagnosis",
+        "tissue characterization"
+    ],
+    marks: 15
 },
+
 {
-    question: "23. Histochemistry is especially valuable in pathology because it:",
-    answers: [
-        { text: "Localizes biochemical substances within tissues", correct: true },
-        { text: "Measures blood glucose directly", correct: false },
-        { text: "Calculates BMI", correct: false },
-        { text: "Determines pulse rate", correct: false }
-    ]
+    question: "Discuss the importance of Histochemistry in modern medical laboratory practice with suitable examples.",
+    keywords: [
+        "medical laboratory",
+        "diagnosis",
+        "research",
+        "histochemistry",
+        "examples"
+    ],
+    marks: 15
 },
+
 {
-    question: "24. Which of the following is an application of PAS staining?",
-    answers: [
-        { text: "Diagnosis of glycogen storage diseases", correct: true },
-        { text: "Detection of malaria parasites", correct: false },
-        { text: "Blood grouping", correct: false },
-        { text: "Detection of viruses by culture", correct: false }
-    ]
+    question: "Evaluate the contribution of Histochemistry to biomedical research and disease diagnosis.",
+    keywords: [
+        "histochemistry",
+        "research",
+        "disease diagnosis",
+        "clinical relevance",
+        "evaluation"
+    ],
+    marks: 15
 },
+
 {
-    question: "25. The success of a histochemical technique depends primarily on:",
-    answers: [
-        { text: "Proper fixation, preservation, and specific staining", correct: true },
-        { text: "Using only thick tissue sections", correct: false },
-        { text: "Applying high temperatures", correct: false },
-        { text: "Avoiding controls", correct: false }
-    ]
+    question: "Analyze the importance of tissue fixation in Histochemistry and explain how poor fixation affects histochemical reactions.",
+    keywords: [
+        "fixation",
+        "tissue preservation",
+        "enzyme activity",
+        "artifacts",
+        "histochemical reactions"
+    ],
+    marks: 15
 },
+
 {
-    question: "26. Which carbohydrate is most strongly demonstrated by the PAS technique in liver tissue?",
-    answers: [
-        { text: "Cellulose", correct: false },
-        { text: "Glycogen", correct: true },
-        { text: "Chitin", correct: false },
-        { text: "Starch", correct: false }
-    ]
+    question: "Explain the criteria for selecting an appropriate fixative for Histochemical investigations.",
+    keywords: [
+        "fixative",
+        "selection",
+        "enzyme preservation",
+        "chemical constituents",
+        "tissue integrity"
+    ],
+    marks: 15
 },
+
 {
-    question: "27. In the PAS reaction, periodic acid primarily oxidizes:",
-    answers: [
-        { text: "Peptide bonds", correct: false },
-        { text: "Vicinal glycol groups", correct: true },
-        { text: "Fatty acids", correct: false },
-        { text: "Amino groups", correct: false }
-    ]
+    question: "Discuss the significance of control sections in Histochemical procedures and describe the different types of controls used.",
+    keywords: [
+        "positive control",
+        "negative control",
+        "validation",
+        "quality assurance",
+        "comparison"
+    ],
+    marks: 15
 },
+
 {
-    question: "28. The aldehyde groups produced during PAS staining react with:",
-    answers: [
-        { text: "Schiff reagent", correct: true },
-        { text: "Hematoxylin", correct: false },
-        { text: "Crystal violet", correct: false },
-        { text: "Safranin", correct: false }
-    ]
+    question: "Describe the biochemical basis for the localization of enzymes within cells using Histochemical techniques.",
+    keywords: [
+        "enzyme localization",
+        "substrate",
+        "reaction product",
+        "cellular distribution",
+        "histochemistry"
+    ],
+    marks: 15
 },
+
 {
-    question: "29. Which tissue structure is typically PAS-positive?",
-    answers: [
-        { text: "Basement membrane", correct: true },
-        { text: "Elastic fibers", correct: false },
-        { text: "Collagen type I only", correct: false },
-        { text: "Red blood cells", correct: false }
-    ]
+    question: "Discuss the clinical importance of enzyme Histochemistry in diagnosing metabolic and inherited disorders.",
+    keywords: [
+        "enzyme deficiency",
+        "metabolic disorders",
+        "diagnosis",
+        "histochemistry",
+        "clinical significance"
+    ],
+    marks: 15
 },
+
 {
-    question: "30. Enzyme histochemistry is primarily used to demonstrate:",
-    answers: [
-        { text: "Enzyme localization and activity", correct: true },
-        { text: "Protein synthesis", correct: false },
-        { text: "DNA replication", correct: false },
-        { text: "Chromosome number", correct: false }
-    ]
+    question: "Evaluate the role of PAS staining in identifying fungal infections and explain the basis for its effectiveness.",
+    keywords: [
+        "PAS",
+        "fungi",
+        "cell wall",
+        "glycoproteins",
+        "diagnosis"
+    ],
+    marks: 15
 },
+
 {
-    question: "31. Which condition is essential for successful enzyme histochemistry?",
-    answers: [
-        { text: "Preservation of enzyme activity", correct: true },
-        { text: "Boiling the tissue", correct: false },
-        { text: "Strong acid fixation", correct: false },
-        { text: "High temperature incubation", correct: false }
-    ]
+    question: "Discuss the histochemical demonstration of basement membranes and explain its diagnostic value.",
+    keywords: [
+        "basement membrane",
+        "PAS stain",
+        "kidney",
+        "diagnosis",
+        "glycoproteins"
+    ],
+    marks: 15
 },
+
 {
-    question: "32. Which enzyme is commonly demonstrated in liver histochemistry?",
-    answers: [
-        { text: "Alkaline phosphatase", correct: true },
-        { text: "Trypsin", correct: false },
-        { text: "Pepsin", correct: false },
-        { text: "Renin", correct: false }
-    ]
+    question: "Compare enzyme Histochemistry with immunohistochemistry, highlighting their principles, advantages, and limitations.",
+    keywords: [
+        "enzyme histochemistry",
+        "immunohistochemistry",
+        "comparison",
+        "advantages",
+        "limitations"
+    ],
+    marks: 15
 },
+
 {
-    question: "33. Radioautography is based on the detection of:",
-    answers: [
-        { text: "Radioactive emissions", correct: true },
-        { text: "Heat energy", correct: false },
-        { text: "Ultrasound waves", correct: false },
-        { text: "Magnetic fields", correct: false }
-    ]
+    question: "Explain the principles of immunofluorescence and discuss its application in autoimmune disease diagnosis.",
+    keywords: [
+        "immunofluorescence",
+        "antigen",
+        "antibody",
+        "autoimmune diseases",
+        "diagnosis"
+    ],
+    marks: 15
 },
+
 {
-    question: "34. Which isotope is commonly used in biological radioautography?",
-    answers: [
-        { text: "Carbon-14", correct: true },
-        { text: "Calcium-40", correct: false },
-        { text: "Iron-56", correct: false },
-        { text: "Sodium-23", correct: false }
-    ]
+    question: "Describe the causes of false-positive and false-negative Histochemical staining results and suggest preventive measures.",
+    keywords: [
+        "false positive",
+        "false negative",
+        "quality control",
+        "artifacts",
+        "prevention"
+    ],
+    marks: 15
 },
+
 {
-    question: "35. The silver grains observed in radioautography indicate:",
-    answers: [
-        { text: "Sites of radioactive decay", correct: true },
-        { text: "Areas of tissue damage", correct: false },
-        { text: "Fat deposits", correct: false },
-        { text: "Calcification", correct: false }
-    ]
+    question: "Discuss the importance of Histochemistry in identifying intracellular carbohydrates, proteins, lipids, and nucleic acids.",
+    keywords: [
+        "carbohydrates",
+        "proteins",
+        "lipids",
+        "nucleic acids",
+        "identification"
+    ],
+    marks: 15
 },
+
 {
-    question: "36. Fluorescence microscopy depends on molecules that:",
-    answers: [
-        { text: "Absorb and emit light", correct: true },
-        { text: "Conduct electricity", correct: false },
-        { text: "Produce heat", correct: false },
-        { text: "Reflect sound", correct: false }
-    ]
+    question: "Evaluate the contribution of Histochemistry to forensic pathology and biomedical investigations.",
+    keywords: [
+        "forensic pathology",
+        "biomedical research",
+        "histochemistry",
+        "identification",
+        "applications"
+    ],
+    marks: 15
 },
+
 {
-    question: "37. The excitation filter in a fluorescence microscope serves to:",
-    answers: [
-        { text: "Select the correct excitation wavelength", correct: true },
-        { text: "Increase magnification", correct: false },
-        { text: "Reduce tissue thickness", correct: false },
-        { text: "Stain the tissue", correct: false }
-    ]
+    question: "Explain the principle of fluorescence labeling and discuss factors affecting fluorescence intensity.",
+    keywords: [
+        "fluorescence labeling",
+        "excitation",
+        "emission",
+        "photobleaching",
+        "intensity"
+    ],
+    marks: 15
 },
+
 {
-    question: "38. Which component separates excitation light from emitted fluorescence?",
-    answers: [
-        { text: "Dichroic mirror", correct: true },
-        { text: "Objective lens", correct: false },
-        { text: "Condenser", correct: false },
-        { text: "Eyepiece", correct: false }
-    ]
+    question: "Discuss the role of fluorescent microscopy in cancer diagnosis and molecular pathology.",
+    keywords: [
+        "fluorescence microscopy",
+        "cancer diagnosis",
+        "tumor markers",
+        "molecular pathology",
+        "clinical application"
+    ],
+    marks: 15
 },
+
 {
-    question: "39. Fluorescence microscopy is commonly used in:",
-    answers: [
-        { text: "Immunofluorescence studies", correct: true },
-        { text: "Gram staining", correct: false },
-        { text: "Blood grouping only", correct: false },
-        { text: "Urinalysis only", correct: false }
-    ]
+    question: "Describe the preparation, handling, and storage of fluorochrome-labelled specimens for optimal microscopic examination.",
+    keywords: [
+        "fluorochromes",
+        "specimen preparation",
+        "handling",
+        "storage",
+        "microscopy"
+    ],
+    marks: 15
 },
+
 {
-    question: "40. Histochemistry differs from routine histology because it emphasizes:",
-    answers: [
-        { text: "Chemical composition of tissues", correct: true },
-        { text: "Gross anatomy", correct: false },
-        { text: "Physiology only", correct: false },
-        { text: "Radiology", correct: false }
-    ]
+    question: "Discuss the significance of radioactive tracers in studying cellular metabolism using Radioautography.",
+    keywords: [
+        "radioactive tracers",
+        "cell metabolism",
+        "autoradiography",
+        "radioisotopes",
+        "research"
+    ],
+    marks: 15
 },
+
 {
-    question: "41. Which of the following is NOT a major application of histochemistry?",
-    answers: [
-        { text: "Determining tissue chemical composition", correct: false },
-        { text: "Disease diagnosis", correct: false },
-        { text: "Detection of cellular enzymes", correct: false },
-        { text: "Measurement of blood pressure", correct: true }
-    ]
+    question: "Explain the advantages of combining Histochemistry with modern molecular diagnostic techniques.",
+    keywords: [
+        "histochemistry",
+        "molecular diagnosis",
+        "integration",
+        "accuracy",
+        "clinical application"
+    ],
+    marks: 15
 },
+
 {
-    question: "42. Schiff reagent becomes colorless after treatment with:",
-    answers: [
-        { text: "Sulfur dioxide", correct: true },
-        { text: "Periodic acid", correct: false },
-        { text: "Nitric acid", correct: false },
-        { text: "Hydrochloric acid", correct: false }
-    ]
+    question: "Describe common laboratory errors encountered during Histochemical staining and explain how they can be corrected.",
+    keywords: [
+        "laboratory errors",
+        "staining",
+        "quality control",
+        "correction",
+        "histochemistry"
+    ],
+    marks: 15
 },
+
 {
-    question: "43. PAS staining is useful in diagnosing diseases involving:",
-    answers: [
-        { text: "Carbohydrate accumulation", correct: true },
-        { text: "Bone fractures", correct: false },
-        { text: "Muscle tears", correct: false },
-        { text: "Heart murmurs", correct: false }
-    ]
+    question: "Discuss the role of Histochemistry in identifying tissue degeneration, necrosis, and pathological changes.",
+    keywords: [
+        "degeneration",
+        "necrosis",
+        "pathology",
+        "histochemistry",
+        "diagnosis"
+    ],
+    marks: 15
 },
+
 {
-    question: "44. Cytochemistry mainly investigates:",
-    answers: [
-        { text: "Chemical constituents within cells", correct: true },
-        { text: "Whole organ development", correct: false },
-        { text: "Body movements", correct: false },
-        { text: "Blood circulation", correct: false }
-    ]
+    question: "Analyze the advantages and disadvantages of Radioautography compared with fluorescence microscopy.",
+    keywords: [
+        "radioautography",
+        "fluorescence microscopy",
+        "comparison",
+        "advantages",
+        "limitations"
+    ],
+    marks: 15
 },
+
 {
-    question: "45. The final product of a positive PAS reaction appears:",
-    answers: [
-        { text: "Bright magenta", correct: true },
-        { text: "Deep blue", correct: false },
-        { text: "Dark green", correct: false },
-        { text: "Orange-red", correct: false }
-    ]
+    question: "Discuss recent advances in Histochemical techniques and their impact on disease diagnosis.",
+    keywords: [
+        "recent advances",
+        "automation",
+        "digital pathology",
+        "diagnosis",
+        "histochemistry"
+    ],
+    marks: 15
 },
+
 {
-    question: "46. Which tissue component is commonly identified using enzyme histochemistry?",
-    answers: [
-        { text: "Lysosomal enzymes", correct: true },
-        { text: "DNA only", correct: false },
-        { text: "Lipids only", correct: false },
-        { text: "Water molecules", correct: false }
-    ]
+    question: "Explain how Histochemistry contributes to understanding disease mechanisms at the cellular level.",
+    keywords: [
+        "cellular mechanisms",
+        "disease",
+        "histochemistry",
+        "localization",
+        "pathogenesis"
+    ],
+    marks: 15
 },
+
 {
-    question: "47. Fluorochromes are substances that:",
-    answers: [
-        { text: "Emit visible light after excitation", correct: true },
-        { text: "Destroy tissues", correct: false },
-        { text: "Absorb proteins", correct: false },
-        { text: "Prevent fixation", correct: false }
-    ]
+    question: "Evaluate the role of Histochemistry in research involving stem cells and regenerative medicine.",
+    keywords: [
+        "stem cells",
+        "regenerative medicine",
+        "histochemistry",
+        "research",
+        "cell differentiation"
+    ],
+    marks: 15
 },
+
 {
-    question: "48. One limitation of fluorescence microscopy is:",
-    answers: [
-        { text: "Photobleaching of fluorescent dyes", correct: true },
-        { text: "No need for special equipment", correct: false },
-        { text: "Unlimited specimen life", correct: false },
-        { text: "No background fluorescence", correct: false }
-    ]
+    question: "Discuss the ethical and safety considerations involved in Radioautography and fluorescence microscopy laboratories.",
+    keywords: [
+        "ethics",
+        "radiation safety",
+        "biosafety",
+        "fluorescence",
+        "laboratory practice"
+    ],
+    marks: 15
 },
+
 {
-    question: "49. Histochemistry plays an important role in:",
-    answers: [
-        { text: "Research and disease diagnosis", correct: true },
-        { text: "Blood transfusion only", correct: false },
-        { text: "Orthopedic surgery only", correct: false },
-        { text: "Dental extraction only", correct: false }
-    ]
-},
-{
-    question: "50. The major advantage of histochemistry is its ability to:",
-    answers: [
-        { text: "Localize specific chemical substances within tissues", correct: true },
-        { text: "Replace all biochemical tests", correct: false },
-        { text: "Visualize viruses without stains", correct: false },
-        { text: "Measure blood glucose directly", correct: false }
-    ]
+    question: "Critically evaluate the overall importance of Histochemistry, Cytochemistry, PAS staining, Radioautography, and Fluorescence Microscopy in modern diagnostic pathology.",
+    keywords: [
+        "histochemistry",
+        "cytochemistry",
+        "PAS",
+        "radioautography",
+        "fluorescence microscopy"
+    ],
+    marks: 15
 }
-
 ];
 
-const EXTREME_QUESTIONS = [
-
-{
-    question: "1. Which histochemical stain is the gold standard for demonstrating ferric iron in tissue?",
-    answers: [
-        { text: "Perls' Prussian Blue stain", correct: true },
-        { text: "Oil Red O", correct: false },
-        { text: "PAS stain", correct: false },
-        { text: "Sudan Black B", correct: false }
-    ]
-},
-{
-    question: "2. What color does ferric iron appear after Perls' Prussian Blue staining?",
-    answers: [
-        { text: "Bright blue", correct: true },
-        { text: "Bright red", correct: false },
-        { text: "Green", correct: false },
-        { text: "Yellow", correct: false }
-    ]
-},
-{
-    question: "3. Which form of iron is detected by Perls' stain?",
-    answers: [
-        { text: "Ferric iron (Fe³⁺)", correct: true },
-        { text: "Ferrous iron (Fe²⁺)", correct: false },
-        { text: "Metallic iron", correct: false },
-        { text: "Iron phosphate", correct: false }
-    ]
-},
-{
-    question: "4. Why can't Perls' stain detect ferrous iron?",
-    answers: [
-        { text: "The reaction is specific for ferric iron only", correct: true },
-        { text: "Ferrous iron evaporates during staining", correct: false },
-        { text: "Ferrous iron is colorless", correct: false },
-        { text: "Ferrous iron cannot bind dyes", correct: false }
-    ]
-},
-{
-    question: "5. Which organs are most commonly affected by hemosiderosis?",
-    answers: [
-        { text: "Liver and spleen", correct: true },
-        { text: "Brain and spinal cord", correct: false },
-        { text: "Skin and nails", correct: false },
-        { text: "Esophagus and stomach", correct: false }
-    ]
-},
-{
-    question: "6. Hemosiderin is best described as:",
-    answers: [
-        { text: "An intracellular iron-storage pigment", correct: true },
-        { text: "A connective tissue fiber", correct: false },
-        { text: "A lipid pigment", correct: false },
-        { text: "A carbohydrate granule", correct: false }
-    ]
-},
-{
-    question: "7. Which histochemical stain is primarily used to demonstrate glycogen?",
-    answers: [
-        { text: "Periodic Acid-Schiff (PAS)", correct: true },
-        { text: "Ziehl-Neelsen", correct: false },
-        { text: "Perls' stain", correct: false },
-        { text: "Sudan III", correct: false }
-    ]
-},
-{
-    question: "8. PAS-positive structures appear what color?",
-    answers: [
-        { text: "Magenta", correct: true },
-        { text: "Blue", correct: false },
-        { text: "Black", correct: false },
-        { text: "Brown", correct: false }
-    ]
-},
-{
-    question: "9. Which chemical oxidizes carbohydrates during the PAS reaction?",
-    answers: [
-        { text: "Periodic acid", correct: true },
-        { text: "Hydrochloric acid", correct: false },
-        { text: "Nitric acid", correct: false },
-        { text: "Acetic acid", correct: false }
-    ]
-},
-{
-    question: "10. Which reagent reacts with aldehyde groups in PAS staining?",
-    answers: [
-        { text: "Schiff reagent", correct: true },
-        { text: "Eosin", correct: false },
-        { text: "Hematoxylin", correct: false },
-        { text: "Crystal violet", correct: false }
-    ]
-},
-{
-    question: "11. Which enzyme is used to confirm that PAS positivity is due to glycogen?",
-    answers: [
-        { text: "Diastase (amylase)", correct: true },
-        { text: "Lipase", correct: false },
-        { text: "Protease", correct: false },
-        { text: "Catalase", correct: false }
-    ]
-},
-{
-    question: "12. What happens to glycogen after PAS-Diastase treatment?",
-    answers: [
-        { text: "It is digested and disappears", correct: true },
-        { text: "It turns blue", correct: false },
-        { text: "It becomes black", correct: false },
-        { text: "It stains more intensely", correct: false }
-    ]
-},
-{
-    question: "13. Which of the following is PAS-positive?",
-    answers: [
-        { text: "Basement membrane", correct: true },
-        { text: "Elastic fibers", correct: false },
-        { text: "Collagen only", correct: false },
-        { text: "Keratin", correct: false }
-    ]
-},
-{
-    question: "14. Which fixative is preferred for preserving glycogen?",
-    answers: [
-        { text: "Cold alcoholic fixatives", correct: true },
-        { text: "Bouin's solution", correct: false },
-        { text: "Zenker's fixative", correct: false },
-        { text: "Mercuric chloride", correct: false }
-    ]
-},
-{
-    question: "15. The PAS reaction is based on the oxidation of:",
-    answers: [
-        { text: "Vicinal glycol groups into aldehydes", correct: true },
-        { text: "Proteins into ketones", correct: false },
-        { text: "Lipids into fatty acids", correct: false },
-        { text: "DNA into nucleotides", correct: false }
-    ]
-},
-{
-    question: "16. Histochemistry is the study of:",
-    answers: [
-        { text: "Chemical constituents of tissues using specific reactions", correct: true },
-        { text: "Only tissue morphology", correct: false },
-        { text: "Microorganisms in culture", correct: false },
-        { text: "Blood cell counts", correct: false }
-    ]
-},
-{
-    question: "17. Enzyme histochemistry is used to:",
-    answers: [
-        { text: "Demonstrate enzyme activity within tissues", correct: true },
-        { text: "Measure blood enzymes only", correct: false },
-        { text: "Identify bacteria", correct: false },
-        { text: "Determine blood group", correct: false }
-    ]
-},
-{
-    question: "18. Why are frozen sections preferred for enzyme histochemistry?",
-    answers: [
-        { text: "They preserve enzyme activity", correct: true },
-        { text: "They are easier to stain", correct: false },
-        { text: "They are cheaper than paraffin sections", correct: false },
-        { text: "They produce permanent slides immediately", correct: false }
-    ]
-},
-{
-    question: "19. Paraffin processing is generally unsuitable for enzyme histochemistry because:",
-    answers: [
-        { text: "It destroys enzyme activity", correct: true },
-        { text: "It stains tissues blue", correct: false },
-        { text: "It increases enzyme concentration", correct: false },
-        { text: "It prevents fixation", correct: false }
-    ]
-},
-{
-    question: "20. Which enzyme is commonly used as a marker for lysosomes?",
-    answers: [
-        { text: "Acid phosphatase", correct: true },
-        { text: "Lipase", correct: false },
-        { text: "Amylase", correct: false },
-        { text: "Trypsin", correct: false }
-    ]
-},
-{
-    question: "21. Which enzyme is commonly used to demonstrate plasma membranes?",
-    answers: [
-        { text: "Alkaline phosphatase", correct: true },
-        { text: "Pepsin", correct: false },
-        { text: "Urease", correct: false },
-        { text: "DNA polymerase", correct: false }
-    ]
-},
-{
-    question: "22. Which enzyme is useful for identifying muscle fiber types histochemically?",
-    answers: [
-        { text: "ATPase", correct: true },
-        { text: "Catalase", correct: false },
-        { text: "Lactase", correct: false },
-        { text: "Lipoprotein lipase", correct: false }
-    ]
-},
-{
-    question: "23. Succinate dehydrogenase is mainly used to demonstrate:",
-    answers: [
-        { text: "Mitochondria", correct: true },
-        { text: "Nucleus", correct: false },
-        { text: "Golgi apparatus", correct: false },
-        { text: "Cell membrane", correct: false }
-    ]
-},
-{
-    question: "24. What is the purpose of incubating tissue sections during enzyme histochemistry?",
-    answers: [
-        { text: "To allow enzymes to react with their substrates", correct: true },
-        { text: "To dissolve the tissue", correct: false },
-        { text: "To remove the nucleus", correct: false },
-        { text: "To fix the tissue permanently", correct: false }
-    ]
-},
-{
-    question: "25. The final visible result of most enzyme histochemical reactions is:",
-    answers: [
-        { text: "An insoluble colored precipitate", correct: true },
-        { text: "A gas bubble", correct: false },
-        { text: "A fluorescent liquid", correct: false },
-        { text: "Complete tissue dissolution", correct: false }
-    ]
-},
-
-{
-    question: "26. What is radioautography?",
-    answers: [
-        { text: "A technique for localizing radioactive substances in tissues", correct: true },
-        { text: "A method for staining connective tissue", correct: false },
-        { text: "A procedure for culturing bacteria", correct: false },
-        { text: "A method for measuring blood glucose", correct: false }
-    ]
-},
-{
-    question: "27. Which of the following is a radioautography technique?",
-    answers: [
-        { text: "Dipping method", correct: true },
-        { text: "Gram staining", correct: false },
-        { text: "Ziehl-Neelsen staining", correct: false },
-        { text: "Feulgen reaction", correct: false }
-    ]
-},
-{
-    question: "28. Which radioactive isotope is commonly used to study DNA synthesis?",
-    answers: [
-        { text: "Tritium (³H)-thymidine", correct: true },
-        { text: "Carbon-14 glucose", correct: false },
-        { text: "Iodine-131", correct: false },
-        { text: "Phosphorus-30", correct: false }
-    ]
-},
-{
-    question: "29. What is the purpose of photographic emulsion in autoradiography?",
-    answers: [
-        { text: "To detect radiation emitted from radioactive isotopes", correct: true },
-        { text: "To preserve tissue proteins", correct: false },
-        { text: "To dissolve lipids", correct: false },
-        { text: "To stain nuclei blue", correct: false }
-    ]
-},
-{
-    question: "30. In autoradiography, silver grains indicate:",
-    answers: [
-        { text: "Sites of radioactive emissions", correct: true },
-        { text: "Areas of lipid accumulation", correct: false },
-        { text: "Collagen fibers", correct: false },
-        { text: "Glycogen deposits", correct: false }
-    ]
-},
-{
-    question: "31. Immunohistochemistry is primarily used to:",
-    answers: [
-        { text: "Detect specific antigens in tissue sections", correct: true },
-        { text: "Measure blood pH", correct: false },
-        { text: "Determine blood group", correct: false },
-        { text: "Culture microorganisms", correct: false }
-    ]
-},
-{
-    question: "32. Which antibody binds directly to the tissue antigen?",
-    answers: [
-        { text: "Primary antibody", correct: true },
-        { text: "Secondary antibody", correct: false },
-        { text: "Monoclonal enzyme", correct: false },
-        { text: "Complement antibody", correct: false }
-    ]
-},
-{
-    question: "33. The secondary antibody in immunohistochemistry binds to:",
-    answers: [
-        { text: "The primary antibody", correct: true },
-        { text: "The antigen directly", correct: false },
-        { text: "The tissue nucleus", correct: false },
-        { text: "DNA molecules", correct: false }
-    ]
-},
-{
-    question: "34. Which enzyme is most commonly used as a label in immunohistochemistry?",
-    answers: [
-        { text: "Horseradish peroxidase (HRP)", correct: true },
-        { text: "Lipase", correct: false },
-        { text: "Pepsin", correct: false },
-        { text: "Catalase", correct: false }
-    ]
-},
-{
-    question: "35. Which chromogen produces a brown reaction product in immunohistochemistry?",
-    answers: [
-        { text: "DAB (Diaminobenzidine)", correct: true },
-        { text: "Eosin", correct: false },
-        { text: "Methylene blue", correct: false },
-        { text: "Sudan IV", correct: false }
-    ]
-},
-{
-    question: "36. Antigen retrieval is performed to:",
-    answers: [
-        { text: "Unmask antigenic sites after fixation", correct: true },
-        { text: "Destroy antibodies", correct: false },
-        { text: "Remove lipids", correct: false },
-        { text: "Digest collagen fibers", correct: false }
-    ]
-},
-{
-    question: "37. Which of the following is an antigen retrieval method?",
-    answers: [
-        { text: "Heat-induced epitope retrieval", correct: true },
-        { text: "Gram staining", correct: false },
-        { text: "Acid-fast staining", correct: false },
-        { text: "Romanowsky staining", correct: false }
-    ]
-},
-{
-    question: "38. The antigen-antibody reaction is best described as:",
-    answers: [
-        { text: "A specific binding between an antigen and its corresponding antibody", correct: true },
-        { text: "A nonspecific protein precipitation", correct: false },
-        { text: "A lipid-carbohydrate interaction", correct: false },
-        { text: "A DNA-RNA hybridization", correct: false }
-    ]
-},
-{
-    question: "39. Which of the following methods detects antigen-antibody reactions?",
-    answers: [
-        { text: "ELISA", correct: true },
-        { text: "Gram stain", correct: false },
-        { text: "Perls' stain", correct: false },
-        { text: "Oil Red O", correct: false }
-    ]
-},
-{
-    question: "40. A lysochrome is:",
-    answers: [
-        { text: "A fat-soluble dye used for lipid staining", correct: true },
-        { text: "A nuclear stain", correct: false },
-        { text: "A bacterial stain", correct: false },
-        { text: "An enzyme substrate", correct: false }
-    ]
-},
-{
-    question: "41. Which of the following is a lipid stain?",
-    answers: [
-        { text: "Oil Red O", correct: true },
-        { text: "PAS", correct: false },
-        { text: "Perls' stain", correct: false },
-        { text: "Feulgen stain", correct: false }
-    ]
-},
-{
-    question: "42. Oil Red O is mainly used to stain:",
-    answers: [
-        { text: "Neutral fats and lipids", correct: true },
-        { text: "Iron deposits", correct: false },
-        { text: "DNA", correct: false },
-        { text: "Collagen fibers", correct: false }
-    ]
-},
-{
-    question: "43. Which type of tissue section is preferred for lipid staining?",
-    answers: [
-        { text: "Frozen section", correct: true },
-        { text: "Paraffin section", correct: false },
-        { text: "Plastic section", correct: false },
-        { text: "Cell smear", correct: false }
-    ]
-},
-{
-    question: "44. Why are lipids usually lost during paraffin processing?",
-    answers: [
-        { text: "Organic solvents dissolve them", correct: true },
-        { text: "Heat converts them into proteins", correct: false },
-        { text: "Fixatives stain them blue", correct: false },
-        { text: "Lipids evaporate naturally", correct: false }
-    ]
-},
-{
-    question: "45. Which principle is fundamental to histochemical reactions?",
-    answers: [
-        { text: "Specific chemical reactions occur at the site of the target substance", correct: true },
-        { text: "All tissues stain the same way", correct: false },
-        { text: "Only proteins can be demonstrated", correct: false },
-        { text: "Chemical reactions occur outside the tissue", correct: false }
-    ]
-},
-{
-    question: "46. Why is fixation important in histochemistry?",
-    answers: [
-        { text: "It preserves tissue morphology and prevents degradation", correct: true },
-        { text: "It removes all proteins", correct: false },
-        { text: "It dissolves connective tissue", correct: false },
-        { text: "It increases enzyme activity", correct: false }
-    ]
-},
-{
-    question: "47. The primary purpose of using controls in histochemistry is to:",
-    answers: [
-        { text: "Validate staining specificity and accuracy", correct: true },
-        { text: "Reduce staining time", correct: false },
-        { text: "Replace tissue fixation", correct: false },
-        { text: "Increase tissue thickness", correct: false }
-    ]
-},
-{
-    question: "48. A positive control is:",
-    answers: [
-        { text: "A tissue known to contain the target substance", correct: true },
-        { text: "A tissue without the target substance", correct: false },
-        { text: "An unstained tissue section", correct: false },
-        { text: "A damaged tissue sample", correct: false }
-    ]
-},
-{
-    question: "49. A negative control is:",
-    answers: [
-        { text: "A tissue or procedure lacking the target substance or primary reagent", correct: true },
-        { text: "A tissue rich in the target substance", correct: false },
-        { text: "A frozen tissue section", correct: false },
-        { text: "A tissue stained with PAS", correct: false }
-    ]
-},
-{
-    question: "50. The major advantage of histochemistry is its ability to:",
-    answers: [
-        { text: "Localize specific chemical substances within tissues", correct: true },
-        { text: "Replace all biochemical tests", correct: false },
-        { text: "Visualize viruses without stains", correct: false },
-        { text: "Measure blood glucose directly", correct: false }
-    ]
-}
+const EXTREME_THEORY_QUESTIONS = [
 ];

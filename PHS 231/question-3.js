@@ -1,1510 +1,2106 @@
-const EASY_QUESTIONS = [
+const EASY_THEORY_QUESTIONS = [
+    {
+    question: "State the six electrophysiological properties of cardiac muscle.",
 
-{
-question: "The study of the heart and blood vessels is called:",
-answers: [
-{text:"Cardiovascular physiology", correct:true},
-{text:"Neurophysiology", correct:false},
-{text:"Respiratory physiology", correct:false},
-{text:"Endocrinology", correct:false}
-]
+    keywords: [
+        "automaticity",
+        "excitability",
+        "conductivity",
+        "contractility",
+        "rhythmicity"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The natural pacemaker of the heart is the:",
-answers: [
-{text:"Sinoatrial (SA) node", correct:true},
-{text:"Atrioventricular (AV) node", correct:false},
-{text:"Bundle of His", correct:false},
-{text:"Purkinje fibres", correct:false}
-]
+    question: "Define automaticity in cardiac muscle.",
+
+    keywords: [
+        "automaticity",
+        "pacemaker",
+        "impulse generation",
+        "heart",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which chamber of the heart has the thickest wall?",
-answers: [
-{text:"Left ventricle", correct:true},
-{text:"Right ventricle", correct:false},
-{text:"Left atrium", correct:false},
-{text:"Right atrium", correct:false}
-]
+    question: "Define excitability of cardiac muscle.",
+
+    keywords: [
+        "excitability",
+        "response",
+        "stimulus",
+        "cardiac muscle",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The SA node is located in the:",
-answers: [
-{text:"Right atrium", correct:true},
-{text:"Left atrium", correct:false},
-{text:"Left ventricle", correct:false},
-{text:"Right ventricle", correct:false}
-]
+    question: "What is conductivity in cardiac muscle?",
+
+    keywords: [
+        "conductivity",
+        "impulse",
+        "transmission",
+        "heart",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The AV node is found between the:",
-answers: [
-{text:"Atria and ventricles", correct:true},
-{text:"Two ventricles", correct:false},
-{text:"Two atria", correct:false},
-{text:"Pulmonary veins", correct:false}
-]
+    question: "Define contractility of cardiac muscle.",
+
+    keywords: [
+        "contractility",
+        "force",
+        "contraction",
+        "heart",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which of the following conducts impulses to the ventricles?",
-answers: [
-{text:"Bundle of His", correct:true},
-{text:"Aorta", correct:false},
-{text:"Pulmonary vein", correct:false},
-{text:"Mitral valve", correct:false}
-]
+    question: "Explain rhythmicity of the heart.",
+
+    keywords: [
+        "rhythmicity",
+        "regular",
+        "heartbeat",
+        "automatic",
+        "heart"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Purkinje fibres are responsible for:",
-answers: [
-{text:"Distributing impulses through the ventricles", correct:true},
-{text:"Carrying oxygen", correct:false},
-{text:"Producing hormones", correct:false},
-{text:"Filtering blood", correct:false}
-]
+    question: "List the components of the cardiac conducting system.",
+
+    keywords: [
+        "SA node",
+        "AV node",
+        "bundle of His",
+        "Purkinje fibres",
+        "conducting system"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The contraction of the heart muscle is called:",
-answers: [
-{text:"Systole", correct:true},
-{text:"Diastole", correct:false},
-{text:"Perfusion", correct:false},
-{text:"Diffusion", correct:false}
-]
+    question: "State the function of the sinoatrial node.",
+
+    keywords: [
+        "SA node",
+        "pacemaker",
+        "heart rate",
+        "impulse",
+        "function"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Relaxation of the heart is known as:",
-answers: [
-{text:"Diastole", correct:true},
-{text:"Systole", correct:false},
-{text:"Depolarization", correct:false},
-{text:"Repolarization", correct:false}
-]
+    question: "State the function of the atrioventricular node.",
+
+    keywords: [
+        "AV node",
+        "delay",
+        "impulse",
+        "atria",
+        "ventricles"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Cardiac output is the product of:",
-answers: [
-{text:"Heart rate × Stroke volume", correct:true},
-{text:"Blood pressure × Pulse rate", correct:false},
-{text:"Stroke volume × Blood pressure", correct:false},
-{text:"Pulse rate × Blood volume", correct:false}
-]
+    question: "What are Purkinje fibres?",
+
+    keywords: [
+        "Purkinje fibres",
+        "ventricles",
+        "impulse",
+        "conduction",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Stroke volume is the amount of blood pumped by:",
-answers: [
-{text:"One ventricle in one beat", correct:true},
-{text:"Both atria in one minute", correct:false},
-{text:"The entire heart in one second", correct:false},
-{text:"One atrium in one beat", correct:false}
-]
+    question: "Define cardiac output.",
+
+    keywords: [
+        "cardiac output",
+        "heart rate",
+        "stroke volume",
+        "definition",
+        "formula"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Normal resting heart rate in adults is approximately:",
-answers: [
-{text:"60–100 beats/minute", correct:true},
-{text:"20–40 beats/minute", correct:false},
-{text:"120–160 beats/minute", correct:false},
-{text:"150–200 beats/minute", correct:false}
-]
+    question: "Write the formula for calculating cardiac output.",
+
+    keywords: [
+        "cardiac output",
+        "stroke volume",
+        "heart rate",
+        "formula",
+        "calculation"
+    ],
+
+    marks: 10
 },
 
 {
-question: "An ECG records the:",
-answers: [
-{text:"Electrical activity of the heart", correct:true},
-{text:"Blood pressure", correct:false},
-{text:"Heart sounds", correct:false},
-{text:"Blood glucose level", correct:false}
-]
+    question: "State five factors affecting cardiac output.",
+
+    keywords: [
+        "heart rate",
+        "stroke volume",
+        "venous return",
+        "contractility",
+        "preload"
+    ],
+
+    marks: 10
 },
 
 {
-question: "ECG stands for:",
-answers: [
-{text:"Electrocardiogram", correct:true},
-{text:"Electroencephalogram", correct:false},
-{text:"Electromyogram", correct:false},
-{text:"Echocardiography", correct:false}
-]
+    question: "Define electrocardiogram (ECG).",
+
+    keywords: [
+        "ECG",
+        "electrical activity",
+        "heart",
+        "recording",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The P wave on an ECG represents:",
-answers: [
-{text:"Atrial depolarization", correct:true},
-{text:"Ventricular depolarization", correct:false},
-{text:"Ventricular repolarization", correct:false},
-{text:"Atrial relaxation", correct:false}
-]
+    question: "State five clinical uses of ECG.",
+
+    keywords: [
+        "arrhythmia",
+        "myocardial infarction",
+        "heart block",
+        "ischemia",
+        "diagnosis"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The QRS complex represents:",
-answers: [
-{text:"Ventricular depolarization", correct:true},
-{text:"Atrial depolarization", correct:false},
-{text:"Ventricular relaxation", correct:false},
-{text:"Heart sounds", correct:false}
-]
+    question: "What is blood pressure?",
+
+    keywords: [
+        "blood pressure",
+        "arterial pressure",
+        "definition",
+        "force",
+        "circulation"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The T wave represents:",
-answers: [
-{text:"Ventricular repolarization", correct:true},
-{text:"Atrial contraction", correct:false},
-{text:"Atrial depolarization", correct:false},
-{text:"Ventricular contraction", correct:false}
-]
+    question: "Define systolic blood pressure.",
+
+    keywords: [
+        "systolic",
+        "ventricular contraction",
+        "maximum pressure",
+        "arteries",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which instrument is used to record an ECG?",
-answers: [
-{text:"Electrocardiograph", correct:true},
-{text:"Stethoscope", correct:false},
-{text:"Spirometer", correct:false},
-{text:"Thermometer", correct:false}
-]
+    question: "Define diastolic blood pressure.",
+
+    keywords: [
+        "diastolic",
+        "ventricular relaxation",
+        "minimum pressure",
+        "arteries",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which of these can increase cardiac output?",
-answers: [
-{text:"Exercise", correct:true},
-{text:"Severe blood loss", correct:false},
-{text:"Heart failure", correct:false},
-{text:"Shock", correct:false}
-]
+    question: "Outline the steps involved in measuring blood pressure by the auscultatory method.",
+
+    keywords: [
+        "sphygmomanometer",
+        "stethoscope",
+        "Korotkoff sounds",
+        "cuff",
+        "measurement"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Blood pressure is measured using a:",
-answers: [
-{text:"Sphygmomanometer", correct:true},
-{text:"Thermometer", correct:false},
-{text:"Spirometer", correct:false},
-{text:"Glucometer", correct:false}
-]
+    question: "What are Korotkoff sounds?",
+
+    keywords: [
+        "Korotkoff sounds",
+        "blood pressure",
+        "auscultation",
+        "artery",
+        "phases"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Normal adult blood pressure is approximately:",
-answers: [
-{text:"120/80 mmHg", correct:true},
-{text:"80/40 mmHg", correct:false},
-{text:"180/120 mmHg", correct:false},
-{text:"90/30 mmHg", correct:false}
-]
+    question: "State five factors that influence blood pressure.",
+
+    keywords: [
+        "age",
+        "exercise",
+        "stress",
+        "blood volume",
+        "vascular resistance"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The first Korotkoff sound indicates:",
-answers: [
-{text:"Systolic blood pressure", correct:true},
-{text:"Diastolic blood pressure", correct:false},
-{text:"Mean arterial pressure", correct:false},
-{text:"Pulse pressure", correct:false}
-]
+    question: "Define arterial blood pressure regulation.",
+
+    keywords: [
+        "blood pressure",
+        "homeostasis",
+        "regulation",
+        "arterial",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The disappearance of Korotkoff sounds indicates:",
-answers: [
-{text:"Diastolic blood pressure", correct:true},
-{text:"Systolic blood pressure", correct:false},
-{text:"Pulse pressure", correct:false},
-{text:"Cardiac output", correct:false}
-]
+    question: "What is the baroreceptor reflex?",
+
+    keywords: [
+        "baroreceptors",
+        "carotid sinus",
+        "aortic arch",
+        "blood pressure",
+        "reflex"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which blood vessel carries oxygenated blood from the heart?",
-answers: [
-{text:"Aorta", correct:true},
-{text:"Pulmonary artery", correct:false},
-{text:"Superior vena cava", correct:false},
-{text:"Inferior vena cava", correct:false}
-]
+    question: "List five cardiovascular reflexes.",
+
+    keywords: [
+        "baroreceptor",
+        "chemoreceptor",
+        "Bainbridge",
+        "Cushing",
+        "Bezold-Jarisch"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The baroreceptor reflex helps regulate:",
-answers: [
-{text:"Blood pressure", correct:true},
-{text:"Blood sugar", correct:false},
-{text:"Body temperature", correct:false},
-{text:"Respiration only", correct:false}
-]
+    question: "Explain the function of the Bainbridge reflex.",
+
+    keywords: [
+        "Bainbridge reflex",
+        "venous return",
+        "heart rate",
+        "atria",
+        "reflex"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which chamber of the heart pumps oxygenated blood to the body?",
-    answers: [
-        { text: "Right atrium", correct: false },
-        { text: "Right ventricle", correct: false },
-        { text: "Left atrium", correct: false },
-        { text: "Left ventricle", correct: true }
-    ]
+    question: "Explain the function of the chemoreceptor reflex in cardiovascular regulation.",
+
+    keywords: [
+        "chemoreceptors",
+        "oxygen",
+        "carbon dioxide",
+        "blood pressure",
+        "medulla"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The pulmonary artery carries:",
-    answers: [
-        { text: "Oxygenated blood", correct: false },
-        { text: "Deoxygenated blood", correct: true },
-        { text: "Mixed blood", correct: false },
-        { text: "Lymph", correct: false }
-    ]
+    question: "State the location of the sinoatrial (SA) node.",
+
+    keywords: [
+        "right atrium",
+        "superior vena cava",
+        "SA node",
+        "pacemaker",
+        "location"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which blood vessel returns oxygenated blood to the heart?",
-    answers: [
-        { text: "Pulmonary vein", correct: true },
-        { text: "Pulmonary artery", correct: false },
-        { text: "Aorta", correct: false },
-        { text: "Superior vena cava", correct: false }
-    ]
+    question: "State the location of the atrioventricular (AV) node.",
+
+    keywords: [
+        "interatrial septum",
+        "right atrium",
+        "AV node",
+        "location",
+        "triangle of Koch"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Normal resting heart rate in adults is:",
-    answers: [
-        { text: "20–40 beats/min", correct: false },
-        { text: "40–60 beats/min", correct: false },
-        { text: "60–100 beats/min", correct: true },
-        { text: "120–150 beats/min", correct: false }
-    ]
+    question: "Differentiate between the SA node and AV node.",
+
+    keywords: [
+        "pacemaker",
+        "impulse delay",
+        "location",
+        "heart",
+        "function"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which valve prevents backflow from the aorta into the left ventricle?",
-    answers: [
-        { text: "Mitral valve", correct: false },
-        { text: "Pulmonary valve", correct: false },
-        { text: "Aortic valve", correct: true },
-        { text: "Tricuspid valve", correct: false }
-    ]
+    question: "Define stroke volume.",
+
+    keywords: [
+        "stroke volume",
+        "ventricle",
+        "blood",
+        "ejection",
+        "definition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which valve separates the right atrium from the right ventricle?",
-    answers: [
-        { text: "Mitral valve", correct: false },
-        { text: "Aortic valve", correct: false },
-        { text: "Pulmonary valve", correct: false },
-        { text: "Tricuspid valve", correct: true }
-    ]
+    question: "State the normal resting heart rate in adults.",
+
+    keywords: [
+        "60-100 bpm",
+        "heart rate",
+        "adult",
+        "normal",
+        "resting"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Stroke volume is the amount of blood pumped by:",
-    answers: [
-        { text: "Both ventricles per minute", correct: false },
-        { text: "One ventricle in one beat", correct: true },
-        { text: "One atrium in one beat", correct: false },
-        { text: "The whole heart in one minute", correct: false }
-    ]
+    question: "State the normal value of cardiac output in a healthy adult.",
+
+    keywords: [
+        "5 litres",
+        "cardiac output",
+        "adult",
+        "normal",
+        "minute"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Cardiac output equals:",
-    answers: [
-        { text: "Heart rate × Stroke volume", correct: true },
-        { text: "Blood pressure × Pulse rate", correct: false },
-        { text: "Heart rate ÷ Stroke volume", correct: false },
-        { text: "Stroke volume ÷ Heart rate", correct: false }
-    ]
+    question: "List the waves found on a normal ECG tracing.",
+
+    keywords: [
+        "P wave",
+        "QRS complex",
+        "T wave",
+        "ECG",
+        "waves"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which instrument records an ECG?",
-    answers: [
-        { text: "Microscope", correct: false },
-        { text: "Electrocardiograph", correct: true },
-        { text: "Stethoscope", correct: false },
-        { text: "Thermometer", correct: false }
-    ]
+    question: "What does the P wave represent on an ECG?",
+
+    keywords: [
+        "atrial depolarization",
+        "P wave",
+        "atria",
+        "ECG",
+        "electrical activity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The first heart sound (S1) is produced by closure of:",
-    answers: [
-        { text: "Aortic and pulmonary valves", correct: false },
-        { text: "Mitral and tricuspid valves", correct: true },
-        { text: "Pulmonary veins", correct: false },
-        { text: "Coronary arteries", correct: false }
-    ]
+    question: "What does the QRS complex represent on an ECG?",
+
+    keywords: [
+        "ventricular depolarization",
+        "QRS complex",
+        "ventricles",
+        "ECG",
+        "electrical activity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The second heart sound (S2) is produced by closure of:",
-    answers: [
-        { text: "Mitral and tricuspid valves", correct: false },
-        { text: "Aortic and pulmonary valves", correct: true },
-        { text: "Atria", correct: false },
-        { text: "Vena cava", correct: false }
-    ]
+    question: "What does the T wave represent on an ECG?",
+
+    keywords: [
+        "ventricular repolarization",
+        "T wave",
+        "ECG",
+        "ventricles",
+        "recovery"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Blood pressure is usually measured in:",
-    answers: [
-        { text: "mmHg", correct: true },
-        { text: "cm", correct: false },
-        { text: "kg", correct: false },
-        { text: "litres", correct: false }
-    ]
+    question: "List five common abnormalities that can be detected using ECG.",
+
+    keywords: [
+        "arrhythmia",
+        "heart block",
+        "myocardial infarction",
+        "ischemia",
+        "hypertrophy"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The top number in a blood pressure reading is:",
-    answers: [
-        { text: "Diastolic pressure", correct: false },
-        { text: "Pulse pressure", correct: false },
-        { text: "Systolic pressure", correct: true },
-        { text: "Mean arterial pressure", correct: false }
-    ]
+    question: "Define hypertension.",
+
+    keywords: [
+        "high blood pressure",
+        "140/90",
+        "arterial pressure",
+        "definition",
+        "hypertension"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of these can increase heart rate?",
-    answers: [
-        { text: "Sleep", correct: false },
-        { text: "Exercise", correct: true },
-        { text: "Rest", correct: false },
-        { text: "Meditation", correct: false }
-    ]
+    question: "Define hypotension.",
+
+    keywords: [
+        "low blood pressure",
+        "hypotension",
+        "arterial pressure",
+        "definition",
+        "circulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nervous system increases heart rate?",
-    answers: [
-        { text: "Parasympathetic nervous system", correct: false },
-        { text: "Sympathetic nervous system", correct: true },
-        { text: "Central nervous system", correct: false },
-        { text: "Somatic nervous system", correct: false }
-    ]
+    question: "List the instruments required for measuring blood pressure.",
+
+    keywords: [
+        "sphygmomanometer",
+        "stethoscope",
+        "cuff",
+        "blood pressure",
+        "equipment"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nervous system slows the heart rate?",
-    answers: [
-        { text: "Sympathetic nervous system", correct: false },
-        { text: "Parasympathetic nervous system", correct: true },
-        { text: "Sensory nervous system", correct: false },
-        { text: "Motor nervous system", correct: false }
-    ]
+    question: "State the purpose of inflating the cuff above systolic pressure during blood pressure measurement.",
+
+    keywords: [
+        "occlude artery",
+        "brachial artery",
+        "blood flow",
+        "cuff",
+        "measurement"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which electrolyte is most important for normal heart contraction?",
-    answers: [
-        { text: "Calcium", correct: true },
-        { text: "Iron", correct: false },
-        { text: "Iodine", correct: false },
-        { text: "Zinc", correct: false }
-    ]
+    question: "Explain why Korotkoff sounds disappear during blood pressure measurement.",
+
+    keywords: [
+        "laminar flow",
+        "artery",
+        "diastolic pressure",
+        "Korotkoff sounds",
+        "blood flow"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The heart receives its blood supply through the:",
-    answers: [
-        { text: "Pulmonary veins", correct: false },
-        { text: "Coronary arteries", correct: true },
-        { text: "Aorta", correct: false },
-        { text: "Superior vena cava", correct: false }
-    ]
+    question: "Define peripheral resistance.",
+
+    keywords: [
+        "vascular resistance",
+        "arterioles",
+        "blood flow",
+        "definition",
+        "pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A person with high blood pressure is said to have:",
-    answers: [
-        { text: "Hypotension", correct: false },
-        { text: "Hypertension", correct: true },
-        { text: "Arrhythmia", correct: false },
-        { text: "Anemia", correct: false }
-    ]
+    question: "State five factors that influence peripheral resistance.",
+
+    keywords: [
+        "vessel diameter",
+        "blood viscosity",
+        "vessel length",
+        "vasoconstriction",
+        "arterioles"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which blood vessel carries blood from the heart to the lungs?",
-    answers: [
-        { text: "Pulmonary artery", correct: true },
-        { text: "Pulmonary vein", correct: false },
-        { text: "Aorta", correct: false },
-        { text: "Inferior vena cava", correct: false }
-    ]
+    question: "Explain the role of blood vessels in blood pressure regulation.",
+
+    keywords: [
+        "vasoconstriction",
+        "vasodilation",
+        "arterioles",
+        "blood pressure",
+        "resistance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which chamber receives oxygenated blood from the lungs?",
-    answers: [
-        { text: "Right atrium", correct: false },
-        { text: "Left atrium", correct: true },
-        { text: "Right ventricle", correct: false },
-        { text: "Left ventricle", correct: false }
-    ]
+    question: "State the role of the medulla oblongata in cardiovascular regulation.",
+
+    keywords: [
+        "medulla",
+        "cardiovascular center",
+        "heart rate",
+        "blood pressure",
+        "autonomic"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The contraction phase of the heart is called:",
-    answers: [
-        { text: "Diastole", correct: false },
-        { text: "Systole", correct: true },
-        { text: "Relaxation", correct: false },
-        { text: "Depolarization", correct: false }
-    ]
+    question: "Differentiate between sympathetic and parasympathetic effects on the heart.",
+
+    keywords: [
+        "sympathetic",
+        "parasympathetic",
+        "heart rate",
+        "contractility",
+        "autonomic"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The relaxation phase of the heart is called:",
-    answers: [
-        { text: "Systole", correct: false },
-        { text: "Diastole", correct: true },
-        { text: "Conduction", correct: false },
-        { text: "Depolarization", correct: false }
-    ]
+    question: "List the major determinants of arterial blood pressure.",
+
+    keywords: [
+        "cardiac output",
+        "peripheral resistance",
+        "blood volume",
+        "arterial pressure",
+        "determinants"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A normal ECG helps diagnose:",
-    answers: [
-        { text: "Kidney disease", correct: false },
-        { text: "Heart conditions", correct: true },
-        { text: "Liver disease", correct: false },
-        { text: "Lung infection only", correct: false }
-    ]
+    question: "State the importance of maintaining normal blood pressure.",
+
+    keywords: [
+        "tissue perfusion",
+        "oxygen delivery",
+        "organ function",
+        "homeostasis",
+        "circulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following is a clinical use of ECG?",
-    answers: [
-        { text: "Detecting arrhythmias", correct: true },
-        { text: "Measuring blood sugar", correct: false },
-        { text: "Checking kidney function", correct: false },
-        { text: "Testing eyesight", correct: false }
-    ]
+    question: "Summarize the sequence of electrical conduction through the heart.",
+
+    keywords: [
+        "SA node",
+        "AV node",
+        "bundle of His",
+        "Purkinje fibres",
+        "ventricles"
+    ],
+
+    marks: 10
+}
+];
+
+const HARD_THEORY_QUESTIONS = [
+    {
+    question: "Discuss the six electrophysiological properties of cardiac muscle and explain the physiological importance of each.",
+
+    keywords: [
+        "automaticity",
+        "excitability",
+        "conductivity",
+        "contractility",
+        "rhythmicity"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Differentiate between automaticity and rhythmicity of cardiac muscle with suitable examples.",
+
+    keywords: [
+        "automaticity",
+        "rhythmicity",
+        "pacemaker",
+        "heart",
+        "differences"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "With the aid of a well-labelled diagram, describe the cardiac conducting system.",
+
+    keywords: [
+        "SA node",
+        "AV node",
+        "bundle of His",
+        "Purkinje fibres",
+        "diagram"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how electrical impulses are generated and conducted through the heart during one complete cardiac cycle.",
+
+    keywords: [
+        "SA node",
+        "AV node",
+        "depolarization",
+        "ventricles",
+        "conduction"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the physiological significance of the delay at the atrioventricular node.",
+
+    keywords: [
+        "AV node",
+        "delay",
+        "ventricular filling",
+        "atria",
+        "coordination"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the mechanism responsible for the pacemaker activity of the sinoatrial node.",
+
+    keywords: [
+        "SA node",
+        "pacemaker potential",
+        "automaticity",
+        "depolarization",
+        "ions"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the factors responsible for variations in cardiac output.",
+
+    keywords: [
+        "heart rate",
+        "stroke volume",
+        "preload",
+        "afterload",
+        "contractility"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how preload, afterload and myocardial contractility influence cardiac output.",
+
+    keywords: [
+        "preload",
+        "afterload",
+        "contractility",
+        "stroke volume",
+        "cardiac output"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the Frank-Starling mechanism and its importance in regulating cardiac output.",
+
+    keywords: [
+        "Frank-Starling",
+        "venous return",
+        "stroke volume",
+        "cardiac output",
+        "muscle fibres"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the physiological factors that increase cardiac output during exercise.",
+
+    keywords: [
+        "exercise",
+        "heart rate",
+        "stroke volume",
+        "sympathetic",
+        "venous return"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the principles underlying electrocardiography and explain how an ECG is recorded.",
+
+    keywords: [
+        "ECG",
+        "electrodes",
+        "electrical activity",
+        "recording",
+        "principle"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the clinical significance of the P wave, QRS complex and T wave on an electrocardiogram.",
+
+    keywords: [
+        "P wave",
+        "QRS complex",
+        "T wave",
+        "ECG",
+        "clinical significance"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss at least five clinical indications for performing an electrocardiogram.",
+
+    keywords: [
+        "arrhythmia",
+        "ischemia",
+        "myocardial infarction",
+        "heart block",
+        "diagnosis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how ECG findings assist in diagnosing cardiovascular diseases.",
+
+    keywords: [
+        "ECG",
+        "diagnosis",
+        "arrhythmia",
+        "ischemia",
+        "infarction"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the mechanisms involved in the autoregulation of arterial blood pressure.",
+
+    keywords: [
+        "baroreceptors",
+        "vasomotor center",
+        "autonomic nervous system",
+        "blood pressure",
+        "regulation"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the role of the baroreceptor reflex in short-term regulation of arterial blood pressure.",
+
+    keywords: [
+        "baroreceptors",
+        "carotid sinus",
+        "aortic arch",
+        "blood pressure",
+        "reflex"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the importance of the chemoreceptor reflex in cardiovascular homeostasis.",
+
+    keywords: [
+        "chemoreceptors",
+        "oxygen",
+        "carbon dioxide",
+        "blood pressure",
+        "respiration"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Compare the mechanisms of the baroreceptor reflex and the Bainbridge reflex.",
+
+    keywords: [
+        "baroreceptor",
+        "Bainbridge",
+        "heart rate",
+        "venous return",
+        "comparison"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how the autonomic nervous system regulates arterial blood pressure.",
+
+    keywords: [
+        "sympathetic",
+        "parasympathetic",
+        "heart rate",
+        "vascular resistance",
+        "blood pressure"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the physiological basis of the auscultatory method of measuring blood pressure.",
+
+    keywords: [
+        "Korotkoff sounds",
+        "sphygmomanometer",
+        "artery",
+        "auscultation",
+        "blood pressure"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the origin and significance of Korotkoff sounds during blood pressure measurement.",
+
+    keywords: [
+        "Korotkoff sounds",
+        "blood flow",
+        "artery",
+        "systolic",
+        "diastolic"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how blood vessel diameter influences arterial blood pressure.",
+
+    keywords: [
+        "vasoconstriction",
+        "vasodilation",
+        "peripheral resistance",
+        "arterioles",
+        "blood pressure"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the relationship between cardiac output and peripheral resistance in maintaining arterial blood pressure.",
+
+    keywords: [
+        "cardiac output",
+        "peripheral resistance",
+        "blood pressure",
+        "circulation",
+        "relationship"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how age, exercise and emotional stress affect blood pressure.",
+
+    keywords: [
+        "age",
+        "exercise",
+        "stress",
+        "blood pressure",
+        "physiology"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the integrated role of the heart, blood vessels and nervous system in maintaining normal arterial blood pressure.",
+
+    keywords: [
+        "heart",
+        "blood vessels",
+        "autonomic nervous system",
+        "blood pressure",
+        "homeostasis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Differentiate between intrinsic and extrinsic regulation of heart rate.",
+
+    keywords: [
+        "intrinsic regulation",
+        "extrinsic regulation",
+        "heart rate",
+        "autonomic nervous system",
+        "comparison"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the effects of sympathetic stimulation on the cardiovascular system.",
+
+    keywords: [
+        "sympathetic",
+        "heart rate",
+        "contractility",
+        "vasoconstriction",
+        "cardiac output"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the effects of parasympathetic stimulation on cardiac function.",
+
+    keywords: [
+        "parasympathetic",
+        "vagus nerve",
+        "heart rate",
+        "AV node",
+        "cardiac function"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how venous return influences stroke volume and cardiac output.",
+
+    keywords: [
+        "venous return",
+        "stroke volume",
+        "Frank-Starling",
+        "cardiac output",
+        "preload"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the physiological factors responsible for maintaining normal cardiac rhythm.",
+
+    keywords: [
+        "SA node",
+        "conduction system",
+        "automaticity",
+        "electrolytes",
+        "autonomic nervous system"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the sequence of electrical and mechanical events during one complete cardiac cycle.",
+
+    keywords: [
+        "cardiac cycle",
+        "electrical events",
+        "mechanical events",
+        "atria",
+        "ventricles"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the physiological basis of ventricular depolarization and repolarization.",
+
+    keywords: [
+        "depolarization",
+        "repolarization",
+        "QRS complex",
+        "T wave",
+        "ventricles"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the relationship between ECG findings and the cardiac conduction pathway.",
+
+    keywords: [
+        "ECG",
+        "SA node",
+        "AV node",
+        "Purkinje fibres",
+        "conduction"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain why abnormalities of the conducting system may result in arrhythmias.",
+
+    keywords: [
+        "arrhythmia",
+        "conducting system",
+        "heart block",
+        "abnormal impulse",
+        "ECG"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the physiological basis of sinus rhythm.",
+
+    keywords: [
+        "sinus rhythm",
+        "SA node",
+        "normal ECG",
+        "heart rate",
+        "automaticity"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe how exercise alters heart rate, stroke volume and cardiac output.",
+
+    keywords: [
+        "exercise",
+        "heart rate",
+        "stroke volume",
+        "cardiac output",
+        "sympathetic"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how cardiac output adapts during strenuous physical activity.",
+
+    keywords: [
+        "exercise",
+        "venous return",
+        "heart rate",
+        "stroke volume",
+        "adaptation"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the mechanisms responsible for maintaining adequate tissue perfusion during exercise.",
+
+    keywords: [
+        "tissue perfusion",
+        "vasodilation",
+        "cardiac output",
+        "blood flow",
+        "exercise"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the importance of arterial elasticity in the regulation of blood pressure.",
+
+    keywords: [
+        "arterial elasticity",
+        "blood pressure",
+        "Windkessel effect",
+        "arteries",
+        "compliance"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the physiological causes of hypertension.",
+
+    keywords: [
+        "hypertension",
+        "peripheral resistance",
+        "cardiac output",
+        "blood volume",
+        "risk factors"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the physiological consequences of prolonged hypertension on the cardiovascular system.",
+
+    keywords: [
+        "hypertension",
+        "heart",
+        "blood vessels",
+        "left ventricular hypertrophy",
+        "complications"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the mechanisms responsible for the maintenance of mean arterial pressure.",
+
+    keywords: [
+        "mean arterial pressure",
+        "cardiac output",
+        "peripheral resistance",
+        "blood pressure",
+        "homeostasis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Compare short-term and long-term regulation of arterial blood pressure.",
+
+    keywords: [
+        "short-term",
+        "long-term",
+        "baroreceptors",
+        "kidneys",
+        "blood pressure"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the physiological importance of cardiovascular reflexes in maintaining circulatory homeostasis.",
+
+    keywords: [
+        "baroreceptor reflex",
+        "chemoreceptor reflex",
+        "Bainbridge reflex",
+        "homeostasis",
+        "circulation"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the sequence of events that occur following a sudden fall in arterial blood pressure.",
+
+    keywords: [
+        "hypotension",
+        "baroreceptors",
+        "sympathetic activation",
+        "vasoconstriction",
+        "heart rate"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the physiological basis for measuring systolic and diastolic blood pressure using Korotkoff sounds.",
+
+    keywords: [
+        "Korotkoff sounds",
+        "systolic pressure",
+        "diastolic pressure",
+        "auscultation",
+        "blood pressure"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the importance of proper cuff placement and cuff size during blood pressure measurement.",
+
+    keywords: [
+        "cuff size",
+        "cuff placement",
+        "blood pressure",
+        "accuracy",
+        "measurement"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the physiological mechanisms responsible for maintaining adequate coronary blood flow.",
+
+    keywords: [
+        "coronary circulation",
+        "oxygen demand",
+        "vasodilation",
+        "myocardium",
+        "blood flow"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the relationship between myocardial oxygen demand and cardiac work.",
+
+    keywords: [
+        "myocardial oxygen",
+        "cardiac work",
+        "heart rate",
+        "contractility",
+        "oxygen consumption"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the integrated role of cardiac electrophysiology, cardiac output, ECG and blood pressure regulation in maintaining cardiovascular homeostasis.",
+
+    keywords: [
+        "electrophysiology",
+        "cardiac output",
+        "ECG",
+        "blood pressure",
+        "homeostasis"
+    ],
+
+    marks: 10
 }
 
 ];
 
-const HARD_QUESTIONS = [
+const EXTREME_THEORY_QUESTIONS = [
+              {
+    question: "Critically evaluate the physiological mechanisms by which preload, afterload, myocardial contractility, heart rate and venous return interact to determine cardiac output.",
 
-{
-question: "Which property of cardiac muscle enables it to generate its own impulse without external stimulation?",
-answers:[
-{text:"Conductivity",correct:false},
-{text:"Automaticity",correct:true},
-{text:"Contractility",correct:false},
-{text:"Rhythmicity",correct:false}
-]
+    keywords: [
+        "preload",
+        "afterload",
+        "contractility",
+        "heart rate",
+        "venous return"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The pacemaker of the heart is the:",
-answers:[
-{text:"AV node",correct:false},
-{text:"SA node",correct:true},
-{text:"Bundle of His",correct:false},
-{text:"Purkinje fibers",correct:false}
-]
+    question: "Explain the Frank-Starling mechanism and discuss its role in maintaining cardiac output during physiological and pathological conditions.",
+
+    keywords: [
+        "Frank-Starling law",
+        "stroke volume",
+        "venous return",
+        "cardiac output",
+        "compensation"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The atrioventricular (AV) node is located in the:",
-answers:[
-{text:"Left atrium",correct:false},
-{text:"Interatrial septum",correct:true},
-{text:"Right ventricle",correct:false},
-{text:"Interventricular septum",correct:false}
-]
+    question: "Evaluate the mechanisms responsible for alterations in cardiac output during strenuous exercise.",
+
+    keywords: [
+        "exercise",
+        "sympathetic stimulation",
+        "stroke volume",
+        "heart rate",
+        "cardiac output"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which structure conducts impulses from the AV node to the ventricles?",
-answers:[
-{text:"Chordae tendineae",correct:false},
-{text:"Bundle of His",correct:true},
-{text:"Papillary muscles",correct:false},
-{text:"Moderator band",correct:false}
-]
+    question: "Discuss how autonomic regulation modifies cardiac output during rest, exercise and emotional stress.",
+
+    keywords: [
+        "sympathetic",
+        "parasympathetic",
+        "heart rate",
+        "contractility",
+        "cardiac output"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Purkinje fibers are responsible for:",
-answers:[
-{text:"Initiating heart beat",correct:false},
-{text:"Rapid conduction through ventricles",correct:true},
-{text:"Closing heart valves",correct:false},
-{text:"Producing ECG waves",correct:false}
-]
+    question: "Describe the physiological consequences of an increase and decrease in cardiac output on systemic circulation.",
+
+    keywords: [
+        "cardiac output",
+        "blood flow",
+        "tissue perfusion",
+        "blood pressure",
+        "circulation"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which electrophysiological property refers to the ability of cardiac muscle to respond to a stimulus?",
-answers:[
-{text:"Excitability",correct:true},
-{text:"Automaticity",correct:false},
-{text:"Rhythmicity",correct:false},
-{text:"Conductivity",correct:false}
-]
+    question: "Differentiate between physiological and pathological factors responsible for variations in cardiac output.",
+
+    keywords: [
+        "physiological",
+        "pathological",
+        "cardiac output",
+        "exercise",
+        "heart disease"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which property allows cardiac muscle to transmit impulses from one cell to another?",
-answers:[
-{text:"Contractility",correct:false},
-{text:"Conductivity",correct:true},
-{text:"Automaticity",correct:false},
-{text:"Rhythmicity",correct:false}
-]
+    question: "Explain the integrated relationship between cardiac output, stroke volume and heart rate with suitable illustrations.",
+
+    keywords: [
+        "stroke volume",
+        "heart rate",
+        "cardiac output",
+        "formula",
+        "relationship"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The ability of cardiac muscle to shorten forcefully is called:",
-answers:[
-{text:"Excitability",correct:false},
-{text:"Contractility",correct:true},
-{text:"Conductivity",correct:false},
-{text:"Automaticity",correct:false}
-]
+    question: "Evaluate the mechanisms responsible for maintaining arterial blood pressure during sudden postural changes.",
+
+    keywords: [
+        "baroreceptor reflex",
+        "blood pressure",
+        "postural hypotension",
+        "sympathetic",
+        "compensation"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Cardiac output is calculated as:",
-answers:[
-{text:"Heart Rate × Stroke Volume",correct:true},
-{text:"Blood Pressure × Pulse Rate",correct:false},
-{text:"Stroke Volume ÷ Heart Rate",correct:false},
-{text:"Cardiac Output ÷ Blood Pressure",correct:false}
-]
+    question: "Discuss the short-term and long-term mechanisms involved in blood pressure regulation.",
+
+    keywords: [
+        "baroreceptors",
+        "chemoreceptors",
+        "kidneys",
+        "RAAS",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Normal resting cardiac output in adults is approximately:",
-answers:[
-{text:"2 L/min",correct:false},
-{text:"5 L/min",correct:true},
-{text:"8 L/min",correct:false},
-{text:"10 L/min",correct:false}
-]
+    question: "Explain how alterations in peripheral resistance influence arterial blood pressure.",
+
+    keywords: [
+        "peripheral resistance",
+        "vasoconstriction",
+        "vasodilation",
+        "arterioles",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Stroke volume is the amount of blood pumped by:",
-answers:[
-{text:"Both ventricles in one minute",correct:false},
-{text:"One ventricle in one beat",correct:true},
-{text:"One atrium per minute",correct:false},
-{text:"The heart in one second",correct:false}
-]
+    question: "Compare neural and hormonal mechanisms involved in blood pressure regulation.",
+
+    keywords: [
+        "autonomic nervous system",
+        "adrenaline",
+        "angiotensin II",
+        "vasopressin",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which factor directly increases cardiac output?",
-answers:[
-{text:"Reduced heart rate",correct:false},
-{text:"Increased stroke volume",correct:true},
-{text:"Decreased venous return",correct:false},
-{text:"Reduced contractility",correct:false}
-]
+    question: "Evaluate the physiological importance of maintaining normal arterial blood pressure.",
+
+    keywords: [
+        "homeostasis",
+        "organ perfusion",
+        "blood flow",
+        "oxygen delivery",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-question: "An ECG primarily records:",
-answers:[
-{text:"Mechanical activity of the heart",correct:false},
-{text:"Electrical activity of the heart",correct:true},
-{text:"Blood pressure",correct:false},
-{text:"Heart sounds",correct:false}
-]
+    question: "Construct a comprehensive table comparing arteries and veins based on structure, function and physiology.",
+
+    keywords: [
+        "arteries",
+        "veins",
+        "wall thickness",
+        "valves",
+        "comparison"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The P wave represents:",
-answers:[
-{text:"Ventricular depolarization",correct:false},
-{text:"Atrial depolarization",correct:true},
-{text:"Atrial repolarization",correct:false},
-{text:"Ventricular repolarization",correct:false}
-]
+    question: "Explain how structural differences between arteries and veins influence their physiological functions.",
+
+    keywords: [
+        "elastic fibres",
+        "muscle",
+        "valves",
+        "pressure",
+        "function"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The QRS complex represents:",
-answers:[
-{text:"Atrial depolarization",correct:false},
-{text:"Ventricular depolarization",correct:true},
-{text:"Ventricular repolarization",correct:false},
-{text:"Atrial contraction",correct:false}
-]
+    question: "Discuss the adaptive structural features of arteries that enable them to withstand high blood pressure.",
+
+    keywords: [
+        "tunica media",
+        "elastic tissue",
+        "arteries",
+        "pressure",
+        "adaptation"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The T wave represents:",
-answers:[
-{text:"Atrial depolarization",correct:false},
-{text:"Ventricular repolarization",correct:true},
-{text:"Atrial repolarization",correct:false},
-{text:"Ventricular contraction",correct:false}
-]
+    question: "Evaluate the clinical importance of venous valves in maintaining efficient circulation.",
+
+    keywords: [
+        "venous valves",
+        "venous return",
+        "varicose veins",
+        "circulation",
+        "blood flow"
+    ],
+
+    marks: 10
 },
 
 {
-question: "ECG is commonly used to diagnose:",
-answers:[
-{text:"Kidney stones",correct:false},
-{text:"Cardiac arrhythmias",correct:true},
-{text:"Diabetes mellitus",correct:false},
-{text:"Liver disease",correct:false}
-]
+    question: "Discuss the electrophysiological basis of impulse generation in cardiac muscle.",
+
+    keywords: [
+        "automaticity",
+        "pacemaker potential",
+        "depolarization",
+        "SA node",
+        "ions"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which reflex helps regulate arterial blood pressure rapidly?",
-answers:[
-{text:"Stretch reflex",correct:false},
-{text:"Baroreceptor reflex",correct:true},
-{text:"Withdrawal reflex",correct:false},
-{text:"Pupillary reflex",correct:false}
-]
+    question: "Explain the ionic basis of depolarization and repolarization in cardiac muscle cells.",
+
+    keywords: [
+        "sodium",
+        "calcium",
+        "potassium",
+        "action potential",
+        "repolarization"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Baroreceptors are mainly located in the:",
-answers:[
-{text:"Lungs",correct:false},
-{text:"Carotid sinus and aortic arch",correct:true},
-{text:"Coronary arteries",correct:false},
-{text:"Pulmonary veins",correct:false}
-]
+    question: "Discuss the physiological significance of each electrophysiological property of cardiac muscle.",
+
+    keywords: [
+        "automaticity",
+        "conductivity",
+        "contractility",
+        "rhythmicity",
+        "importance"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Chemoreceptors regulate blood pressure mainly by detecting changes in:",
-answers:[
-{text:"Blood glucose",correct:false},
-{text:"Blood gases and pH",correct:true},
-{text:"Calcium level",correct:false},
-{text:"Body temperature",correct:false}
-]
+    question: "Compare the electrophysiological properties of cardiac muscle with those of skeletal muscle.",
+
+    keywords: [
+        "cardiac muscle",
+        "skeletal muscle",
+        "automaticity",
+        "action potential",
+        "comparison"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which instrument is used to measure arterial blood pressure?",
-answers:[
-{text:"Electrocardiograph",correct:false},
-{text:"Sphygmomanometer",correct:true},
-{text:"Spirometer",correct:false},
-{text:"Otoscope",correct:false}
-]
+    question: "With the aid of a labelled diagram, explain the cardiac conducting tissues and discuss their physiological significance.",
+
+    keywords: [
+        "SA node",
+        "AV node",
+        "Bundle of His",
+        "Purkinje fibres",
+        "diagram"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Korotkoff sounds are heard during:",
-answers:[
-{text:"ECG recording",correct:false},
-{text:"Blood pressure measurement",correct:true},
-{text:"Cardiac catheterization",correct:false},
-{text:"Pulse oximetry",correct:false}
-]
+    question: "Evaluate the physiological consequences of damage to different components of the cardiac conducting system.",
+
+    keywords: [
+        "heart block",
+        "arrhythmia",
+        "SA node",
+        "AV node",
+        "Purkinje fibres"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The first Korotkoff sound indicates:",
-answers:[
-{text:"Diastolic pressure",correct:false},
-{text:"Systolic pressure",correct:true},
-{text:"Mean arterial pressure",correct:false},
-{text:"Pulse pressure",correct:false}
-]
+    question: "Discuss the relationship between the cardiac conducting tissues and electrocardiographic findings.",
+
+    keywords: [
+        "ECG",
+        "P wave",
+        "QRS complex",
+        "T wave",
+        "conduction"
+    ],
+
+    marks: 10
 },
 
 {
-question: "The disappearance of Korotkoff sounds indicates:",
-answers:[
-{text:"Systolic pressure",correct:false},
-{text:"Diastolic pressure",correct:true},
-{text:"Pulse rate",correct:false},
-{text:"Cardiac output",correct:false}
-]
+    question: "Explain the hierarchical arrangement of blood vessels from the heart to the tissues and back to the heart.",
+
+    keywords: [
+        "arteries",
+        "arterioles",
+        "capillaries",
+        "venules",
+        "veins"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which of the following can increase blood pressure?",
-answers:[
-{text:"Blood loss",correct:false},
-{text:"Stress and anxiety",correct:true},
-{text:"Severe dehydration",correct:false},
-{text:"Reduced cardiac output",correct:false}
-]
+    question: "Evaluate the physiological significance of each class of blood vessel in maintaining cardiovascular homeostasis.",
+
+    keywords: [
+        "arteries",
+        "arterioles",
+        "capillaries",
+        "veins",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-question: "Which blood vessel has the highest blood pressure?",
-answers:[
-{text:"Pulmonary artery",correct:false},
-{text:"Aorta",correct:true},
-{text:"Superior vena cava",correct:false},
-{text:"Pulmonary vein",correct:false}
-]
+    question: "Critically evaluate the role of the arterial baroreceptor reflex in the long-term regulation of arterial blood pressure, highlighting its limitations.",
+
+    keywords: [
+        "baroreceptors",
+        "carotid sinus",
+        "aortic arch",
+        "short-term regulation",
+        "limitations"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The Frank-Starling law of the heart states that:",
-answers:[
-{text:"Heart rate determines blood pressure",correct:false},
-{text:"The greater the ventricular filling, the stronger the contraction",correct:true},
-{text:"Blood pressure is independent of cardiac output",correct:false},
-{text:"Heart rate decreases with exercise",correct:false}
-]
+    question: "Discuss the integrated mechanisms responsible for maintaining cardiac output during strenuous exercise and explain the physiological significance of each mechanism.",
+
+    keywords: [
+        "heart rate",
+        "stroke volume",
+        "venous return",
+        "sympathetic stimulation",
+        "Frank-Starling mechanism"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which of the following decreases cardiac output?",
-answers:[
-{text:"Increased stroke volume",correct:false},
-{text:"Bradycardia",correct:true},
-{text:"Exercise",correct:false},
-{text:"Sympathetic stimulation",correct:false}
-]
+    question: "With appropriate illustrations, describe the electrophysiological basis of the cardiac action potential in both pacemaker and ventricular muscle cells.",
+
+    keywords: [
+        "pacemaker cells",
+        "ventricular muscle",
+        "phases",
+        "ion channels",
+        "automaticity"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The sympathetic nervous system increases heart rate mainly through stimulation of:",
-answers:[
-{text:"Beta-1 receptors",correct:true},
-{text:"Alpha-2 receptors",correct:false},
-{text:"Beta-2 receptors",correct:false},
-{text:"Muscarinic receptors",correct:false}
-]
+    question: "Assess the physiological basis of blood pressure regulation by integrating neural, hormonal and renal mechanisms.",
+
+    keywords: [
+        "baroreceptor reflex",
+        "RAAS",
+        "ADH",
+        "ANP",
+        "kidneys"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Parasympathetic stimulation of the heart is mainly carried by the:",
-answers:[
-{text:"Phrenic nerve",correct:false},
-{text:"Vagus nerve",correct:true},
-{text:"Median nerve",correct:false},
-{text:"Radial nerve",correct:false}
-]
+    question: "Evaluate the relationship between preload, afterload, myocardial contractility and cardiac output using physiological principles.",
+
+    keywords: [
+        "preload",
+        "afterload",
+        "contractility",
+        "stroke volume",
+        "cardiac output"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The AV node normally delays impulse conduction to:",
-answers:[
-{text:"Increase ventricular filling time",correct:true},
-{text:"Increase heart rate",correct:false},
-{text:"Prevent atrial contraction",correct:false},
-{text:"Close the semilunar valves",correct:false}
-]
+    question: "Explain the physiological basis of coronary blood flow regulation and discuss factors that influence myocardial oxygen supply and demand.",
+
+    keywords: [
+        "coronary circulation",
+        "oxygen demand",
+        "vasodilation",
+        "metabolic regulation",
+        "blood flow"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which electrolyte is most important for cardiac depolarization?",
-answers:[
-{text:"Sodium",correct:true},
-{text:"Calcium",correct:false},
-{text:"Magnesium",correct:false},
-{text:"Chloride",correct:false}
-]
+    question: "Discuss the mechanisms involved in the generation, propagation and clinical interpretation of the electrocardiogram.",
+
+    keywords: [
+        "ECG",
+        "depolarization",
+        "repolarization",
+        "waves",
+        "cardiac conduction"
+    ],
+
+    marks: 20
 },
 
 {
-question: "During ventricular systole, which valves are open?",
-answers:[
-{text:"Mitral and tricuspid valves",correct:false},
-{text:"Aortic and pulmonary valves",correct:true},
-{text:"All four valves",correct:false},
-{text:"No valves",correct:false}
-]
+    question: "Differentiate between physiological and pathological causes of altered cardiac output, explaining their mechanisms.",
+
+    keywords: [
+        "physiological",
+        "pathological",
+        "heart failure",
+        "exercise",
+        "cardiac output"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The normal resting heart rate of an adult is approximately:",
-answers:[
-{text:"20–40 bpm",correct:false},
-{text:"60–100 bpm",correct:true},
-{text:"110–140 bpm",correct:false},
-{text:"140–180 bpm",correct:false}
-]
+    question: "Describe the complete pathway of impulse conduction through the heart and explain the consequences of interruption at different levels.",
+
+    keywords: [
+        "SA node",
+        "AV node",
+        "bundle branches",
+        "Purkinje fibres",
+        "heart block"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Pulse pressure is calculated as:",
-answers:[
-{text:"Systolic pressure + Diastolic pressure",correct:false},
-{text:"Systolic pressure − Diastolic pressure",correct:true},
-{text:"Mean arterial pressure ÷ 2",correct:false},
-{text:"Cardiac output × Heart rate",correct:false}
-]
+    question: "Evaluate the diagnostic importance of ECG in myocardial infarction, arrhythmias and electrolyte disturbances.",
+
+    keywords: [
+        "myocardial infarction",
+        "arrhythmias",
+        "electrolytes",
+        "ECG changes",
+        "diagnosis"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Mean arterial pressure depends primarily on:",
-answers:[
-{text:"Cardiac output and total peripheral resistance",correct:true},
-{text:"Heart sounds",correct:false},
-{text:"Blood glucose",correct:false},
-{text:"Respiratory rate",correct:false}
-]
+    question: "Discuss the physiological adaptations of the cardiovascular system during haemorrhage and explain how homeostasis is restored.",
+
+    keywords: [
+        "haemorrhage",
+        "sympathetic response",
+        "vasoconstriction",
+        "RAAS",
+        "ADH"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The Bainbridge reflex is primarily activated by:",
-answers:[
-{text:"Increased venous return",correct:true},
-{text:"Low blood glucose",correct:false},
-{text:"Low oxygen concentration",correct:false},
-{text:"High blood calcium",correct:false}
-]
+    question: "Compare the electrophysiological properties of skeletal, smooth and cardiac muscles, emphasizing their clinical relevance.",
+
+    keywords: [
+        "skeletal muscle",
+        "smooth muscle",
+        "cardiac muscle",
+        "action potential",
+        "clinical relevance"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which cardiovascular reflex responds mainly to increased arterial pressure?",
-answers:[
-{text:"Bainbridge reflex",correct:false},
-{text:"Baroreceptor reflex",correct:true},
-{text:"Cushing reflex",correct:false},
-{text:"Withdrawal reflex",correct:false}
-]
+    question: "Discuss the physiological basis of hypertension with emphasis on neural, endocrine and renal factors involved in its development.",
+
+    keywords: [
+        "hypertension",
+        "sympathetic nervous system",
+        "RAAS",
+        "kidneys",
+        "vascular resistance"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which factor has the greatest effect on peripheral resistance?",
-answers:[
-{text:"Diameter of arterioles",correct:true},
-{text:"Length of veins",correct:false},
-{text:"Heart sounds",correct:false},
-{text:"Respiratory volume",correct:false}
-]
+    question: "Explain how autonomic nervous system activity influences cardiac performance during rest, exercise and emotional stress.",
+
+    keywords: [
+        "sympathetic",
+        "parasympathetic",
+        "exercise",
+        "stress",
+        "heart rate"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which ECG interval represents conduction from the atria to the ventricles?",
-answers:[
-{text:"QT interval",correct:false},
-{text:"PR interval",correct:true},
-{text:"ST segment",correct:false},
-{text:"RR interval",correct:false}
-]
+    question: "Critically discuss the Frank-Starling law of the heart and evaluate its importance in maintaining circulatory balance.",
+
+    keywords: [
+        "Frank-Starling law",
+        "venous return",
+        "stroke volume",
+        "cardiac output",
+        "physiological significance"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The electrical axis of the heart is determined primarily by:",
-answers:[
-{text:"Ventricular depolarization",correct:true},
-{text:"Atrial contraction",correct:false},
-{text:"Heart sounds",correct:false},
-{text:"Valve movement",correct:false}
-]
+    question: "Explain the mechanisms responsible for maintaining venous return under normal and pathological conditions.",
+
+    keywords: [
+        "venous return",
+        "skeletal muscle pump",
+        "respiratory pump",
+        "venous valves",
+        "blood volume"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which of the following is NOT a clinical indication for ECG?",
-answers:[
-{text:"Diagnosis of arrhythmias",correct:false},
-{text:"Detection of myocardial infarction",correct:false},
-{text:"Monitoring electrolyte imbalance",correct:false},
-{text:"Measurement of blood glucose",correct:true}
-]
+    question: "Discuss the functional relationship between arterial compliance, peripheral resistance and pulse pressure.",
+
+    keywords: [
+        "arterial compliance",
+        "peripheral resistance",
+        "pulse pressure",
+        "elastic arteries",
+        "blood pressure"
+    ],
+
+    marks: 20
 },
 
 {
-question: "A decrease in venous return generally results in:",
-answers:[
-{text:"Increased stroke volume",correct:false},
-{text:"Reduced cardiac output",correct:true},
-{text:"Increased systolic pressure",correct:false},
-{text:"Increased ventricular filling",correct:false}
-]
+    question: "Describe in detail the physiological basis, procedure and sources of error in the auscultatory method of blood pressure measurement.",
+
+    keywords: [
+        "auscultatory method",
+        "Korotkoff sounds",
+        "sphygmomanometer",
+        "procedure",
+        "errors"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which factor increases stroke volume during exercise?",
-answers:[
-{text:"Reduced preload",correct:false},
-{text:"Increased myocardial contractility",correct:true},
-{text:"Reduced venous return",correct:false},
-{text:"Bradycardia",correct:false}
-]
+    question: "Evaluate the physiological mechanisms responsible for maintaining adequate tissue perfusion during circulatory shock.",
+
+    keywords: [
+        "shock",
+        "perfusion",
+        "vasoconstriction",
+        "cardiac output",
+        "compensation"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The conducting tissue responsible for the fastest impulse transmission is:",
-answers:[
-{text:"SA node",correct:false},
-{text:"AV node",correct:false},
-{text:"Purkinje fibers",correct:true},
-{text:"Bundle branches",correct:false}
-]
+    question: "Explain the physiological significance of the coronary and systemic circulations, highlighting their structural and functional differences.",
+
+    keywords: [
+        "coronary circulation",
+        "systemic circulation",
+        "oxygen supply",
+        "pressure",
+        "function"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The second heart sound (S2) occurs due to closure of the:",
-answers:[
-{text:"Mitral and tricuspid valves",correct:false},
-{text:"Aortic and pulmonary valves",correct:true},
-{text:"Mitral valve only",correct:false},
-{text:"Tricuspid valve only",correct:false}
-]
+    question: "Discuss the mechanisms by which cardiac contractility is regulated and explain the factors that alter myocardial performance.",
+
+    keywords: [
+        "contractility",
+        "calcium",
+        "sympathetic stimulation",
+        "inotropic factors",
+        "myocardial performance"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which physiological factor causes an increase in heart rate during exercise?",
-answers:[
-{text:"Parasympathetic stimulation",correct:false},
-{text:"Sympathetic stimulation",correct:true},
-{text:"Reduced adrenaline secretion",correct:false},
-{text:"Reduced venous return",correct:false}
-]
+    question: "Describe the hierarchy of blood vessels from the heart to the tissues and back to the heart, explaining the functional significance of each vessel type.",
+
+    keywords: [
+        "arteries",
+        "arterioles",
+        "capillaries",
+        "venules",
+        "veins"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which chamber has the thickest myocardium?",
-answers:[
-{text:"Right atrium",correct:false},
-{text:"Left atrium",correct:false},
-{text:"Right ventricle",correct:false},
-{text:"Left ventricle",correct:true}
-]
+    question: "Assess the physiological factors responsible for variations in arterial blood pressure under resting and exercising conditions.",
+
+    keywords: [
+        "exercise",
+        "blood pressure",
+        "cardiac output",
+        "vascular resistance",
+        "sympathetic activity"
+    ],
+
+    marks: 20
 },
 
 {
-question: "The carotid sinus is most sensitive to changes in:",
-answers:[
-{text:"Blood glucose",correct:false},
-{text:"Arterial blood pressure",correct:true},
-{text:"Blood temperature",correct:false},
-{text:"Blood calcium",correct:false}
-]
+    question: "Discuss the integrated cardiovascular responses to prolonged endurance exercise and explain their adaptive significance.",
+
+    keywords: [
+        "endurance exercise",
+        "cardiac output",
+        "stroke volume",
+        "vascular adaptation",
+        "oxygen delivery"
+    ],
+
+    marks: 20
 },
 
 {
-question: "Which of the following best maintains arterial blood pressure over the long term?",
-answers:[
-{text:"Kidneys through regulation of blood volume",correct:true},
-{text:"Baroreceptors alone",correct:false},
-{text:"Heart sounds",correct:false},
-{text:"ECG activity",correct:false}
-]
+    question: "Using physiological concepts, explain how abnormalities of cardiac conduction produce different forms of arrhythmias and correlate them with expected ECG findings.",
+
+    keywords: [
+        "arrhythmias",
+        "conduction defects",
+        "ECG",
+        "heart block",
+        "abnormal rhythms"
+    ],
+
+    marks: 20
 }
-];
-
-const EXTREME_QUESTIONS = [
-
-{
-question: "Which electrophysiological property enables the SA node to generate impulses without external stimulation?",
-answers:[
-{text:"Automaticity", correct:true},
-{text:"Conductivity", correct:false},
-{text:"Excitability", correct:false},
-{text:"Contractility", correct:false}
-]
-},
-
-{
-question: "The fastest conducting fibers in the cardiac conduction system are:",
-answers:[
-{text:"Purkinje fibers", correct:true},
-{text:"AV node", correct:false},
-{text:"SA node", correct:false},
-{text:"Bundle branches", correct:false}
-]
-},
-
-{
-question: "Which ion is mainly responsible for phase 0 depolarization in ventricular muscle?",
-answers:[
-{text:"Sodium", correct:true},
-{text:"Calcium", correct:false},
-{text:"Potassium", correct:false},
-{text:"Chloride", correct:false}
-]
-},
-
-{
-question: "The AV node normally delays impulse conduction to:",
-answers:[
-{text:"Allow ventricular filling", correct:true},
-{text:"Increase heart rate", correct:false},
-{text:"Reduce atrial contraction", correct:false},
-{text:"Prevent depolarization", correct:false}
-]
-},
-
-{
-question: "Frank-Starling's law is primarily related to:",
-answers:[
-{text:"Preload", correct:true},
-{text:"Afterload", correct:false},
-{text:"Heart rate", correct:false},
-{text:"Blood viscosity", correct:false}
-]
-},
-
-{
-question: "Which factor directly increases cardiac output during exercise?",
-answers:[
-{text:"Increased sympathetic stimulation", correct:true},
-{text:"Reduced venous return", correct:false},
-{text:"Decreased stroke volume", correct:false},
-{text:"Reduced myocardial contractility", correct:false}
-]
-},
-
-{
-question: "Mean arterial pressure depends mainly on:",
-answers:[
-{text:"Cardiac output and peripheral resistance", correct:true},
-{text:"Blood volume only", correct:false},
-{text:"Heart rate only", correct:false},
-{text:"Respiratory rate", correct:false}
-]
-},
-
-{
-question: "The baroreceptors responsible for short-term blood pressure regulation are mainly located in the:",
-answers:[
-{text:"Carotid sinus and aortic arch", correct:true},
-{text:"Pulmonary veins", correct:false},
-{text:"Inferior vena cava", correct:false},
-{text:"Coronary sinus", correct:false}
-]
-},
-
-{
-question: "Which ECG wave represents atrial depolarization?",
-answers:[
-{text:"P wave", correct:true},
-{text:"QRS complex", correct:false},
-{text:"T wave", correct:false},
-{text:"U wave", correct:false}
-]
-},
-
-{
-question: "The QRS complex represents:",
-answers:[
-{text:"Ventricular depolarization", correct:true},
-{text:"Atrial repolarization", correct:false},
-{text:"Ventricular repolarization", correct:false},
-{text:"Atrial contraction", correct:false}
-]
-},
-
-{
-question: "Which ECG interval reflects AV nodal conduction time?",
-answers:[
-{text:"PR interval", correct:true},
-{text:"QT interval", correct:false},
-{text:"RR interval", correct:false},
-{text:"ST segment", correct:false}
-]
-},
-
-{
-question: "An increase in afterload generally causes:",
-answers:[
-{text:"Reduced stroke volume", correct:true},
-{text:"Increased ejection fraction", correct:false},
-{text:"Reduced ventricular pressure", correct:false},
-{text:"Immediate increase in cardiac output", correct:false}
-]
-},
-
-{
-question: "Which reflex is activated during sudden hypotension?",
-answers:[
-{text:"Baroreceptor reflex", correct:true},
-{text:"Cushing reflex", correct:false},
-{text:"Bainbridge reflex", correct:false},
-{text:"Bezold-Jarisch reflex", correct:false}
-]
-},
-
-{
-question: "Coronary blood flow occurs predominantly during:",
-answers:[
-{text:"Diastole", correct:true},
-{text:"Systole", correct:false},
-{text:"Isovolumetric contraction", correct:false},
-{text:"Atrial systole", correct:false}
-]
-},
-
-{
-question: "The major determinant of systolic blood pressure is:",
-answers:[
-{text:"Stroke volume", correct:true},
-{text:"Venous pressure", correct:false},
-{text:"Capillary pressure", correct:false},
-{text:"Plasma proteins", correct:false}
-]
-},
-
-{
-question: "Which autonomic receptor increases heart rate when stimulated?",
-answers:[
-{text:"Beta-1 receptor", correct:true},
-{text:"Alpha-1 receptor", correct:false},
-{text:"Beta-2 receptor", correct:false},
-{text:"Muscarinic receptor", correct:false}
-]
-},
-
-{
-question: "The main pacemaker of the heart is the:",
-answers:[
-{text:"SA node", correct:true},
-{text:"AV node", correct:false},
-{text:"Bundle of His", correct:false},
-{text:"Purkinje fibers", correct:false}
-]
-},
-
-{
-question: "An ECG is least useful in diagnosing:",
-answers:[
-{text:"Diabetes mellitus", correct:true},
-{text:"Arrhythmias", correct:false},
-{text:"Myocardial infarction", correct:false},
-{text:"Heart block", correct:false}
-]
-},
-
-{
-question: "Which vessel supplies the myocardium?",
-answers:[
-{text:"Coronary arteries", correct:true},
-{text:"Pulmonary veins", correct:false},
-{text:"Superior vena cava", correct:false},
-{text:"Pulmonary artery", correct:false}
-]
-},
-
-{
-question: "A decrease in venous return will directly reduce:",
-answers:[
-{text:"Stroke volume", correct:true},
-{text:"Peripheral resistance", correct:false},
-{text:"Blood viscosity", correct:false},
-{text:"Heart sounds", correct:false}
-]
-},
-
-{
-question: "Cardiac output equals:",
-answers:[
-{text:"Heart rate × Stroke volume", correct:true},
-{text:"Stroke volume ÷ Heart rate", correct:false},
-{text:"Blood pressure × Heart rate", correct:false},
-{text:"Peripheral resistance × Heart rate", correct:false}
-]
-},
-
-{
-question: "Which heart chamber has the thickest myocardium?",
-answers:[
-{text:"Left ventricle", correct:true},
-{text:"Right ventricle", correct:false},
-{text:"Left atrium", correct:false},
-{text:"Right atrium", correct:false}
-]
-},
-
-{
-question: "The first heart sound (S1) is produced by closure of:",
-answers:[
-{text:"Mitral and tricuspid valves", correct:true},
-{text:"Aortic and pulmonary valves", correct:false},
-{text:"Pulmonary veins", correct:false},
-{text:"Semilunar valves only", correct:false}
-]
-},
-
-{
-question: "Which mechanism explains increased cardiac output during pregnancy?",
-answers:[
-{text:"Increased blood volume", correct:true},
-{text:"Reduced preload", correct:false},
-{text:"Reduced contractility", correct:false},
-{text:"Reduced venous return", correct:false}
-]
-},
-
-{
-question: "Which electrolyte abnormality is most associated with cardiac arrhythmias?",
-answers:[
-{text:"Potassium imbalance", correct:true},
-{text:"Iron deficiency", correct:false},
-{text:"Copper deficiency", correct:false},
-{text:"Zinc deficiency", correct:false}
-]
-},
-
-{
-question: "Which vessel carries oxygenated blood from the lungs to the heart?",
-answers:[
-{text:"Pulmonary veins", correct:true},
-{text:"Pulmonary artery", correct:false},
-{text:"Superior vena cava", correct:false},
-{text:"Inferior vena cava", correct:false}
-]
-},
-
-{
-question: "The ECG T wave represents:",
-answers:[
-{text:"Ventricular repolarization", correct:true},
-{text:"Atrial depolarization", correct:false},
-{text:"Atrial repolarization", correct:false},
-{text:"Ventricular contraction", correct:false}
-]
-},
-
-{
-question: "Which component of blood pressure is most influenced by peripheral resistance?",
-answers:[
-{text:"Diastolic pressure", correct:true},
-{text:"Systolic pressure", correct:false},
-{text:"Pulse pressure", correct:false},
-{text:"Mean venous pressure", correct:false}
-]
-},
-
-{
-question: "Which hormone increases blood pressure by vasoconstriction?",
-answers:[
-{text:"Angiotensin II", correct:true},
-{text:"Insulin", correct:false},
-{text:"Glucagon", correct:false},
-{text:"Calcitonin", correct:false}
-]
-},
-
-{
-question: "The coronary sinus drains into the:",
-answers:[
-{text:"Right atrium", correct:true},
-{text:"Left atrium", correct:false},
-{text:"Right ventricle", correct:false},
-{text:"Pulmonary trunk", correct:false}
-]
-},
-
-{
-question: "Which factor decreases cardiac output?",
-answers:[
-{text:"Severe hemorrhage", correct:true},
-{text:"Exercise", correct:false},
-{text:"Sympathetic stimulation", correct:false},
-{text:"Increased venous return", correct:false}
-]
-},
-
-{
-question: "The longest refractory period occurs in:",
-answers:[
-{text:"Cardiac muscle", correct:true},
-{text:"Smooth muscle", correct:false},
-{text:"Skeletal muscle", correct:false},
-{text:"Respiratory muscle", correct:false}
-]
-},
-
-{
-question: "Which artery is commonly palpated at the wrist?",
-answers:[
-{text:"Radial artery", correct:true},
-{text:"Femoral artery", correct:false},
-{text:"Axillary artery", correct:false},
-{text:"Popliteal artery", correct:false}
-]
-},
-
-{
-question: "Which chamber receives oxygenated blood directly from the lungs?",
-answers:[
-{text:"Left atrium", correct:true},
-{text:"Right atrium", correct:false},
-{text:"Left ventricle", correct:false},
-{text:"Right ventricle", correct:false}
-]
-},
-
-{
-question: "The Bainbridge reflex is mainly triggered by:",
-answers:[
-{text:"Increased venous return", correct:true},
-{text:"Low arterial pressure", correct:false},
-{text:"Hypoxia", correct:false},
-{text:"Hyperkalemia", correct:false}
-]
-},
-
-{
-question: "Cardiac muscle cells are connected by:",
-answers:[
-{text:"Intercalated discs", correct:true},
-{text:"Desmosomes only", correct:false},
-{text:"Tight junctions only", correct:false},
-{text:"Gap junctions only", correct:false}
-]
-},
-
-{
-question: "Which ECG change is most suggestive of myocardial infarction?",
-answers:[
-{text:"ST-segment elevation", correct:true},
-{text:"Short PR interval", correct:false},
-{text:"Absent P wave", correct:false},
-{text:"Short QT interval", correct:false}
-]
-},
-
-{
-question: "Which valve prevents backflow into the left ventricle?",
-answers:[
-{text:"Aortic valve", correct:true},
-{text:"Mitral valve", correct:false},
-{text:"Tricuspid valve", correct:false},
-{text:"Pulmonary valve", correct:false}
-]
-},
-
-{
-question: "Which factor has the greatest influence on venous return?",
-answers:[
-{text:"Skeletal muscle pump", correct:true},
-{text:"Body temperature", correct:false},
-{text:"Vision", correct:false},
-{text:"Taste", correct:false}
-]
-},
-
-{
-question: "The autonomic neurotransmitter released by sympathetic cardiac nerves is:",
-answers:[
-{text:"Norepinephrine", correct:true},
-{text:"Acetylcholine", correct:false},
-{text:"Dopamine", correct:false},
-{text:"Serotonin", correct:false}
-]
-},
-
-{
-question: "Which vessel leaves the right ventricle?",
-answers:[
-{text:"Pulmonary trunk", correct:true},
-{text:"Aorta", correct:false},
-{text:"Superior vena cava", correct:false},
-{text:"Pulmonary vein", correct:false}
-]
-},
-
-{
-question: "Blood pressure is highest in the:",
-answers:[
-{text:"Aorta", correct:true},
-{text:"Capillaries", correct:false},
-{text:"Venules", correct:false},
-{text:"Vena cava", correct:false}
-]
-},
-
-{
-question: "Which cardiovascular parameter is represented by pulse pressure?",
-answers:[
-{text:"Systolic minus diastolic pressure", correct:true},
-{text:"Mean arterial pressure", correct:false},
-{text:"Cardiac output", correct:false},
-{text:"Central venous pressure", correct:false}
-]
-},
-
-{
-question: "Which electrolyte is mainly responsible for cardiac repolarization?",
-answers:[
-{text:"Potassium", correct:true},
-{text:"Sodium", correct:false},
-{text:"Calcium", correct:false},
-{text:"Magnesium", correct:false}
-]
-},
-
-{
-question: "Which vessel carries deoxygenated blood away from the heart?",
-answers:[
-{text:"Pulmonary artery", correct:true},
-{text:"Pulmonary vein", correct:false},
-{text:"Aorta", correct:false},
-{text:"Coronary artery", correct:false}
-]
-},
-
-{
-question: "Cardiac contractility is increased primarily by:",
-answers:[
-{text:"Sympathetic stimulation", correct:true},
-{text:"Parasympathetic stimulation", correct:false},
-{text:"Hypoxia", correct:false},
-{text:"Acidosis", correct:false}
-]
-},
-
-{
-question: "Which blood vessel supplies the SA node in most individuals?",
-answers:[
-{text:"Right coronary artery", correct:true},
-{text:"Left coronary artery", correct:false},
-{text:"Circumflex artery", correct:false},
-{text:"Pulmonary artery", correct:false}
-]
-},
-
-{
-question: "The normal resting heart rate in adults is:",
-answers:[
-{text:"60–100 beats/min", correct:true},
-{text:"30–50 beats/min", correct:false},
-{text:"110–130 beats/min", correct:false},
-{text:"140–180 beats/min", correct:false}
-]
-},
-
-{
-question: "Which structure separates the left and right ventricles?",
-answers:[
-{text:"Interventricular septum", correct:true},
-{text:"Interatrial septum", correct:false},
-{text:"Mitral valve", correct:false},
-{text:"Coronary sinus", correct:false}
-]
-},
-
-{
-question: "Failure of ventricular repolarization would most directly affect the:",
-answers:[
-{text:"T wave", correct:true},
-{text:"P wave", correct:false},
-{text:"PR interval", correct:false},
-{text:"QRS complex", correct:false}
-]
-}
-
 ];

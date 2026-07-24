@@ -1,1513 +1,2084 @@
-const EASY_QUESTIONS = [
+const EASY_THEORY_QUESTIONS = [
 
-{
-    question: "Vitamins are best defined as:",
-    answers: [
-        { text: "Organic compounds required in small amounts for normal growth and metabolism", correct: true },
-        { text: "Inorganic compounds needed in large amounts", correct: false },
-        { text: "Energy-giving nutrients", correct: false },
-        { text: "Body-building nutrients only", correct: false }
-    ]
-},
+    {
+    question: "Define vitamins and explain why they are required in small amounts in the human body.",
 
-{
-    question: "Which vitamin is commonly known as ascorbic acid?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin C", correct: true },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin E", correct: false }
-    ]
-},
+    keywords: [
+        "vitamins",
+        "organic compounds",
+        "small amounts",
+        "metabolism",
+        "growth"
+    ],
 
-{
-    question: "Which of the following is a fat-soluble vitamin?",
-    answers: [
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin B₁", correct: false },
-        { text: "Vitamin D", correct: true },
-        { text: "Vitamin B₁₂", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which vitamin deficiency causes scurvy?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin C", correct: true },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
-},
+    question: "Classify vitamins into fat-soluble and water-soluble groups, giving two examples of each.",
 
-{
-    question: "Which vitamin deficiency causes rickets in children?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin D", correct: true },
-        { text: "Vitamin E", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
-},
+    keywords: [
+        "fat-soluble vitamins",
+        "water-soluble vitamins",
+        "vitamin A",
+        "vitamin C",
+        "classification"
+    ],
 
-{
-    question: "Which vitamin is important for normal vision?",
-    answers: [
-        { text: "Vitamin A", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin B₂", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The main function of carbohydrates is to:",
-    answers: [
-        { text: "Build muscles", correct: false },
-        { text: "Provide energy", correct: true },
-        { text: "Produce hormones", correct: false },
-        { text: "Store vitamins", correct: false }
-    ]
-},
+    question: "Explain five important functions of vitamins in the human body.",
 
-{
-    question: "Which of the following is a simple sugar?",
-    answers: [
-        { text: "Starch", correct: false },
-        { text: "Glucose", correct: true },
-        { text: "Cellulose", correct: false },
-        { text: "Glycogen", correct: false }
-    ]
-},
+    keywords: [
+        "metabolism",
+        "enzyme cofactor",
+        "growth",
+        "immunity",
+        "health maintenance"
+    ],
 
-{
-    question: "Sucrose is composed of:",
-    answers: [
-        { text: "Glucose and Galactose", correct: false },
-        { text: "Glucose and Fructose", correct: true },
-        { text: "Fructose and Galactose", correct: false },
-        { text: "Glucose and Glucose", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which nutrient is primarily responsible for growth and tissue repair?",
-    answers: [
-        { text: "Carbohydrates", correct: false },
-        { text: "Proteins", correct: true },
-        { text: "Fats", correct: false },
-        { text: "Water", correct: false }
-    ]
-},
+    question: "List the major food groups and state one function of each.",
 
-{
-    question: "Proteins are made up of:",
-    answers: [
-        { text: "Fatty acids", correct: false },
-        { text: "Amino acids", correct: true },
-        { text: "Monosaccharides", correct: false },
-        { text: "Nucleotides", correct: false }
-    ]
-},
+    keywords: [
+        "food groups",
+        "energy",
+        "body building",
+        "protection",
+        "nutrition"
+    ],
 
-{
-    question: "Which disease results from severe protein deficiency?",
-    answers: [
-        { text: "Rickets", correct: false },
-        { text: "Kwashiorkor", correct: true },
-        { text: "Scurvy", correct: false },
-        { text: "Goiter", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Marasmus is mainly caused by deficiency of:",
-    answers: [
-        { text: "Protein only", correct: false },
-        { text: "Protein and calories", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Iron", correct: false }
-    ]
-},
+    question: "Discuss the nutritional importance of cereals, legumes, seeds and nuts.",
 
-{
-    question: "Which nutrient provides the highest amount of energy per gram?",
-    answers: [
-        { text: "Protein", correct: false },
-        { text: "Fat", correct: true },
-        { text: "Carbohydrate", correct: false },
-        { text: "Water", correct: false }
-    ]
-},
+    keywords: [
+        "cereals",
+        "legumes",
+        "seeds",
+        "nuts",
+        "nutrients"
+    ],
 
-{
-    question: "One gram of carbohydrate provides approximately:",
-    answers: [
-        { text: "2 kcal", correct: false },
-        { text: "4 kcal", correct: true },
-        { text: "7 kcal", correct: false },
-        { text: "9 kcal", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "One gram of fat provides approximately:",
-    answers: [
-        { text: "4 kcal", correct: false },
-        { text: "5 kcal", correct: false },
-        { text: "7 kcal", correct: false },
-        { text: "9 kcal", correct: true }
-    ]
-},
+    question: "Differentiate between monosaccharides, disaccharides and polysaccharides with examples.",
 
-{
-    question: "Which mineral is essential for the formation of hemoglobin?",
-    answers: [
-        { text: "Calcium", correct: false },
-        { text: "Iron", correct: true },
-        { text: "Magnesium", correct: false },
-        { text: "Potassium", correct: false }
-    ]
-},
+    keywords: [
+        "monosaccharides",
+        "disaccharides",
+        "polysaccharides",
+        "glucose",
+        "starch"
+    ],
 
-{
-    question: "Calcium is mainly required for:",
-    answers: [
-        { text: "Vision", correct: false },
-        { text: "Strong bones and teeth", correct: true },
-        { text: "Blood glucose regulation", correct: false },
-        { text: "Protein digestion", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which mineral is necessary for normal thyroid function?",
-    answers: [
-        { text: "Iron", correct: false },
-        { text: "Iodine", correct: true },
-        { text: "Zinc", correct: false },
-        { text: "Copper", correct: false }
-    ]
-},
+    question: "Explain the composition and nutritional significance of sucrose.",
 
-{
-    question: "The largest percentage of the human body is made up of:",
-    answers: [
-        { text: "Protein", correct: false },
-        { text: "Water", correct: true },
-        { text: "Fat", correct: false },
-        { text: "Minerals", correct: false }
-    ]
-},
+    keywords: [
+        "sucrose",
+        "glucose",
+        "fructose",
+        "disaccharide",
+        "energy"
+    ],
 
-{
-    question: "Water helps regulate body temperature mainly through:",
-    answers: [
-        { text: "Digestion", correct: false },
-        { text: "Sweating", correct: true },
-        { text: "Chewing", correct: false },
-        { text: "Urination only", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Digestion of proteins begins mainly in the:",
-    answers: [
-        { text: "Mouth", correct: false },
-        { text: "Stomach", correct: true },
-        { text: "Small intestine", correct: false },
-        { text: "Large intestine", correct: false }
-    ]
-},
+    question: "Describe the classification of fatty acids based on carbon chain length and degree of saturation.",
 
-{
-    question: "The end products of protein digestion are:",
-    answers: [
-        { text: "Glucose", correct: false },
-        { text: "Amino acids", correct: true },
-        { text: "Fatty acids", correct: false },
-        { text: "Glycerol", correct: false }
-    ]
-},
+    keywords: [
+        "fatty acids",
+        "saturated",
+        "unsaturated",
+        "short-chain",
+        "long-chain"
+    ],
 
-{
-    question: "The end products of fat digestion are:",
-    answers: [
-        { text: "Glucose and fructose", correct: false },
-        { text: "Fatty acids and glycerol", correct: true },
-        { text: "Amino acids", correct: false },
-        { text: "Maltose", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which organ produces bile that helps in fat digestion?",
-    answers: [
-        { text: "Pancreas", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Kidney", correct: false },
-        { text: "Stomach", correct: false }
-    ]
-},
+    question: "Outline three major biological functions of lipids in the human body.",
 
-{
-    question: "The gall bladder primarily functions to:",
-    answers: [
-        { text: "Produce bile", correct: false },
-        { text: "Store and concentrate bile", correct: true },
-        { text: "Digest proteins", correct: false },
-        { text: "Produce insulin", correct: false }
-    ]
-},
+    keywords: [
+        "energy storage",
+        "cell membrane",
+        "insulation",
+        "protection",
+        "lipids"
+    ],
 
-{
-    question: "Which organ produces insulin?",
-    answers: [
-        { text: "Liver", correct: false },
-        { text: "Pancreas", correct: true },
-        { text: "Kidney", correct: false },
-        { text: "Stomach", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which vitamin is essential for normal blood clotting?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin K", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin B₁₂", correct: false }
-    ]
-},
+    question: "Explain the digestion of proteins from the mouth to the small intestine.",
 
-{
-    question: "Night blindness is caused by deficiency of:",
-    answers: [
-        { text: "Vitamin A", correct: true },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin E", correct: false },
-        { text: "Vitamin C", correct: false }
-    ]
-},
+    keywords: [
+        "protein digestion",
+        "pepsin",
+        "trypsin",
+        "amino acids",
+        "small intestine"
+    ],
 
-{
-    question: "Which vitamin is synthesized in the skin in the presence of sunlight?",
-    answers: [
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin D", correct: true },
-        { text: "Vitamin B₆", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The main site of nutrient absorption is the:",
-    answers: [
-        { text: "Large intestine", correct: false },
-        { text: "Small intestine", correct: true },
-        { text: "Esophagus", correct: false },
-        { text: "Stomach", correct: false }
-    ]
-},
+    question: "Discuss the nutritional importance of proteins in human growth and development.",
 
-{
-    question: "Which food group is mainly responsible for body building?",
-    answers: [
-        { text: "Carbohydrates", correct: false },
-        { text: "Proteins", correct: true },
-        { text: "Fats and oils", correct: false },
-        { text: "Vitamins", correct: false }
-    ]
-},
+    keywords: [
+        "proteins",
+        "growth",
+        "repair",
+        "enzymes",
+        "body tissues"
+    ],
 
-{
-    question: "Which food group mainly supplies energy?",
-    answers: [
-        { text: "Carbohydrates", correct: true },
-        { text: "Minerals", correct: false },
-        { text: "Water", correct: false },
-        { text: "Vitamins", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The process by which food is broken down into absorbable substances is called:",
-    answers: [
-        { text: "Circulation", correct: false },
-        { text: "Digestion", correct: true },
-        { text: "Respiration", correct: false },
-        { text: "Excretion", correct: false }
-    ]
-},
+    question: "State the causes and clinical features of protein deficiency.",
 
-{
-    question: "Which nutrient does NOT provide energy?",
-    answers: [
-        { text: "Protein", correct: false },
-        { text: "Water", correct: true },
-        { text: "Fat", correct: false },
-        { text: "Carbohydrate", correct: false }
-    ]
-},
+    keywords: [
+        "protein deficiency",
+        "kwashiorkor",
+        "muscle wasting",
+        "edema",
+        "malnutrition"
+    ],
 
-{
-    question: "Which mineral is important for healthy bones and teeth?",
-    answers: [
-        { text: "Iron", correct: false },
-        { text: "Calcium", correct: true },
-        { text: "Copper", correct: false },
-        { text: "Sodium", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The digestion of starch begins in the:",
-    answers: [
-        { text: "Mouth", correct: true },
-        { text: "Stomach", correct: false },
-        { text: "Small intestine", correct: false },
-        { text: "Large intestine", correct: false }
-    ]
-},
+    question: "Differentiate between complete and incomplete proteins with suitable examples.",
 
-{
-    question: "Salivary amylase acts mainly on:",
-    answers: [
-        { text: "Protein", correct: false },
-        { text: "Fat", correct: false },
-        { text: "Starch", correct: true },
-        { text: "Vitamins", correct: false }
-    ]
-},
+    keywords: [
+        "complete protein",
+        "incomplete protein",
+        "essential amino acids",
+        "animal protein",
+        "plant protein"
+    ],
 
-{
-    question: "Which organ stores glycogen?",
-    answers: [
-        { text: "Heart", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Lungs", correct: false },
-        { text: "Kidney", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The body mass index (BMI) is used to assess:",
-    answers: [
-        { text: "Blood pressure", correct: false },
-        { text: "Nutritional status", correct: true },
-        { text: "Vision", correct: false },
-        { text: "Kidney function", correct: false }
-    ]
-},
+    question: "Explain the importance of minerals in maintaining normal body functions.",
 
-{
-    question: "The average healthy adult body contains approximately how much water?",
-    answers: [
-        { text: "20%", correct: false },
-        { text: "40%", correct: false },
-        { text: "60%", correct: true },
-        { text: "90%", correct: false }
-    ]
-},
+    keywords: [
+        "minerals",
+        "bone formation",
+        "electrolytes",
+        "enzymes",
+        "metabolism"
+    ],
 
-{
-    question: "Which nutrient is the body's major source of stored energy?",
-    answers: [
-        { text: "Protein", correct: false },
-        { text: "Fat", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Water", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which vitamin is also known as tocopherol?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin E", correct: true },
-        { text: "Vitamin K", correct: false }
-    ]
-},
+    question: "Classify minerals into macro-minerals and trace elements with examples.",
 
-{
-    question: "The body's energy requirement at complete rest is called:",
-    answers: [
-        { text: "Specific Dynamic Action", correct: false },
-        { text: "Basal Metabolic Rate", correct: true },
-        { text: "Body Mass Index", correct: false },
-        { text: "Net Protein Utilization", correct: false }
-    ]
-},
+    keywords: [
+        "macro minerals",
+        "trace elements",
+        "calcium",
+        "iron",
+        "classification"
+    ],
 
-{
-    question: "Specific Dynamic Action (SDA) refers to:",
-    answers: [
-        { text: "Energy used for digestion and absorption of food", correct: true },
-        { text: "Energy used during sleep", correct: false },
-        { text: "Energy used only for exercise", correct: false },
-        { text: "Energy stored as fat", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which nutrient has the highest Specific Dynamic Action?",
-    answers: [
-        { text: "Carbohydrate", correct: false },
-        { text: "Protein", correct: true },
-        { text: "Fat", correct: false },
-        { text: "Water", correct: false }
-    ]
-},
+    question: "Discuss the physiological importance of water in the human body.",
 
-{
-    question: "Biological Value (BV) is used to measure the quality of:",
-    answers: [
-        { text: "Carbohydrates", correct: false },
-        { text: "Proteins", correct: true },
-        { text: "Fats", correct: false },
-        { text: "Minerals", correct: false }
-    ]
-},
+    keywords: [
+        "water",
+        "transport",
+        "temperature regulation",
+        "solvent",
+        "metabolism"
+    ],
 
-{
-    question: "Net Protein Utilization (NPU) measures:",
-    answers: [
-        { text: "The percentage of ingested protein retained by the body", correct: true },
-        { text: "The amount of glucose produced", correct: false },
-        { text: "The body's fat storage", correct: false },
-        { text: "The body's water balance", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "Which disease results from iodine deficiency?",
-    answers: [
-        { text: "Scurvy", correct: false },
-        { text: "Goiter", correct: true },
-        { text: "Rickets", correct: false },
-        { text: "Beriberi", correct: false }
-    ]
-},
+    question: "Describe the mechanism of thirst and explain its importance in fluid balance.",
 
-{
-    question: "Which of the following is an essential nutrient?",
-    answers: [
-        { text: "Water", correct: true },
-        { text: "Alcohol", correct: false },
-        { text: "Cholesterol", correct: false },
-        { text: "Caffeine", correct: false }
-    ]
-}
+    keywords: [
+        "thirst",
+        "hypothalamus",
+        "osmoreceptors",
+        "fluid balance",
+        "dehydration"
+    ],
 
-];
+    marks: 10
+},
+{
+    question: "Define basal metabolic rate (BMR) and state four factors that influence it.",
 
-const HARD_QUESTIONS = [
+    keywords: [
+        "basal metabolic rate",
+        "age",
+        "sex",
+        "body size",
+        "thyroid hormone"
+    ],
 
-{
-    question: "Which vitamin functions primarily as an antioxidant that protects cell membranes from oxidative damage?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin E", correct: true },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The active form of vitamin D responsible for increasing calcium absorption is:",
-    answers: [
-        { text: "Calcidiol", correct: false },
-        { text: "Calcitriol", correct: true },
-        { text: "Ergocalciferol", correct: false },
-        { text: "Cholecalciferol", correct: false }
-    ]
-},
+    question: "Explain the concept of energy expenditure in humans.",
 
-{
-    question: "Pellagra results from the deficiency of:",
-    answers: [
-        { text: "Vitamin B₁", correct: false },
-        { text: "Niacin (Vitamin B₃)", correct: true },
-        { text: "Vitamin B₆", correct: false },
-        { text: "Vitamin C", correct: false }
-    ]
-},
+    keywords: [
+        "energy expenditure",
+        "BMR",
+        "physical activity",
+        "SDA",
+        "calories"
+    ],
 
-{
-    question: "Beriberi is caused by deficiency of:",
-    answers: [
-        { text: "Vitamin B₂", correct: false },
-        { text: "Vitamin B₁", correct: true },
-        { text: "Vitamin B₁₂", correct: false },
-        { text: "Vitamin D", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The vitamin essential for DNA synthesis and red blood cell maturation is:",
-    answers: [
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin B₁₂", correct: true },
-        { text: "Vitamin E", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
-},
+    question: "Discuss the components of total daily energy expenditure.",
 
-{
-    question: "The Biological Value (BV) of a protein measures:",
-    answers: [
-        { text: "Its energy value", correct: false },
-        { text: "The proportion of absorbed protein retained by the body", correct: true },
-        { text: "Its fat content", correct: false },
-        { text: "Its vitamin content", correct: false }
-    ]
-},
+    keywords: [
+        "basal metabolism",
+        "physical activity",
+        "specific dynamic action",
+        "thermogenesis",
+        "energy"
+    ],
 
-{
-    question: "Net Protein Utilization (NPU) is calculated based on:",
-    answers: [
-        { text: "Protein intake and nitrogen retained", correct: true },
-        { text: "Body weight only", correct: false },
-        { text: "Calorie intake only", correct: false },
-        { text: "Water intake", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The amino acid most likely to be limiting in cereals is:",
-    answers: [
-        { text: "Methionine", correct: false },
-        { text: "Lysine", correct: true },
-        { text: "Leucine", correct: false },
-        { text: "Valine", correct: false }
-    ]
-},
+    question: "Define Specific Dynamic Action (SDA) and explain its nutritional significance.",
 
-{
-    question: "Legumes are generally deficient in which essential amino acid?",
-    answers: [
-        { text: "Methionine", correct: true },
-        { text: "Lysine", correct: false },
-        { text: "Histidine", correct: false },
-        { text: "Arginine", correct: false }
-    ]
-},
+    keywords: [
+        "specific dynamic action",
+        "thermic effect",
+        "food metabolism",
+        "energy expenditure",
+        "digestion"
+    ],
 
-{
-    question: "Combining cereals and legumes improves protein quality because:",
-    answers: [
-        { text: "They contain more fat", correct: false },
-        { text: "Their amino acid deficiencies complement each other", correct: true },
-        { text: "They contain more water", correct: false },
-        { text: "They reduce digestion", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The process of converting excess glucose into glycogen is called:",
-    answers: [
-        { text: "Glycolysis", correct: false },
-        { text: "Glycogenesis", correct: true },
-        { text: "Gluconeogenesis", correct: false },
-        { text: "Lipolysis", correct: false }
-    ]
-},
+    question: "Explain the meaning of Biological Value (BV) of proteins and state its importance.",
 
-{
-    question: "The breakdown of glycogen into glucose is known as:",
-    answers: [
-        { text: "Glycogenesis", correct: false },
-        { text: "Glycogenolysis", correct: true },
-        { text: "Gluconeogenesis", correct: false },
-        { text: "Proteolysis", correct: false }
-    ]
-},
+    keywords: [
+        "biological value",
+        "protein quality",
+        "nitrogen retention",
+        "protein utilization",
+        "nutrition"
+    ],
 
-{
-    question: "The principal storage form of carbohydrate in animals is:",
-    answers: [
-        { text: "Cellulose", correct: false },
-        { text: "Glycogen", correct: true },
-        { text: "Sucrose", correct: false },
-        { text: "Lactose", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The primary function of bile salts is to:",
-    answers: [
-        { text: "Digest proteins", correct: false },
-        { text: "Emulsify fats", correct: true },
-        { text: "Digest carbohydrates", correct: false },
-        { text: "Absorb vitamins", correct: false }
-    ]
-},
+    question: "Define Net Protein Utilization (NPU) and explain its nutritional significance.",
 
-{
-    question: "Which enzyme digests triglycerides in the small intestine?",
-    answers: [
-        { text: "Pepsin", correct: false },
-        { text: "Pancreatic lipase", correct: true },
-        { text: "Amylase", correct: false },
-        { text: "Trypsin", correct: false }
-    ]
-},
+    keywords: [
+        "net protein utilization",
+        "protein quality",
+        "nitrogen",
+        "protein efficiency",
+        "nutrition"
+    ],
 
-{
-    question: "The major site of fat absorption is the:",
-    answers: [
-        { text: "Stomach", correct: false },
-        { text: "Small intestine", correct: true },
-        { text: "Large intestine", correct: false },
-        { text: "Esophagus", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The principal plasma protein responsible for maintaining osmotic pressure is:",
-    answers: [
-        { text: "Globulin", correct: false },
-        { text: "Albumin", correct: true },
-        { text: "Fibrinogen", correct: false },
-        { text: "Hemoglobin", correct: false }
-    ]
-},
+    question: "Describe the methods used in nutritional assessment.",
 
-{
-    question: "Which mineral is required for the synthesis of thyroid hormones?",
-    answers: [
-        { text: "Iron", correct: false },
-        { text: "Iodine", correct: true },
-        { text: "Calcium", correct: false },
-        { text: "Magnesium", correct: false }
-    ]
-},
+    keywords: [
+        "anthropometry",
+        "dietary assessment",
+        "clinical assessment",
+        "biochemical assessment",
+        "nutrition"
+    ],
 
-{
-    question: "Iron deficiency commonly results in:",
-    answers: [
-        { text: "Night blindness", correct: false },
-        { text: "Microcytic hypochromic anemia", correct: true },
-        { text: "Rickets", correct: false },
-        { text: "Osteoporosis", correct: false }
-    ]
+    marks: 10
 },
-
 {
-    question: "The Basal Metabolic Rate (BMR) is usually measured:",
-    answers: [
-        { text: "Immediately after exercise", correct: false },
-        { text: "After an overnight fast and complete rest", correct: true },
-        { text: "During digestion", correct: false },
-        { text: "After eating a heavy meal", correct: false }
-    ]
-},
+    question: "Differentiate between nutritional screening, nutritional surveillance and nutritional monitoring.",
 
-{
-    question: "Which nutrient has the greatest thermic effect (Specific Dynamic Action)?",
-    answers: [
-        { text: "Fat", correct: false },
-        { text: "Protein", correct: true },
-        { text: "Carbohydrate", correct: false },
-        { text: "Water", correct: false }
-    ]
-},
+    keywords: [
+        "nutritional screening",
+        "nutritional surveillance",
+        "nutritional monitoring",
+        "assessment",
+        "public health"
+    ],
 
-{
-    question: "The Recommended Dietary Allowance (RDA) is intended to:",
-    answers: [
-        { text: "Meet the needs of nearly all healthy individuals", correct: true },
-        { text: "Treat nutritional diseases", correct: false },
-        { text: "Measure obesity", correct: false },
-        { text: "Calculate BMI", correct: false }
-    ]
+    marks: 10
 },
 
 {
-    question: "The best indicator of long-term protein nutritional status is:",
-    answers: [
-        { text: "Serum albumin", correct: true },
-        { text: "Blood glucose", correct: false },
-        { text: "Hemoglobin only", correct: false },
-        { text: "Serum sodium", correct: false }
-    ]
-},
+    question: "Explain why proteins are described as body-building nutrients.",
 
-{
-    question: "Which disease is characterized by edema due to severe protein deficiency?",
-    answers: [
-        { text: "Marasmus", correct: false },
-        { text: "Kwashiorkor", correct: true },
-        { text: "Scurvy", correct: false },
-        { text: "Pellagra", correct: false }
-    ]
-},
+    keywords: [
+        "growth",
+        "repair",
+        "tissue formation",
+        "maintenance",
+        "amino acids"
+    ],
 
-{
-    question: "A deficiency of vitamin C impairs collagen synthesis because vitamin C is required for:",
-    answers: [
-        { text: "Hydroxylation of proline and lysine", correct: true },
-        { text: "DNA replication", correct: false },
-        { text: "Fat digestion", correct: false },
-        { text: "Glycogen synthesis", correct: false }
-    ]
+    marks: 10
 },
 
 {
-    question: "The primary purpose of nutritional assessment is to:",
-    answers: [
-        { text: "Diagnose infectious diseases", correct: false },
-        { text: "Determine an individual's nutritional status", correct: true },
-        { text: "Measure blood pressure only", correct: false },
-        { text: "Treat metabolic disorders", correct: false }
-    ]
-},
+    question: "Describe the process of digestion of proteins in the stomach.",
 
-{
-    question: "Which of the following is an anthropometric measurement?",
-    answers: [
-        { text: "Blood glucose level", correct: false },
-        { text: "Body Mass Index (BMI)", correct: true },
-        { text: "Serum albumin", correct: false },
-        { text: "Urine pH", correct: false }
-    ]
+    keywords: [
+        "pepsin",
+        "HCl",
+        "protein breakdown",
+        "polypeptides",
+        "stomach"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A Body Mass Index (BMI) between 18.5 and 24.9 kg/m² is classified as:",
-    answers: [
-        { text: "Underweight", correct: false },
-        { text: "Normal weight", correct: true },
-        { text: "Overweight", correct: false },
-        { text: "Obese", correct: false }
-    ]
+    question: "Outline the digestion of carbohydrates from the mouth to the small intestine.",
+
+    keywords: [
+        "salivary amylase",
+        "pancreatic amylase",
+        "maltase",
+        "glucose",
+        "absorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which vitamin deficiency is associated with megaloblastic anemia?",
-    answers: [
-        { text: "Vitamin C", correct: false },
-        { text: "Folic acid", correct: true },
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin D", correct: false }
-    ]
+    question: "State the functions of dietary fibre in human nutrition.",
+
+    keywords: [
+        "bowel movement",
+        "constipation prevention",
+        "blood glucose",
+        "cholesterol",
+        "gut health"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Vitamin B₁₂ absorption requires which intrinsic factor secreted by the:",
-    answers: [
-        { text: "Liver", correct: false },
-        { text: "Stomach", correct: true },
-        { text: "Pancreas", correct: false },
-        { text: "Small intestine", correct: false }
-    ]
+    question: "Explain the importance of water in maintaining body temperature.",
+
+    keywords: [
+        "sweating",
+        "evaporation",
+        "thermoregulation",
+        "cooling",
+        "hydration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The most abundant mineral in the human body is:",
-    answers: [
-        { text: "Iron", correct: false },
-        { text: "Calcium", correct: true },
-        { text: "Sodium", correct: false },
-        { text: "Potassium", correct: false }
-    ]
+    question: "Define food balance and explain its importance.",
+
+    keywords: [
+        "balanced diet",
+        "nutrients",
+        "health",
+        "growth",
+        "energy"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major intracellular cation is:",
-    answers: [
-        { text: "Sodium", correct: false },
-        { text: "Potassium", correct: true },
-        { text: "Calcium", correct: false },
-        { text: "Chloride", correct: false }
-    ]
+    question: "Describe the role of calcium in the human body.",
+
+    keywords: [
+        "bones",
+        "teeth",
+        "blood clotting",
+        "muscle contraction",
+        "nerve function"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major extracellular cation is:",
-    answers: [
-        { text: "Potassium", correct: false },
-        { text: "Magnesium", correct: false },
-        { text: "Sodium", correct: true },
-        { text: "Calcium", correct: false }
-    ]
+    question: "State five functions of phosphorus in the body.",
+
+    keywords: [
+        "ATP",
+        "bones",
+        "teeth",
+        "buffer",
+        "DNA"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which vitamin acts as a coenzyme in many amino acid metabolism reactions?",
-    answers: [
-        { text: "Vitamin B₆", correct: true },
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin D", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
+    question: "Explain why iron is regarded as an essential mineral nutrient.",
+
+    keywords: [
+        "haemoglobin",
+        "oxygen transport",
+        "anaemia",
+        "red blood cells",
+        "iron"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The process by which amino acids are converted into glucose is known as:",
-    answers: [
-        { text: "Glycolysis", correct: false },
-        { text: "Gluconeogenesis", correct: true },
-        { text: "Lipogenesis", correct: false },
-        { text: "Ketogenesis", correct: false }
-    ]
+    question: "Discuss the nutritional importance of iodine.",
+
+    keywords: [
+        "thyroid hormones",
+        "metabolism",
+        "goitre",
+        "growth",
+        "iodine"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The respiratory quotient (RQ) for carbohydrate metabolism is approximately:",
-    answers: [
-        { text: "0.7", correct: false },
-        { text: "0.8", correct: false },
-        { text: "1.0", correct: true },
-        { text: "1.5", correct: false }
-    ]
+    question: "State the major functions of sodium in the body.",
+
+    keywords: [
+        "fluid balance",
+        "nerve impulse",
+        "muscle contraction",
+        "electrolytes",
+        "blood pressure"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The respiratory quotient (RQ) for fat metabolism is approximately:",
-    answers: [
-        { text: "0.7", correct: true },
-        { text: "0.9", correct: false },
-        { text: "1.0", correct: false },
-        { text: "1.2", correct: false }
-    ]
+    question: "Explain the physiological importance of potassium.",
+
+    keywords: [
+        "heart function",
+        "muscle contraction",
+        "nerve impulse",
+        "electrolyte",
+        "cell function"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which lipoprotein is commonly called the 'good cholesterol'?",
-    answers: [
-        { text: "LDL", correct: false },
-        { text: "HDL", correct: true },
-        { text: "VLDL", correct: false },
-        { text: "Chylomicrons", correct: false }
-    ]
+    question: "Describe the process of absorption of nutrients in the small intestine.",
+
+    keywords: [
+        "villi",
+        "microvilli",
+        "diffusion",
+        "active transport",
+        "blood"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which lipoprotein is commonly called the 'bad cholesterol'?",
-    answers: [
-        { text: "HDL", correct: false },
-        { text: "LDL", correct: true },
-        { text: "IDL", correct: false },
-        { text: "Chylomicrons", correct: false }
-    ]
+    question: "Outline the importance of nutritional assessment in healthcare.",
+
+    keywords: [
+        "nutrition status",
+        "malnutrition",
+        "assessment",
+        "monitoring",
+        "health"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Essential fatty acids include:",
-    answers: [
-        { text: "Palmitic acid", correct: false },
-        { text: "Linoleic acid", correct: true },
-        { text: "Stearic acid", correct: false },
-        { text: "Oleic acid", correct: false }
-    ]
+    question: "State the components commonly assessed during nutritional assessment.",
+
+    keywords: [
+        "anthropometry",
+        "dietary assessment",
+        "clinical examination",
+        "biochemical tests",
+        "history"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The liver stores excess glucose mainly as:",
-    answers: [
-        { text: "Fat", correct: false },
-        { text: "Glycogen", correct: true },
-        { text: "Protein", correct: false },
-        { text: "Ketone bodies", correct: false }
-    ]
+    question: "Explain the concept of nutritional surveillance.",
+
+    keywords: [
+        "monitoring",
+        "population",
+        "nutrition",
+        "health trends",
+        "intervention"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone lowers blood glucose concentration?",
-    answers: [
-        { text: "Glucagon", correct: false },
-        { text: "Insulin", correct: true },
-        { text: "Cortisol", correct: false },
-        { text: "Adrenaline", correct: false }
-    ]
+    question: "Differentiate between nutritional screening and nutritional assessment.",
+
+    keywords: [
+        "screening",
+        "assessment",
+        "risk identification",
+        "evaluation",
+        "nutrition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Glucagon primarily acts to:",
-    answers: [
-        { text: "Decrease blood glucose", correct: false },
-        { text: "Increase blood glucose", correct: true },
-        { text: "Increase calcium absorption", correct: false },
-        { text: "Increase protein synthesis", correct: false }
-    ]
+    question: "Describe the causes and effects of dehydration.",
+
+    keywords: [
+        "water loss",
+        "thirst",
+        "fatigue",
+        "electrolytes",
+        "body fluids"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Nitrogen balance is considered positive during:",
-    answers: [
-        { text: "Starvation", correct: false },
-        { text: "Growth and pregnancy", correct: true },
-        { text: "Severe illness", correct: false },
-        { text: "Protein deficiency", correct: false }
-    ]
+    question: "Explain why adequate nutrition is essential for growth and development.",
+
+    keywords: [
+        "growth",
+        "development",
+        "nutrients",
+        "health",
+        "body functions"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Negative nitrogen balance is commonly seen in:",
-    answers: [
-        { text: "Childhood growth", correct: false },
-        { text: "Pregnancy", correct: false },
-        { text: "Severe burns", correct: true },
-        { text: "Recovery after illness", correct: false }
-    ]
+    question: "Discuss the importance of a balanced diet in disease prevention.",
+
+    keywords: [
+        "balanced diet",
+        "immunity",
+        "healthy weight",
+        "chronic diseases",
+        "nutrition"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The principal protein found in connective tissue is:",
-    answers: [
-        { text: "Albumin", correct: false },
-        { text: "Collagen", correct: true },
-        { text: "Keratin", correct: false },
-        { text: "Actin", correct: false }
-    ]
+    question: "State the major factors that influence nutritional requirements.",
+
+    keywords: [
+        "age",
+        "sex",
+        "activity",
+        "pregnancy",
+        "health status"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major storage form of fat in the body is:",
-    answers: [
-        { text: "Phospholipids", correct: false },
-        { text: "Triglycerides", correct: true },
-        { text: "Cholesterol", correct: false },
-        { text: "Glycolipids", correct: false }
-    ]
+    question: "Describe the relationship between nutrition and immunity.",
+
+    keywords: [
+        "immune system",
+        "vitamins",
+        "minerals",
+        "infection",
+        "resistance"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The preferred energy source for the brain under normal conditions is:",
-    answers: [
-        { text: "Fatty acids", correct: false },
-        { text: "Glucose", correct: true },
-        { text: "Amino acids", correct: false },
-        { text: "Cholesterol", correct: false }
-    ]
+    question: "Outline the nutritional importance of fruits and vegetables.",
+
+    keywords: [
+        "vitamins",
+        "minerals",
+        "fibre",
+        "antioxidants",
+        "health"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major site of gluconeogenesis is the:",
-    answers: [
-        { text: "Heart", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Lungs", correct: false },
-        { text: "Spleen", correct: false }
-    ]
+    question: "Explain why nutrition is considered a major determinant of health.",
+
+    keywords: [
+        "growth",
+        "disease prevention",
+        "body functions",
+        "well-being",
+        "health"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following provides the most accurate assessment of long-term glycemic control in diabetic patients?",
-    answers: [
-        { text: "Random blood glucose", correct: false },
-        { text: "HbA1c", correct: true },
-        { text: "Urine glucose", correct: false },
-        { text: "Oral glucose tolerance test", correct: false }
-    ]
+    question: "Discuss the importance of good nutrition throughout the human life cycle.",
+
+    keywords: [
+        "infancy",
+        "childhood",
+        "adulthood",
+        "pregnancy",
+        "old age"
+    ],
+
+    marks: 10
 }
 ];
 
-const EXTREME_QUESTIONS = [
+const HARD_THEORY_QUESTIONS = [
 
-{
-    question: "The coenzyme thiamine pyrophosphate (TPP) is derived from:",
-    answers: [
-        { text: "Vitamin B₁", correct: true },
-        { text: "Vitamin B₂", correct: false },
-        { text: "Vitamin B₆", correct: false },
-        { text: "Vitamin B₁₂", correct: false }
-    ]
+    {
+    question: "Discuss the classification of vitamins and explain the biochemical significance of each class.",
+
+    keywords: [
+        "fat-soluble vitamins",
+        "water-soluble vitamins",
+        "examples",
+        "functions",
+        "differences"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A patient presents with dermatitis, diarrhea, and dementia. The most likely vitamin deficiency is:",
-    answers: [
-        { text: "Vitamin B₁", correct: false },
-        { text: "Niacin (Vitamin B₃)", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin D", correct: false }
-    ]
+    question: "Evaluate the physiological roles of fat-soluble vitamins in maintaining normal body functions.",
+
+    keywords: [
+        "vitamins A D E K",
+        "vision",
+        "bone health",
+        "antioxidant",
+        "blood clotting"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which enzyme requires biotin as its coenzyme?",
-    answers: [
-        { text: "Pyruvate carboxylase", correct: true },
-        { text: "Hexokinase", correct: false },
-        { text: "Lactate dehydrogenase", correct: false },
-        { text: "Pepsin", correct: false }
-    ]
+    question: "Discuss the metabolic importance of water-soluble vitamins in enzymatic reactions.",
+
+    keywords: [
+        "B-complex",
+        "vitamin C",
+        "coenzymes",
+        "energy metabolism",
+        "enzyme function"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The active coenzyme form of vitamin B₆ is:",
-    answers: [
-        { text: "Pyridoxal phosphate", correct: true },
-        { text: "Thiamine pyrophosphate", correct: false },
-        { text: "Coenzyme A", correct: false },
-        { text: "FAD", correct: false }
-    ]
+    question: "Explain the biochemical basis of vitamin deficiency diseases and their clinical manifestations.",
+
+    keywords: [
+        "deficiency",
+        "clinical signs",
+        "vitamins",
+        "metabolism",
+        "examples"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which vitamin functions as tetrahydrofolate (THF) in one-carbon metabolism?",
-    answers: [
-        { text: "Folic acid", correct: true },
-        { text: "Vitamin B₁₂", correct: false },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin D", correct: false }
-    ]
+    question: "Compare and contrast fat-soluble and water-soluble vitamins with suitable examples.",
+
+    keywords: [
+        "storage",
+        "absorption",
+        "toxicity",
+        "examples",
+        "differences"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A deficiency of intrinsic factor primarily leads to deficiency of:",
-    answers: [
-        { text: "Vitamin B₁", correct: false },
-        { text: "Vitamin B₁₂", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin K", correct: false }
-    ]
+    question: "Discuss the digestion, absorption and transport of dietary lipids.",
+
+    keywords: [
+        "bile salts",
+        "lipase",
+        "micelles",
+        "chylomicrons",
+        "absorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which lipoprotein transports dietary triglycerides from the intestine to peripheral tissues?",
-    answers: [
-        { text: "HDL", correct: false },
-        { text: "LDL", correct: false },
-        { text: "Chylomicrons", correct: true },
-        { text: "VLDL", correct: false }
-    ]
+    question: "Explain the biochemical importance of phosphatidic acid in lipid metabolism.",
+
+    keywords: [
+        "phosphatidic acid",
+        "glycerophospholipids",
+        "biosynthesis",
+        "intermediate",
+        "lipids"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major apolipoprotein present in HDL is:",
-    answers: [
-        { text: "Apo A-I", correct: true },
-        { text: "Apo B-100", correct: false },
-        { text: "Apo C-II", correct: false },
-        { text: "Apo E", correct: false }
-    ]
+    question: "Describe the biosynthesis of glycerophospholipids from phosphatidic acid.",
+
+    keywords: [
+        "phosphatidic acid",
+        "CDP",
+        "glycerol",
+        "phospholipids",
+        "biosynthesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Ketone bodies are synthesized mainly in the:",
-    answers: [
-        { text: "Kidney", correct: false },
-        { text: "Liver", correct: true },
-        { text: "Brain", correct: false },
-        { text: "Pancreas", correct: false }
-    ]
+    question: "Discuss the biochemical pathway of β-oxidation of palmitic acid.",
+
+    keywords: [
+        "activation",
+        "carnitine shuttle",
+        "beta oxidation",
+        "acetyl-CoA",
+        "ATP"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The principal ketone body utilized by peripheral tissues is:",
-    answers: [
-        { text: "Acetoacetate", correct: false },
-        { text: "β-Hydroxybutyrate", correct: true },
-        { text: "Acetone", correct: false },
-        { text: "Pyruvate", correct: false }
-    ]
+    question: "Calculate the ATP yield from the complete oxidation of palmitic acid and explain each stage.",
+
+    keywords: [
+        "ATP yield",
+        "beta oxidation",
+        "acetyl-CoA",
+        "TCA cycle",
+        "electron transport chain"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which metabolic pathway produces the greatest amount of ATP?",
-    answers: [
-        { text: "Glycolysis", correct: false },
-        { text: "Electron Transport Chain", correct: true },
-        { text: "Pentose Phosphate Pathway", correct: false },
-        { text: "Urea Cycle", correct: false }
-    ]
+    question: "Discuss the physiological importance of cholesterol in the human body.",
+
+    keywords: [
+        "cell membrane",
+        "steroid hormones",
+        "bile acids",
+        "vitamin D",
+        "cholesterol"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The rate-limiting enzyme of cholesterol synthesis is:",
-    answers: [
-        { text: "HMG-CoA reductase", correct: true },
-        { text: "Acetyl-CoA carboxylase", correct: false },
-        { text: "Hormone-sensitive lipase", correct: false },
-        { text: "Lipoprotein lipase", correct: false }
-    ]
+    question: "Explain the metabolism of LDL and HDL and their roles in cardiovascular health.",
+
+    keywords: [
+        "LDL",
+        "HDL",
+        "cholesterol transport",
+        "atherosclerosis",
+        "reverse transport"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Statin drugs primarily inhibit:",
-    answers: [
-        { text: "Fat absorption", correct: false },
-        { text: "HMG-CoA reductase", correct: true },
-        { text: "Pancreatic lipase", correct: false },
-        { text: "LDL receptors", correct: false }
-    ]
+    question: "Evaluate the biochemical basis for referring to LDL as bad cholesterol and HDL as good cholesterol.",
+
+    keywords: [
+        "LDL",
+        "HDL",
+        "plaque formation",
+        "cholesterol removal",
+        "cardiovascular disease"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The rate-limiting enzyme in fatty acid synthesis is:",
-    answers: [
-        { text: "Acetyl-CoA carboxylase", correct: true },
-        { text: "Fatty acid synthase", correct: false },
-        { text: "Hormone-sensitive lipase", correct: false },
-        { text: "Citrate synthase", correct: false }
-    ]
+    question: "Discuss the biochemical causes, diagnosis and management of steatorrhea.",
+
+    keywords: [
+        "fat malabsorption",
+        "lipids",
+        "digestion",
+        "clinical features",
+        "management"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which vitamin deficiency causes increased bleeding time due to impaired synthesis of clotting factors?",
-    answers: [
-        { text: "Vitamin A", correct: false },
-        { text: "Vitamin K", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Vitamin D", correct: false }
-    ]
+    question: "Describe the biological functions of phospholipids in human physiology.",
+
+    keywords: [
+        "cell membrane",
+        "lipoproteins",
+        "surfactant",
+        "signalling",
+        "phospholipids"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major storage form of iron in the body is:",
-    answers: [
-        { text: "Ferritin", correct: true },
-        { text: "Hemoglobin", correct: false },
-        { text: "Transferrin", correct: false },
-        { text: "Myoglobin", correct: false }
-    ]
+    question: "Explain the biochemical importance of essential fatty acids in human nutrition.",
+
+    keywords: [
+        "linoleic acid",
+        "linolenic acid",
+        "arachidonic acid",
+        "membranes",
+        "eicosanoids"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The plasma protein responsible for transporting iron is:",
-    answers: [
-        { text: "Albumin", correct: false },
-        { text: "Ferritin", correct: false },
-        { text: "Transferrin", correct: true },
-        { text: "Ceruloplasmin", correct: false }
-    ]
+    question: "Discuss the synthesis and biological functions of triglycerides.",
+
+    keywords: [
+        "triglycerides",
+        "energy storage",
+        "fatty acids",
+        "glycerol",
+        "biosynthesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A patient with severe vitamin D deficiency is most likely to have:",
-    answers: [
-        { text: "Hypercalcemia", correct: false },
-        { text: "Hypocalcemia", correct: true },
-        { text: "Hypernatremia", correct: false },
-        { text: "Hyperkalemia", correct: false }
-    ]
+    question: "Explain the biochemical mechanisms involved in lipid transport through lipoproteins.",
+
+    keywords: [
+        "chylomicrons",
+        "VLDL",
+        "LDL",
+        "HDL",
+        "transport"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The enzyme responsible for converting angiotensin I to angiotensin II is:",
-    answers: [
-        { text: "Renin", correct: false },
-        { text: "Angiotensin-converting enzyme (ACE)", correct: true },
-        { text: "Pepsin", correct: false },
-        { text: "Trypsin", correct: false }
-    ]
+    question: "Discuss the role of bile salts in lipid digestion and absorption.",
+
+    keywords: [
+        "bile salts",
+        "emulsification",
+        "micelles",
+        "fat digestion",
+        "absorption"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which condition is characterized by excessive ketone body production?",
-    answers: [
-        { text: "Diabetic ketoacidosis", correct: true },
-        { text: "Iron deficiency anemia", correct: false },
-        { text: "Pernicious anemia", correct: false },
-        { text: "Scurvy", correct: false }
-    ]
+    question: "Evaluate the metabolic significance of acetyl-CoA in lipid metabolism.",
+
+    keywords: [
+        "acetyl-CoA",
+        "beta oxidation",
+        "TCA cycle",
+        "fatty acid synthesis",
+        "ketogenesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The respiratory quotient (RQ) of a mixed diet is approximately:",
-    answers: [
-        { text: "0.70", correct: false },
-        { text: "0.82", correct: true },
-        { text: "1.00", correct: false },
-        { text: "1.20", correct: false }
-    ]
+    question: "Describe the biochemical pathway involved in ketone body formation and utilization.",
+
+    keywords: [
+        "ketogenesis",
+        "ketone bodies",
+        "liver",
+        "acetyl-CoA",
+        "energy"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which organ is the major site of gluconeogenesis during prolonged fasting?",
-    answers: [
-        { text: "Liver", correct: true },
-        { text: "Brain", correct: false },
-        { text: "Heart", correct: false },
-        { text: "Spleen", correct: false }
-    ]
+    question: "Discuss the biochemical basis of obesity with emphasis on lipid metabolism.",
+
+    keywords: [
+        "energy balance",
+        "fat storage",
+        "adipose tissue",
+        "lipogenesis",
+        "obesity"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The first enzyme of the urea cycle is:",
-    answers: [
-        { text: "Carbamoyl phosphate synthetase I", correct: true },
-        { text: "Arginase", correct: false },
-        { text: "Ornithine transcarbamylase", correct: false },
-        { text: "Argininosuccinate lyase", correct: false }
-    ]
+    question: "Explain the relationship between lipid metabolism and cardiovascular diseases.",
+
+    keywords: [
+        "atherosclerosis",
+        "cholesterol",
+        "lipoproteins",
+        "plaque",
+        "heart disease"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Hyperammonemia is most directly associated with disorders of the:",
-    answers: [
-        { text: "Glycolytic pathway", correct: false },
-        { text: "Urea cycle", correct: true },
-        { text: "Pentose phosphate pathway", correct: false },
-        { text: "Citric acid cycle", correct: false }
-    ]
+    question: "Discuss the metabolism and physiological importance of omega-3 and omega-6 fatty acids.",
+
+    keywords: [
+        "omega-3",
+        "omega-6",
+        "essential fatty acids",
+        "eicosanoids",
+        "inflammation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major fuel utilized by skeletal muscle during prolonged exercise is:",
-    answers: [
-        { text: "Fatty acids", correct: true },
-        { text: "Vitamin C", correct: false },
-        { text: "Calcium", correct: false },
-        { text: "Urea", correct: false }
-    ]
-},
+    question: "Evaluate the biochemical consequences of impaired lipid digestion and absorption.",
 
-// ==========================
-// EXTREME QUESTIONS (26–50)
-// ==========================
+    keywords: [
+        "malabsorption",
+        "fat-soluble vitamins",
+        "steatorrhea",
+        "digestion",
+        "nutrient deficiency"
+    ],
 
-{
-    question: "The most important factor determining glomerular filtration rate (GFR) is:",
-    answers: [
-        { text: "Glomerular capillary hydrostatic pressure", correct: true },
-        { text: "Blood glucose concentration", correct: false },
-        { text: "Plasma protein synthesis", correct: false },
-        { text: "Urine volume", correct: false }
-    ]
+    marks: 10
 },
 
 {
-    question: "Which nephron segment reabsorbs the greatest percentage of filtered water?",
-    answers: [
-        { text: "Proximal convoluted tubule", correct: true },
-        { text: "Loop of Henle", correct: false },
-        { text: "Distal convoluted tubule", correct: false },
-        { text: "Collecting duct", correct: false }
-    ]
+    question: "Discuss the regulation of fatty acid synthesis in the human body.",
+
+    keywords: [
+        "acetyl-CoA carboxylase",
+        "insulin",
+        "glucagon",
+        "citrate",
+        "fatty acid synthesis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The filtration membrane prevents filtration mainly of:",
-    answers: [
-        { text: "Large plasma proteins", correct: true },
-        { text: "Water", correct: false },
-        { text: "Sodium ions", correct: false },
-        { text: "Glucose", correct: false }
-    ]
+    question: "Explain the regulation of β-oxidation of fatty acids under different metabolic conditions.",
+
+    keywords: [
+        "carnitine shuttle",
+        "malonyl-CoA",
+        "glucagon",
+        "fasting",
+        "beta oxidation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which hormone is responsible for increasing potassium excretion by the kidneys?",
-    answers: [
-        { text: "Aldosterone", correct: true },
-        { text: "ADH", correct: false },
-        { text: "Renin", correct: false },
-        { text: "Insulin", correct: false }
-    ]
+    question: "Describe the biochemical pathway of cholesterol biosynthesis and its regulation.",
+
+    keywords: [
+        "HMG-CoA reductase",
+        "mevalonate",
+        "cholesterol synthesis",
+        "regulation",
+        "statins"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The normal adult glomerular filtration rate is approximately:",
-    answers: [
-        { text: "125 mL/min", correct: true },
-        { text: "25 mL/min", correct: false },
-        { text: "250 mL/min", correct: false },
-        { text: "500 mL/min", correct: false }
-    ]
+    question: "Evaluate the role of cholesterol in membrane structure and cellular function.",
+
+    keywords: [
+        "cell membrane",
+        "fluidity",
+        "stability",
+        "cholesterol",
+        "transport"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The major function of the vasa recta is to:",
-    answers: [
-        { text: "Preserve the medullary osmotic gradient", correct: true },
-        { text: "Filter blood", correct: false },
-        { text: "Produce urine", correct: false },
-        { text: "Secrete renin", correct: false }
-    ]
+    question: "Discuss the metabolism of phospholipids and their importance in cell membranes.",
+
+    keywords: [
+        "phospholipids",
+        "membrane",
+        "turnover",
+        "biosynthesis",
+        "functions"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The principal buffer system in extracellular fluid is:",
-    answers: [
-        { text: "Bicarbonate buffer", correct: true },
-        { text: "Protein buffer", correct: false },
-        { text: "Phosphate buffer", correct: false },
-        { text: "Hemoglobin buffer", correct: false }
-    ]
+    question: "Explain the biochemical mechanism of lipolysis and its hormonal regulation.",
+
+    keywords: [
+        "hormone-sensitive lipase",
+        "adrenaline",
+        "glucagon",
+        "free fatty acids",
+        "lipolysis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Hydrogen ions are secreted mainly by which cells in the collecting duct?",
-    answers: [
-        { text: "Intercalated cells", correct: true },
-        { text: "Principal cells", correct: false },
-        { text: "Podocytes", correct: false },
-        { text: "Mesangial cells", correct: false }
-    ]
+    question: "Discuss the transport and metabolism of free fatty acids in the circulation.",
+
+    keywords: [
+        "albumin",
+        "free fatty acids",
+        "transport",
+        "oxidation",
+        "energy"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which condition results from complete absence of ADH secretion?",
-    answers: [
-        { text: "Central diabetes insipidus", correct: true },
-        { text: "Diabetes mellitus", correct: false },
-        { text: "Nephrotic syndrome", correct: false },
-        { text: "Glomerulonephritis", correct: false }
-    ]
+    question: "Evaluate the role of adipose tissue in lipid storage and energy homeostasis.",
+
+    keywords: [
+        "adipose tissue",
+        "triglycerides",
+        "energy storage",
+        "lipolysis",
+        "homeostasis"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidney activates vitamin D into:",
-    answers: [
-        { text: "Calcitriol", correct: true },
-        { text: "Calcidiol", correct: false },
-        { text: "Ergocalciferol", correct: false },
-        { text: "Cholecalciferol", correct: false }
-    ]
+    question: "Describe the biochemical basis of fatty liver disease.",
+
+    keywords: [
+        "hepatic steatosis",
+        "triglycerides",
+        "liver",
+        "lipid accumulation",
+        "metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A decrease in renal blood flow stimulates:",
-    answers: [
-        { text: "Renin secretion", correct: true },
-        { text: "Insulin secretion", correct: false },
-        { text: "Glucagon secretion", correct: false },
-        { text: "Calcitonin secretion", correct: false }
-    ]
+    question: "Discuss the digestion, absorption and metabolism of dietary cholesterol.",
+
+    keywords: [
+        "cholesterol",
+        "micelles",
+        "intestinal absorption",
+        "transport",
+        "liver"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The nephron segment most responsible for establishing the medullary osmotic gradient is:",
-    answers: [
-        { text: "Loop of Henle", correct: true },
-        { text: "Proximal tubule", correct: false },
-        { text: "Bowman's capsule", correct: false },
-        { text: "Distal tubule", correct: false }
-    ]
+    question: "Explain the synthesis and physiological significance of bile acids.",
+
+    keywords: [
+        "cholesterol",
+        "bile acids",
+        "digestion",
+        "emulsification",
+        "enterohepatic circulation"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The majority of filtered bicarbonate is reabsorbed in the:",
-    answers: [
-        { text: "Proximal convoluted tubule", correct: true },
-        { text: "Distal convoluted tubule", correct: false },
-        { text: "Collecting duct", correct: false },
-        { text: "Loop of Henle", correct: false }
-    ]
+    question: "Evaluate the biochemical basis of hypercholesterolemia and its complications.",
+
+    keywords: [
+        "LDL",
+        "atherosclerosis",
+        "cholesterol",
+        "risk factors",
+        "heart disease"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which of the following best estimates renal plasma flow?",
-    answers: [
-        { text: "PAH clearance", correct: true },
-        { text: "Creatinine clearance", correct: false },
-        { text: "Inulin clearance", correct: false },
-        { text: "Urea clearance", correct: false }
-    ]
+    question: "Discuss the relationship between saturated fats and cardiovascular disease.",
+
+    keywords: [
+        "saturated fats",
+        "LDL",
+        "atherosclerosis",
+        "heart disease",
+        "diet"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The kidney contributes to red blood cell production through secretion of:",
-    answers: [
-        { text: "Erythropoietin", correct: true },
-        { text: "Renin", correct: false },
-        { text: "Calcitriol", correct: false },
-        { text: "ADH", correct: false }
-    ]
+    question: "Describe the health benefits of unsaturated fatty acids with suitable examples.",
+
+    keywords: [
+        "monounsaturated",
+        "polyunsaturated",
+        "omega-3",
+        "heart health",
+        "examples"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The filtration slits are formed by:",
-    answers: [
-        { text: "Podocyte foot processes", correct: true },
-        { text: "Mesangial cells", correct: false },
-        { text: "Macula densa", correct: false },
-        { text: "Endothelial cells", correct: false }
-    ]
+    question: "Explain the biochemical importance of lipid-soluble antioxidants.",
+
+    keywords: [
+        "vitamin E",
+        "free radicals",
+        "oxidative stress",
+        "membranes",
+        "antioxidants"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which acid-base disorder is characterized by decreased blood pH due to excess hydrogen ions?",
-    answers: [
-        { text: "Metabolic acidosis", correct: true },
-        { text: "Metabolic alkalosis", correct: false },
-        { text: "Respiratory alkalosis", correct: false },
-        { text: "Respiratory compensation", correct: false }
-    ]
+    question: "Discuss oxidative damage to lipids and the body's protective mechanisms.",
+
+    keywords: [
+        "lipid peroxidation",
+        "free radicals",
+        "antioxidants",
+        "vitamin E",
+        "oxidative stress"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The strongest physiological stimulus for ADH secretion is:",
-    answers: [
-        { text: "Increased plasma osmolarity", correct: true },
-        { text: "Low calcium", correct: false },
-        { text: "Low glucose", correct: false },
-        { text: "High protein intake", correct: false }
-    ]
+    question: "Evaluate the metabolic adaptations that occur during prolonged fasting.",
+
+    keywords: [
+        "lipolysis",
+        "ketogenesis",
+        "gluconeogenesis",
+        "fasting",
+        "energy metabolism"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which nephron segment is known as the diluting segment?",
-    answers: [
-        { text: "Thick ascending limb of Loop of Henle", correct: true },
-        { text: "Descending limb", correct: false },
-        { text: "Collecting duct", correct: false },
-        { text: "Bowman's capsule", correct: false }
-    ]
+    question: "Describe the biochemical changes in lipid metabolism during starvation.",
+
+    keywords: [
+        "fat mobilization",
+        "ketone bodies",
+        "beta oxidation",
+        "starvation",
+        "energy"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "A patient with severe renal failure is most likely to develop:",
-    answers: [
-        { text: "Hyperkalemia", correct: true },
-        { text: "Hypoglycemia", correct: false },
-        { text: "Hyperthyroidism", correct: false },
-        { text: "Hypocalcemia due to insulin deficiency", correct: false }
-    ]
+    question: "Discuss the role of nutrition in preventing lipid-related metabolic disorders.",
+
+    keywords: [
+        "balanced diet",
+        "exercise",
+        "cholesterol",
+        "obesity",
+        "prevention"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The renal threshold for glucose is exceeded in:",
-    answers: [
-        { text: "Diabetes mellitus", correct: true },
-        { text: "Diabetes insipidus", correct: false },
-        { text: "Hypothyroidism", correct: false },
-        { text: "Asthma", correct: false }
-    ]
+    question: "Explain how excessive intake of dietary fat contributes to metabolic diseases.",
+
+    keywords: [
+        "obesity",
+        "insulin resistance",
+        "fat accumulation",
+        "metabolic syndrome",
+        "diet"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which cells detect sodium chloride concentration in the distal nephron?",
-    answers: [
-        { text: "Macula densa cells", correct: true },
-        { text: "Podocytes", correct: false },
-        { text: "Mesangial cells", correct: false },
-        { text: "Principal cells", correct: false }
-    ]
+    question: "Evaluate the biochemical effects of trans fatty acids on human health.",
+
+    keywords: [
+        "trans fats",
+        "LDL",
+        "HDL",
+        "atherosclerosis",
+        "cardiovascular disease"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Which transport mechanism is responsible for glucose reabsorption in the proximal tubule?",
-    answers: [
-        { text: "Secondary active transport", correct: true },
-        { text: "Simple diffusion", correct: false },
-        { text: "Osmosis", correct: false },
-        { text: "Facilitated diffusion", correct: false }
-    ]
+    question: "Discuss the biochemical principles underlying nutritional therapy for dyslipidaemia.",
+
+    keywords: [
+        "diet",
+        "lipoproteins",
+        "cholesterol",
+        "exercise",
+        "therapy"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "Countercurrent multiplication primarily occurs in the:",
-    answers: [
-        { text: "Loop of Henle", correct: true },
-        { text: "Collecting duct", correct: false },
-        { text: "Bowman's capsule", correct: false },
-        { text: "Proximal tubule", correct: false }
-    ]
+    question: "Explain the integration of carbohydrate, protein and lipid metabolism during feeding and fasting.",
+
+    keywords: [
+        "fed state",
+        "fasting state",
+        "insulin",
+        "glucagon",
+        "metabolic integration"
+    ],
+
+    marks: 10
 },
 
 {
-    question: "The most accurate substance used experimentally to measure GFR is:",
-    answers: [
-        { text: "Inulin", correct: true },
-        { text: "Creatinine", correct: false },
-        { text: "Urea", correct: false },
-        { text: "Glucose", correct: false }
-    ]
+    question: "Discuss the metabolic fate of acetyl-CoA in carbohydrate, protein and lipid metabolism.",
+
+    keywords: [
+        "acetyl-CoA",
+        "TCA cycle",
+        "fatty acid synthesis",
+        "ketogenesis",
+        "energy production"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the importance of lipid metabolism in maintaining overall human health and homeostasis.",
+
+    keywords: [
+        "lipid metabolism",
+        "energy",
+        "cell membranes",
+        "hormones",
+        "homeostasis"
+    ],
+
+    marks: 10
+}
+];
+
+const EXTREME_THEORY_QUESTIONS = [
+
+    {
+    question: "Critically evaluate the integrated role of vitamins in maintaining metabolic homeostasis and explain the consequences of multiple vitamin deficiencies.",
+
+    keywords: [
+        "vitamins",
+        "metabolic homeostasis",
+        "coenzymes",
+        "deficiency",
+        "metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Compare the biochemical mechanisms of absorption, transport, storage and excretion of fat-soluble and water-soluble vitamins.",
+
+    keywords: [
+        "fat-soluble vitamins",
+        "water-soluble vitamins",
+        "absorption",
+        "transport",
+        "storage"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the metabolic importance of vitamin B-complex as coenzymes in carbohydrate, lipid and protein metabolism.",
+
+    keywords: [
+        "B-complex",
+        "coenzymes",
+        "carbohydrate metabolism",
+        "lipid metabolism",
+        "protein metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical mechanisms responsible for vitamin toxicity and deficiency with relevant clinical examples.",
+
+    keywords: [
+        "hypervitaminosis",
+        "hypovitaminosis",
+        "toxicity",
+        "deficiency",
+        "clinical manifestations"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the complete biochemical pathway of β-oxidation of palmitic acid and calculate the total ATP yield using modern ATP values.",
+
+    keywords: [
+        "beta oxidation",
+        "palmitic acid",
+        "ATP yield",
+        "acetyl-CoA",
+        "electron transport chain"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically discuss the regulation of fatty acid synthesis and β-oxidation under fed and fasting conditions.",
+
+    keywords: [
+        "fatty acid synthesis",
+        "beta oxidation",
+        "insulin",
+        "glucagon",
+        "metabolic regulation"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical importance of phosphatidic acid as the central intermediate in lipid biosynthesis.",
+
+    keywords: [
+        "phosphatidic acid",
+        "triglycerides",
+        "phospholipids",
+        "biosynthesis",
+        "lipid metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the synthesis, transport and physiological importance of phospholipids in maintaining membrane integrity.",
+
+    keywords: [
+        "phospholipids",
+        "cell membrane",
+        "transport",
+        "biosynthesis",
+        "membrane integrity"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically examine the metabolism of cholesterol from synthesis to excretion and explain its clinical significance.",
+
+    keywords: [
+        "cholesterol",
+        "biosynthesis",
+        "bile acids",
+        "transport",
+        "clinical significance"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the role of LDL, HDL, VLDL and chylomicrons in lipid transport and cardiovascular disease.",
+
+    keywords: [
+        "LDL",
+        "HDL",
+        "VLDL",
+        "chylomicrons",
+        "lipoproteins"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical basis of atherosclerosis with emphasis on cholesterol metabolism and oxidative modification of lipoproteins.",
+
+    keywords: [
+        "atherosclerosis",
+        "LDL oxidation",
+        "foam cells",
+        "cholesterol",
+        "plaque formation"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the biochemical relationship between obesity, insulin resistance and lipid metabolism.",
+
+    keywords: [
+        "obesity",
+        "insulin resistance",
+        "lipid metabolism",
+        "adipose tissue",
+        "metabolic syndrome"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical mechanisms involved in ketogenesis and explain its physiological significance during prolonged fasting.",
+
+    keywords: [
+        "ketogenesis",
+        "ketone bodies",
+        "fasting",
+        "acetyl-CoA",
+        "liver"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the role of essential fatty acids in inflammation, immunity and membrane function.",
+
+    keywords: [
+        "essential fatty acids",
+        "omega-3",
+        "omega-6",
+        "eicosanoids",
+        "membrane function"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the digestion, absorption and metabolic fate of dietary lipids from ingestion to storage.",
+
+    keywords: [
+        "lipid digestion",
+        "absorption",
+        "micelles",
+        "chylomicrons",
+        "storage"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the biochemical basis of steatorrhea and explain the metabolic consequences of impaired lipid absorption.",
+
+    keywords: [
+        "steatorrhea",
+        "fat malabsorption",
+        "bile salts",
+        "lipase deficiency",
+        "fat-soluble vitamins"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Describe the metabolic integration of carbohydrates, proteins and lipids during starvation.",
+
+    keywords: [
+        "starvation",
+        "gluconeogenesis",
+        "lipolysis",
+        "ketogenesis",
+        "protein catabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the regulation of energy metabolism by insulin and glucagon during feeding and fasting.",
+
+    keywords: [
+        "insulin",
+        "glucagon",
+        "fed state",
+        "fasting state",
+        "energy metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical importance of biological value (BV) and net protein utilization (NPU) in assessing dietary protein quality.",
+
+    keywords: [
+        "biological value",
+        "net protein utilization",
+        "protein quality",
+        "nitrogen balance",
+        "nutrition"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical principles underlying nutritional assessment, nutritional screening and nutritional surveillance in public health.",
+
+    keywords: [
+        "nutritional assessment",
+        "screening",
+        "surveillance",
+        "public health",
+        "monitoring"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the physiological mechanisms regulating thirst and body water balance.",
+
+    keywords: [
+        "thirst",
+        "hypothalamus",
+        "ADH",
+        "osmoreceptors",
+        "water balance"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain how basal metabolic rate is measured and discuss the physiological factors that significantly influence it.",
+
+    keywords: [
+        "basal metabolic rate",
+        "indirect calorimetry",
+        "thyroid hormones",
+        "lean body mass",
+        "age"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical importance of specific dynamic action (SDA) in human energy metabolism.",
+
+    keywords: [
+        "specific dynamic action",
+        "thermic effect of food",
+        "energy expenditure",
+        "digestion",
+        "metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical consequences of prolonged protein-energy malnutrition on major organ systems.",
+
+    keywords: [
+        "protein-energy malnutrition",
+        "kwashiorkor",
+        "marasmus",
+        "organ function",
+        "metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically discuss the role of balanced nutrition in preventing metabolic disorders and maintaining long-term human health.",
+
+    keywords: [
+        "balanced diet",
+        "metabolic disorders",
+        "disease prevention",
+        "nutrition",
+        "health"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical regulation of cholesterol synthesis and discuss the mechanisms by which statin drugs lower plasma cholesterol.",
+
+    keywords: [
+        "HMG-CoA reductase",
+        "mevalonate pathway",
+        "statins",
+        "LDL receptors",
+        "cholesterol synthesis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically discuss the enterohepatic circulation of bile salts and explain its significance in lipid digestion and cholesterol homeostasis.",
+
+    keywords: [
+        "bile salts",
+        "enterohepatic circulation",
+        "cholesterol",
+        "lipid digestion",
+        "ileum"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical mechanisms responsible for oxidative stress and explain the protective roles of antioxidant vitamins.",
+
+    keywords: [
+        "oxidative stress",
+        "free radicals",
+        "vitamin E",
+        "vitamin C",
+        "antioxidants"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the metabolic consequences of vitamin deficiencies on carbohydrate, lipid and protein metabolism.",
+
+    keywords: [
+        "vitamin deficiency",
+        "carbohydrate metabolism",
+        "lipid metabolism",
+        "protein metabolism",
+        "coenzymes"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the metabolic adaptations that occur during prolonged starvation and explain how the body conserves protein.",
+
+    keywords: [
+        "starvation",
+        "gluconeogenesis",
+        "ketogenesis",
+        "protein sparing",
+        "lipolysis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the biochemical changes associated with obesity and explain their relationship with metabolic syndrome.",
+
+    keywords: [
+        "obesity",
+        "insulin resistance",
+        "metabolic syndrome",
+        "adipokines",
+        "lipid metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical basis of protein-energy malnutrition and compare the pathophysiology of kwashiorkor and marasmus.",
+
+    keywords: [
+        "kwashiorkor",
+        "marasmus",
+        "protein deficiency",
+        "energy deficiency",
+        "malnutrition"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the metabolic integration of carbohydrate, lipid and protein metabolism during intense physical exercise.",
+
+    keywords: [
+        "glycogen",
+        "fatty acids",
+        "amino acids",
+        "ATP",
+        "exercise metabolism"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically discuss the physiological regulation of appetite and energy balance in humans.",
+
+    keywords: [
+        "hypothalamus",
+        "leptin",
+        "ghrelin",
+        "energy balance",
+        "appetite"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical significance of lipoprotein lipase and hormone-sensitive lipase in lipid metabolism.",
+
+    keywords: [
+        "lipoprotein lipase",
+        "hormone-sensitive lipase",
+        "triglycerides",
+        "lipolysis",
+        "fatty acids"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical relationship between diabetes mellitus and abnormal lipid metabolism.",
+
+    keywords: [
+        "diabetes mellitus",
+        "insulin deficiency",
+        "lipolysis",
+        "ketogenesis",
+        "hyperlipidemia"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the digestion, absorption and transport of dietary proteins from ingestion to tissue utilization.",
+
+    keywords: [
+        "protein digestion",
+        "amino acids",
+        "absorption",
+        "portal circulation",
+        "protein synthesis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the mechanisms involved in maintaining acid-base balance through nutritional and metabolic processes.",
+
+    keywords: [
+        "acid-base balance",
+        "buffers",
+        "kidneys",
+        "lungs",
+        "nutrition"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical importance of trace elements in enzyme activation and metabolic regulation.",
+
+    keywords: [
+        "trace elements",
+        "enzyme activation",
+        "zinc",
+        "selenium",
+        "copper"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical role of calcium and phosphorus in skeletal metabolism and cellular signalling.",
+
+    keywords: [
+        "calcium",
+        "phosphorus",
+        "bone metabolism",
+        "cell signalling",
+        "parathyroid hormone"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the biochemical mechanisms responsible for maintaining electrolyte and fluid balance in the body.",
+
+    keywords: [
+        "electrolytes",
+        "fluid balance",
+        "sodium",
+        "potassium",
+        "osmosis"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically discuss the nutritional management of hyperlipidaemia using biochemical principles.",
+
+    keywords: [
+        "hyperlipidaemia",
+        "diet therapy",
+        "cholesterol",
+        "lipoproteins",
+        "nutrition"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the biochemical significance of dietary fibre in maintaining gastrointestinal and metabolic health.",
+
+    keywords: [
+        "dietary fibre",
+        "gut microbiota",
+        "cholesterol",
+        "blood glucose",
+        "colon health"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the biochemical consequences of excessive intake of saturated fats and trans fats on cardiovascular health.",
+
+    keywords: [
+        "saturated fats",
+        "trans fats",
+        "LDL",
+        "atherosclerosis",
+        "heart disease"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Explain the biochemical importance of nutritional assessment in the prevention and management of chronic diseases.",
+
+    keywords: [
+        "nutritional assessment",
+        "screening",
+        "monitoring",
+        "chronic disease",
+        "public health"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the biochemical basis of dietary recommendations for reducing cardiovascular disease risk.",
+
+    keywords: [
+        "dietary guidelines",
+        "cholesterol",
+        "lipids",
+        "cardiovascular disease",
+        "nutrition"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the role of nutrition in immune function with emphasis on vitamins, minerals and proteins.",
+
+    keywords: [
+        "immune function",
+        "vitamins",
+        "minerals",
+        "proteins",
+        "nutrition"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Evaluate the physiological and biochemical importance of water in maintaining homeostasis during health and disease.",
+
+    keywords: [
+        "water",
+        "homeostasis",
+        "fluid balance",
+        "temperature regulation",
+        "transport"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Discuss the integration of metabolic pathways involved in maintaining energy homeostasis during feeding, fasting and starvation.",
+
+    keywords: [
+        "feeding",
+        "fasting",
+        "starvation",
+        "energy homeostasis",
+        "metabolic integration"
+    ],
+
+    marks: 10
+},
+
+{
+    question: "Critically evaluate the role of nutritional biochemistry in the prevention, diagnosis and management of metabolic diseases.",
+
+    keywords: [
+        "nutritional biochemistry",
+        "metabolic diseases",
+        "prevention",
+        "diagnosis",
+        "management"
+    ],
+
+    marks: 10
 }
 ];
