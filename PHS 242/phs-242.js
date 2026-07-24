@@ -439,7 +439,7 @@ function scrollToTop() {
 
         const questionCard = document.querySelector(".question-card");
 
-        const y = questionCard.getBoundingClientRect().top + window.pageYOffset - 290;
+        const y = questionCard.getBoundingClientRect().top + window.pageYOffset - 320;
 
         window.scrollTo({
             top: y,
