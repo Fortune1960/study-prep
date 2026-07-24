@@ -241,14 +241,6 @@ function loadQuestion() {
 
 }
 
-answerBox.addEventListener("focus", () => {
-    document.querySelector(".navigation-buttons").style.display = "none";
-});
-
-answerBox.addEventListener("blur", () => {
-    document.querySelector(".navigation-buttons").style.display = "flex";
-});
-
 /*==================================
         SAVE ANSWER
 ==================================*/
@@ -443,16 +435,15 @@ function updateNavigationButtons() {
 
 function scrollToTop() {
 
-    const card = document.querySelector(".question-card");
+    if (window.innerWidth <= 768) {
 
-    if (card) {
+        const questionCard = document.querySelector(".question-card");
 
-        card.scrollIntoView({
+        const y = questionCard.getBoundingClientRect().top + window.pageYOffset - 290;
 
-            behavior: "smooth",
-
-            block: "start"
-
+        window.scrollTo({
+            top: y,
+            behavior: "smooth"
         });
 
     }

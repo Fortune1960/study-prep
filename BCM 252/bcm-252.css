@@ -1805,9 +1805,9 @@ align-items:flex-start;
 }
 
 .navigation-buttons{
-
-flex-direction:column;
-
+    flex-direction:column;
+    position:static;
+    margin-top:20px;
 }
 
 .palette-btn{
