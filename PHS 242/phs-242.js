@@ -221,7 +221,6 @@ function loadQuestion() {
 
     questionText.textContent = current.question;
 
-
     if (userAnswers[currentIndex]) {
 
         answerBox.value = userAnswers[currentIndex];
@@ -232,6 +231,8 @@ function loadQuestion() {
 
     }
 
+    autoResizeTextarea(); // <-- Add this line here
+
     updateCounts();
 
     updateProgress();
@@ -240,6 +241,13 @@ function loadQuestion() {
 
 }
 
+answerBox.addEventListener("focus", () => {
+    document.querySelector(".navigation-buttons").style.display = "none";
+});
+
+answerBox.addEventListener("blur", () => {
+    document.querySelector(".navigation-buttons").style.display = "flex";
+});
 
 /*==================================
         SAVE ANSWER
@@ -257,6 +265,15 @@ answerBox.addEventListener("input", function () {
 
     saveProgress();
 
+});
+
+function autoResizeTextarea() {
+    answerBox.style.height = "90px"; // Reset first
+    answerBox.style.height = answerBox.scrollHeight + "px";
+}
+
+answerBox.addEventListener("input", () => {
+    autoResizeTextarea();
 });
 
 

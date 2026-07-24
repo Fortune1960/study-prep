@@ -1671,7 +1671,6 @@ footer{
 }
 
 
-
 /* ==========================
    TABLET
 ========================== */
@@ -1870,6 +1869,19 @@ order:-1;
 margin-bottom:20px;
 
 }
+
+ .theory-answer{
+        width:100%;
+        min-height:90px;      /* Starts small */
+        height:90px;
+        max-height:60vh;      /* Prevents it from becoming too tall */
+        overflow-y:hidden;    /* No scrollbar initially */
+        resize:none;          /* Disable manual resize */
+        font-size:16px;
+        line-height:1.6;
+        padding:15px;
+        transition:height .2s ease;
+    }
 
 }
 
